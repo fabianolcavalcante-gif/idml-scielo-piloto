@@ -1,0 +1,56 @@
+{
+  "approved": true,
+  "artifacts": {
+    "bytes": 272,
+    "files": 1
+  },
+  "backup": "20260921T121706Z",
+  "checksum": {
+    "checksums_verified": true,
+    "payload_bytes": 165053,
+    "payload_sha256": {
+      "artifacts.tar.gz": "ef65f4a37bb3966266ff4d19af584a29ac74e1e75abb635cdb0ddfc01ab04e4b",
+      "database.dump": "9489c45f5caf7fe6247b7084a0dc73f261c703da3e0d48bcc1956a36fc7032e1",
+      "openclaw-state.tar.gz": "2ad3f681d0516677e70c9d16eff56e2f9d6fa620ca4a6dc27a5aa4a199d5b1c1"
+    }
+  },
+  "cleanup_complete": true,
+  "existing_services_unchanged": true,
+  "inventory": {
+    "checksums_verified": false,
+    "classification": {
+      "future_timestamp": 0,
+      "missing_or_empty_payload": 15,
+      "noncanonical_name": 34,
+      "unsafe_path": 0
+    },
+    "complete": true,
+    "delete_authorized": false,
+    "manual_review_candidates": [],
+    "policy": {
+      "keep_days": 30,
+      "keep_latest": 7
+    },
+    "protected": 90,
+    "read_only": true,
+    "restore_verified": false,
+    "unrecognized_or_incomplete": 49,
+    "version": "backup-retention-plan-1.0"
+  },
+  "live_database_modified": false,
+  "max_ready_ms": 10.86,
+  "min_memory_available_bytes": 906768384,
+  "oom_killed": false,
+  "openclaw": {
+    "bytes": 3406839,
+    "files": 14
+  },
+  "postgres_image_id": "sha256:16bc17c64a573ef34162af9298258d1aec548232985b33ed7b1eac33ba35c229",
+  "public_tables": 21,
+  "registered_artifacts_hash_verified": 1,
+  "release_ready": false,
+  "restored_agents_started": false,
+  "samples": 8,
+  "sqlite_integrity": true,
+  "version": "backup-restore-1.0"
+}

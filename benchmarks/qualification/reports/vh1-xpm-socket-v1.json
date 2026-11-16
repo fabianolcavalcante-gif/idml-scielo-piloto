@@ -1,0 +1,79 @@
+{
+  "version": "vh1-xpm-socket-qualification-1.0",
+  "date": "2026-10-22",
+  "scope": "real-offline-xpm-through-private-socket-laboratory-only",
+  "source_archive": {
+    "release": "vh1-xpm-socket-20261022-v3",
+    "sha256": "359a4d61415ca668995fb29dc0a9eea4b25353740ce02051d14c26e506acb9ae",
+    "files": 1132,
+    "private_inputs_included": false
+  },
+  "tests": {
+    "local_passed": 211,
+    "linux_passed": 211,
+    "new_cases": 28,
+    "counts_overlap": true,
+    "final_failures": 0,
+    "final_errors": 0,
+    "final_skipped": 0,
+    "warnings_per_final_run": 1,
+    "local_duration_seconds": 25.22,
+    "linux_duration_seconds": 18.41,
+    "full_suite_repeated": false,
+    "global_coverage_measured": false,
+    "initial_linux_attempt": {
+      "passed": 210,
+      "failed": 1,
+      "cause": "256 MiB tmpfs did not cover upload temporary reserve plus candidate",
+      "correction": "512 MiB test tmpfs; application upload reserve unchanged"
+    }
+  },
+  "real_execution": {
+    "summary": "benchmarks/qualification/reports/vh1-xpm-socket-real-v1.json",
+    "root": "/opt/idml-platform/private/qualification/vh1-xpm-socket-20261022T180433Z",
+    "articles": 2,
+    "negative_cases": 2,
+    "attested_reports": 4,
+    "sealed_reports_root_0600": 4,
+    "report_hashes_verified": true,
+    "client_uid": 10001,
+    "broker_uid": 0,
+    "all_raw_passed": false,
+    "required_queries_complete": false,
+    "vendor_network": "none",
+    "original_inputs_and_vendor_files_unchanged": true,
+    "active_services_unchanged": 25,
+    "initial_harness_failures": [
+      "AF_UNIX address exceeded Linux path limit; moved socket into short /run directory",
+      "Private umask removed traversal permission from read-only input mount; explicit mode corrected"
+    ]
+  },
+  "checks": {
+    "ruff_global": true,
+    "mypy_source_files": 128,
+    "formatted_files": 4,
+    "source_manifest_verified": true
+  },
+  "source_and_evidence_sha256": {
+    "src/idml_foundation/services/xpm_socket.py": "9049cf9440c0715a5ee68de4bfb7dc91d08fa13b679cee0085a445f8916a3767",
+    "ops/xpm_validator_broker.py": "8b725f59a432ab387a2a7122c6a04cdb8f62576e86ace416146979cbf3d734f7",
+    "ops/qualify_vh1_xpm_socket.py": "8d13f67cab0cd3a14ce769f0b31581755ed28f3e8a62530eedd4c6b28d7009bb",
+    "tests/test_xpm_socket.py": "9043427aa80df2ad278bf690a0428bfecf485944628c1355816b524b1412c9e7",
+    "tmp/vh1-xpm-socket-tests.xml": "1da57ad9c32ee0fe9da40062fd270fd56ec1f6f3da6c3a2ea63ba9b5832b64b6",
+    "tmp/vh1-xpm-socket-linux-tests.log": "d018753a6729377700b6bdc0852c16d569040905536487fe3ade8153cbfde8f4",
+    "benchmarks/qualification/reports/vh1-xpm-socket-real-v1.json": "8a12ffd6c2a587436cd35024c64d58fd0ed7537cc539c7b3439cd187f61201b3"
+  },
+  "limitations": [
+    "Offline only: external mandatory queries remain incomplete",
+    "No new compatibility exception, normative waiver or severity reduction",
+    "Raw legacy XPM results include environment and compatibility findings; not editorial accuracy metrics",
+    "Private laboratory qualification, not active API/worker provisioning",
+    "No auto promotion, AI cycle, human acceptance or G-HOMOLOG",
+    "No global CI or coverage claim"
+  ],
+  "candidate_stored_on_vps": true,
+  "active_runtime_changed": false,
+  "database_changed": false,
+  "formal_xml_approved": false,
+  "ai_invoked": false
+}

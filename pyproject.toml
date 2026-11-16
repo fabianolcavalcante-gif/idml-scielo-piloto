@@ -9,11 +9,13 @@ description = "Fundação segura e multiempresa da plataforma IDML para SciELO"
 requires-python = ">=3.12,<3.13"
 dependencies = [
   "alembic>=1.14,<2",
+  "cryptography>=45,<47",
   "email-validator>=2.2,<3",
   "fastapi>=0.115,<1",
   "lxml>=5.3,<7",
   "prometheus-client>=0.21,<1",
   "psycopg[binary]>=3.2,<4",
+  "pypdf>=6.1,<7",
   "pwdlib[argon2]>=0.2,<1",
   "pydantic-settings>=2.7,<3",
   "python-multipart>=0.0.20,<1",

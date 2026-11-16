@@ -1,0 +1,27 @@
+# Opt-in only after installing and qualifying the administrator-owned brokers.
+# The API gets the upload scanner socket. Validation sockets stay in the worker.
+services:
+  api:
+    environment:
+      IDML_JOURNAL_PROFILE_PATH: /app/profiles/esa-aop-1.1.json
+      IDML_FEATURE_CLAMAV: "true"
+      IDML_CLAMAV_SOCKET: /run/idml-clamav-vh1/scan.sock
+    volumes:
+      - /run/idml-clamav-vh1:/run/idml-clamav-vh1:ro
+      - /var/lib/idml-web-sources:/run/idml-web-sources:ro
+  worker:
+    environment:
+      IDML_JOURNAL_PROFILE_PATH: /app/profiles/esa-aop-1.1.json
+      IDML_FEATURE_WEB_EDIT_PROVIDER: ${IDML_FEATURE_WEB_EDIT_PROVIDER:-false}
+      IDML_AUTOMATION_AUTHORIZATION_ROOT: /run/idml-edit-decisions
+      IDML_ENRICHMENT_LOCATION: vps
+      IDML_ENRICHMENT_ROOT: /run/idml-enrichment
+      IDML_VALIDATOR_REGISTRY_PATH: /app/config/validator-registry-vh1-composed.json
+      IDML_VALIDATOR_SCOPED_AUTHORITIES: "true"
+      IDML_VALIDATOR_SOCKET: /run/idml-modern-vh1/validator.sock
+      IDML_XPM_SOCKET: /run/idml-xpm-vh1/validator.sock
+    volumes:
+      - /var/lib/idml-vh1-enrichment/runtime:/run/idml-enrichment:ro
+      - /var/lib/idml-vh1-edit-decisions:/run/idml-edit-decisions:ro
+      - /run/idml-modern-vh1:/run/idml-modern-vh1:ro
+      - /run/idml-xpm-vh1:/run/idml-xpm-vh1:ro

@@ -1,0 +1,10 @@
+{
+  "approved": true,
+  "evidence_sha256": "82703cdb05357b66db7234eace28332d18bfad4f68e5d2ddc004f5edb0107b01",
+  "production_capacity_qualified": false,
+  "release_ready": false,
+  "restricted_content_emitted": false,
+  "sources_match": true,
+  "v12_2_complete": false,
+  "version": "phase7-v12-storage-gate-1.0"
+}

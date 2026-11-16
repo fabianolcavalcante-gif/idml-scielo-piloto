@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"https://idml.local/schemas/agents/math_notes-proposal-1.1.json","allOf":[{"$ref":"common-proposal-1.1.schema.json"},{"properties":{"domain":{"const":"math_notes"}}}]}

@@ -1,0 +1,21 @@
+{
+  "version": "h1-rendition-name-triage-1.0",
+  "scope": "local installed runtime, filename checks only",
+  "cases": [
+    {
+      "case": "esa-e20240086-corrected",
+      "package_sha256": "44f30381779f0f520780b272b95dfcfd54312a70a7c17012f08ace7aaaabe825",
+      "filename_diagnostics": [
+        "validator-derived-name-conflict"
+      ]
+    },
+    {
+      "case": "esa-e20240135",
+      "package_sha256": "5d199ea2fc24939c367e5b57d8ca79cb944576ffe80514790c2f11414222a0fa",
+      "filename_diagnostics": [
+        "validator-derived-name-conflict"
+      ]
+    }
+  ],
+  "formal_validation_passed": false
+}

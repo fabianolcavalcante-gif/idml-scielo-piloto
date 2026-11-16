@@ -1,0 +1,124 @@
+{
+  "approved": true,
+  "article_gates": [],
+  "external_validator_evidence": null,
+  "human_review_required": true,
+  "private_corpus_executed": false,
+  "release_ready": false,
+  "restricted_content_emitted": false,
+  "stage": "7C-08",
+  "synthetic_gates": [
+    {
+      "exit_code": 0,
+      "gate": "v01",
+      "passed": true,
+      "report_sha256": "81b2e7eeed58f23ae93384f2b85425a9855b315bf5811310f729c321c7ca3af7"
+    },
+    {
+      "exit_code": 0,
+      "gate": "v02",
+      "passed": true,
+      "report_sha256": "3bc995aa0b42483d4a41393522559faae6715ed518420fcc1123356275ad37f2"
+    },
+    {
+      "exit_code": 0,
+      "gate": "v03",
+      "passed": true,
+      "real_exact_stories": 0,
+      "real_packages_verified": 0,
+      "report_sha256": "41589995d05d877158b905050bbffb39294c1838657c22705f0f892cc5239bb7"
+    },
+    {
+      "exit_code": 0,
+      "gate": "v04",
+      "passed": true,
+      "report_sha256": "de5f78763b14d3dec3a55a1062f1cb5dcea75377958990599f32026d28cee229"
+    },
+    {
+      "exit_code": 0,
+      "gate": "v05",
+      "passed": true,
+      "report_sha256": "b540c0c35b71c50d8123717c3fb9cf072cf30c36630e0e985f2526fbd13baff9"
+    },
+    {
+      "exit_code": 0,
+      "gate": "v06",
+      "passed": true,
+      "report_sha256": "77ab209689007264627a622dc511d16d2464b72fa9d468b80e40f224551b90da"
+    },
+    {
+      "exit_code": 0,
+      "gate": "v07",
+      "passed": true,
+      "report_sha256": "ada1360fae41484ca54aaf365fc3a9ca183331003c7f03fd25f2c5578959a03c"
+    },
+    {
+      "exit_code": 0,
+      "gate": "v08",
+      "passed": true,
+      "report_sha256": "f3554779463940b5d412d7804a96a8794e35675a36e8d8650d5c4c10b89b3480"
+    },
+    {
+      "exit_code": 0,
+      "gate": "v09",
+      "passed": true,
+      "report_sha256": "572e125990de8942359f330e918009761b31ec20f5a1caaf0a21fe00ad58bc30"
+    },
+    {
+      "exit_code": 0,
+      "gate": "v10",
+      "passed": true,
+      "report_sha256": "ec3fafe1ad7ad60f7ab5a790aaaaccf375e10f978296d91741e44b72ad33b07a"
+    },
+    {
+      "exit_code": 0,
+      "gate": "v11",
+      "passed": true,
+      "report_sha256": "a6be953a88c388034be003ce27a5b258b828e079f6a181c8de710c3443c87ffe"
+    },
+    {
+      "exit_code": 0,
+      "gate": "7c01",
+      "passed": true,
+      "report_sha256": "136519da0ed4f985e2d7bd521af375f94c6971e9b16bb450dcca09e62835d8fd"
+    },
+    {
+      "exit_code": 0,
+      "gate": "7c02",
+      "passed": true,
+      "report_sha256": "f1029bb508b6f8a9dc597d4e19152bacec8e68c0714d553c7c11f337f5a95f9c"
+    },
+    {
+      "exit_code": 0,
+      "gate": "7c03",
+      "passed": true,
+      "report_sha256": "ee9f87c5ca79a5ac0d84587b69e6ec382a66e4bf0defa812a641c1ae6a16d288"
+    },
+    {
+      "exit_code": 0,
+      "gate": "7c04",
+      "passed": true,
+      "report_sha256": "30faf36ca78dfbae83d063b3024a5d6a190d9b2d88e16d570f79b596615188fc"
+    },
+    {
+      "exit_code": 0,
+      "gate": "7c05",
+      "passed": true,
+      "report_sha256": "f1c4fae4590b584708d7a0f69425b6060bd1a94e4e5f454595c5d0ddb406bbd2"
+    },
+    {
+      "exit_code": 0,
+      "gate": "7c06",
+      "passed": true,
+      "report_sha256": "eb46417796ba46962b53892634e0881f7c522668d8f9e9560721c8632f4ab912"
+    },
+    {
+      "exit_code": 0,
+      "gate": "7c07",
+      "passed": true,
+      "report_sha256": "3788bc2e5227e3ccccb9a485248d4e2c640bdd2c8d35a4ad8adf917c11980006"
+    }
+  ],
+  "version": "phase7-7c08-requalification-1.0",
+  "xpm_windows_pending": true
+}

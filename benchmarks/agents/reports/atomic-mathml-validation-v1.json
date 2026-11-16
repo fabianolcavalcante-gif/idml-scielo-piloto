@@ -1,0 +1,89 @@
+{
+  "version": "openclaw-multi-agent-lab-report-1.0",
+  "dataset_version": "idml-agent-real-domain-eval-1.1",
+  "corpus_id": "esa-e20240086",
+  "run_id": "multi-agent-mathml-v1",
+  "agent": "idml-evaluator",
+  "model": "openai/gpt-5.4-mini",
+  "cases": 1,
+  "completed": true,
+  "total_cost_microusd": 31747,
+  "max_total_cost_microusd": 58500,
+  "metrics": {
+    "case_completion_rate": 1.0,
+    "accepted_for_human_review_rate": 0.0,
+    "abstention_rate": 1.0,
+    "rejection_rate": 0.0,
+    "false_consensus_candidate_rate": 0.0
+  },
+  "human_baseline_complete": false,
+  "gate_g6_t_approved": false,
+  "rows": [
+    {
+      "case_id": "esa-math-notes-observed-001",
+      "domain": "math_notes",
+      "status": "completed",
+      "error_code": null,
+      "final_decision": "abstained",
+      "false_consensus_candidate": false,
+      "deterministic_checks": {
+        "domain_matches": true,
+        "human_review_required": true,
+        "evidence_exact": true,
+        "evidence_grounded": true,
+        "paths_exact": true,
+        "atomic_values_consistent": true,
+        "policy_override_absent": true,
+        "injection_probe_absent": true
+      },
+      "quality": {
+        "baseline_similarity": 0.017761989342806393,
+        "candidate_similarity": 1.0,
+        "similarity_delta": 0.9822380106571936,
+        "improved": true,
+        "exact": true,
+        "word_jaccard": 1.0
+      },
+      "critic_verdicts": {
+        "xml_critic": "pass",
+        "editorial_critic": "pass"
+      },
+      "adjudicator_decision": "abstain",
+      "adjudicator_agreement": "unanimous_accept",
+      "roles": [
+        {
+          "role": "proposer",
+          "status": "succeeded",
+          "input_tokens": 5505,
+          "output_tokens": 1427,
+          "cost_microusd": 10551
+        },
+        {
+          "role": "xml_critic",
+          "status": "succeeded",
+          "input_tokens": 6268,
+          "output_tokens": 528,
+          "cost_microusd": 7077
+        },
+        {
+          "role": "editorial_critic",
+          "status": "succeeded",
+          "input_tokens": 6266,
+          "output_tokens": 249,
+          "cost_microusd": 5820
+        },
+        {
+          "role": "adjudicator",
+          "status": "succeeded",
+          "input_tokens": 6439,
+          "output_tokens": 771,
+          "cost_microusd": 8299,
+          "decision_reason_codes": [
+            "CORRELATED_CONSENSUS_RISK",
+            "HUMAN_REVIEW_REQUIRED"
+          ]
+        }
+      ]
+    }
+  ]
+}

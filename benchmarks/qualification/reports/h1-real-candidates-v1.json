@@ -1,0 +1,72 @@
+{
+  "version": "h1-real-candidates-1.0",
+  "executed_at": "2026-09-29",
+  "authorization": "explicit user approval in current conversation",
+  "source_sha256": {
+    "ops/build_h1_real_packages.py": "aea6e25282a8e1d0ea5efd5dd080c5a89f81ad635fd21ead13c1096f548a93e5",
+    "ops/observe_validator_socket.py": "81bca0819b8b3639cb0ebd7c06da0932220256ea8bddf01778b42715c25887ac",
+    "ops/smoke_validator_socket.py": "0a5834a0848a53b48f2d2927143a435087271716c7b6f85911280cc42f90a2e4",
+    "ops/validator_broker.py": "bba13b95b571bc604428c82e4e6548e47bfafe73d0d799d303ead327bc8fef55",
+    "src/idml_foundation/services/validator_transport.py": "68e69b1332a1e68cc0812c488efc263f6b405fdcfd2eb20db6a8174f3b8311b4",
+    "config/validator-registry-v1.json": "5c17b26e40d9621ca9f344c09306b626f2c596b2fa04dec1deb0ddb444ebbab5"
+  },
+  "scope": "fresh deterministic pipeline and package builder, exact bytes through isolated VPS broker; not deployed API/Redis/UI job",
+  "cases": [
+    {
+      "corpus_id": "esa-e20240086",
+      "source_parity": true,
+      "offline_valid": true,
+      "xml_sha256": "0c4376c2965c55d2d87033966e53b009dfc06b230c69fdb43b9da22f66354e42",
+      "package_sha256": "1a0ff322e19d9aed77f540887c343cf27822597ace18916ed2a8bf4aadc83b0c",
+      "packtools": {
+        "status": "failed",
+        "critical": 28,
+        "error": 4,
+        "warning": 9,
+        "report_sha256": "f8b58f84ab825fb7c678c5bc6da92d5d5d44f016390ccd2afec24aec85db1c2e"
+      },
+      "spsvalidator": {
+        "status": "failed",
+        "critical": 29,
+        "error": 5,
+        "warning": 9,
+        "report_sha256": "aa48db954a2a2719e7110066ff595dbee386f494f90fa2530c08e15b4c58a7f3"
+      },
+      "failure_code": "validator-exception-or-invalid-output",
+      "approved": false
+    },
+    {
+      "corpus_id": "esa-e20240135",
+      "source_parity": true,
+      "offline_valid": true,
+      "xml_sha256": "1757cdb3a15b7fd44beb009e794ff812995eb59cd6e2c1eee2cabee15f9a9706",
+      "package_sha256": "5d199ea2fc24939c367e5b57d8ca79cb944576ffe80514790c2f11414222a0fa",
+      "packtools": {
+        "status": "completed",
+        "critical": 10,
+        "error": 4,
+        "warning": 8,
+        "report_sha256": "87983035fe32d07ca7bab9b9ba543bf43c90eabb498cf4cb57818fa681ea294f"
+      },
+      "spsvalidator": {
+        "status": "completed",
+        "critical": 10,
+        "error": 5,
+        "warning": 8,
+        "report_sha256": "ba33916747c1ac9938170cb65e9eae0b0ec12cb39b5cc75a993bb12f3db83dad"
+      },
+      "approved": false
+    }
+  ],
+  "full_tests_passed": 649,
+  "warnings": 3,
+  "application_line_coverage_percent": 87.83,
+  "existing_services_unchanged": true,
+  "readiness_after": "database/redis ok",
+  "remote_private_candidate_copies_removed": 4,
+  "remote_scratch_empty": true,
+  "local_originals_preserved": true,
+  "worker_deployed": false,
+  "production_activated": false,
+  "homologation_authorized": false
+}

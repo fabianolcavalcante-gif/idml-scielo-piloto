@@ -6,4 +6,4 @@
 *.pdf binary
 *.idml binary
 *.zip binary
-
+vendor/jats/** -text

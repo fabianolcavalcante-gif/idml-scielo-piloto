@@ -1,0 +1,770 @@
+{
+  "active_application_changed": false,
+  "cases": [
+    {
+      "case": "esa-e20240086",
+      "validators": [
+        {
+          "authority_evidence": {
+            "binding": {
+              "bundle_sha256": "aeb3420e5c1fdee076e6179d50adbf0c6977340e095d844b6720caf0b9170121",
+              "grant_sha256": "2526af5ed618b0eab8bc4a1e68d379dadd6dab6620bd32216cdcdb9e77184da5",
+              "scope_sha256": "c10ffcd84086fdd55bfab47920f5dc04665137c264ebf7a245b9d704def59678"
+            },
+            "checks": {
+              "doi": [
+                true
+              ],
+              "issue": [
+                true
+              ],
+              "orcid": [
+                true,
+                true,
+                true
+              ],
+              "orcid_reasons": [
+                "public_record_and_name_match",
+                "public_record_and_name_match",
+                "public_record_and_name_match"
+              ],
+              "section": [
+                true
+              ]
+            },
+            "expected": {
+              "doi": 1,
+              "issue": 1,
+              "orcid": 3,
+              "section": 1
+            },
+            "version": "scoped-authority-evidence-1.0"
+          },
+          "candidate_sha256": "e0eb4cb4989a1d7ff2c6059f3b57b687fdca40bdf56664dafa4f342b4e772bbe",
+          "counts": {
+            "warning": 9
+          },
+          "findings": [
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "app-app-element-app-group-app-exist-6e8b29290a5b",
+              "message": "warning reported by rule app-app-element-app-group-app-exist-6e8b29290a5b",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+              "message": "warning reported by rule reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+              "message": "warning reported by rule reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+              "message": "warning reported by rule reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "sec-sec-content-sec-p-exist-6ca2373fbf26",
+              "message": "warning reported by rule sec-sec-content-sec-p-exist-6ca2373fbf26",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "sec-sec-content-sec-p-exist-6ca2373fbf26",
+              "message": "warning reported by rule sec-sec-content-sec-p-exist-6ca2373fbf26",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            }
+          ],
+          "history_policy_evidence": {
+            "absence_is_not_proof_of_no_revision": true,
+            "candidate_sha256": "e0eb4cb4989a1d7ff2c6059f3b57b687fdca40bdf56664dafa4f342b4e772bbe",
+            "invocations": [
+              {
+                "default_failures": [
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-request"
+                  },
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-recd"
+                  }
+                ],
+                "default_rows_sha256": "c1f5c9e2b46bbeffc2126e703deb366240045c815c17b87ed81e311fd8b5ee9b",
+                "effective_failures": [],
+                "effective_rows_sha256": "407800d34607d6c82e593513a45a97a2d50ee9a0ed122d97c9c76164a0769f68",
+                "only_revision_presence_changed": true
+              }
+            ],
+            "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+            "policy": "sps-1.10-history-presence-1.0",
+            "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+            "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+            "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+          },
+          "image_id": "sha256:4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca",
+          "name": "packtools"
+        },
+        {
+          "authority_evidence": {
+            "binding": {
+              "bundle_sha256": "aeb3420e5c1fdee076e6179d50adbf0c6977340e095d844b6720caf0b9170121",
+              "grant_sha256": "2526af5ed618b0eab8bc4a1e68d379dadd6dab6620bd32216cdcdb9e77184da5",
+              "scope_sha256": "c10ffcd84086fdd55bfab47920f5dc04665137c264ebf7a245b9d704def59678"
+            },
+            "checks": {
+              "doi": [
+                true
+              ],
+              "issue": [
+                true
+              ],
+              "orcid": [
+                true,
+                true,
+                true
+              ],
+              "orcid_reasons": [
+                "public_record_and_name_match",
+                "public_record_and_name_match",
+                "public_record_and_name_match"
+              ],
+              "section": [
+                true
+              ]
+            },
+            "expected": {
+              "doi": 1,
+              "issue": 1,
+              "orcid": 3,
+              "section": 1
+            },
+            "version": "scoped-authority-evidence-1.0"
+          },
+          "candidate_sha256": "32e4866803d5b8120453b98b1e1044bfbbd27316b3049ecb227946e3947ec0d8",
+          "counts": {
+            "warning": 9
+          },
+          "findings": [
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "app-app-app-element-app-group-app-exist-b70163d3b3dc",
+              "message": "warning reported by rule app-app-app-element-app-group-app-exist-b70163d3b3dc",
+              "response": "warning"
+            },
+            {
+              "code": "reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+              "message": "warning reported by rule reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+              "response": "warning"
+            },
+            {
+              "code": "reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+              "message": "warning reported by rule reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+              "response": "warning"
+            },
+            {
+              "code": "reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+              "message": "warning reported by rule reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+              "response": "warning"
+            },
+            {
+              "code": "sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+              "message": "warning reported by rule sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+              "response": "warning"
+            },
+            {
+              "code": "sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+              "message": "warning reported by rule sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+              "response": "warning"
+            }
+          ],
+          "history_policy_evidence": {
+            "absence_is_not_proof_of_no_revision": true,
+            "candidate_sha256": "32e4866803d5b8120453b98b1e1044bfbbd27316b3049ecb227946e3947ec0d8",
+            "invocations": [
+              {
+                "default_failures": [
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-request"
+                  },
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-recd"
+                  }
+                ],
+                "default_rows_sha256": "c1f5c9e2b46bbeffc2126e703deb366240045c815c17b87ed81e311fd8b5ee9b",
+                "effective_failures": [],
+                "effective_rows_sha256": "407800d34607d6c82e593513a45a97a2d50ee9a0ed122d97c9c76164a0769f68",
+                "only_revision_presence_changed": true
+              }
+            ],
+            "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+            "policy": "sps-1.10-history-presence-1.0",
+            "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+            "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+            "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+          },
+          "image_id": "sha256:61b90cc8ecca8de508c6cd19701551860de32f053a4899fd056835c8f05ab048",
+          "name": "spsvalidator"
+        }
+      ]
+    },
+    {
+      "case": "esa-e20240135",
+      "validators": [
+        {
+          "authority_evidence": {
+            "binding": {
+              "bundle_sha256": "c9c6cd29f9fdc8fb41d0ca59ce243e02f68ff70497a5d7b3d380c8fc3479e9df",
+              "grant_sha256": "c28e85497106cc793ec33fa527209d7caea69b388159e31c6be051f845daa284",
+              "scope_sha256": "1f745d9d8ac4b66ae2faed95dc07326ce8d24f05d07f089fcd53150fa5db1652"
+            },
+            "checks": {
+              "doi": [
+                true
+              ],
+              "issue": [
+                true
+              ],
+              "orcid": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "orcid_reasons": [
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match"
+              ],
+              "section": [
+                true
+              ]
+            },
+            "expected": {
+              "doi": 1,
+              "issue": 1,
+              "orcid": 4,
+              "section": 1
+            },
+            "version": "scoped-authority-evidence-1.0"
+          },
+          "candidate_sha256": "875dc7ff6d66d14dcc4fa125dad6a7db001e44444c75c5f31a4cbe49f5a1f0c7",
+          "counts": {
+            "warning": 5
+          },
+          "findings": [
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "app-app-element-app-group-app-exist-6e8b29290a5b",
+              "message": "warning reported by rule app-app-element-app-group-app-exist-6e8b29290a5b",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            }
+          ],
+          "history_policy_evidence": {
+            "absence_is_not_proof_of_no_revision": true,
+            "candidate_sha256": "875dc7ff6d66d14dcc4fa125dad6a7db001e44444c75c5f31a4cbe49f5a1f0c7",
+            "invocations": [
+              {
+                "default_failures": [
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-request"
+                  },
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-recd"
+                  }
+                ],
+                "default_rows_sha256": "184db947290f38135a2b2bc7de130218000d8521bb46b129a36ceebdb7e72d7a",
+                "effective_failures": [],
+                "effective_rows_sha256": "fa73035c21f88fa8c842ef0c5159b0f98c1be376602defcd9421292b59fa5a8d",
+                "only_revision_presence_changed": true
+              }
+            ],
+            "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+            "policy": "sps-1.10-history-presence-1.0",
+            "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+            "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+            "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+          },
+          "image_id": "sha256:4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca",
+          "name": "packtools"
+        },
+        {
+          "authority_evidence": {
+            "binding": {
+              "bundle_sha256": "c9c6cd29f9fdc8fb41d0ca59ce243e02f68ff70497a5d7b3d380c8fc3479e9df",
+              "grant_sha256": "c28e85497106cc793ec33fa527209d7caea69b388159e31c6be051f845daa284",
+              "scope_sha256": "1f745d9d8ac4b66ae2faed95dc07326ce8d24f05d07f089fcd53150fa5db1652"
+            },
+            "checks": {
+              "doi": [
+                true
+              ],
+              "issue": [
+                true
+              ],
+              "orcid": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "orcid_reasons": [
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match"
+              ],
+              "section": [
+                true
+              ]
+            },
+            "expected": {
+              "doi": 1,
+              "issue": 1,
+              "orcid": 4,
+              "section": 1
+            },
+            "version": "scoped-authority-evidence-1.0"
+          },
+          "candidate_sha256": "1ccac72fffebcf7793e59035ee5a02b3f0177b319f2802f95a1041cea8e91546",
+          "counts": {
+            "warning": 5
+          },
+          "findings": [
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "app-app-app-element-app-group-app-exist-b70163d3b3dc",
+              "message": "warning reported by rule app-app-app-element-app-group-app-exist-b70163d3b3dc",
+              "response": "warning"
+            }
+          ],
+          "history_policy_evidence": {
+            "absence_is_not_proof_of_no_revision": true,
+            "candidate_sha256": "1ccac72fffebcf7793e59035ee5a02b3f0177b319f2802f95a1041cea8e91546",
+            "invocations": [
+              {
+                "default_failures": [
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-request"
+                  },
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-recd"
+                  }
+                ],
+                "default_rows_sha256": "184db947290f38135a2b2bc7de130218000d8521bb46b129a36ceebdb7e72d7a",
+                "effective_failures": [],
+                "effective_rows_sha256": "fa73035c21f88fa8c842ef0c5159b0f98c1be376602defcd9421292b59fa5a8d",
+                "only_revision_presence_changed": true
+              }
+            ],
+            "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+            "policy": "sps-1.10-history-presence-1.0",
+            "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+            "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+            "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+          },
+          "image_id": "sha256:61b90cc8ecca8de508c6cd19701551860de32f053a4899fd056835c8f05ab048",
+          "name": "spsvalidator"
+        }
+      ]
+    }
+  ],
+  "formal_xml_approved": false,
+  "plan_sha256": "939dcee8ad1b50d09ee22abf51da6301ab7d2bfbb79675416fe2b7c71df88c82",
+  "qualification": {
+    "active_application_changed": false,
+    "audit_sha256": "8cc576f7cc5f2d8ebec05b629f174ac23a96d35f6e1f670e7acef4f1491d85d3",
+    "autonomous_application": false,
+    "cases": {
+      "esa-e20240086": {
+        "before_package_sha256": "6b2ba60422107ad023893995b6149a1fe5d3926daf9cc679532bb27dc0f5d3be",
+        "before_xml_sha256": "297d660afa87e34ca530bdf0c22d8f9c1f5623461c8cd425eaa3b3177a119b3d",
+        "catalog_id": "5b0778149f657d9b99a33b0dbe53de0c5474a2ac6caa0c2eed2c48f250d2b8ea",
+        "catalog_sha256": "cc6ac811f68b821111f6219891846585f6a7a16196ff13aeaf8c823ef0fd24c9",
+        "delta": {
+          "all_other_xml_unchanged": true,
+          "changes": [
+            {
+              "after_sha256": "55fa6cb621547f2da4c755c143a2c99ac215e2febf693d263a81ac31a832edcc",
+              "before_sha256": "cf623731607dc9a73f5d6bedaff2888f6791f996b717054d5ad68262e88b2389",
+              "id": "e-formula-af9761e9-3e23-5e08-9f34-61012855e28e"
+            },
+            {
+              "after_sha256": "5342e7ed374f938c02baae80933aeb683608393ae288589fe78e33d70c44a402",
+              "before_sha256": "0bde74798553901190b32886eff974ab0f4600e99ca0f1df25dc607158867b50",
+              "id": "e-formula-500818b8-d682-5149-893e-c989336435b0"
+            },
+            {
+              "after_sha256": "689ba03eae359a64268ad74a2d5f6008458ed529c36c1db6f462558b3eacba99",
+              "before_sha256": "f2e22e7d6f8b6e8d34a41c587afa8086e6bd8866fd3b083de3ec6c8374c90c87",
+              "id": "e-formula-0e118109-65d4-56f5-8082-3ea1436f0d10"
+            }
+          ],
+          "formula_count": 17
+        },
+        "deterministic": true,
+        "files": {
+          "candidate.xml": "e0eb4cb4989a1d7ff2c6059f3b57b687fdca40bdf56664dafa4f342b4e772bbe",
+          "candidate.zip": "32e4866803d5b8120453b98b1e1044bfbbd27316b3049ecb227946e3947ec0d8",
+          "canonical.json": "966042993c3c444e36aa3f1f723b91e9ef8bb7c91ba9c3de3e4d612d42652a1a",
+          "esa-math-notes-observed-005.png": "fcc48ea0d53830cc99364377d754f5e5721d3da7b86611449ef8b3229f6898d3",
+          "esa-math-notes-observed-012.png": "cca692f37d888f5ce091d9c1ff56aa6e94b4d2d2c96abc163ed87e48a3334546",
+          "esa-math-notes-observed-015.png": "13dfa7263bc355760914541cf673049ebd0c03ae54fe3e5256c1b3dccac7778a",
+          "formula_catalog.json": "cc6ac811f68b821111f6219891846585f6a7a16196ff13aeaf8c823ef0fd24c9",
+          "grant.json": "2526af5ed618b0eab8bc4a1e68d379dadd6dab6620bd32216cdcdb9e77184da5",
+          "incoming/0000-0002-0839-9947.json": "8e88176120496aa1a9293abf3cd2940f607e382f5dee6e96113176e637a6f26b",
+          "incoming/0000-0002-3963-5973.json": "e81c0ed401ba8a09569816458ec3de4ab432893a0effb6483545e121a16a2324",
+          "incoming/0000-0003-1136-7986.json": "36109949ff7b73425b30f4bc29600beabaa5ddf1d1f613b97856143bd74fce6c",
+          "incoming/crossref.json": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3",
+          "incoming/doi-manifest.json": "12194530e76ce5e33a252463fcbe6c9084d62ffcdeed444bf24a235446c22414",
+          "incoming/editorial-manifest.json": "2524691537b152dc61add507c33ce50167cf87bdf2658aed73960b496c216aaa",
+          "incoming/journal.json": "ecb356e02ecfc04718dd3fc36127359ccc04083796a5b6037a08b0a36ff52caf",
+          "incoming/manifest.json": "aeb3420e5c1fdee076e6179d50adbf0c6977340e095d844b6720caf0b9170121",
+          "scope.json": "22a0c56fdb308597f6cfb46b66a2c9e6ea3baa4a17db54e3ef2aef6a6a6bcd93"
+        },
+        "fresh_authorities": {
+          "doi": {
+            "retrieved_at": "2026-10-08T13:17:46.203787+00:00",
+            "sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3"
+          },
+          "editorial": {
+            "0000-0002-0839-9947": {
+              "retrieved_at": "2026-10-08T13:17:46.749647+00:00",
+              "sha256": "8e88176120496aa1a9293abf3cd2940f607e382f5dee6e96113176e637a6f26b"
+            },
+            "0000-0002-3963-5973": {
+              "retrieved_at": "2026-10-08T13:17:47.054157+00:00",
+              "sha256": "e81c0ed401ba8a09569816458ec3de4ab432893a0effb6483545e121a16a2324"
+            },
+            "0000-0003-1136-7986": {
+              "retrieved_at": "2026-10-08T13:17:47.320422+00:00",
+              "sha256": "36109949ff7b73425b30f4bc29600beabaa5ddf1d1f613b97856143bd74fce6c"
+            },
+            "journal": {
+              "retrieved_at": "2026-10-08T13:17:47.421652+00:00",
+              "sha256": "ecb356e02ecfc04718dd3fc36127359ccc04083796a5b6037a08b0a36ff52caf"
+            }
+          }
+        },
+        "offline_valid": true,
+        "package_sha256": "32e4866803d5b8120453b98b1e1044bfbbd27316b3049ecb227946e3947ec0d8",
+        "previous_catalog_sha256": "dff17d1362ff70c7b701e3ec32764fbeedfe0f9444bfffa852adec7d6c0e14d6",
+        "review_counts": {
+          "reviewed_no_confirmed_transcription_defect": 14,
+          "source_correction": 3
+        },
+        "scope_sha256": "c10ffcd84086fdd55bfab47920f5dc04665137c264ebf7a245b9d704def59678",
+        "source_idml_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+        "source_pdf_sha256": "232fb2428bbdf344af192d24865a4e39848fd4e4fae20f2325aa9ecef6ff2496",
+        "unchanged_assets": {
+          "1809-4457-esa-30-e20240086-gf01.jpg": "df078062a48950f2b9ca63f4746a901ae1ebc7e0f6f4b48ab0bb9f12a6378681",
+          "1809-4457-esa-30-e20240086-gf02.jpg": "3eb3d32a852fe99a2e53f7bc1fe3d48e34c380fccc25b990c1c08a246708d416",
+          "1809-4457-esa-30-e20240086-gf03.jpg": "078f9c29910b59b170e2542a9726de0dc58fd40fd913ed8f57dd1e6cf4c32a2f",
+          "1809-4457-esa-30-e20240086-gf04.jpg": "ed7c61692bc1445bd335772dc6e47d80b1f9dbd4f064dde9380539e4b55f9482",
+          "1809-4457-esa-30-e20240086-gf05.jpg": "59014924b128e7057c3c478efdd8638726a8ec456ee1bf3d639b140631bb5b7d",
+          "1809-4457-esa-30-e20240086.pdf": "232fb2428bbdf344af192d24865a4e39848fd4e4fae20f2325aa9ecef6ff2496"
+        },
+        "unchanged_catalogs": {
+          "articlemeta_date_catalog": "fb1908069a2511eb7ac0b24aff3353de34080e6f4e767bb310812589155e3ee6",
+          "articlemeta_orcid_catalog": "c03ca7db99861d4076872d3a5c1957c9e1ecdbef71e43334fef69624416c117c",
+          "editorial_enrichment_catalog": "12301152ffee18ebd3ee87adb4fcc0fdc8533ef30468582fb013b1f848d0fa58",
+          "formal_metadata_catalog": "466920403384c76743d1b5d235457deba8da6ccd49d5aa5fa2abaf19e1c54796",
+          "institution_location_catalog": "fcdd41b732bafd82571fc5d9e7f71ff02c5df66fabd93371fe9ad335a7990a66",
+          "verified_funding_catalog": "f97f8dc65e68fda109fb303a50ecae5eb810c43360d66ecb5d31dbf593956843"
+        },
+        "xml_sha256": "e0eb4cb4989a1d7ff2c6059f3b57b687fdca40bdf56664dafa4f342b4e772bbe"
+      },
+      "esa-e20240135": {
+        "before_package_sha256": "793956107ec688fb529fc83340d1dc3b3da5fe517e13558db7aa781b4e03b1a3",
+        "before_xml_sha256": "9ff50bc3ae960c16fea624c71482e8aedd7c616f9e36e2fb1a82fdf5f79b0590",
+        "catalog_id": "51a5017617d68d3057ab0e2c892e957d6dc863363aa869f0b37fee39c5e8a5c2",
+        "catalog_sha256": "975630d2150376a781a4b917e9e50a3c98dda63636e5db89a6e19d882fdaace3",
+        "delta": {
+          "all_other_xml_unchanged": true,
+          "changes": [
+            {
+              "after_sha256": "062dc08418befb3bb76a95d053fa84882f7a7f0f985736b1df2162b3450c3e83",
+              "before_sha256": "c28a6c9446b83c2ccafb868ff70b0541c7ddd88b251ec6be7241e29e87f3b14c",
+              "id": "e-formula-b6bc901a-bfeb-5af4-a140-d895f9efbe0d"
+            },
+            {
+              "after_sha256": "740c9f74aaa045b353644332ff37aca4a12bf1609b2a0b96eefa36f9005b7297",
+              "before_sha256": "56f822ee197ed5d8c5f28e440e525ac4941f22c9b22d3f3b296105ed5d57a8b6",
+              "id": "e-native-inline-formula-2a645605-e9a8-52ce-b6f9-9f13a73d7fc2"
+            },
+            {
+              "after_sha256": "a41099a088c8457638682030eaad92ab56b07bb7a0e3005a6192339b7b73c61d",
+              "before_sha256": "c9aa67009cd3bec65463e1e8ecd3f01acc73361cb93e3a367106a5c436910405",
+              "id": "e-inline-formula-0f4a5d33-7d30-515d-a1ed-1d83f3536579"
+            },
+            {
+              "after_sha256": "1a70454981b4568b018828a9dcb924902f954baa59db21f96067fced3f9bb5c4",
+              "before_sha256": "cba646d67091be2550523c7ad0043257f946ff87208f3571544ce536ef216f5c",
+              "id": "e-inline-formula-e1d01b23-b3dd-561d-83d3-00eb41504dee"
+            },
+            {
+              "after_sha256": "746d82334c7f4a5f239000f3ff2b2308b15290b339cd32e0313ba1c4f3669e29",
+              "before_sha256": "ceb2f8a23e28f75779e90fb96e57ae24173fd24ce5466c3341b30defb0acac57",
+              "id": "e-inline-formula-ee19128e-0086-5160-917a-f917061861a3"
+            },
+            {
+              "after_sha256": "746d82334c7f4a5f239000f3ff2b2308b15290b339cd32e0313ba1c4f3669e29",
+              "before_sha256": "3c52ab68c68d7be3a7321b4995a35baf5cdd838eca56dffc43dfd5c8726b6e6d",
+              "id": "e-inline-formula-c7cb5341-4fb3-5f86-8bdf-8c0206c940e4"
+            },
+            {
+              "after_sha256": "746d82334c7f4a5f239000f3ff2b2308b15290b339cd32e0313ba1c4f3669e29",
+              "before_sha256": "4ac36ed0a48c242c730ba30e1ef1fabd736fc0dc988380dea695bfc8abb11c38",
+              "id": "e-inline-formula-48f207c0-2a2a-5399-9d83-e2917fdf535d"
+            },
+            {
+              "after_sha256": "746d82334c7f4a5f239000f3ff2b2308b15290b339cd32e0313ba1c4f3669e29",
+              "before_sha256": "ceb2f8a23e28f75779e90fb96e57ae24173fd24ce5466c3341b30defb0acac57",
+              "id": "e-inline-formula-3dd0d8b4-535f-53e1-8226-06350657d486"
+            },
+            {
+              "after_sha256": "746d82334c7f4a5f239000f3ff2b2308b15290b339cd32e0313ba1c4f3669e29",
+              "before_sha256": "d0c2a100a720c8d195091419dab5c60a12997ee96807e0e8fe8a1fd6f9da21d9",
+              "id": "e-inline-formula-793533ff-4a37-5be4-ae8e-9ec5ab160b92"
+            },
+            {
+              "after_sha256": "744ada3f2846e66af910e657ee50ee6ad9cc430e1ed910aecd9c5d158eabf1f2",
+              "before_sha256": "49c400798188ae175021916e0c0da157a7d5a646bdb316e1c2739fde4ab3a8be",
+              "id": "e-inline-formula-d4ddae1c-cbe5-5a73-a4ad-e2df0fd2239a"
+            },
+            {
+              "after_sha256": "e15defe4e773adbf94a3ba0bed25291e2313d0947b7ba379ce4a57c9c8fcc736",
+              "before_sha256": "7de92397b0e3031fb496e8f131058cdafe0614a80779ab9bfb66c809d579fc57",
+              "id": "e-inline-formula-a99c53e9-f01c-55b5-9f34-30cff30b5930"
+            }
+          ],
+          "formula_count": 43
+        },
+        "deterministic": true,
+        "files": {
+          "candidate.xml": "875dc7ff6d66d14dcc4fa125dad6a7db001e44444c75c5f31a4cbe49f5a1f0c7",
+          "candidate.zip": "1ccac72fffebcf7793e59035ee5a02b3f0177b319f2802f95a1041cea8e91546",
+          "canonical.json": "540b3a69eb4e30ca40a634e546a7e05a7815187b61ae86155ee645197011f3a3",
+          "esa-math-notes-inline-003.png": "00a9d94a5eb13184369bed8c1ba7843f2a1f29e7214d37903bcfebc25e4afd57",
+          "esa-math-notes-inline-007.png": "2c12ffefc6c1f9f00f69369e8f2fa75bb461b167d21ba937528241ae9dddd360",
+          "esa-math-notes-inline-009.png": "e3aa2faeeb2a357a1aa1a2c801ff34a66b1933bec75a7c4205a109580351a512",
+          "esa-math-notes-inline-010.png": "ca714fb024892cfc64061373bb0e7e0f712b3eb5ac0805548b1b25ef1ccc6870",
+          "esa-math-notes-inline-012.png": "e6be027ec4ed307c6645fb8a7724469b9bf22e942156648edf0e195f7bc37fc8",
+          "esa-math-notes-inline-013.png": "8746c23f8b5afc7effea48ad30fc5c552c111d8a6a81b91b5d4658bf26513c5d",
+          "esa-math-notes-inline-014.png": "bb5207361a8406dc29b469565ea94965582287b78613231decd25144ec32a5af",
+          "esa-math-notes-inline-015.png": "d6433cf8a4bc90a4b719613193504a8db4d3e3d5fb353457ebe579e1c336d074",
+          "esa-math-notes-inline-031.png": "246f4dcd898556e325a21a5ece268242632f29a4db72a81236d16805b42c72aa",
+          "esa-math-notes-inline-032.png": "48e7388f4f58d2e6c86982a14c68365921f86852044fee023156b03b20cb0576",
+          "esa-math-notes-observed-003.png": "e2d3dc60a79547662c5785cfab572a3879cd1788c989d2ed765d9e6325d18715",
+          "formula_catalog.json": "975630d2150376a781a4b917e9e50a3c98dda63636e5db89a6e19d882fdaace3",
+          "grant.json": "c28e85497106cc793ec33fa527209d7caea69b388159e31c6be051f845daa284",
+          "incoming/0000-0001-6095-4568.json": "3de4b93ada52dce38d1087399e2d2bcb141f92847c7fc4499b9e6e8ec3f0e3b0",
+          "incoming/0000-0002-0767-779X.json": "399b9526ea5cb9c1d94a79031936029f9762aabe94ce42324c0c2e1fa0cdb036",
+          "incoming/0000-0002-9395-9493.json": "6eaa97ca928562e1f820432ff882ab536f921176da2eb16fe7287f56a647a1a3",
+          "incoming/0000-0003-3715-2940.json": "c1912ad41e77c25a9865fedfccdf0ceca0b75f78fb99f111aa364107050871b8",
+          "incoming/crossref.json": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+          "incoming/doi-manifest.json": "00e359cb9574bf0e3bf088acfb7fb8d90e45173f4a0f0541c06f8d0fffa269ce",
+          "incoming/editorial-manifest.json": "060b4db2cba9e42f202572decbe3b6112312681b5ba8f01cbc185c00ae3b2cda",
+          "incoming/journal.json": "ecb356e02ecfc04718dd3fc36127359ccc04083796a5b6037a08b0a36ff52caf",
+          "incoming/manifest.json": "c9c6cd29f9fdc8fb41d0ca59ce243e02f68ff70497a5d7b3d380c8fc3479e9df",
+          "scope.json": "a3542b3b21ed3699c65eb959449cbdc4a2525f9e197fe093dab803cd9645e46a"
+        },
+        "fresh_authorities": {
+          "doi": {
+            "retrieved_at": "2026-10-08T13:17:56.487571+00:00",
+            "sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50"
+          },
+          "editorial": {
+            "0000-0001-6095-4568": {
+              "retrieved_at": "2026-10-08T13:17:56.746974+00:00",
+              "sha256": "3de4b93ada52dce38d1087399e2d2bcb141f92847c7fc4499b9e6e8ec3f0e3b0"
+            },
+            "0000-0002-0767-779X": {
+              "retrieved_at": "2026-10-08T13:17:57.006186+00:00",
+              "sha256": "399b9526ea5cb9c1d94a79031936029f9762aabe94ce42324c0c2e1fa0cdb036"
+            },
+            "0000-0002-9395-9493": {
+              "retrieved_at": "2026-10-08T13:17:57.281057+00:00",
+              "sha256": "6eaa97ca928562e1f820432ff882ab536f921176da2eb16fe7287f56a647a1a3"
+            },
+            "0000-0003-3715-2940": {
+              "retrieved_at": "2026-10-08T13:17:57.833291+00:00",
+              "sha256": "c1912ad41e77c25a9865fedfccdf0ceca0b75f78fb99f111aa364107050871b8"
+            },
+            "journal": {
+              "retrieved_at": "2026-10-08T13:17:47.421652+00:00",
+              "sha256": "ecb356e02ecfc04718dd3fc36127359ccc04083796a5b6037a08b0a36ff52caf"
+            }
+          }
+        },
+        "offline_valid": true,
+        "package_sha256": "1ccac72fffebcf7793e59035ee5a02b3f0177b319f2802f95a1041cea8e91546",
+        "previous_catalog_sha256": "ac4fb211cbcd4ebe550d2b9fa2d4b350fb4418a7158152656ca3b636a6ec0e62",
+        "review_counts": {
+          "glyph_or_style_review_pending": 5,
+          "reviewed_no_confirmed_transcription_defect": 27,
+          "source_correction": 11
+        },
+        "scope_sha256": "1f745d9d8ac4b66ae2faed95dc07326ce8d24f05d07f089fcd53150fa5db1652",
+        "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+        "source_pdf_sha256": "d997b54fdac501397b80e7a4526d6fff705509a99b52e90bd70310d8cdba6157",
+        "unchanged_assets": {
+          "1809-4457-esa-30-e20240135-gf01.jpg": "d5271693c4ea6aa0711a2a5bb9b61df7c9f2afd95f5b57668eb0aa2203fbf3a8",
+          "1809-4457-esa-30-e20240135-gf02.jpg": "dc7d711a910fa0bb66166af504982a5bf916d6371f69f7a1cb8633d23274425a",
+          "1809-4457-esa-30-e20240135-gf03.jpg": "a18b38923350cb857cbc402e74879c6abfcc5c1ea7cf6fdf299f7ac476f02a29",
+          "1809-4457-esa-30-e20240135-gf04.jpg": "0418804c16c8a026c67fecf3bf4483076974fea628945638c5e1b798809aeb0a",
+          "1809-4457-esa-30-e20240135-gf05.jpg": "b592cb2ebc7ab6e9b772b092c0c4e4614121ed426b6b72b39ca391e3a397e24a",
+          "1809-4457-esa-30-e20240135-gf06.jpg": "c276a2dda7563baaaa08b5ba43554e198bc976e0b018d146e8a8efe308c6918f",
+          "1809-4457-esa-30-e20240135-gf07.jpg": "53f597cca0364192ecbcb8df7390b986363b339b828865f5228ca5160f7528b8",
+          "1809-4457-esa-30-e20240135.pdf": "d997b54fdac501397b80e7a4526d6fff705509a99b52e90bd70310d8cdba6157"
+        },
+        "unchanged_catalogs": {
+          "crossref_metadata_catalog": "a2528bd179e5d50b0b255a80bfc0acf5dd13c3204f9189bb87c63a994d92122b",
+          "formal_metadata_catalog": "aac6763c58eb9cde824447199f5af3fecc97a55286811e3ba34953bc6247f0d7",
+          "institution_location_catalog": "814a7e121339706f3dc4f368c4db8d65526521f92d6ef26273c419a52caa3773"
+        },
+        "xml_sha256": "875dc7ff6d66d14dcc4fa125dad6a7db001e44444c75c5f31a4cbe49f5a1f0c7"
+      }
+    },
+    "code_sha256": {
+      "doi_authority_transport.py": "ab83fbe18e6e688335d6dc69296773285ed52b6854dc98a32326f7db34dcd6a3",
+      "doi_package_binding.py": "4a4e768050bff7669cac414ac49ec5433f7490a42c88c8e39cce385711acc318",
+      "package_validation.py": "728f9e4d565967a8e5d4c6084fe1c19c898d53193ed6536c18ef529865880aec",
+      "probe_scoped_socket.py": "4f96186ed1887478baf8fe51cd30a41e5b7d0e78e4856f7eb50009e32accaafc",
+      "provision_scoped_authorities.py": "280c4dbeba72db68e7822ba515d3700037f352911ab1f31e20708d2f52a8ea23",
+      "run_vh1_history_linux.py": "9e212b91d252148b775378027efd5595cb0141a3454811529335cd59b72cc45b",
+      "run_vh1_metadata_linux.py": "482158e396879ebc86454ab1d538406ac89d3bc4698e01dd2b07d691c1ee4d24",
+      "run_vh1_scoped_socket.py": "fd8742aa4fd861e7e09e6f705f7d5902fb25ef886c28761b419b19eeb906e540",
+      "scoped_authority_transport.py": "2d6a8cd07056464bb64b25739b1c9c423e3ec4ba94e674b992d6ad8baaced0f2",
+      "scoped_validator_broker.py": "e3cd6ccafe54523db1e70b76ecd7cc6f33da143487ae4206f1b7b7e80c5cb83f",
+      "scoped_validator_transport.py": "7a8c633911fb8abcaf24e9a4882a90a7f669b55fc1c1928a1ccad33cd75e1856",
+      "validation_engine.py": "ee32a0c44e9a7cb60f9d65d85281b0eb7e55dba79d846e687bdd95139f275b1d",
+      "validation_scope.py": "7df6a7f2255faec390c2f11228a61f70ef741fd28031170566e97a901883af63",
+      "validator_broker.py": "487df9390980f6505b33545df14bc687c4b91824159eadfce2263f8b7aa17f7f",
+      "validator_registry.py": "72331f5e3c95a459c81f17e617f209031e334a9a0b28edb508f6a65f27704723",
+      "validator_transport.py": "68e69b1332a1e68cc0812c488efc263f6b405fdcfd2eb20db6a8174f3b8311b4"
+    },
+    "created_at": "2026-10-08T13:17:39.178765+00:00",
+    "formal_xml_approved": false,
+    "gold_read": false,
+    "human_review_required": true,
+    "registry_sha256": "f938efed9ba4db86ad1e6c0e487576540d62d3619d22694531108fe98d6fa061",
+    "source_sha256": {
+      "ops/collect_vh1_affiliation_sources.py": "46c3607057bfa1adfe61a3117edeed1269cb97c253d749c824356495681f9641",
+      "ops/collect_vh1_articlemeta_dates.py": "26664fa36e68dabba3a1ddcff81c7a1b2f19d646ec206c77289cb8cacfab8c67",
+      "ops/collect_vh1_editorial_sources.py": "0307b6d30de3208f4d144bb87ca7b88156dcf1b9718d02009a13acb4d4257e57",
+      "ops/collect_vh1_funding_sources.py": "70f085d2c3116b10aa6654df8fea22af76fec1809ddbdba6473ab8ba54bd4008",
+      "ops/collect_vh1_orcid_sources.py": "3cf171f8d3b7acafca424d4476e9e7bec1d8c4ed688a20c9ac558c5cc1b096b6",
+      "ops/qualify_vh1_formula_links.py": "005bce3872689dabb1fb0a7c361f55fca0b8134d0398ade115a6fe246a96679b",
+      "ops/qualify_vh1_formula_revisions.py": "29f704f16b070ce412cb88811a2d792e44f8677359b9c9cf39b00022a0444e64",
+      "ops/qualify_vh1_metadata.py": "a2dec611576e90e4279c37addfc96e1cf3b255173ecbe881935a00c06b1fcafe",
+      "src/idml_foundation/ai/formula_catalog.py": "78870c9fab28bd3c294aca4b51b68eefd3e5ce4eb07a8887c429826d83416ec4",
+      "src/idml_foundation/pipeline/canonical_mapper.py": "5380a66f15e0eb475f7c1f5104ce93181009d2e1cdda7f3a6082cc288284f462",
+      "src/idml_foundation/pipeline/funding_parser.py": "47a40964e8da95d62b62c84484b9ed639e8eed6cd47dfdbe58be8c9f4ccc8fad",
+      "src/idml_foundation/pipeline/jats_builder.py": "9ad113044ef77a4fa342ac31a24129631db1f870bdfd64c4bfd723ef6db71430",
+      "src/idml_foundation/pipeline/metadata_normalization.py": "088deaecec3648103c86ea6984a6bbc6a46a7686dde0f196c01c7f1fc1d16ad8",
+      "src/idml_foundation/pipeline/object_reference_resolver.py": "69d38bcf2a199875663a83817b77c95c961287e3e4d06635036f7a72788d347c",
+      "src/idml_foundation/pipeline/service.py": "310212a49a816bcfad5a6cf9c08af2e888941be3f4d8f0644ac54d1a68199e36",
+      "src/idml_foundation/publication_dates.py": "0f20190f807ac867acf402ed0e5d11fc1fb0ef5491a9ea0e79cd9e7bd08b5eae",
+      "src/idml_foundation/release/articlemeta_dates.py": "3bae62f5bda276d585ce568502c61e7e50f5dc66e9ffa019d304bf846eb80532",
+      "src/idml_foundation/release/articlemeta_orcids.py": "2231ed6f7068226bc7b1088d2d3d051ac396e7eb7358c3aef8caf3fae1795568",
+      "src/idml_foundation/release/formal_metadata.py": "c179194a4704ec137b754a6e088cfcfe4dc2b659e796d44cd6ad975af2bbd1b7",
+      "src/idml_foundation/release/institution_locations.py": "272cad83762e905df22822de84fec177b7563aa1cfd130200d76c9a11d8fa0e3",
+      "src/idml_foundation/release/verified_funding.py": "79fb22afa11f69d5b77a1899782fd154a3459eac4d9d48e501813456c740c03b",
+      "src/idml_foundation/services/enrichment.py": "c291d5729519d7673a3eba2852c10022a1aedbbe4ce88f39a4197585aa8e1288",
+      "src/idml_foundation/services/source_authorization.py": "e1c37189771dc5715f0d951c3f29861d423ab782aa8ef84e20eae5f26695755b"
+    },
+    "version": "vh1-formula-revisions-local-1.0"
+  },
+  "transport": "scoped-broker-executor-not-socket",
+  "version": "vh1-history-linux-1.0"
+}

@@ -1,0 +1,311 @@
+{
+  "version": "vh18-web-operational-access-1.0",
+  "date": "2026-11-11",
+  "release": "vh18-web-access-20261111-v1",
+  "image_id": "sha256:73a3548a7d5be4a030b6014bdc8dc2ab94e26ce3f37b0d52eed408caf16518dc",
+  "implementation": {
+    "operator_delegation_opt_in": true,
+    "owner_permissions_bound_to_article_and_source": true,
+    "subsequent_portal_revoke_takes_precedence": true,
+    "reviewer_remains_readonly_for_jobs": true,
+    "administrator_assignment_deferred": true,
+    "undo_and_recover_web_jobs": true,
+    "incomplete_native_validation_preserves_head": true,
+    "validation_download_links": true
+  },
+  "permissions": {
+    "organizations": 2,
+    "owner_article_permits": 3,
+    "expires_on": "2026-12-10",
+    "existing_memberships_preserved": true,
+    "source_policy_readonly_mount": true,
+    "temporary_accounts_disabled": true
+  },
+  "qualification": {
+    "focused_windows_tests": 133,
+    "linux_tests": 885,
+    "full_windows_tests": 3246,
+    "full_windows_coverage_percent": 90.16,
+    "postgresql_native": true,
+    "ruff": true,
+    "mypy_source_modules": 152,
+    "browser": {
+      "operator_source_controls": true,
+      "undo_job": "a8fe9203-84b6-40e1-81d0-dd6358d6aa4e",
+      "undo": {
+        "state": "blocked",
+        "active_snapshot_changed": true,
+        "restore_id": "60d07209-0a94-4aa1-980e-b5937471570c",
+        "snapshot_id": "7725e08a-1e98-4a77-9319-1c6d8b1c6f89",
+        "provider_calls": 0,
+        "release_approved": false
+      },
+      "undo_hashes_verified": true,
+      "recover_job": "9239f5ed-1635-4120-9cb4-c08a96035949",
+      "recover": {
+        "state": "revalidated-working-draft",
+        "active_snapshot_changed": true,
+        "restore_id": "d5963d6b-6705-48a7-b9a8-eeb35bb47572",
+        "snapshot_id": "2649962c-c0d7-4ccf-a727-f46c7dfba95e",
+        "provider_calls": 0,
+        "release_approved": false
+      },
+      "recover_hashes_verified": true,
+      "reviewer_download": true,
+      "named_reviewer_download": true,
+      "reviewer_edit_denied": true,
+      "reviewer_source_readonly": true,
+      "temporary_accounts_disabled": true
+    },
+    "formal": {
+      "applied": {
+        "modern": [
+          {
+            "name": "packtools",
+            "status": "completed",
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            },
+            "report_sha256": "39ad95f5a918e00289936d56652f50b379cddbec6de1cab5a5ba128aab6080e7"
+          },
+          {
+            "name": "spsvalidator",
+            "status": "completed",
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            },
+            "report_sha256": "7f68f857a8e9b460e02b71646e1ad752431adf2f8e28534157cc6ad85f90f494"
+          }
+        ],
+        "xpm": {
+          "status": "completed",
+          "raw": {
+            "blocking_errors": 3,
+            "fatal_errors": 1,
+            "errors": 4,
+            "warnings": 2
+          },
+          "derived": {
+            "blocking_errors": 0,
+            "fatal_errors": 0,
+            "errors": 0,
+            "warnings": 2
+          }
+        },
+        "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+        "zip_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+        "offline": true,
+        "release_approved": false
+      },
+      "undo": {
+        "modern": [
+          {
+            "name": "packtools",
+            "status": "completed",
+            "counts": {
+              "blocking": 0,
+              "critical": 1,
+              "error": 0,
+              "warning": 6
+            },
+            "report_sha256": "ed2d7bb076a7a951c0b5f6cfd2c7bbbebebaa4ae4863c8f347705df8a705ab32"
+          },
+          {
+            "name": "spsvalidator",
+            "status": "completed",
+            "counts": {
+              "blocking": 0,
+              "critical": 1,
+              "error": 0,
+              "warning": 6
+            },
+            "report_sha256": "1d27652d67e1dc364173a390fe4916e8286f4aed92285f53988a281fd5ad10dc"
+          }
+        ],
+        "xpm": {
+          "status": "completed",
+          "raw": {
+            "blocking_errors": 3,
+            "fatal_errors": 1,
+            "errors": 5,
+            "warnings": 2
+          },
+          "derived": {
+            "blocking_errors": 3,
+            "fatal_errors": 1,
+            "errors": 3,
+            "warnings": 2
+          }
+        },
+        "xml_sha256": "f6f25a46b38f04059898b70fe53ab46c8bb5591ffc5ac14273f7467a257ac36f",
+        "zip_sha256": "f27fa733088ba236617fe8931e6023c170eaaada903a7b99e6a6df52787daea5",
+        "offline": true,
+        "release_approved": false
+      },
+      "recover": {
+        "modern": [
+          {
+            "name": "packtools",
+            "status": "completed",
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            },
+            "report_sha256": "772a7e9949918b1af1a469db77cc6c32e5b9e15e5887151183361e759a212169"
+          },
+          {
+            "name": "spsvalidator",
+            "status": "completed",
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            },
+            "report_sha256": "9031d2499aec8bace02d33f31cb9f438ecfe1e914219de8cffb2544fec851122"
+          }
+        ],
+        "xpm": {
+          "status": "completed",
+          "raw": {
+            "blocking_errors": 3,
+            "fatal_errors": 1,
+            "errors": 4,
+            "warnings": 2
+          },
+          "derived": {
+            "blocking_errors": 0,
+            "fatal_errors": 0,
+            "errors": 0,
+            "warnings": 2
+          }
+        },
+        "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+        "zip_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+        "offline": true,
+        "release_approved": false
+      }
+    },
+    "source_gates": {
+      "v09": true,
+      "v10": true,
+      "v11": true
+    },
+    "workflow_commands": 42
+  },
+  "paid_edit": {
+    "executed_on": "2026-11-10",
+    "runtime": "vh17-regression-20261109-v1",
+    "model": "openai/gpt-5.4-mini",
+    "calls": 4,
+    "cost_microusd": 13666,
+    "roles": [
+      "proposer",
+      "xml_critic",
+      "editorial_critic",
+      "adjudicator"
+    ],
+    "original_article_preserved": true,
+    "first_internal_undo_validators_unavailable": true,
+    "web_retest_all_native_completed": true
+  },
+  "deployment": {
+    "release": "vh18-web-access-20261111-v1",
+    "image": "idml-foundation:vh18-web-access-20261111-v1",
+    "image_id": "sha256:73a3548a7d5be4a030b6014bdc8dc2ab94e26ce3f37b0d52eed408caf16518dc",
+    "migration": "e2f314253647",
+    "schema_changed": false,
+    "runtime_files_verified": {
+      "idml-development-api-1": 353,
+      "idml-development-worker-1": 353
+    },
+    "backup": "/opt/idml-platform/backups/20261111T104252Z",
+    "restore_test": true,
+    "image_rollback_test": true,
+    "other_services_unchanged": true,
+    "existing_data_counts_unchanged": true,
+    "flags_disabled": true,
+    "smoke": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "homologation_ready": false,
+    "release_approved": false
+  },
+  "backup": {
+    "backup": "/opt/idml-platform/backups/20261111T105232Z",
+    "database_and_artifacts_restored": true,
+    "private_files": 179,
+    "private_trees": [
+      "web-sources",
+      "web-owner-decision",
+      "catalogs",
+      "edit-decisions",
+      "validation-authority",
+      "source-vault",
+      "catalog-evidence",
+      "owner-decision",
+      "modern-registry",
+      "xpm-registry"
+    ],
+    "private_sha256": "547317a5e5a80870eb3480192c808b3a627e10ca7b7fd0d3165b033cfb8bc9c9",
+    "private_content_owner_mode_restored": true,
+    "healthy_idml": 5,
+    "data_counts": {
+      "organizations": 10,
+      "users": 7,
+      "artifacts": 28,
+      "domain_snapshots": 12,
+      "agent_runs": 0,
+      "agent_proposals": 0
+    }
+  },
+  "limits": {
+    "qualified_case": "e20240086 controlled affiliation copy",
+    "original_indesign_links_verified": false,
+    "reviewer_supplied_published_figures_used": true,
+    "continuous_provider_enabled": false,
+    "per_revision_edit_authorization_required": true,
+    "universal_idml_support": false,
+    "official_scielo_acceptance": false,
+    "editorial_warnings_preserved": true
+  },
+  "release_approved": false,
+  "homologation_ready": false,
+  "evidence_sha256": {
+    "tmp/vh18-manifest.json": "1660b7ef1d61e15fb5b6cda3fcf94784c07bf8e6f7aae0c615b51c93cf5ae945",
+    "tmp/vh18-focus.xml": "2254b61061d0e24764667fa7c345cd57c180d3469270d3b2f5154b67a3a8df29",
+    "tmp/vh18-web-final.json": "ad4a6532cf2e77d2f3eb55895aa9d5a17af385218c750da7debbb3bcc2655eaf",
+    "tmp/vh18-verified.json": "aa7bef7778af65420c5bf645fcf8f8c58ccc41e2d508a9304b1870c8cbb2799b",
+    "tmp/vh18-deployment.json": "b6041889ed4da4ef37fcf08f1af45aa7eff199d8e7851ca7f2018c28aada9ece",
+    "tmp/vh18-catalog-backup.json": "4fa0fed8eb8437aa8ffeda71709ba847b10441803c10fd0aa389dde2782ca8e1",
+    "tmp/vh18-full.xml": "ab4bf2ea5163f2a379ac3ab9b0c21f0e33445ea80c663b4ed16c0f28df92fbdf",
+    "tmp/vh18-final-ci-final.json": "8da576e78f84ddbcbbe4812b1b516d574722cda3a8da180b814f1b95e9a928ac",
+    "benchmarks/qualification/reports/vh18-queue-observation-v1.json": "f2e1410d5e33cb83a945631428ecb0add8efb7199baa75b4c8a1c31da0d12e34",
+    "benchmarks/qualification/reports/vh18-volume-observation-v1.json": "9f4f93b6f17910117ac95760845f75be954f40dc412c4f3a9f357aa0045f133a"
+  },
+  "source_sha256": {
+    "deploy/docker-compose.validators.yml": "22a24db8559071bec650d16a996f22e8f3280060f7a9dd08e9c5ca7259a8f72c",
+    "ops/deploy_web_access.py": "462ab3e1b5bbde2a9a32ee42ff7feb59fb5aa4d51ecea74c6be0f30289dd6990",
+    "src/idml_foundation/routers/article_sources.py": "beb5d22fa9de799dc497e4f6260c5005d9fa56a3163738c52b635242d29e4254",
+    "src/idml_foundation/routers/edit_evaluation_ui.py": "cdddac51fe104de514e6ae57adfc4aef7922ff513e1c5748dacec79d664de0ab",
+    "src/idml_foundation/routers/edit_evaluations.py": "454bd2fe7efe2d780b12625e4c1d92475262495b0cb7a80ea90173f971ccdc6b",
+    "src/idml_foundation/routers/source_access_ui.py": "f4b7c1057c9f5d3ac517cccb767dc16ccd7dbba80505a4bfa9c66fd1a4b2afdc",
+    "src/idml_foundation/schemas.py": "a33727e756059fefb895d6f485789ea570dd46b256a5d871d3bec6466ac4dbdd",
+    "src/idml_foundation/services/article_source_access.py": "3f4e3d4c577ab835386f9f779aecd302e7b5f6e122296b56cffd5368736fff82",
+    "src/idml_foundation/services/web_restore.py": "b90e1ce2bca528f28f1aefba07184f42ae5eaccbf2e43cdea74a30afbc4c2815",
+    "src/idml_foundation/services/web_source_policy.py": "2639391ecc76c6a18da54b5f8e9fc619e80f40b3f533c2abfcc8a75e31bf1dbd",
+    "src/idml_foundation/worker.py": "1f3bbb030be9a4ce19430bb0ee0d8a3a64bed0088e36de929db74182d7ab4e46",
+    "tests/test_web_operational_access.py": "3b5c0d8d0bd001b8c367bb9bb0a3b8d6ff04457091f9a07d7693d01f595f1449"
+  },
+  "closing_date": "2026-11-14"
+}

@@ -1,0 +1,57 @@
+{
+  "version": "h1-country-codes-1.0",
+  "profile_id": "esa-aop-1.1.0",
+  "profile_sha256": "de569429e6af7491f2e9333664c1aed057344f285c342a1c79fbc317bbd8cb3c",
+  "cases": [
+    {
+      "case": "esa-e20240086",
+      "country_attributes_added": 3,
+      "xml_sha256": "7081d302358f8c022114a0ebf568372af43e115bda38a748cc7c2ebbc1494ad0",
+      "package_sha256": "6b209eb4209e20aff17b653545f5553af3b562c9549ee34b5a2ca49671d9c4f6",
+      "only_country_xml_delta": true,
+      "catalog_migration": {
+        "formula_catalog": {
+          "before": "4037bad60e42ce8cf53d998792cf47563cee5ae8341c0a35e6f0e590fdddb1cb",
+          "after": "311cc1cf7a3fe90eabc806cf1938ac7d154987f24b2f9ba7c4cfc13267bbb945"
+        },
+        "editorial_enrichment_catalog": {
+          "before": "a0e2fdee1cb37d446c6e84e16b51afe4315951dd4f0e0f63a2b5ecf1808a36f4",
+          "after": "188e0b007ba77faecbe1fc028747a9a7aec013a240eb27d6dfaa565c6ebbfe27"
+        },
+        "formal_metadata_catalog": {
+          "before": "b805907f033904d56a89e3e641d4cb7e295c1c47a23285727919941201bc4fae",
+          "after": "aacdfa83da82fb33c7cad7fa7ed80e2114aedeff3971d025a0cd876abe475176"
+        }
+      },
+      "offline_valid": true,
+      "deterministic_package": true
+    },
+    {
+      "case": "esa-e20240135",
+      "country_attributes_added": 0,
+      "xml_sha256": "1757cdb3a15b7fd44beb009e794ff812995eb59cd6e2c1eee2cabee15f9a9706",
+      "package_sha256": "e0be244b52eb524328a3f260c426617850bb057e3bbc9ecb82c43134929950c8",
+      "only_country_xml_delta": true,
+      "catalog_migration": {
+        "formula_catalog": {
+          "before": "6089705c07ec4144164b10ad3f6beefe7da8b269b80f77c70edb3e636a00e986",
+          "after": "07402095249ff7f020052492aa449e01a12fa122cbdabfc22e26e1d771bd9793"
+        },
+        "crossref_metadata_catalog": {
+          "before": "a5219854415a01310d5e3b29b9adb30eddd4a1696889683c40c7db76a0879879",
+          "after": "56647f469c5388cfec41ef2f1cd827df9609f74dae9d945b6ad63fd3398ea665"
+        },
+        "formal_metadata_catalog": {
+          "before": "a805eeb61ccc5cb44f1fb0f80d31bf4e683f89bb9fcac0aa126ae55b46262163",
+          "after": "47919bca3d9c9fec80055f267f89afc9795880ec20ce5a273ae7e76300d38c71"
+        }
+      },
+      "offline_valid": true,
+      "deterministic_package": true
+    }
+  ],
+  "active_profile_changed": false,
+  "gold_read": false,
+  "catalog_values_changed": false,
+  "ready_for_scielo": false
+}

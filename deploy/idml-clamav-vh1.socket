@@ -1,0 +1,15 @@
+[Unit]
+Description=Private on-demand scanner for IDML uploads
+
+[Socket]
+ListenStream=/run/idml-clamav-vh1/scan.sock
+SocketMode=0660
+ExecStartPost=/bin/chgrp 10001 /run/idml-clamav-vh1/scan.sock
+DirectoryMode=0755
+Accept=yes
+MaxConnections=4
+Backlog=4
+RemoveOnStop=yes
+
+[Install]
+WantedBy=sockets.target

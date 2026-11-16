@@ -1,0 +1,88 @@
+{
+  "version": "vh09-history-vps-qualification-1.0",
+  "checkpoint_date": "2026-10-20",
+  "recorded_date": "2026-10-21",
+  "scope": "private-revalidation-history-and-intermediate-deployment",
+  "source_archive": {
+    "release": "vh09-20261020-v1",
+    "files": 1113,
+    "sha256": "3e1248fc090b5e21a498db1f28e1ea48a07db095dc5e91b40104429087fa7555",
+    "manifest": "/opt/idml-platform/releases/vh09-20261020-v1/release-source-manifest.json",
+    "private_inputs_included": false
+  },
+  "tests": {
+    "full": {
+      "passed": 2631,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "duration_seconds": 1196.671
+    },
+    "focused": {
+      "passed": 73
+    },
+    "linux": {
+      "passed": 199,
+      "warnings": 1
+    },
+    "counts_overlap": true,
+    "new_tests": 16
+  },
+  "coverage": {
+    "scope": "idml_foundation",
+    "covered_lines": 12960,
+    "statements": 14401,
+    "percent": 89.99375043399763,
+    "branch_measurement": false
+  },
+  "postgresql": {
+    "migration": "b9d0e1f20314",
+    "isolated": true,
+    "concurrent_sessions": 2,
+    "persisted_requests": 1,
+    "immutable_triggers": 5,
+    "sql_guards": 2,
+    "outer_rollback": true
+  },
+  "deployment": {
+    "image": "idml-foundation:vh09-20261020-v1",
+    "image_id": "sha256:903a1027c94116a884f118dbbb0e31d1ea4af6b2a2a8d944b79c8ffc6831e32f",
+    "runtime_files_verified": 322,
+    "runtime_sources_not_writable_by_app": true,
+    "backup": "/opt/idml-platform/backups/20261020T183258Z",
+    "restore_test": true,
+    "image_rollback_test": true,
+    "other_services_unchanged": true,
+    "existing_data_counts_unchanged": true,
+    "flags_disabled": true
+  },
+  "evidence_sha256": {
+    "tmp/vh09-deployed-full-tests.xml": "2ef68d6e83c8fa20c4080fd9733f1e59228b5bc35381962953bcdde4094d9d24",
+    "tmp/vh09-deployed-full-coverage.json": "e43cfd2871dd2f655d1a99fb7838e67aa046241968b6c18f3d076cbbc4a7f107",
+    "tmp/vh09-vps-deployment.json": "3c8113fbc42873352e9690318cd7d83987909257aabf00fc8c9d3fd3bead97e3",
+    "tmp/vh09-vps-qualification.json": "8f6c920efb736f349387d4e9633ec42f4344071a9cd80627bf640e3475de867e",
+    "tmp/vh09-vps-postgres-tests.log": "af0abe2cd8b18708e400a14a7117a6d8652a5b9c82c20869ea254d1730c61830",
+    "tmp/vh09-vps-linux-tests.log": "3f269c9540a99408c4d5862b33ea5976fb83fa57e31d3364c466c28631c3316f",
+    "tmp/vh09-persistence-tests.xml": "ffbd13bc4daf50a38e59e24cca1de9cdd3a7f7688780e506e09b07388e99fcf8"
+  },
+  "checks": {
+    "ruff_global": true,
+    "mypy_source_files": 125,
+    "increment_formatted_files": 6,
+    "vh08_policy_proof": true,
+    "global_ci_approved": false
+  },
+  "limitations": [
+    "Historical source archive, not current working-tree hash approval",
+    "No automatic promotion or article restoration in this checkpoint",
+    "External validation tests use synthetic executors; no new real-article/XPM run",
+    "No active AI cycle, new HTTP endpoint or source grants for real articles",
+    "Working version is not final RC and does not imply SciELO approval"
+  ],
+  "full_vh09_complete": false,
+  "live_ai_called": false,
+  "vps_changed": true,
+  "active_snapshot_changed": false,
+  "homologation_ready": false,
+  "release_approved": false
+}

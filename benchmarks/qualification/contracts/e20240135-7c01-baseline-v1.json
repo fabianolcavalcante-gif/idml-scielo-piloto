@@ -1,0 +1,199 @@
+{
+  "contract_version": "1.0.0",
+  "stage": "7C-01",
+  "corpus_id": "esa-e20240135",
+  "purpose": "freeze the failing content-safe baseline before corrective implementation",
+  "expected": {
+    "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+    "candidate_xml_sha256": "0080b2986805788bfe8023a105ea81e57f0a9dfee39dc486f1559a4e3891e09b",
+    "deterministic": true,
+    "validation": {
+      "valid": true,
+      "issues": 1
+    },
+    "inventory": {
+      "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+      "counts": {
+        "stories": 60,
+        "frames": 68,
+        "spreads": 8,
+        "styles": 292,
+        "tables": 6,
+        "anchored_objects": 54,
+        "assets": 54,
+        "links": 89,
+        "notes": 0,
+        "evidence": 697,
+        "reading_order": 60,
+        "reading_order_issues": 15
+      },
+      "anchored_object_classes": {
+        "figure:inline": 5,
+        "figure:unknown": 2,
+        "formula:block": 21,
+        "formula:inline": 19,
+        "formula:unknown": 7
+      },
+      "asset_media_types": {
+        "application/pdf": 47,
+        "application/postscript": 5,
+        "image/png": 2
+      },
+      "asset_name_classes": {
+        "auxiliary-glyph": 18,
+        "figure": 7,
+        "formula": 22,
+        "layout-branding": 7
+      },
+      "link_relationships": {
+        "external-asset": 45,
+        "external-hyperlink": 35,
+        "external-layout-asset": 9
+      },
+      "review_reason_families": {
+        "correspondence_email_requires_single_marked_contributor": 1,
+        "external_assets_require_package_resolution": 1,
+        "formula_requires_mathml_transcription": 21,
+        "inline_formula_requires_mathml_transcription": 19,
+        "reading_order": 15,
+        "unmapped_correspondence_line": 1,
+        "unmapped_style": 8,
+        "unmatched_figure_asset": 7,
+        "unmatched_source_table": 1,
+        "unnumbered_graphic_caption": 2
+      },
+      "evidence_coverage": {
+        "anchored_objects_with_evidence": 54,
+        "assets_with_evidence": 54,
+        "styles_with_evidence": 292,
+        "links_with_evidence": 89,
+        "evidence_with_artifact_hash": 697
+      },
+      "unresolved_external_assets": 54,
+      "private_inventory_sha256": "9c24c356bf8e5ae992805cb2be87d7e69b673b209a1c9b8635d2942566aad086",
+      "content_emitted": false
+    },
+    "semantic": {
+      "passed": false,
+      "blocking_findings": 108,
+      "domains": {
+        "metadata": {
+          "expected": 5,
+          "actual": 5,
+          "altered": 1,
+          "omissions": 1,
+          "inventions": 1,
+          "duplications": 0,
+          "displacements": 0
+        },
+        "authors": {
+          "expected": 4,
+          "actual": 4,
+          "altered": 2,
+          "omissions": 0,
+          "inventions": 0,
+          "duplications": 0,
+          "displacements": 0
+        },
+        "affiliations": {
+          "expected": 4,
+          "actual": 4,
+          "altered": 0,
+          "omissions": 0,
+          "inventions": 0,
+          "duplications": 0,
+          "displacements": 0
+        },
+        "structure": {
+          "expected": 26,
+          "actual": 18,
+          "altered": 0,
+          "omissions": 14,
+          "inventions": 6,
+          "duplications": 0,
+          "displacements": 0
+        },
+        "body": {
+          "expected": 5814,
+          "actual": 5877,
+          "altered": 0,
+          "omissions": 0,
+          "inventions": 2,
+          "duplications": 61,
+          "displacements": 0
+        },
+        "references": {
+          "expected": 35,
+          "actual": 35,
+          "altered": 0,
+          "omissions": 0,
+          "inventions": 0,
+          "duplications": 0,
+          "displacements": 0
+        },
+        "figures": {
+          "expected": 7,
+          "actual": 7,
+          "altered": 0,
+          "omissions": 0,
+          "inventions": 0,
+          "duplications": 0,
+          "displacements": 6
+        },
+        "tables": {
+          "expected": 5,
+          "actual": 5,
+          "altered": 0,
+          "omissions": 0,
+          "inventions": 0,
+          "duplications": 0,
+          "displacements": 0
+        },
+        "formulas": {
+          "expected": 43,
+          "actual": 40,
+          "altered": 14,
+          "omissions": 3,
+          "inventions": 0,
+          "duplications": 0,
+          "displacements": 0
+        },
+        "formula_content": {
+          "expected": 43,
+          "actual": 0,
+          "altered": 0,
+          "omissions": 43,
+          "inventions": 0,
+          "duplications": 0,
+          "displacements": 0
+        },
+        "notes": {
+          "expected": 10,
+          "actual": 2,
+          "altered": 0,
+          "omissions": 8,
+          "inventions": 0,
+          "duplications": 0,
+          "displacements": 0
+        },
+        "media": {
+          "expected": 7,
+          "actual": 0,
+          "altered": 0,
+          "omissions": 7,
+          "inventions": 0,
+          "duplications": 0,
+          "displacements": 0
+        }
+      },
+      "cross_references": {
+        "decision": "needs_review",
+        "expected": 39,
+        "actual": 38,
+        "matched_targets": 38,
+        "expected_unique_targets": 35,
+        "actual_unique_targets": 34
+      }
+    }
+  }
+}

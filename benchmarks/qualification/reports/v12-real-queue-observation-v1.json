@@ -1,0 +1,854 @@
+{
+  "approved": true,
+  "cleanup_errors": [],
+  "container_states": {
+    "idml-v12-queue-app": {
+      "exit_code": 0,
+      "oom_killed": false,
+      "running_before_cleanup": false
+    },
+    "idml-v12-queue-pg": {
+      "exit_code": 0,
+      "oom_killed": false,
+      "running_before_cleanup": true
+    },
+    "idml-v12-queue-redis": {
+      "exit_code": 0,
+      "oom_killed": false,
+      "running_before_cleanup": false
+    }
+  },
+  "existing_service_count": 25,
+  "existing_services_unchanged": true,
+  "failures": [],
+  "images": {
+    "idml-foundation:phase7-7c08-v1": "sha256:4fcf47666812a6b45dbafe5baecc44dcdb6393ac7b4893568b44e1683cf2ed86",
+    "postgres:16-alpine": "sha256:16bc17c64a573ef34162af9298258d1aec548232985b33ed7b1eac33ba35c229",
+    "redis:7-alpine": "sha256:6ab0b6e7381779332f97b8ca76193e45b0756f38d4c0dcda72dbb3c32061ab99"
+  },
+  "limits": {
+    "application_memory_mib": 256,
+    "internal_network": true,
+    "published_ports": 0,
+    "total_memory_mib": 384
+  },
+  "probe": {
+    "approved": true,
+    "production_capacity_qualified": false,
+    "provider_calls": 0,
+    "release_ready": false,
+    "restricted_content_emitted": false,
+    "scenarios": [
+      {
+        "approved": true,
+        "delayed_job_respected": true,
+        "effects": 6,
+        "elapsed_seconds": 8.194,
+        "enqueue_ms": [
+          19.625,
+          14.505,
+          8.986,
+          7.314,
+          16.734,
+          6.869
+        ],
+        "events": 18,
+        "jobs": 6,
+        "mode": "normal",
+        "samples": [
+          {
+            "execution_ms": 304.888,
+            "queue_ms": 6778.162
+          },
+          {
+            "execution_ms": 503.985,
+            "queue_ms": 6380.124
+          },
+          {
+            "execution_ms": 193.585,
+            "queue_ms": 7501.053
+          },
+          {
+            "execution_ms": 283.3,
+            "queue_ms": 7015.313
+          },
+          {
+            "execution_ms": 297.617,
+            "queue_ms": 7291.112
+          },
+          {
+            "execution_ms": 304.741,
+            "queue_ms": 7774.043
+          }
+        ],
+        "xml_sha256": [
+          "1575ab02ebb0e49f8c85c86e046f44e1053c8209be94fbebf64db5e4ec2fca1c"
+        ]
+      },
+      {
+        "approved": true,
+        "delayed_job_respected": true,
+        "effects": 6,
+        "elapsed_seconds": 7.391,
+        "enqueue_ms": [
+          10.746,
+          83.997,
+          11.518,
+          12.538,
+          79.338,
+          8.184
+        ],
+        "events": 18,
+        "jobs": 6,
+        "mode": "duplicate",
+        "samples": [
+          {
+            "execution_ms": 293.683,
+            "queue_ms": 5705.642
+          },
+          {
+            "execution_ms": 202.156,
+            "queue_ms": 5997.711
+          },
+          {
+            "execution_ms": 300.375,
+            "queue_ms": 6188.488
+          },
+          {
+            "execution_ms": 286.076,
+            "queue_ms": 6408.902
+          },
+          {
+            "execution_ms": 294.663,
+            "queue_ms": 6684.822
+          },
+          {
+            "execution_ms": 202.648,
+            "queue_ms": 6897.384
+          }
+        ],
+        "xml_sha256": [
+          "1575ab02ebb0e49f8c85c86e046f44e1053c8209be94fbebf64db5e4ec2fca1c"
+        ]
+      },
+      {
+        "approved": true,
+        "delayed_job_respected": true,
+        "effects": 6,
+        "elapsed_seconds": 7.998,
+        "enqueue_ms": [
+          76.436,
+          80.278,
+          12.036,
+          83.652,
+          9.007,
+          10.185
+        ],
+        "events": 18,
+        "jobs": 6,
+        "mode": "lost",
+        "samples": [
+          {
+            "execution_ms": 483.041,
+            "queue_ms": 6397.169
+          },
+          {
+            "execution_ms": 205.555,
+            "queue_ms": 6789.042
+          },
+          {
+            "execution_ms": 385.253,
+            "queue_ms": 6914.067
+          },
+          {
+            "execution_ms": 193.085,
+            "queue_ms": 7212.089
+          },
+          {
+            "execution_ms": 298.944,
+            "queue_ms": 7393.5
+          },
+          {
+            "execution_ms": 210.252,
+            "queue_ms": 7690.256
+          }
+        ],
+        "xml_sha256": [
+          "1575ab02ebb0e49f8c85c86e046f44e1053c8209be94fbebf64db5e4ec2fca1c"
+        ]
+      },
+      {
+        "approved": true,
+        "delayed_job_respected": true,
+        "effects": 6,
+        "elapsed_seconds": 7.806,
+        "enqueue_ms": [
+          69.321,
+          18.342,
+          8.708,
+          8.968,
+          9.357,
+          85.31
+        ],
+        "events": 18,
+        "jobs": 6,
+        "mode": "outage",
+        "samples": [
+          {
+            "execution_ms": 482.365,
+            "queue_ms": 6036.211
+          },
+          {
+            "execution_ms": 190.772,
+            "queue_ms": 6582.25
+          },
+          {
+            "execution_ms": 293.477,
+            "queue_ms": 6707.579
+          },
+          {
+            "execution_ms": 205.291,
+            "queue_ms": 7085.542
+          },
+          {
+            "execution_ms": 290.67,
+            "queue_ms": 7205.459
+          },
+          {
+            "execution_ms": 210.991,
+            "queue_ms": 7410.307
+          }
+        ],
+        "xml_sha256": [
+          "1575ab02ebb0e49f8c85c86e046f44e1053c8209be94fbebf64db5e4ec2fca1c"
+        ]
+      }
+    ],
+    "v12_complete": false,
+    "version": "phase7-v12-real-queue-1.0"
+  },
+  "release_ready": false,
+  "restricted_content_emitted": false,
+  "samples": [
+    {
+      "cpu_idle": 650744254,
+      "cpu_iowait": 550854,
+      "cpu_total": 689784379,
+      "disk_free_bytes": 15976280064,
+      "disk_used_percent": 84.01997824842371,
+      "memory_available_bytes": 954933248,
+      "monotonic": 3472863.582,
+      "page_in_kib": 188367487,
+      "page_out_kib": 273878177,
+      "ready": true,
+      "ready_ms": 10.655,
+      "swap_in_pages": 5998300,
+      "swap_out_pages": 8472239,
+      "swap_used_bytes": 2098282496
+    },
+    {
+      "cpu_idle": 650744619,
+      "cpu_iowait": 550855,
+      "cpu_total": 689784800,
+      "disk_free_bytes": 15976280064,
+      "disk_used_percent": 84.01997824842371,
+      "memory_available_bytes": 949022720,
+      "monotonic": 3472865.706,
+      "page_in_kib": 188367983,
+      "page_out_kib": 273878189,
+      "ready": true,
+      "ready_ms": 13.777,
+      "swap_in_pages": 5998321,
+      "swap_out_pages": 8472239,
+      "swap_used_bytes": 2098282496
+    },
+    {
+      "cpu_idle": 650744995,
+      "cpu_iowait": 550855,
+      "cpu_total": 689785223,
+      "disk_free_bytes": 15976280064,
+      "disk_used_percent": 84.01997824842371,
+      "memory_available_bytes": 951869440,
+      "monotonic": 3472867.841,
+      "page_in_kib": 188368227,
+      "page_out_kib": 273878189,
+      "ready": true,
+      "ready_ms": 8.391,
+      "swap_in_pages": 5998336,
+      "swap_out_pages": 8472239,
+      "swap_used_bytes": 2098282496
+    },
+    {
+      "cpu_idle": 650745388,
+      "cpu_iowait": 550856,
+      "cpu_total": 689785667,
+      "disk_free_bytes": 15976280064,
+      "disk_used_percent": 84.01997824842371,
+      "memory_available_bytes": 940007424,
+      "monotonic": 3472870.072,
+      "page_in_kib": 188368287,
+      "page_out_kib": 273878397,
+      "ready": true,
+      "ready_ms": 6.176,
+      "swap_in_pages": 5998351,
+      "swap_out_pages": 8472239,
+      "swap_used_bytes": 2098282496
+    },
+    {
+      "cpu_idle": 650745780,
+      "cpu_iowait": 550858,
+      "cpu_total": 689786089,
+      "disk_free_bytes": 15976280064,
+      "disk_used_percent": 84.01997824842371,
+      "memory_available_bytes": 940089344,
+      "monotonic": 3472872.21,
+      "page_in_kib": 188368367,
+      "page_out_kib": 273880429,
+      "ready": true,
+      "ready_ms": 7.04,
+      "swap_in_pages": 5998351,
+      "swap_out_pages": 8472239,
+      "swap_used_bytes": 2098282496
+    },
+    {
+      "cpu_idle": 650746212,
+      "cpu_iowait": 550900,
+      "cpu_total": 689786671,
+      "disk_free_bytes": 15976169472,
+      "disk_used_percent": 84.02008886632466,
+      "memory_available_bytes": 935145472,
+      "monotonic": 3472875.149,
+      "page_in_kib": 188402563,
+      "page_out_kib": 273885005,
+      "ready": true,
+      "ready_ms": 12.962,
+      "swap_in_pages": 5999731,
+      "swap_out_pages": 8472724,
+      "swap_used_bytes": 2098806784
+    },
+    {
+      "cpu_idle": 650746418,
+      "cpu_iowait": 550911,
+      "cpu_total": 689786963,
+      "disk_free_bytes": 15976177664,
+      "disk_used_percent": 84.02008067240607,
+      "memory_available_bytes": 921165824,
+      "monotonic": 3472876.617,
+      "page_in_kib": 188412291,
+      "page_out_kib": 273886549,
+      "ready": true,
+      "ready_ms": 7.691,
+      "swap_in_pages": 5999740,
+      "swap_out_pages": 8473110,
+      "swap_used_bytes": 2100379648
+    },
+    {
+      "cpu_idle": 650746617,
+      "cpu_iowait": 550915,
+      "cpu_total": 689787242,
+      "disk_free_bytes": 15976177664,
+      "disk_used_percent": 84.02008067240607,
+      "memory_available_bytes": 897519616,
+      "monotonic": 3472878.075,
+      "page_in_kib": 188420443,
+      "page_out_kib": 273886549,
+      "ready": true,
+      "ready_ms": 61.052,
+      "swap_in_pages": 5999756,
+      "swap_out_pages": 8473110,
+      "swap_used_bytes": 2100379648
+    },
+    {
+      "cpu_idle": 650746829,
+      "cpu_iowait": 550917,
+      "cpu_total": 689787577,
+      "disk_free_bytes": 15976173568,
+      "disk_used_percent": 84.02008476936537,
+      "memory_available_bytes": 878477312,
+      "monotonic": 3472879.719,
+      "page_in_kib": 188420915,
+      "page_out_kib": 273886645,
+      "ready": true,
+      "ready_ms": 8.209,
+      "swap_in_pages": 5999779,
+      "swap_out_pages": 8473110,
+      "swap_used_bytes": 2100379648
+    },
+    {
+      "cpu_idle": 650746912,
+      "cpu_iowait": 550936,
+      "cpu_total": 689787760,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 856735744,
+      "monotonic": 3472880.651,
+      "page_in_kib": 188428119,
+      "page_out_kib": 273891437,
+      "ready": true,
+      "ready_ms": 5.723,
+      "swap_in_pages": 5999832,
+      "swap_out_pages": 8473110,
+      "swap_used_bytes": 2100117504
+    },
+    {
+      "cpu_idle": 650747200,
+      "cpu_iowait": 550973,
+      "cpu_total": 689788190,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 845774848,
+      "monotonic": 3472882.82,
+      "page_in_kib": 188439295,
+      "page_out_kib": 273891493,
+      "ready": true,
+      "ready_ms": 5.519,
+      "swap_in_pages": 5999839,
+      "swap_out_pages": 8473110,
+      "swap_used_bytes": 2099855360
+    },
+    {
+      "cpu_idle": 650747324,
+      "cpu_iowait": 551172,
+      "cpu_total": 689788634,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 827473920,
+      "monotonic": 3472885.043,
+      "page_in_kib": 188471699,
+      "page_out_kib": 273893981,
+      "ready": true,
+      "ready_ms": 8.196,
+      "swap_in_pages": 5999846,
+      "swap_out_pages": 8473732,
+      "swap_used_bytes": 2101690368
+    },
+    {
+      "cpu_idle": 650747573,
+      "cpu_iowait": 551234,
+      "cpu_total": 689789111,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 810237952,
+      "monotonic": 3472887.443,
+      "page_in_kib": 188488915,
+      "page_out_kib": 273906189,
+      "ready": true,
+      "ready_ms": 6.244,
+      "swap_in_pages": 5999886,
+      "swap_out_pages": 8476626,
+      "swap_used_bytes": 2111287296
+    },
+    {
+      "cpu_idle": 650747898,
+      "cpu_iowait": 551239,
+      "cpu_total": 689789554,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 801890304,
+      "monotonic": 3472889.672,
+      "page_in_kib": 188493991,
+      "page_out_kib": 273909581,
+      "ready": true,
+      "ready_ms": 6.149,
+      "swap_in_pages": 5999902,
+      "swap_out_pages": 8477474,
+      "swap_used_bytes": 2112475136
+    },
+    {
+      "cpu_idle": 650748231,
+      "cpu_iowait": 551248,
+      "cpu_total": 689789987,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 798081024,
+      "monotonic": 3472891.861,
+      "page_in_kib": 188498463,
+      "page_out_kib": 273909633,
+      "ready": true,
+      "ready_ms": 11.143,
+      "swap_in_pages": 5999902,
+      "swap_out_pages": 8477474,
+      "swap_used_bytes": 2112475136
+    },
+    {
+      "cpu_idle": 650748541,
+      "cpu_iowait": 551257,
+      "cpu_total": 689790423,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 794923008,
+      "monotonic": 3472894.052,
+      "page_in_kib": 188501695,
+      "page_out_kib": 273919597,
+      "ready": true,
+      "ready_ms": 7.295,
+      "swap_in_pages": 5999902,
+      "swap_out_pages": 8479965,
+      "swap_used_bytes": 2116358144
+    },
+    {
+      "cpu_idle": 650748843,
+      "cpu_iowait": 551266,
+      "cpu_total": 689790861,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 768282624,
+      "monotonic": 3472896.265,
+      "page_in_kib": 188509843,
+      "page_out_kib": 273928621,
+      "ready": true,
+      "ready_ms": 6.747,
+      "swap_in_pages": 5999902,
+      "swap_out_pages": 8482184,
+      "swap_used_bytes": 2118283264
+    },
+    {
+      "cpu_idle": 650749162,
+      "cpu_iowait": 551270,
+      "cpu_total": 689791289,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 757878784,
+      "monotonic": 3472898.438,
+      "page_in_kib": 188510403,
+      "page_out_kib": 273928621,
+      "ready": true,
+      "ready_ms": 11.519,
+      "swap_in_pages": 5999909,
+      "swap_out_pages": 8482184,
+      "swap_used_bytes": 2118283264
+    },
+    {
+      "cpu_idle": 650749486,
+      "cpu_iowait": 551272,
+      "cpu_total": 689791726,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 728678400,
+      "monotonic": 3472900.642,
+      "page_in_kib": 188511731,
+      "page_out_kib": 273929337,
+      "ready": true,
+      "ready_ms": 12.694,
+      "swap_in_pages": 5999918,
+      "swap_out_pages": 8482346,
+      "swap_used_bytes": 2118905856
+    },
+    {
+      "cpu_idle": 650749824,
+      "cpu_iowait": 551277,
+      "cpu_total": 689792162,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 739512320,
+      "monotonic": 3472902.835,
+      "page_in_kib": 188513675,
+      "page_out_kib": 273930425,
+      "ready": true,
+      "ready_ms": 7.972,
+      "swap_in_pages": 5999918,
+      "swap_out_pages": 8482618,
+      "swap_used_bytes": 2120097792
+    },
+    {
+      "cpu_idle": 650750168,
+      "cpu_iowait": 551278,
+      "cpu_total": 689792594,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 707002368,
+      "monotonic": 3472905.0,
+      "page_in_kib": 188516311,
+      "page_out_kib": 273930461,
+      "ready": true,
+      "ready_ms": 7.096,
+      "swap_in_pages": 5999918,
+      "swap_out_pages": 8482618,
+      "swap_used_bytes": 2120097792
+    },
+    {
+      "cpu_idle": 650750521,
+      "cpu_iowait": 551282,
+      "cpu_total": 689793023,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 721219584,
+      "monotonic": 3472907.162,
+      "page_in_kib": 188517547,
+      "page_out_kib": 273931881,
+      "ready": true,
+      "ready_ms": 5.76,
+      "swap_in_pages": 5999921,
+      "swap_out_pages": 8482973,
+      "swap_used_bytes": 2120994816
+    },
+    {
+      "cpu_idle": 650750833,
+      "cpu_iowait": 551283,
+      "cpu_total": 689793447,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 741183488,
+      "monotonic": 3472909.304,
+      "page_in_kib": 188518615,
+      "page_out_kib": 273931881,
+      "ready": true,
+      "ready_ms": 8.238,
+      "swap_in_pages": 5999927,
+      "swap_out_pages": 8482973,
+      "swap_used_bytes": 2120994816
+    },
+    {
+      "cpu_idle": 650751169,
+      "cpu_iowait": 551285,
+      "cpu_total": 689793899,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 739549184,
+      "monotonic": 3472911.57,
+      "page_in_kib": 188518615,
+      "page_out_kib": 273931917,
+      "ready": true,
+      "ready_ms": 5.748,
+      "swap_in_pages": 5999927,
+      "swap_out_pages": 8482973,
+      "swap_used_bytes": 2120994816
+    },
+    {
+      "cpu_idle": 650751499,
+      "cpu_iowait": 551285,
+      "cpu_total": 689794337,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 704671744,
+      "monotonic": 3472913.773,
+      "page_in_kib": 188518615,
+      "page_out_kib": 273931917,
+      "ready": true,
+      "ready_ms": 6.953,
+      "swap_in_pages": 5999927,
+      "swap_out_pages": 8482973,
+      "swap_used_bytes": 2120994816
+    },
+    {
+      "cpu_idle": 650751837,
+      "cpu_iowait": 551285,
+      "cpu_total": 689794765,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 712347648,
+      "monotonic": 3472915.938,
+      "page_in_kib": 188518615,
+      "page_out_kib": 273931917,
+      "ready": true,
+      "ready_ms": 5.474,
+      "swap_in_pages": 5999927,
+      "swap_out_pages": 8482973,
+      "swap_used_bytes": 2120994816
+    },
+    {
+      "cpu_idle": 650752193,
+      "cpu_iowait": 551285,
+      "cpu_total": 689795191,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 752263168,
+      "monotonic": 3472918.093,
+      "page_in_kib": 188518627,
+      "page_out_kib": 273931949,
+      "ready": true,
+      "ready_ms": 7.816,
+      "swap_in_pages": 5999927,
+      "swap_out_pages": 8482973,
+      "swap_used_bytes": 2120994816
+    },
+    {
+      "cpu_idle": 650752521,
+      "cpu_iowait": 551287,
+      "cpu_total": 689795629,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 754327552,
+      "monotonic": 3472920.299,
+      "page_in_kib": 188519311,
+      "page_out_kib": 273931949,
+      "ready": true,
+      "ready_ms": 8.055,
+      "swap_in_pages": 5999927,
+      "swap_out_pages": 8482973,
+      "swap_used_bytes": 2120994816
+    },
+    {
+      "cpu_idle": 650752857,
+      "cpu_iowait": 551287,
+      "cpu_total": 689796076,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 715890688,
+      "monotonic": 3472922.565,
+      "page_in_kib": 188519315,
+      "page_out_kib": 273931949,
+      "ready": true,
+      "ready_ms": 9.052,
+      "swap_in_pages": 5999928,
+      "swap_out_pages": 8482973,
+      "swap_used_bytes": 2120994816
+    },
+    {
+      "cpu_idle": 650753172,
+      "cpu_iowait": 551287,
+      "cpu_total": 689796512,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 694816768,
+      "monotonic": 3472924.763,
+      "page_in_kib": 188519347,
+      "page_out_kib": 273932025,
+      "ready": true,
+      "ready_ms": 7.13,
+      "swap_in_pages": 5999931,
+      "swap_out_pages": 8482973,
+      "swap_used_bytes": 2120994816
+    },
+    {
+      "cpu_idle": 650753491,
+      "cpu_iowait": 551287,
+      "cpu_total": 689796950,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 723017728,
+      "monotonic": 3472926.982,
+      "page_in_kib": 188519759,
+      "page_out_kib": 273933105,
+      "ready": true,
+      "ready_ms": 7.181,
+      "swap_in_pages": 5999989,
+      "swap_out_pages": 8483233,
+      "swap_used_bytes": 2121670656
+    },
+    {
+      "cpu_idle": 650753855,
+      "cpu_iowait": 551287,
+      "cpu_total": 689797376,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 698474496,
+      "monotonic": 3472929.143,
+      "page_in_kib": 188519759,
+      "page_out_kib": 273933105,
+      "ready": true,
+      "ready_ms": 13.714,
+      "swap_in_pages": 5999989,
+      "swap_out_pages": 8483233,
+      "swap_used_bytes": 2121670656
+    },
+    {
+      "cpu_idle": 650754192,
+      "cpu_iowait": 551290,
+      "cpu_total": 689797827,
+      "disk_free_bytes": 15975972864,
+      "disk_used_percent": 84.02028552037078,
+      "memory_available_bytes": 738484224,
+      "monotonic": 3472931.41,
+      "page_in_kib": 188521327,
+      "page_out_kib": 273934145,
+      "ready": true,
+      "ready_ms": 7.134,
+      "swap_in_pages": 6000006,
+      "swap_out_pages": 8483233,
+      "swap_used_bytes": 2121670656
+    },
+    {
+      "cpu_idle": 650754502,
+      "cpu_iowait": 551308,
+      "cpu_total": 689798262,
+      "disk_free_bytes": 15975972864,
+      "disk_used_percent": 84.02028552037078,
+      "memory_available_bytes": 744243200,
+      "monotonic": 3472933.616,
+      "page_in_kib": 188536595,
+      "page_out_kib": 273934145,
+      "ready": true,
+      "ready_ms": 7.402,
+      "swap_in_pages": 6000008,
+      "swap_out_pages": 8483233,
+      "swap_used_bytes": 2121670656
+    },
+    {
+      "cpu_idle": 650754813,
+      "cpu_iowait": 551311,
+      "cpu_total": 689798713,
+      "disk_free_bytes": 15975972864,
+      "disk_used_percent": 84.02028552037078,
+      "memory_available_bytes": 719282176,
+      "monotonic": 3472935.894,
+      "page_in_kib": 188537359,
+      "page_out_kib": 273934217,
+      "ready": true,
+      "ready_ms": 7.915,
+      "swap_in_pages": 6000103,
+      "swap_out_pages": 8483233,
+      "swap_used_bytes": 2121408512
+    },
+    {
+      "cpu_idle": 650755168,
+      "cpu_iowait": 551311,
+      "cpu_total": 689799145,
+      "disk_free_bytes": 15975972864,
+      "disk_used_percent": 84.02028552037078,
+      "memory_available_bytes": 698138624,
+      "monotonic": 3472938.073,
+      "page_in_kib": 188537367,
+      "page_out_kib": 273934217,
+      "ready": true,
+      "ready_ms": 6.931,
+      "swap_in_pages": 6000105,
+      "swap_out_pages": 8483233,
+      "swap_used_bytes": 2121408512
+    },
+    {
+      "cpu_idle": 650755466,
+      "cpu_iowait": 551312,
+      "cpu_total": 689799577,
+      "disk_free_bytes": 15975968768,
+      "disk_used_percent": 84.02028961733008,
+      "memory_available_bytes": 774307840,
+      "monotonic": 3472940.262,
+      "page_in_kib": 188537595,
+      "page_out_kib": 273934373,
+      "ready": true,
+      "ready_ms": 5.937,
+      "swap_in_pages": 6000105,
+      "swap_out_pages": 8483233,
+      "swap_used_bytes": 2121408512
+    },
+    {
+      "cpu_idle": 650755801,
+      "cpu_iowait": 551314,
+      "cpu_total": 689800010,
+      "disk_free_bytes": 15975964672,
+      "disk_used_percent": 84.02029371428937,
+      "memory_available_bytes": 915222528,
+      "monotonic": 3472942.45,
+      "page_in_kib": 188537863,
+      "page_out_kib": 273935481,
+      "ready": true,
+      "ready_ms": 7.022,
+      "swap_in_pages": 6000106,
+      "swap_out_pages": 8483233,
+      "swap_used_bytes": 2121408512
+    }
+  ],
+  "source_sha256": {
+    "ops/benchmark_phase7_v12.py": "b8cd76a57b9bacc52d79fa33a413aa15a47526933f77be7e077fad92d7ff32ac",
+    "ops/lab_phase7_v12_queue.py": "8c69e1c86e6264d8b4f395fe3b846a4d8391a336c42f185856100d50f609a766",
+    "ops/observe_phase7_v12.py": "540b25a769d6daf8ab98c50391b9401afe09fc5052c321140950541ad3697a85",
+    "ops/observe_phase7_v12_queue.py": "8356d54c349ad6be6c9cc378e02a558d6badfb0856945f7ad914fb896ae5c65a",
+    "src/idml_foundation/routers/jobs.py": "4f9496b313e8758b41783910699170a7b9c88214d1460bc4fa5235b70837a44c",
+    "src/idml_foundation/worker.py": "8d9643187643d25913b1da5b190e7c53bafbc423bd2d92ba682112b4c0ee0cf7",
+    "tests/__init__.py": "4e24ba0b5233c005e635af2edfa636c732f50934d99b63f0cc0b66660a2a7a91",
+    "tests/phase3_helpers.py": "ff9af5a2728e397a0d7e21465dc8e9f2d983045cad50d4e001562fb1f88abcf6"
+  },
+  "v12_complete": false,
+  "version": "phase7-v12-real-queue-observation-1.0"
+}

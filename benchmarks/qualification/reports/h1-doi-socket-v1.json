@@ -1,0 +1,76 @@
+{
+  "version": "h1-doi-socket-1.0",
+  "executed_at": "2026-09-30",
+  "image": "sha256:113366e7788c111faada2ef2cb6bc218c1c1b5061dca447fd462ce0216bc23ae",
+  "cases": [
+    {
+      "mode": "match",
+      "cleaned": true,
+      "adapter_completed": true,
+      "doi_mismatch_detected": false,
+      "summary": {
+        "blocking": 3,
+        "error": 3,
+        "ok": 233,
+        "warning": 6
+      },
+      "report_sha256": "425a38552e9bbfbb3b1fd4a42acdc15d4bb75ba268b3b49c10e72f192e2b1564"
+    },
+    {
+      "mode": "mismatch",
+      "cleaned": true,
+      "adapter_completed": true,
+      "doi_mismatch_detected": true,
+      "summary": {
+        "blocking": 3,
+        "error": 4,
+        "ok": 232,
+        "warning": 6
+      },
+      "report_sha256": "3d06cbb8bb09aff6522f6108f5f8db206455a03f4479218620aa054169d38fe6"
+    },
+    {
+      "mode": "expired",
+      "cleaned": true,
+      "rejected": true
+    },
+    {
+      "mode": "disconnect",
+      "cleaned": true,
+      "client_disconnected": true
+    }
+  ],
+  "existing_services_unchanged": true,
+  "synthetic_only": true,
+  "peer_uid": 10001,
+  "formal_xml_approved": false,
+  "source_sha256": {
+    "ops/qualify_doi_socket_linux.py": "8cb6d5e260dedf5bec43ea96a4a88b78f8a6d6a8c64340b361d73ce029cec6c4",
+    "ops/doi_model_compat.py": "4292190bf916483f339efca80b3038e70574b78ef3b940a2a15478d831b813c4",
+    "ops/probe_doi_full_defaults.py": "f3fef0156ac07a505a3943e0cc662f06d06b11ff0d7e249aa7bdd02bb1cf1d24",
+    "ops/packtools_doi_validate.py": "3f9fd6712f371b6ada353753e18df9fd0bff36b1db85a412fa996ad46a8689e7",
+    "ops/validator_broker.py": "487df9390980f6505b33545df14bc687c4b91824159eadfce2263f8b7aa17f7f",
+    "tests/test_doi_model_compat.py": "21d67c3ef4b27dac12ee96bd0eb8ffbca31c84680f40208092c2607eb84130bd",
+    "deploy/Dockerfile.packtools-doi-authority": "a378c9d59280f0e19f17aa26124525d189c4057b3eeb53d105a2e8b19c49cefa"
+  },
+  "native_bug_proof": {
+    "one_shot_authors_reproduced": true,
+    "compatibility_passed": true,
+    "negative_metadata_rejected": true
+  },
+  "tests": {
+    "passed": 751,
+    "warnings": 3,
+    "coverage_percent": 88.02,
+    "coverage_scope": "src/idml_foundation only",
+    "focused_passed": 50,
+    "ruff_passed": true,
+    "v10_passed": true
+  },
+  "health_ready": {
+    "database": "ok",
+    "redis": "ok"
+  },
+  "active_deployment_changed": false,
+  "sps_authority_integration_completed": false
+}

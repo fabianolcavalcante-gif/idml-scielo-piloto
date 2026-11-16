@@ -50,6 +50,7 @@ def issue_session(
     *,
     ip: str | None = None,
     user_agent: str | None = None,
+    mfa_verified: bool = False,
 ) -> IssuedSession:
     raw = secrets.token_urlsafe(48)
     pepper = settings.session_pepper.get_secret_value()
@@ -59,6 +60,8 @@ def issue_session(
         token_hash=hash_session_token(raw, pepper),
         token_version=user.token_version,
         expires_at=expires,
+        authenticated_at=utcnow(),
+        mfa_verified_at=utcnow() if mfa_verified else None,
         ip_hash=hashlib.sha256(ip.encode()).hexdigest() if ip else None,
         user_agent_hash=hashlib.sha256(user_agent.encode()).hexdigest() if user_agent else None,
     )
@@ -67,7 +70,9 @@ def issue_session(
     return IssuedSession(raw_token=raw, expires_at=expires)
 
 
-def authenticate_session(db: Session, raw_token: str, settings: Settings) -> User | None:
+def authenticate_session_record(
+    db: Session, raw_token: str, settings: Settings
+) -> tuple[User, SessionToken] | None:
     digest = hash_session_token(raw_token, settings.session_pepper.get_secret_value())
     statement = (
         select(User, SessionToken)
@@ -86,7 +91,12 @@ def authenticate_session(db: Session, raw_token: str, settings: Settings) -> Use
     ):
         return None
     session.last_seen_at = utcnow()
-    return cast(User, user)
+    return cast(User, user), cast(SessionToken, session)
+
+
+def authenticate_session(db: Session, raw_token: str, settings: Settings) -> User | None:
+    authenticated = authenticate_session_record(db, raw_token, settings)
+    return authenticated[0] if authenticated else None
 
 
 def revoke_session(db: Session, raw_token: str, settings: Settings) -> bool:
@@ -101,3 +111,7 @@ def revoke_session(db: Session, raw_token: str, settings: Settings) -> bool:
 def new_one_time_token() -> str:
     """Invitation and recovery tokens use the same opaque-token primitive."""
     return secrets.token_urlsafe(48)
+
+
+def hash_one_time_token(raw_token: str, pepper: str) -> str:
+    return hmac.new(pepper.encode(), raw_token.encode(), hashlib.sha256).hexdigest()

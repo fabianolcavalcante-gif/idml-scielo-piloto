@@ -1,0 +1,126 @@
+{
+  "manifest_version": "1.0.0",
+  "corpus_id": "esa-e20240086",
+  "journal": "Engenharia Sanitária e Ambiental",
+  "template": "ESA AOP InDesign DOM 20.3",
+  "split": "development",
+  "source_root_hint": "SCIELO/EXEMPLO",
+  "policy": {
+    "purpose": "desenvolvimento e avaliação interna do primeiro template",
+    "license_status": "uso interno autorizado; redistribuição não confirmada",
+    "confidentiality": "restricted",
+    "contains_personal_data": true,
+    "redistribution_allowed": false,
+    "anonymization": "conteúdo não é versionado; somente hashes, nomes técnicos e contagens",
+    "retention": {
+      "retain_until": null,
+      "review_interval_days": 365,
+      "deletion_requires_approval": true
+    }
+  },
+  "artifacts": [
+    {
+      "logical_path": "ESA_2024086_AOP.idml",
+      "role": "source_idml",
+      "media_type": "application/vnd.adobe.indesign-idml-package",
+      "sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+      "size_bytes": 371156,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-0825/1809-4457-esa-30-e20240086.xml",
+      "role": "approved_xml_reference",
+      "media_type": "application/xml",
+      "sha256": "739b4c3247a06d6d5253ad2805fb830d09692cb306cbb5c785ad99707e539de9",
+      "size_bytes": 127844,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-0825/1809-4457-esa-30-e20240086.pdf",
+      "role": "approved_pdf_reference",
+      "media_type": "application/pdf",
+      "sha256": "232fb2428bbdf344af192d24865a4e39848fd4e4fae20f2325aa9ecef6ff2496",
+      "size_bytes": 768627,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-0825.zip",
+      "role": "approved_delivery_package",
+      "media_type": "application/zip",
+      "sha256": "e7034e8c3503f4ed8a8506105202a2f849626d981792bda4d5f05d40924e1ff8",
+      "size_bytes": 1146665,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "xpm.html",
+      "role": "xpm_report",
+      "media_type": "text/html",
+      "sha256": "0d1b5ea75aeca68d089389e62a696cf3b99d5b55f12db7d66dc9408468542a43",
+      "size_bytes": 494283,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "falsos positivos.xlsx",
+      "role": "validator_exception_evidence",
+      "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sha256": "9052126fb51f5292991a0689ed0572733b2692c001dda4f26d7f53c98e68b1ed",
+      "size_bytes": 10321,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-e20240086-gf01.jpg",
+      "role": "figure_asset",
+      "media_type": "image/jpeg",
+      "sha256": "df078062a48950f2b9ca63f4746a901ae1ebc7e0f6f4b48ab0bb9f12a6378681",
+      "size_bytes": 105586,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-e20240086-gf02.jpg",
+      "role": "figure_asset",
+      "media_type": "image/jpeg",
+      "sha256": "3eb3d32a852fe99a2e53f7bc1fe3d48e34c380fccc25b990c1c08a246708d416",
+      "size_bytes": 113705,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-e20240086-gf03.jpg",
+      "role": "figure_asset",
+      "media_type": "image/jpeg",
+      "sha256": "078f9c29910b59b170e2542a9726de0dc58fd40fd913ed8f57dd1e6cf4c32a2f",
+      "size_bytes": 88206,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-e20240086-gf04.jpg",
+      "role": "figure_asset",
+      "media_type": "image/jpeg",
+      "sha256": "ed7c61692bc1445bd335772dc6e47d80b1f9dbd4f064dde9380539e4b55f9482",
+      "size_bytes": 91200,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-e20240086-gf05.jpg",
+      "role": "figure_asset",
+      "media_type": "image/jpeg",
+      "sha256": "59014924b128e7057c3c478efdd8638726a8ec456ee1bf3d639b140631bb5b7d",
+      "size_bytes": 95505,
+      "access_class": "restricted"
+    }
+  ],
+  "expected": {
+    "pages": 10,
+    "stories": 46,
+    "text_frames": 55,
+    "body_sections": 4,
+    "body_paragraphs": 78,
+    "contributors": 3,
+    "affiliations": 3,
+    "figures": 5,
+    "tables": 3,
+    "inline_formulas": 2,
+    "display_formulas": 15,
+    "references": 52,
+    "notes": 4
+  }
+}

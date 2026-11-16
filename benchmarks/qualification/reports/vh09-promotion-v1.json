@@ -1,0 +1,76 @@
+{
+  "version": "vh09-working-draft-promotion-1.0",
+  "source_sha256": {
+    "src/idml_foundation/services/autocorrection_promotion.py": "510752bef2c6b3db56ecfea78dfc3318e3de11de8c5e73650e2433e66a8e645e",
+    "src/idml_foundation/services/autocorrection_promotion_policy.py": "a6a8b618043e258838862d799e20b6e82b66c5fb451eb1e3613b466a7078647b",
+    "tests/test_autocorrection_promotion.py": "36cff7c9c5a2880d8360088d48f8ee2094af321e60d77dc3131c0d51d19c1116",
+    "tests/test_autocorrection_promotion_policy.py": "1ae94b537af8413abcecd18d48c56d25d159e78b2918c2abf361ad913c7b1d21",
+    "ops/qualify_vh09_promotion_postgres.py": "9fc3087971267902f2c773c65a2e6409225c5ac81f6a9cdc4c0ead8922a4d90d",
+    "ops/qualify_vh09_promotion_native.py": "a0cb421acc6639cc868d63f6cc624e34e1cd89dc003b80fcbbc0ee916fb9460f"
+  },
+  "postgresql": {
+    "passed": true,
+    "same_request_single_promotion": true,
+    "different_requests_one_conflict": true,
+    "human_claim_lock_timeout_verified": true,
+    "human_claim_refused_after_commit": true,
+    "outer_rollback": true,
+    "sql_guards": 2,
+    "active_database_changed": false,
+    "synthetic_validation": true,
+    "release_approved": false
+  },
+  "linux_tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "387",
+    "time": "16.115",
+    "timestamp": "2026-10-29T19:33:52.055889+00:00",
+    "hostname": "2476459cb481"
+  },
+  "active_services_unchanged": 25,
+  "active_database_unchanged": true,
+  "health_ready": 200,
+  "active_runtime_changed": false,
+  "ai_invoked": false,
+  "automatic_application_enabled": false,
+  "release_approved": false,
+  "evidence_sha256": {
+    "postgres.log": "41accbc5ff771b0dfae383cf3f75f6b34d9be1014ee769c2b906ece701f987d5",
+    "postgres-initial-fixture.log": "8d5bf3bc91603b0e5af3fa2d5a225f527b1c2ab0658e9c68072a9fa4cdb71561",
+    "linux-tests.log": "9efc1e01b4d50b072f8b075d01ee6bfc940b81b31963a22a1f73f9d24beb631b",
+    "linux-tests-initial-reserve.log": "1960d841786081ba5b7f10e82039751bcb49b631c72461bdcf3cee2eb5b0d74e",
+    "output/linux-tests.xml": "4fb9e656e0993a97db8ddcfbbb8a805891bcf3447c0840edfdb850ccc80dc11f",
+    "output/native-policy-replay.json": "bae083f42334838b5e6cb27de917eaf05344db1362c076df41af59f8e5dc5f2b"
+  },
+  "date": "2026-10-29",
+  "local_tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "387",
+    "time": "48.524",
+    "timestamp": "2026-10-29T09:14:21.438509-03:00",
+    "hostname": "DELL3010"
+  },
+  "new_tests": 60,
+  "full_suite": false,
+  "coverage": null,
+  "ruff_passed": true,
+  "mypy_source_files": 137,
+  "diff_check_passed": true,
+  "implementation_status": "internal_opt_in_service_qualified_not_active",
+  "restored_package_revalidation_implemented": false,
+  "worker_integration_implemented": false,
+  "homologation_ready": false,
+  "synthetic_pg_validators": true,
+  "historical_native_policy_only": true,
+  "initial_attempts": {
+    "postgresql": "fixed UUID reuse between synthetic scenarios; fixture now independently scoped; initial log retained",
+    "linux": "default 5GiB artifact reserve exceeded 512MiB lab tmpfs; isolated test environment reserve set to 1MiB, no application setting changed; initial log retained"
+  },
+  "native_policy_replay_sha256": "bae083f42334838b5e6cb27de917eaf05344db1362c076df41af59f8e5dc5f2b"
+}

@@ -1,0 +1,63 @@
+{
+  "version": "phase7-v02-evidence-1.0",
+  "family": "V-02",
+  "status": "passed",
+  "security_matrix": {
+    "synthetic_cases": 26,
+    "synthetic_passed": 26,
+    "real_packages_requested": 6,
+    "real_packages_verified": 6,
+    "restricted_content_emitted": false,
+    "network_required": false
+  },
+  "controls": {
+    "archive_paths": "passed",
+    "unicode_and_case_collisions": "passed",
+    "symlink_and_special_entries": "passed",
+    "encrypted_entries": "passed",
+    "unsupported_compression": "passed",
+    "nested_archives_and_executable_payloads": "passed",
+    "entry_size_ratio_depth_and_path_limits": "passed",
+    "required_entries_and_mimetype": "passed",
+    "crc_integrity": "passed",
+    "xml_dtd_entities_and_external_resolution": "passed",
+    "malformed_and_oversized_xml": "passed",
+    "incomplete_idml_reference_classification": "passed",
+    "malformed_internal_idml_structure": "passed",
+    "upload_cancellation_and_size_short_circuit": "passed",
+    "temporary_file_cleanup": "passed",
+    "scanner_unavailable_fail_closed": "passed"
+  },
+  "scanner": {
+    "clamav_protocol_tests": "passed",
+    "indeterminate_and_unavailable_response": "sanitized_503",
+    "malware_response": "sanitized_422",
+    "vps_feature_enabled": false,
+    "residual_risk": "ClamAV remains an optional disabled control in the development VPS; activation is deferred to the production security gate."
+  },
+  "reproducibility": {
+    "local_gate": "passed",
+    "vps_gate": "passed",
+    "vps_network_enabled": false,
+    "vps_private_corpus_present": false,
+    "ci_gate_configured": true
+  },
+  "automated_regression": {
+    "tests_passed": 225,
+    "coverage_percent": 85.29,
+    "ruff_check": "passed",
+    "mypy_strict": "passed"
+  },
+  "deployment": {
+    "image": "idml-foundation:phase7-v02-ingest-security-v1",
+    "image_id": "sha256:8807135f2d0df6f98a9fe83177ae6cced08c25b7e4ddd4641bf67f08bd59ec15",
+    "backup": "/opt/idml-platform/backups/20260908T125309Z",
+    "backup_restore": "passed",
+    "api_health": "healthy",
+    "worker_health": "healthy",
+    "openclaw_health": "healthy",
+    "application_feature_flags_false": true
+  },
+  "production_activation_authorized": false,
+  "next_family": "V-03"
+}

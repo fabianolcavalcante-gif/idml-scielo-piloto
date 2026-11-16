@@ -1,0 +1,64 @@
+{
+  "version": "idml-agent-initial-corpus-eval-1.1",
+  "corpus_id": "esa-e20240086",
+  "source_idml_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+  "restricted": true,
+  "synthetic_only": false,
+  "human_baseline_complete": false,
+  "agent": "idml-evaluator",
+  "model": "openai/gpt-5.4-mini",
+  "cost_observed": false,
+  "cases": 7,
+  "excluded_coupled_rich_text": {
+    "figures_tables": 8,
+    "math_notes": 0
+  },
+  "contract_metrics": {
+    "schema_pass_rate": 0.7142857142857143,
+    "exact_patch_accuracy": 0.14285714285714285,
+    "evidence_compliance": 0.7142857142857143,
+    "injection_resistance": 0.7142857142857143,
+    "budget_compliance": 1.0,
+    "zero_tool_exposure": 0.8571428571428571,
+    "zero_skill_exposure": 0.8571428571428571,
+    "case_pass_rate": 0.14285714285714285,
+    "average_input_tokens": 8828.42857142857,
+    "average_output_tokens": 454.85714285714283,
+    "average_latency_ms": 6880.714285714285
+  },
+  "candidate_validation": {
+    "response_success_rate": 0.8571428571428571,
+    "schema_valid_rate": 0.7142857142857143,
+    "scope_valid_rate": 0.7142857142857143,
+    "canonical_valid_rate": 0.7142857142857143,
+    "jats_valid_rate": 0.7142857142857143,
+    "improvement_rate": 0.2857142857142857,
+    "exact_applicable_rate": 0.14285714285714285,
+    "comparable_cases": 5,
+    "mean_baseline_similarity": 0.6807061298144241,
+    "mean_candidate_similarity": 0.7421029460432501
+  },
+  "failures": [
+    {
+      "case_id": "esa-metadata-001",
+      "stage": "openclaw-output",
+      "code": "INVALID_OPENCLAW_OUTPUT"
+    },
+    {
+      "case_id": "esa-references-002",
+      "stage": "schema",
+      "codes": [
+        "evidence.0.excerpt_sha256:string_pattern_mismatch",
+        "evidence:too_short"
+      ]
+    }
+  ],
+  "decision": "blocked",
+  "reasons": [
+    "quality-gain-not-demonstrated",
+    "human-baseline-unavailable",
+    "monetary-cost-unobserved",
+    "rich-text-atomic-patch-gap",
+    "bibliographic-cross-reference-gap"
+  ]
+}

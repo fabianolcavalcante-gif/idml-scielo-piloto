@@ -1,0 +1,120 @@
+{
+  "version": "vh10-article-sources-deployment-1.0",
+  "date": "2026-10-30",
+  "deployment": {
+    "release": "vh10-sources-20261030-v1",
+    "image": "idml-foundation:vh10-sources-20261030-v1",
+    "migration": "e2f314253647",
+    "runtime_files_verified": 345,
+    "backup": "/opt/idml-platform/backups/20261030T175647Z",
+    "restore_test": true,
+    "image_rollback_test": true,
+    "other_services_unchanged": true,
+    "existing_data_counts_unchanged": true,
+    "flags_disabled": true,
+    "homologation_ready": false,
+    "release_approved": false
+  },
+  "postcheck": {
+    "runtime_files_verified": {
+      "idml-development-api-1": 345,
+      "idml-development-worker-1": 345
+    },
+    "services": [
+      {
+        "service": "idml-validation-modern-vh1.service",
+        "enabled": true,
+        "automatic_restart_after_sigkill": true,
+        "bind_directory_preserved": true,
+        "worker_reconnected": true,
+        "unauthorized_uid_denied": true,
+        "socket_mode": "0660"
+      },
+      {
+        "service": "idml-validation-xpm-vh1.service",
+        "enabled": true,
+        "automatic_restart_after_sigkill": true,
+        "bind_directory_preserved": true,
+        "worker_reconnected": true,
+        "unauthorized_uid_denied": true,
+        "socket_mode": "0660"
+      }
+    ],
+    "smoke": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "containers": 25,
+    "idml_containers_healthy": 5,
+    "image_id": "sha256:c0ed6eefe9d9a2b009bc6d00884a3cecddc934af13c3d7719ebb24d49e75545f",
+    "migration": "e2f314253647",
+    "data_and_jobs_unchanged": true,
+    "source_manifest_sha256": "60d0cd5ae736e12a98673f2004c39e672ddd4060d3bd16a789139a3629aaedda",
+    "authority_grants_created": 0,
+    "ai_invoked": false,
+    "homologation_ready": false
+  },
+  "activation": {
+    "http": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "runtime_article_authorization": true,
+    "active_article_decisions_created": 0,
+    "ai_invoked": false,
+    "homologation_ready": false
+  },
+  "negative_smoke": {
+    "missing_consent_denies_all_executors": true,
+    "active_decisions_created": 0,
+    "release_approved": false,
+    "source_ui_http": 200,
+    "private_source_route": 401,
+    "root_registry_enabled": true
+  },
+  "postgres": {
+    "passed": true,
+    "concurrent_decisions_one_conflict": true,
+    "outer_rollback": true,
+    "revocation_enforced": true,
+    "sql_guards": 2,
+    "active_database_changed": false,
+    "ai_invoked": false
+  },
+  "local_tests": {
+    "passed": 532,
+    "new_tests": 38,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "linux_tests": {
+    "passed": 532,
+    "failures": 0,
+    "warnings": 2,
+    "overlaps_local": true
+  },
+  "ui": {
+    "node_vm_passed": true,
+    "selection_safe_text_and_tenant_races": true,
+    "browser_e2e": false
+  },
+  "ruff_passed": true,
+  "mypy_modules": 144,
+  "source_files": 1250,
+  "source_archive_sha256": "cf4fe6628117affeb8b489b40b6fc36dcbe3f546979e88b1b4b3a80545bb9f8e",
+  "evidence_sha256": {
+    "tmp/article-sources-final.xml": "b32be1021b162358634ef89b4b5dbc5952af019312e917fca6ef227c615ea598",
+    "tmp/article-sources-linux-tests.log": "31a9aa2124b99e236357c5588aa84731436578846ac655c72e99a2267c8cb9a8",
+    "tmp/article-sources-postgres-tests.log": "e78740560dee0d3333ac4a7e8fea214ea660837577a2d2cfc82e0e2ebeb96708",
+    "tmp/run_article_sources_native.py": "3c13b7dc27b1c82204bc0cf5366974a2e0141dcb47c69ef63ed577612c930dc0",
+    "tests/ui_article_sources.cjs": "326da8241ed69e961180226c78547c004e228c13a97b29a762f55b9eee6d4035",
+    "benchmarks/qualification/reports/vh10-article-sources-native-v1.json": "f44ee1b4cabceb1b7f9b72aae604cd738d2857298330e73c3534af9695bd42be"
+  },
+  "no_active_article_grants_created": true,
+  "ai_invoked": false,
+  "homologation_ready": false,
+  "release_approved": false
+}

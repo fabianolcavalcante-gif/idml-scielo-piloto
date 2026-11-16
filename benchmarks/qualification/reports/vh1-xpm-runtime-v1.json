@@ -1,0 +1,76 @@
+{
+  "version": "vh1-xpm-runtime-qualification-1.0",
+  "date": "2026-10-23",
+  "scope": "current-execution-doi-compatibility-and-orcid-deposit-diagnostics",
+  "source_archive": {
+    "release": "vh1-xpm-runtime-20261023-v1",
+    "sha256": "2652f51359edb48703e620dbfd74a3abe19fe5daa9d22d7cadb0c4db30b7f860",
+    "files": 1148,
+    "private_inputs_included": false,
+    "closing_documentation_synced_separately": true
+  },
+  "tests": {
+    "local_passed": 498,
+    "linux_passed": 498,
+    "new_cases": 41,
+    "counts_overlap": true,
+    "final_failures": 0,
+    "final_errors": 0,
+    "final_skipped": 0,
+    "warnings_per_final_run": 1,
+    "local_duration_seconds": 42.98,
+    "linux_duration_seconds": 29.18,
+    "full_suite_repeated": false,
+    "global_coverage_measured": false
+  },
+  "real_execution": {
+    "summary": "benchmarks/qualification/reports/vh1-xpm-runtime-real-v1.json",
+    "postcheck": "tmp/vh1-xpm-runtime-postcheck.json",
+    "root": "/opt/idml-platform/private/qualification/vh1-xpm-semantic-20261023T154139Z",
+    "articles": 2,
+    "negative_cases": 2,
+    "attested_reports": 4,
+    "verified_query_receipts": 13,
+    "sealed_files_root_0600": 19,
+    "baseline_doi_exceptions_per_article": 2,
+    "baseline_author_orcid_deposit_links_matched": 7,
+    "e135_public_name_incomplete": 2,
+    "e135_public_name_not_exact": 2,
+    "negative_cases_compatibility_applied": false,
+    "original_inputs_and_vendor_files_unchanged": true,
+    "active_services_unchanged": 25,
+    "temporary_networks_remaining": 0,
+    "required_queries_complete": false,
+    "authenticated_orcid_ownership": false
+  },
+  "checks": {
+    "ruff_global": true,
+    "mypy_source_files": 132,
+    "source_manifest_verified": true
+  },
+  "source_and_evidence_sha256": {
+    "src/idml_foundation/release/orcid_query_diagnostics.py": "52c00a552b3483adc3bacea86e930b5069a28e4a7807d4f54ce05cd85043b519",
+    "src/idml_foundation/release/xpm_query_semantics.py": "2be774f94f83bb252fe7a3b9bddf9b2181d480e583afcca86727d8c7d7fe3754",
+    "src/idml_foundation/services/xpm_runtime_compatibility.py": "197e833fc2884393a22cecacb55c8c395ae7a497ea3e782d0bf05140b20f9f5c",
+    "src/idml_foundation/services/xpm_execution.py": "c60c1b1e1549e6409be9055f9b397050fe1755a2435607a9e700e2154fd6dd9e",
+    "src/idml_foundation/services/package_validation.py": "fb0b84b6aa75d3aacb49c350712e32e6da6bd01d7c167cf4b735a8519c1a5590",
+    "tests/test_xpm_runtime_compatibility.py": "092ffe34a951b34bd66eaea4aaf0d140ef398b6cfedfb8c389be6f4cdfe71916",
+    "benchmarks/qualification/reports/vh1-xpm-runtime-real-v1.json": "9f355ab59f4b647953524fb688462668927e35a967c8a3a31d536ecc6b5df999",
+    "tmp/vh1-xpm-runtime-tests.xml": "68c9448844354678e5520429d7f620f1fa3794800316d824e9b1f5d1cb4321d2",
+    "tmp/vh1-xpm-runtime-linux-tests.log": "c48295c7d70c42e65f4944c1fb1582f3868a4379ecdd206652ddec891cadbbe1",
+    "tmp/vh1-xpm-runtime-postcheck.json": "3ab412996bef468b3d7a1dd3b6e2ea1098be6cf65bcdaa1054020ae18e345b7c"
+  },
+  "limitations": [
+    "Only the two DOI rules composed in the current execution; SPS/date and Wayta composition pending",
+    "Four public ORCID names unconfirmed despite exact deposited author-identifier links",
+    "No fuzzy identity or automatic name/identifier edit; no authenticated ownership",
+    "DOCTYPE/JATS decision, residual finding and remaining required queries pending",
+    "Candidate stored and tested, not active in API/worker; no G-HOMOLOG or SciELO approval",
+    "No AI execution and no new global coverage measurement"
+  ],
+  "candidate_stored_on_vps": true,
+  "active_runtime_changed": false,
+  "database_changed": false,
+  "formal_xml_approved": false,
+  "ai_invoked": false
+}

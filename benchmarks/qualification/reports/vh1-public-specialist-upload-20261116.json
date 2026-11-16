@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-16",
+  "access": "public_https",
+  "role": "operator",
+  "company": "Homologação ESA — novos artigos",
+  "new_real_upload": {
+    "resource": "3f37accb-f36f-45d2-89a4-e7cf1c34e9b8",
+    "uploaded_files": 9,
+    "conversion": "succeeded",
+    "package_job": "65f52d69-1bd7-4a81-98b1-115f8c2dcfdd",
+    "package_status": "failed_permanent",
+    "error_code": "invalid_job_input",
+    "first_missing_link": "ESA_2024135_Eq03.pdf"
+  },
+  "complete_synthetic_upload": {
+    "resource": "b7fe37bb-30ae-4ccb-941f-cdcfaddb1bf6",
+    "uploaded_files": 3,
+    "conversion": "succeeded",
+    "package_job": "5d552490-555a-4c26-8d1d-c949d12452fb",
+    "package": "succeeded",
+    "download_and_diagnosis": true
+  }
+}

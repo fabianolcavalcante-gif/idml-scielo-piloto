@@ -1,0 +1,145 @@
+{
+  "$defs": {
+    "AutomationScope": {
+      "additionalProperties": false,
+      "properties": {
+        "article_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Article Id",
+          "type": "string"
+        },
+        "organization_id": {
+          "format": "uuid",
+          "title": "Organization Id",
+          "type": "string"
+        },
+        "profile_id": {
+          "const": "esa-aop-1.1.0",
+          "title": "Profile Id",
+          "type": "string"
+        },
+        "resource_id": {
+          "format": "uuid",
+          "title": "Resource Id",
+          "type": "string"
+        },
+        "review_version": {
+          "minimum": 1,
+          "title": "Review Version",
+          "type": "integer"
+        },
+        "snapshot_id": {
+          "format": "uuid",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "snapshot_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Snapshot Sha256",
+          "type": "string"
+        },
+        "source_idml_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Idml Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "organization_id",
+        "resource_id",
+        "snapshot_id",
+        "snapshot_sha256",
+        "source_idml_sha256",
+        "article_id",
+        "profile_id",
+        "review_version"
+      ],
+      "title": "AutomationScope",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "actor": {
+      "const": "service:idml-autocorrection",
+      "default": "service:idml-autocorrection",
+      "title": "Actor",
+      "type": "string"
+    },
+    "applied": {
+      "const": false,
+      "default": false,
+      "title": "Applied",
+      "type": "boolean"
+    },
+    "decision_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Decision Sha256",
+      "type": "string"
+    },
+    "intent_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Intent Sha256",
+      "type": "string"
+    },
+    "policy_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Policy Sha256",
+      "type": "string"
+    },
+    "previous_event_sha256": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Previous Event Sha256"
+    },
+    "recorded_at": {
+      "format": "date-time",
+      "title": "Recorded At",
+      "type": "string"
+    },
+    "release_approved": {
+      "const": false,
+      "default": false,
+      "title": "Release Approved",
+      "type": "boolean"
+    },
+    "scope": {
+      "$ref": "#/$defs/AutomationScope"
+    },
+    "state": {
+      "enum": [
+        "eligible_for_candidate",
+        "refused",
+        "abstained"
+      ],
+      "title": "State",
+      "type": "string"
+    },
+    "version": {
+      "const": "autocorrection-event-1.0",
+      "default": "autocorrection-event-1.0",
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "scope",
+    "policy_sha256",
+    "intent_sha256",
+    "decision_sha256",
+    "state",
+    "recorded_at"
+  ],
+  "title": "AutomationEvent",
+  "type": "object"
+}

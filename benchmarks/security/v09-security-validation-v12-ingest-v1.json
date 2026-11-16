@@ -1,0 +1,124 @@
+{
+  "version": "phase7-v09-security-validation-1.0",
+  "family": "V-09",
+  "standard_basis": [
+    "OWASP_API_SECURITY_TOP_10_2023",
+    "OWASP_ASVS_5_0_0_AUTHENTICATION_SESSION_ACCESS_CONTROL"
+  ],
+  "security_tests": 35,
+  "full_tests": null,
+  "line_coverage_percent": null,
+  "cross_tenant_surfaces": 15,
+  "critical_findings_open": 0,
+  "high_findings_open": 0,
+  "known_cross_tenant_leaks": 0,
+  "resolved_findings": [
+    {
+      "id": "V09-AUTH-THROTTLE",
+      "severity": "high",
+      "resolution": "Redis-backed HMAC-keyed login and recovery throttling with fail-closed provider errors"
+    },
+    {
+      "id": "V09-AUTH-TIMING",
+      "severity": "medium",
+      "resolution": "constant password-hash verification path for missing, inactive, and active accounts"
+    },
+    {
+      "id": "V09-LOG-SECRET",
+      "severity": "high",
+      "resolution": "message-level redaction for bearer tokens, provider keys, private keys, assignments, and credentialed URLs"
+    },
+    {
+      "id": "V09-MASS-ASSIGNMENT",
+      "severity": "medium",
+      "resolution": "unknown top-level fields forbidden on all API write contracts"
+    },
+    {
+      "id": "V09-DENIED-AUDIT",
+      "severity": "medium",
+      "resolution": "failed authentication audit records persist independently of request rollback"
+    }
+  ],
+  "coverage": {
+    "identity": [
+      "login",
+      "logout",
+      "expiration",
+      "password_recovery",
+      "mfa",
+      "recovery_code_replay",
+      "session_revocation",
+      "recent_authentication"
+    ],
+    "authorization": [
+      "role_permission_matrix",
+      "deny_by_default",
+      "object_level_authorization",
+      "function_level_authorization",
+      "mass_assignment",
+      "tenant_non_enumeration"
+    ],
+    "tenant_resources": [
+      "organizations",
+      "resources",
+      "jobs",
+      "job_events",
+      "artifacts",
+      "reviews",
+      "snapshots",
+      "releases",
+      "audit",
+      "agent_runs",
+      "agent_proposals"
+    ],
+    "input_and_browser": [
+      "csrf_bearer_only",
+      "cors_default_deny",
+      "csp",
+      "xss_output_encoding",
+      "sql_injection",
+      "xxe",
+      "archive_traversal",
+      "archive_bombs",
+      "malicious_upload_policy"
+    ],
+    "ai_and_secrets": [
+      "prompt_injection_idml",
+      "prompt_injection_pdf",
+      "prompt_injection_xml",
+      "prompt_injection_metadata",
+      "prompt_injection_evidence",
+      "log_redaction",
+      "production_secret_validation",
+      "application_agent_flags_false"
+    ]
+  },
+  "source_sha256": {
+    "src/idml_foundation/settings.py": "d092dfd181feece6e22bab3750c8454707e70ec9602cf1c940f8bf67c1d823b1",
+    "src/idml_foundation/rate_limit.py": "0f7adb84a035e4dffe14405e6a6b1fe8d094716dd01d27f1888dca569429dee7",
+    "src/idml_foundation/dependencies.py": "518cf60d3a97460e274ecb1f470ddf2fb91fe4296bd20e30520355fa420e9109",
+    "src/idml_foundation/routers/auth.py": "0b3f0a0042773376018a6189f47e1d0ef6738344a4f735c2790b0067c60fbe09",
+    "src/idml_foundation/logging_config.py": "964c3e361cbeb8c5841c7cabdcd70a15bd37e4401dd2a217d423f722f9f42cd7",
+    "src/idml_foundation/main.py": "17d8e70c491662cf46bc62972080bcdea90e4ed2803d5d6aed20c184596adc9b",
+    "src/idml_foundation/schemas.py": "22a09c7ed02b1751de7512a2edc5cf1b05bc81457c9a373e6ab97d2ce668c5f8",
+    "src/idml_foundation/rbac.py": "71a65b64bbf9ecf020610fedb74bee831926584e629e4a510fb6198da20da71c",
+    "src/idml_foundation/ingest/safe_zip.py": "93faa91755c6fee6997f80b6249a446a11b17257069e76f07c7f8152d16fe829",
+    "src/idml_foundation/ingest/xml_security.py": "a6f062e7620bda07a4e0fadf6b8a20b6c75371e566b5fd2295e4bb1a96058a90",
+    "src/idml_foundation/ai/security.py": "93714a720c29dfffc7539baff04483fddaa6ca23ce8bdc40e2702c83837e7190",
+    "tests/test_phase7_v09_security.py": "aee23bcdd6d05843374db8a712a4f33e51025ea9227315e98327ea028caa6bb5",
+    "tests/test_settings_and_logging.py": "1461197fa76985fd1a89a6a570eb5c94b6d40033665f9bd76a861d589d2b254b",
+    "deploy/docker-compose.dev.yml": "d3d7058c0c84448ae4457d3204fce42ca63d48151550be41285833ed438c11b8"
+  },
+  "privacy": {
+    "contains_article_text": false,
+    "contains_raw_credentials": false,
+    "contains_raw_agent_output": false,
+    "restricted_content_emitted": false
+  },
+  "v09_approved": true,
+  "release_candidate_approved": false,
+  "production_activation_authorized": false,
+  "executed_at": "2026-09-22",
+  "requalification_of": "v09-security-validation-v1.json",
+  "scope": "Local security regression after bounded XML ingestion; deployment unchanged"
+}

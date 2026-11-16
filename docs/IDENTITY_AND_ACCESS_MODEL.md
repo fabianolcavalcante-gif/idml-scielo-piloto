@@ -24,6 +24,7 @@ Um usuário pode pertencer a várias empresas. Toda requisição de domínio inf
 | criar/alterar recursos | ✓ | ✓ | — | — |
 | enviar artefato/criar job | ✓ | ✓ | — | — |
 | aplicar revisão | ✓ | — | ✓ | — |
+| solicitar aprovação editorial | ✓ | ✓ | ✓ | ✓ |
 | aprovar release | ✓ | — | — | ✓ |
 | ler auditoria | ✓ | — | — | ✓ |
 
@@ -41,7 +42,10 @@ Papéis desconhecidos e permissões não listadas são negados. Administrador de
 
 ## MFA e reautenticação
 
-MFA será obrigatória em produção para administradores e responsáveis por release. TOTP/WebAuthn será implementado antes do Gate G5. A Fase 1 deixa o campo `mfa_required`, a política e os eventos preparados, mas não expõe produção nem declara o fluxo editorial pronto.
+O Gate G5 implementa MFA TOTP com segredo cifrado, proteção contra replay e dez
+códigos de recuperação de uso único persistidos somente como HMAC. Habilitar MFA
+revoga as sessões anteriores. WebAuthn permanece uma evolução futura; TOTP é o
+segundo fator suportado nesta fase.
 
 Ações sensíveis exigirão autenticação ocorrida nos últimos 10 minutos e, quando configurado, segundo fator:
 
@@ -50,6 +54,10 @@ Ações sensíveis exigirão autenticação ocorrida nos últimos 10 minutos e, 
 - alterar política de release;
 - aprovar release;
 - exportar auditoria ou restaurar backup.
+
+Convites, alteração de papéis, solicitação/aprovação editorial e exportação de
+auditoria exigem autenticação dos últimos 10 minutos e MFA verificada na sessão.
+A organização nunca pode ficar sem ao menos um administrador ativo.
 
 ## Sessões
 
@@ -74,4 +82,3 @@ Service accounts não fazem login interativo, não herdam papel humano e têm sc
 - OpenClaw: sem acesso direto e sem autoridade de autorização.
 
 O teste `test_user_cannot_access_other_organization` é regressão obrigatória do CI.
-

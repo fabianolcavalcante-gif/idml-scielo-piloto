@@ -1,0 +1,22 @@
+{
+  "atomic_formula_cases": 1,
+  "atomic_rich_text_cases": 2,
+  "candidate_xml_sha256": "20a03a91496ac0b447bd2abe589c2be6c231547793dcf5289bd3e66cc1990880",
+  "corpus_id": "esa-e20240135",
+  "dataset_cases": 6,
+  "dataset_version": "idml-agent-e20240135-7c07-1.0",
+  "domains": {
+    "contributors_affiliations": 1,
+    "figures_tables": 1,
+    "math_notes": 1,
+    "metadata": 1,
+    "references": 1,
+    "structure": 1
+  },
+  "hidden_gold_exposed_to_provider": false,
+  "human_review_required": true,
+  "restricted_content_emitted": false,
+  "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+  "version": "phase7-7c07-dataset-qualification-1.0",
+  "visual_cases": 1
+}

@@ -1,0 +1,39 @@
+{
+  "active_application_changed": false,
+  "created_at": "2026-10-21T13:29:17.054670+00:00",
+  "executor_implemented": false,
+  "export_sha256": {
+    "config/autocorrection-policy-vh1-1.0.json": "e71c6945755aec8a68480bd4ae87f24961a740cb7656ccdcfabe1b53e58c479a",
+    "schemas/autocorrection-decision-1.0.schema.json": "9ccc95d373185fd471d2b6ca048435c9b7e58fe8e7736c1f19404228902671fb",
+    "schemas/autocorrection-event-1.0.schema.json": "bd6357ee455ae89c7fb421b3ef398cfad68c937a7e3604035730e1480c4acb0e",
+    "schemas/autocorrection-intent-1.0.schema.json": "800abb756e1bf3d01f4fecbe6f6484ef3d21026bf677fe1790d0d4b78c7d28b3"
+  },
+  "homologation_ready": false,
+  "live_ai_called": false,
+  "policy_sha256": "fd850af92f0fd76f4fdb2056fecac0a53b36754beb7a8a5cccbea4f8df6107c4",
+  "release_approved": false,
+  "scope": "deterministic-policy-synthetic-tests-only",
+  "source_sha256": {
+    "ops/qualify_vh08_autocorrection.py": "9da4fa071dcb70a4d66077d5ced768bdea657833113836d46bcd6888c4bf16dd",
+    "profiles/esa-aop-1.1.json": "de569429e6af7491f2e9333664c1aed057344f285c342a1c79fbc317bbd8cb3c",
+    "src/idml_foundation/ai/autocorrection_contracts.py": "7bc1ece6cd65b5b572ea8285e710899bf30085801cde9e6c48e22e423f96b954",
+    "src/idml_foundation/ai/autocorrection_policy.py": "8d487e94f26445eb619bf73cad4948f763f07c697ee9be558e757ef2738e4c4a",
+    "src/idml_foundation/ai/outputs.py": "821712df53d89ef16bf232a1bb878b2c4342b21e739e7be892da56eaddb06e93",
+    "src/idml_foundation/ai/policy.py": "16362d1c7edf80efc7afbeec00f5f563b33144a83c2ece41a0ea62de0936dad3",
+    "src/idml_foundation/ai/security.py": "93714a720c29dfffc7539baff04483fddaa6ca23ce8bdc40e2702c83837e7190",
+    "src/idml_foundation/domain/canonical.py": "38171a7f6ece6323da7bad02535983f7a833cdc3a8091ae724c44c2108943f50",
+    "src/idml_foundation/domain/common.py": "63b25c5079cce6f19cf5d0554375ca5c53236b3de34349eec36fba0298d4df46",
+    "src/idml_foundation/services/reviews.py": "3f9f110b0c10708b98a5af9fd9283e714e3701b9e840c02ed528d569bfd1e275",
+    "tests/domain_helpers.py": "2f94a146a43af489041eea34770b7e6a4011035d94a6d32ac33196b37735e018",
+    "tests/test_autocorrection_policy.py": "2acae7f83ff7d17b8ab7b309ad6a5a081aada34bea62150cb68737ddc6c5be4f"
+  },
+  "tests": {
+    "coverage_sha256": "865f63ed21b2b264b2bcc356d26acc0d1b3af80967e2db551dd2653fcda2292f",
+    "failures": 0,
+    "junit_sha256": "599a7d7e5cd3c9e8def69a1995163ed600e2391ae436397e5fb9fb16dc37ad53",
+    "new_modules_line_branch_percent": 100,
+    "passed": 102,
+    "skipped": 0
+  },
+  "version": "vh08-policy-qualification-1.0"
+}

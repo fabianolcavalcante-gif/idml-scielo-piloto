@@ -1,0 +1,28 @@
+{
+  "version": "openclaw-idml-evaluator-attestation-1.0",
+  "observed_at": "2026-08-26T15:53:59Z",
+  "openclaw_version": "2026.6.11",
+  "agent_id": "idml-evaluator",
+  "model": "openai/gpt-5.4-mini",
+  "bindings": [],
+  "configured_skills": [],
+  "effective_skills": [],
+  "effective_tools": [],
+  "config_valid": true,
+  "security_audit": {"critical": 0, "warn": 1, "info": 2},
+  "global_gateway_notes": [
+    "personal-assistant trust model",
+    "browser and elevated capabilities remain globally enabled for existing workloads",
+    "gateway remains loopback-only"
+  ],
+  "workspace_system_prompt_sha256": "f12a7ee06fd3b40ade2c93ec3fe58b2c8b2dc7820de4ef1d397a0901bec3569f",
+  "output_schema_enforced_by_openclaw": false,
+  "output_schema_validated_by_idml": true,
+  "synthetic_injection_smoke_passed": true,
+  "application_activation_eligible": false,
+  "blocking_reasons": [
+    "human editorial baseline is incomplete",
+    "provider cost is not exposed by this OpenClaw path",
+    "tenant-bound IDML plugin and gateway adapter are not provisioned"
+  ]
+}

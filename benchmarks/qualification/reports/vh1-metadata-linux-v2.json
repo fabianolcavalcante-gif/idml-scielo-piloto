@@ -1,0 +1,694 @@
+{
+  "active_application_changed": false,
+  "cases": [
+    {
+      "case": "esa-e20240086",
+      "validators": [
+        {
+          "authority_evidence": {
+            "binding": {
+              "bundle_sha256": "26e0248444625119a20b7de38a0f83c307dd0631c678001943e43915a5149af6",
+              "grant_sha256": "ef9973ae55c299b1a10844489e75d797f71fcbaf250e8c5d3d6128649370a6f2",
+              "scope_sha256": "3a50b0de2ac5dc8318289511f6522363ce03be4078cb051a7c82453204bbab93"
+            },
+            "checks": {
+              "doi": [
+                true
+              ],
+              "issue": [
+                true
+              ],
+              "orcid": [],
+              "orcid_reasons": [],
+              "section": [
+                true
+              ]
+            },
+            "expected": {
+              "doi": 1,
+              "issue": 1,
+              "orcid": 0,
+              "section": 1
+            },
+            "version": "scoped-authority-evidence-1.0"
+          },
+          "candidate_sha256": "38d64ffc016045937001883f37ca3009917b896245657dbd0d711ab81b603eb6",
+          "counts": {
+            "critical": 14,
+            "error": 3,
+            "warning": 9
+          },
+          "findings": [
+            {
+              "code": "aff-state-addr-line-state-exist-b767117669fa",
+              "message": "critical reported by rule aff-state-addr-line-state-exist-b767117669fa",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "article-dates-pub-date-date-pub-format-80b782eb212d",
+              "message": "critical reported by rule article-dates-pub-date-date-pub-format-80b782eb212d",
+              "response": "critical"
+            },
+            {
+              "code": "article-dates-pub-date-pub-day-pub-date-pub-exist-8e078bf80ec0",
+              "message": "critical reported by rule article-dates-pub-date-pub-day-pub-date-pub-exist-8e078bf80ec0",
+              "response": "critical"
+            },
+            {
+              "code": "article-dates-pub-date-pub-month-pub-date-pub-exist-0e561c0ff684",
+              "message": "critical reported by rule article-dates-pub-date-pub-month-pub-date-pub-exist-0e561c0ff684",
+              "response": "critical"
+            },
+            {
+              "code": "article-dates-valid-date-accepted-value-c3e694c7802c",
+              "message": "critical reported by rule article-dates-valid-date-accepted-value-c3e694c7802c",
+              "response": "critical"
+            },
+            {
+              "code": "contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+              "message": "critical reported by rule contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+              "message": "critical reported by rule contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+              "message": "critical reported by rule contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "funding-data-award-id-and-funding-source-award-group-award-id-exist-c1c062bef12e",
+              "message": "critical reported by rule funding-data-award-id-and-funding-source-award-group-award-id-exist-c1c062bef12e",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-d12364d1c76a",
+              "message": "critical reported by rule funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-d12364d1c76a",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-d12364d1c76a",
+              "message": "critical reported by rule funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-d12364d1c76a",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "history-required-date-pub-history-date-date-type-pub-exist-fe5a32c8bf44",
+              "message": "critical reported by rule history-required-date-pub-history-date-date-type-pub-exist-fe5a32c8bf44",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "history-required-date-rev-recd-history-date-date-type-rev-recd-exist-3e953fb9b41f",
+              "message": "critical reported by rule history-required-date-rev-recd-history-date-date-type-rev-recd-exist-3e953fb9b41f",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "history-required-date-rev-request-history-date-date-type-rev-request-exist-4f1d58f9fc9d",
+              "message": "critical reported by rule history-required-date-rev-request-history-date-date-type-rev-request-exist-4f1d58f9fc9d",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "id-and-rid-disp-formula-id-e-formula-0e118109-65d4-56f5-8082-3ea1436f0d10-is-linked-to-xref-disp-formula-id-match-2f146ebcc8e7",
+              "message": "error reported by rule id-and-rid-disp-formula-id-e-formula-0e118109-65d4-56f5-8082-3ea1436f0d10-is-linked-to-xref-disp-formula-id-match-2f146ebcc8e7",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "error"
+            },
+            {
+              "code": "id-and-rid-disp-formula-id-e-formula-44665dfc-6476-50ef-a786-f9a5fe6a51f7-is-linked-to-xref-disp-formula-id-match-4bbeca1fa4c8",
+              "message": "error reported by rule id-and-rid-disp-formula-id-e-formula-44665dfc-6476-50ef-a786-f9a5fe6a51f7-is-linked-to-xref-disp-formula-id-match-4bbeca1fa4c8",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "error"
+            },
+            {
+              "code": "id-and-rid-disp-formula-id-e-formula-500818b8-d682-5149-893e-c989336435b0-is-linked-to-xref-disp-formula-id-match-c0eb2f7a55f7",
+              "message": "error reported by rule id-and-rid-disp-formula-id-e-formula-500818b8-d682-5149-893e-c989336435b0-is-linked-to-xref-disp-formula-id-match-c0eb2f7a55f7",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "error"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "app-app-element-app-group-app-exist-6e8b29290a5b",
+              "message": "warning reported by rule app-app-element-app-group-app-exist-6e8b29290a5b",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+              "message": "warning reported by rule reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+              "message": "warning reported by rule reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+              "message": "warning reported by rule reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "sec-sec-content-sec-p-exist-6ca2373fbf26",
+              "message": "warning reported by rule sec-sec-content-sec-p-exist-6ca2373fbf26",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "sec-sec-content-sec-p-exist-6ca2373fbf26",
+              "message": "warning reported by rule sec-sec-content-sec-p-exist-6ca2373fbf26",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            }
+          ],
+          "image_id": "sha256:8b10e0d37580ed5c018e86049281010968eac05ee07e4cbc640cc9f2358aa266",
+          "name": "packtools"
+        },
+        {
+          "authority_evidence": {
+            "binding": {
+              "bundle_sha256": "26e0248444625119a20b7de38a0f83c307dd0631c678001943e43915a5149af6",
+              "grant_sha256": "ef9973ae55c299b1a10844489e75d797f71fcbaf250e8c5d3d6128649370a6f2",
+              "scope_sha256": "3a50b0de2ac5dc8318289511f6522363ce03be4078cb051a7c82453204bbab93"
+            },
+            "checks": {
+              "doi": [
+                true
+              ],
+              "issue": [
+                true
+              ],
+              "orcid": [],
+              "orcid_reasons": [],
+              "section": [
+                true
+              ]
+            },
+            "expected": {
+              "doi": 1,
+              "issue": 1,
+              "orcid": 0,
+              "section": 1
+            },
+            "version": "scoped-authority-evidence-1.0"
+          },
+          "candidate_sha256": "31d49f07499e5ae1d09de949199d654618c209ee119ff62e695a31f406874c5c",
+          "counts": {
+            "critical": 14,
+            "error": 3,
+            "warning": 9
+          },
+          "findings": [
+            {
+              "code": "aff-aff-state-addr-line-state-exist-302311123921",
+              "message": "critical reported by rule aff-aff-state-addr-line-state-exist-302311123921",
+              "response": "critical"
+            },
+            {
+              "code": "article-dates-article-dates-pub-date-date-pub-format-78e3c776d3aa",
+              "message": "critical reported by rule article-dates-article-dates-pub-date-date-pub-format-78e3c776d3aa",
+              "response": "critical"
+            },
+            {
+              "code": "article-dates-article-dates-pub-date-pub-day-pub-date-pub-exist-55cfcb45d6aa",
+              "message": "critical reported by rule article-dates-article-dates-pub-date-pub-day-pub-date-pub-exist-55cfcb45d6aa",
+              "response": "critical"
+            },
+            {
+              "code": "article-dates-article-dates-pub-date-pub-month-pub-date-pub-exist-1d9df77c1724",
+              "message": "critical reported by rule article-dates-article-dates-pub-date-pub-month-pub-date-pub-exist-1d9df77c1724",
+              "response": "critical"
+            },
+            {
+              "code": "article-dates-article-dates-valid-date-accepted-value-c9b55e168d69",
+              "message": "critical reported by rule article-dates-article-dates-valid-date-accepted-value-c9b55e168d69",
+              "response": "critical"
+            },
+            {
+              "code": "contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+              "message": "critical reported by rule contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+              "response": "critical"
+            },
+            {
+              "code": "contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+              "message": "critical reported by rule contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+              "response": "critical"
+            },
+            {
+              "code": "contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+              "message": "critical reported by rule contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+              "response": "critical"
+            },
+            {
+              "code": "funding-data-funding-data-award-id-and-funding-source-award-group-award-id-exist-1fcad4ebc009",
+              "message": "critical reported by rule funding-data-funding-data-award-id-and-funding-source-award-group-award-id-exist-1fcad4ebc009",
+              "response": "critical"
+            },
+            {
+              "code": "funding-data-funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-89359b29da1b",
+              "message": "critical reported by rule funding-data-funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-89359b29da1b",
+              "response": "critical"
+            },
+            {
+              "code": "funding-data-funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-89359b29da1b",
+              "message": "critical reported by rule funding-data-funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-89359b29da1b",
+              "response": "critical"
+            },
+            {
+              "code": "history-history-required-date-pub-history-date-date-type-pub-exist-f3038182317b",
+              "message": "critical reported by rule history-history-required-date-pub-history-date-date-type-pub-exist-f3038182317b",
+              "response": "critical"
+            },
+            {
+              "code": "history-history-required-date-rev-recd-history-date-date-type-rev-recd-exist-ef912a098978",
+              "message": "critical reported by rule history-history-required-date-rev-recd-history-date-date-type-rev-recd-exist-ef912a098978",
+              "response": "critical"
+            },
+            {
+              "code": "history-history-required-date-rev-request-history-date-date-type-rev-request-exist-23889e3b4763",
+              "message": "critical reported by rule history-history-required-date-rev-request-history-date-date-type-rev-request-exist-23889e3b4763",
+              "response": "critical"
+            },
+            {
+              "code": "id-and-rid-id-and-rid-disp-formula-id-e-formula-0e118109-65d4-56f5-8082-3ea1436f0d10-is-linked-to-xref-disp-formula-id-m-087e8465041c",
+              "message": "error reported by rule id-and-rid-id-and-rid-disp-formula-id-e-formula-0e118109-65d4-56f5-8082-3ea1436f0d10-is-linked-to-xref-disp-formula-id-m-087e8465041c",
+              "response": "error"
+            },
+            {
+              "code": "id-and-rid-id-and-rid-disp-formula-id-e-formula-44665dfc-6476-50ef-a786-f9a5fe6a51f7-is-linked-to-xref-disp-formula-id-m-a9e280337564",
+              "message": "error reported by rule id-and-rid-id-and-rid-disp-formula-id-e-formula-44665dfc-6476-50ef-a786-f9a5fe6a51f7-is-linked-to-xref-disp-formula-id-m-a9e280337564",
+              "response": "error"
+            },
+            {
+              "code": "id-and-rid-id-and-rid-disp-formula-id-e-formula-500818b8-d682-5149-893e-c989336435b0-is-linked-to-xref-disp-formula-id-m-01880654cbe7",
+              "message": "error reported by rule id-and-rid-id-and-rid-disp-formula-id-e-formula-500818b8-d682-5149-893e-c989336435b0-is-linked-to-xref-disp-formula-id-m-01880654cbe7",
+              "response": "error"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "app-app-app-element-app-group-app-exist-b70163d3b3dc",
+              "message": "warning reported by rule app-app-app-element-app-group-app-exist-b70163d3b3dc",
+              "response": "warning"
+            },
+            {
+              "code": "reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+              "message": "warning reported by rule reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+              "response": "warning"
+            },
+            {
+              "code": "reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+              "message": "warning reported by rule reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+              "response": "warning"
+            },
+            {
+              "code": "reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+              "message": "warning reported by rule reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+              "response": "warning"
+            },
+            {
+              "code": "sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+              "message": "warning reported by rule sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+              "response": "warning"
+            },
+            {
+              "code": "sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+              "message": "warning reported by rule sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+              "response": "warning"
+            }
+          ],
+          "image_id": "sha256:3832b370222634f1eb9ddbd8aa9aa74e31acf2ee4e2cfba398eb72ff3d918ff7",
+          "name": "spsvalidator"
+        }
+      ]
+    },
+    {
+      "case": "esa-e20240135",
+      "validators": [
+        {
+          "authority_evidence": {
+            "binding": {
+              "bundle_sha256": "201a1b1983d945e267da5a45b07dbd501865e368e7291703f3175ea7b84381f4",
+              "grant_sha256": "5bf1104a87736b748ee6c2ae9f8ce6d5d3db0f3d340f8b0e35eb6e038d670196",
+              "scope_sha256": "a690cbabbcbeb099dd47597cc5d30fbde828ed6c54082d1f1a4d640b290c22a8"
+            },
+            "checks": {
+              "doi": [
+                true
+              ],
+              "issue": [
+                true
+              ],
+              "orcid": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "orcid_reasons": [
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match"
+              ],
+              "section": [
+                true
+              ]
+            },
+            "expected": {
+              "doi": 1,
+              "issue": 1,
+              "orcid": 4,
+              "section": 1
+            },
+            "version": "scoped-authority-evidence-1.0"
+          },
+          "candidate_sha256": "1757cdb3a15b7fd44beb009e794ff812995eb59cd6e2c1eee2cabee15f9a9706",
+          "counts": {
+            "critical": 6,
+            "warning": 5
+          },
+          "findings": [
+            {
+              "code": "aff-state-addr-line-state-exist-b767117669fa",
+              "message": "critical reported by rule aff-state-addr-line-state-exist-b767117669fa",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "aff-state-addr-line-state-exist-b767117669fa",
+              "message": "critical reported by rule aff-state-addr-line-state-exist-b767117669fa",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "aff-state-addr-line-state-exist-b767117669fa",
+              "message": "critical reported by rule aff-state-addr-line-state-exist-b767117669fa",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "aff-state-addr-line-state-exist-b767117669fa",
+              "message": "critical reported by rule aff-state-addr-line-state-exist-b767117669fa",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "history-required-date-rev-recd-history-date-date-type-rev-recd-exist-3e953fb9b41f",
+              "message": "critical reported by rule history-required-date-rev-recd-history-date-date-type-rev-recd-exist-3e953fb9b41f",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "history-required-date-rev-request-history-date-date-type-rev-request-exist-4f1d58f9fc9d",
+              "message": "critical reported by rule history-required-date-rev-request-history-date-date-type-rev-request-exist-4f1d58f9fc9d",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "critical"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "app-app-element-app-group-app-exist-6e8b29290a5b",
+              "message": "warning reported by rule app-app-element-app-group-app-exist-6e8b29290a5b",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            }
+          ],
+          "image_id": "sha256:8b10e0d37580ed5c018e86049281010968eac05ee07e4cbc640cc9f2358aa266",
+          "name": "packtools"
+        },
+        {
+          "authority_evidence": {
+            "binding": {
+              "bundle_sha256": "201a1b1983d945e267da5a45b07dbd501865e368e7291703f3175ea7b84381f4",
+              "grant_sha256": "5bf1104a87736b748ee6c2ae9f8ce6d5d3db0f3d340f8b0e35eb6e038d670196",
+              "scope_sha256": "a690cbabbcbeb099dd47597cc5d30fbde828ed6c54082d1f1a4d640b290c22a8"
+            },
+            "checks": {
+              "doi": [
+                true
+              ],
+              "issue": [
+                true
+              ],
+              "orcid": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "orcid_reasons": [
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match"
+              ],
+              "section": [
+                true
+              ]
+            },
+            "expected": {
+              "doi": 1,
+              "issue": 1,
+              "orcid": 4,
+              "section": 1
+            },
+            "version": "scoped-authority-evidence-1.0"
+          },
+          "candidate_sha256": "e0be244b52eb524328a3f260c426617850bb057e3bbc9ecb82c43134929950c8",
+          "counts": {
+            "critical": 6,
+            "warning": 5
+          },
+          "findings": [
+            {
+              "code": "aff-aff-state-addr-line-state-exist-302311123921",
+              "message": "critical reported by rule aff-aff-state-addr-line-state-exist-302311123921",
+              "response": "critical"
+            },
+            {
+              "code": "aff-aff-state-addr-line-state-exist-302311123921",
+              "message": "critical reported by rule aff-aff-state-addr-line-state-exist-302311123921",
+              "response": "critical"
+            },
+            {
+              "code": "aff-aff-state-addr-line-state-exist-302311123921",
+              "message": "critical reported by rule aff-aff-state-addr-line-state-exist-302311123921",
+              "response": "critical"
+            },
+            {
+              "code": "aff-aff-state-addr-line-state-exist-302311123921",
+              "message": "critical reported by rule aff-aff-state-addr-line-state-exist-302311123921",
+              "response": "critical"
+            },
+            {
+              "code": "history-history-required-date-rev-recd-history-date-date-type-rev-recd-exist-ef912a098978",
+              "message": "critical reported by rule history-history-required-date-rev-recd-history-date-date-type-rev-recd-exist-ef912a098978",
+              "response": "critical"
+            },
+            {
+              "code": "history-history-required-date-rev-request-history-date-date-type-rev-request-exist-23889e3b4763",
+              "message": "critical reported by rule history-history-required-date-rev-request-history-date-date-type-rev-request-exist-23889e3b4763",
+              "response": "critical"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "app-app-app-element-app-group-app-exist-b70163d3b3dc",
+              "message": "warning reported by rule app-app-app-element-app-group-app-exist-b70163d3b3dc",
+              "response": "warning"
+            }
+          ],
+          "image_id": "sha256:3832b370222634f1eb9ddbd8aa9aa74e31acf2ee4e2cfba398eb72ff3d918ff7",
+          "name": "spsvalidator"
+        }
+      ]
+    }
+  ],
+  "formal_xml_approved": false,
+  "plan_sha256": "97608790dff7b0180007674e68727084709d202684f61acac39e1490bd699003",
+  "qualification": {
+    "active_application_changed": false,
+    "cases": {
+      "esa-e20240086": {
+        "before_package_sha256": "6b209eb4209e20aff17b653545f5553af3b562c9549ee34b5a2ca49671d9c4f6",
+        "before_xml_sha256": "7081d302358f8c022114a0ebf568372af43e115bda38a748cc7c2ebbc1494ad0",
+        "catalog_sha256": {
+          "editorial_enrichment_catalog": "12301152ffee18ebd3ee87adb4fcc0fdc8533ef30468582fb013b1f848d0fa58",
+          "formal_metadata_catalog": "466920403384c76743d1b5d235457deba8da6ccd49d5aa5fa2abaf19e1c54796",
+          "formula_catalog": "dff17d1362ff70c7b701e3ec32764fbeedfe0f9444bfffa852adec7d6c0e14d6"
+        },
+        "delta": {
+          "credit_roles_normalized": 3,
+          "publication_year_added": 0,
+          "states_extracted": 2
+        },
+        "deterministic": true,
+        "files": {
+          "candidate.xml": "38d64ffc016045937001883f37ca3009917b896245657dbd0d711ab81b603eb6",
+          "candidate.zip": "31d49f07499e5ae1d09de949199d654618c209ee119ff62e695a31f406874c5c",
+          "grant.json": "ef9973ae55c299b1a10844489e75d797f71fcbaf250e8c5d3d6128649370a6f2",
+          "incoming/crossref.json": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3",
+          "incoming/doi-manifest.json": "844671fb06578bdf622d25f5ebaf483af952af98968ae38f39d9082b389e178c",
+          "incoming/editorial-manifest.json": "05b76e3635acc92e5170945608c2ea96fa17331eeeeac9ae61bd0f00ab6fc126",
+          "incoming/journal.json": "ecb356e02ecfc04718dd3fc36127359ccc04083796a5b6037a08b0a36ff52caf",
+          "incoming/manifest.json": "26e0248444625119a20b7de38a0f83c307dd0631c678001943e43915a5149af6",
+          "scope.json": "edcc24a5fe9dfed48e954cdd5a1bb1370fff0c447cb14ec3a24de888d637fb69"
+        },
+        "offline_valid": true,
+        "package_sha256": "31d49f07499e5ae1d09de949199d654618c209ee119ff62e695a31f406874c5c",
+        "scope_sha256": "3a50b0de2ac5dc8318289511f6522363ce03be4078cb051a7c82453204bbab93",
+        "xml_sha256": "38d64ffc016045937001883f37ca3009917b896245657dbd0d711ab81b603eb6"
+      },
+      "esa-e20240135": {
+        "before_package_sha256": "e0be244b52eb524328a3f260c426617850bb057e3bbc9ecb82c43134929950c8",
+        "before_xml_sha256": "1757cdb3a15b7fd44beb009e794ff812995eb59cd6e2c1eee2cabee15f9a9706",
+        "catalog_sha256": {
+          "crossref_metadata_catalog": "a2528bd179e5d50b0b255a80bfc0acf5dd13c3204f9189bb87c63a994d92122b",
+          "formal_metadata_catalog": "aac6763c58eb9cde824447199f5af3fecc97a55286811e3ba34953bc6247f0d7",
+          "formula_catalog": "ac4fb211cbcd4ebe550d2b9fa2d4b350fb4418a7158152656ca3b636a6ec0e62"
+        },
+        "delta": {
+          "credit_roles_normalized": 0,
+          "publication_year_added": 0,
+          "states_extracted": 0
+        },
+        "deterministic": true,
+        "files": {
+          "candidate.xml": "1757cdb3a15b7fd44beb009e794ff812995eb59cd6e2c1eee2cabee15f9a9706",
+          "candidate.zip": "e0be244b52eb524328a3f260c426617850bb057e3bbc9ecb82c43134929950c8",
+          "grant.json": "5bf1104a87736b748ee6c2ae9f8ce6d5d3db0f3d340f8b0e35eb6e038d670196",
+          "incoming/0000-0001-6095-4568.json": "3de4b93ada52dce38d1087399e2d2bcb141f92847c7fc4499b9e6e8ec3f0e3b0",
+          "incoming/0000-0002-0767-779X.json": "399b9526ea5cb9c1d94a79031936029f9762aabe94ce42324c0c2e1fa0cdb036",
+          "incoming/0000-0002-9395-9493.json": "6eaa97ca928562e1f820432ff882ab536f921176da2eb16fe7287f56a647a1a3",
+          "incoming/0000-0003-3715-2940.json": "c1912ad41e77c25a9865fedfccdf0ceca0b75f78fb99f111aa364107050871b8",
+          "incoming/crossref.json": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+          "incoming/doi-manifest.json": "ae8e9ff928ca1ec0fe8d7611996a752e918f2fe1b49a7f225bffa3814166da4e",
+          "incoming/editorial-manifest.json": "ffea9f85886d698b8a069b9a93479ecd782596581fbd06e585ec9c6b2669bbb3",
+          "incoming/journal.json": "ecb356e02ecfc04718dd3fc36127359ccc04083796a5b6037a08b0a36ff52caf",
+          "incoming/manifest.json": "201a1b1983d945e267da5a45b07dbd501865e368e7291703f3175ea7b84381f4",
+          "scope.json": "4913d1d8d33016b9aa65b20b1bb2387c6a4bde8111e88fe215067b42ad31a6d0"
+        },
+        "offline_valid": true,
+        "package_sha256": "e0be244b52eb524328a3f260c426617850bb057e3bbc9ecb82c43134929950c8",
+        "scope_sha256": "a690cbabbcbeb099dd47597cc5d30fbde828ed6c54082d1f1a4d640b290c22a8",
+        "xml_sha256": "1757cdb3a15b7fd44beb009e794ff812995eb59cd6e2c1eee2cabee15f9a9706"
+      }
+    },
+    "catalog_values_changed": false,
+    "code_sha256": {
+      "doi_authority_transport.py": "ab83fbe18e6e688335d6dc69296773285ed52b6854dc98a32326f7db34dcd6a3",
+      "doi_package_binding.py": "4a4e768050bff7669cac414ac49ec5433f7490a42c88c8e39cce385711acc318",
+      "package_validation.py": "728f9e4d565967a8e5d4c6084fe1c19c898d53193ed6536c18ef529865880aec",
+      "probe_scoped_socket.py": "4f96186ed1887478baf8fe51cd30a41e5b7d0e78e4856f7eb50009e32accaafc",
+      "provision_scoped_authorities.py": "280c4dbeba72db68e7822ba515d3700037f352911ab1f31e20708d2f52a8ea23",
+      "run_vh1_metadata_linux.py": "482158e396879ebc86454ab1d538406ac89d3bc4698e01dd2b07d691c1ee4d24",
+      "run_vh1_scoped_socket.py": "fd8742aa4fd861e7e09e6f705f7d5902fb25ef886c28761b419b19eeb906e540",
+      "scoped_authority_transport.py": "2d6a8cd07056464bb64b25739b1c9c423e3ec4ba94e674b992d6ad8baaced0f2",
+      "scoped_validator_broker.py": "e3cd6ccafe54523db1e70b76ecd7cc6f33da143487ae4206f1b7b7e80c5cb83f",
+      "scoped_validator_transport.py": "7a8c633911fb8abcaf24e9a4882a90a7f669b55fc1c1928a1ccad33cd75e1856",
+      "validation_engine.py": "ee32a0c44e9a7cb60f9d65d85281b0eb7e55dba79d846e687bdd95139f275b1d",
+      "validation_scope.py": "7df6a7f2255faec390c2f11228a61f70ef741fd28031170566e97a901883af63",
+      "validator_broker.py": "487df9390980f6505b33545df14bc687c4b91824159eadfce2263f8b7aa17f7f",
+      "validator_registry.py": "72331f5e3c95a459c81f17e617f209031e334a9a0b28edb508f6a65f27704723",
+      "validator_transport.py": "68e69b1332a1e68cc0812c488efc263f6b405fdcfd2eb20db6a8174f3b8311b4"
+    },
+    "created_at": "2026-10-05T12:31:20.104045+00:00",
+    "formal_xml_approved": false,
+    "gold_read": false,
+    "registry_sha256": "4b95158a52e9bd2cd7ad143797c5441f635b87d426284db862bbd356ea4dac7f",
+    "source_sha256": {
+      "ops/qualify_vh1_metadata.py": "d0212a1b916ba19d355b845026f7db57b48bf66675c9d0a36cc44fdf40d282cd",
+      "src/idml_foundation/pipeline/canonical_mapper.py": "c3a350f75592bcec3bdd191561f03adf9b49e0713d8ec8415adf987a4d4a1eb6",
+      "src/idml_foundation/pipeline/jats_builder.py": "d89674ab0b575813a1be80ebe65b8cc2f307da86d089d0a38c26a2ea82d6ff5e",
+      "src/idml_foundation/pipeline/metadata_normalization.py": "088deaecec3648103c86ea6984a6bbc6a46a7686dde0f196c01c7f1fc1d16ad8"
+    },
+    "version": "vh1-metadata-local-1.0"
+  },
+  "transport": "scoped-broker-executor-not-socket",
+  "version": "vh1-metadata-linux-1.0"
+}

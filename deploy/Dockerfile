@@ -12,6 +12,12 @@ RUN groupadd --gid 10001 idml && useradd --uid 10001 --gid idml --create-home id
 WORKDIR /app
 COPY pyproject.toml requirements.lock ./
 COPY src ./src
+COPY config ./config
+COPY prompts ./prompts
+COPY schemas ./schemas
+COPY openclaw ./openclaw
+COPY profiles ./profiles
+COPY vendor ./vendor
 COPY alembic.ini ./
 COPY migrations ./migrations
 RUN python -m pip install --require-hashes -r requirements.lock

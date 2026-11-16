@@ -1,0 +1,22 @@
+{
+  "manifest_version": "1.0.0",
+  "corpus_id": "rbedu-0272965-aop-holdout",
+  "journal": "Revista Brasileira de Educação",
+  "template": "RBEdu AOP InDesign DOM 20.3",
+  "split": "homologation_holdout",
+  "source_root_hint": "SCIELO",
+  "policy": {
+    "purpose": "holdout de contraste; proibido para ajuste de regras",
+    "license_status": "uso interno autorizado; redistribuição não confirmada",
+    "confidentiality": "restricted",
+    "contains_personal_data": true,
+    "redistribution_allowed": false,
+    "anonymization": "conteúdo não é versionado; somente hashes e contagens",
+    "retention": {"retain_until": null, "review_interval_days": 365, "deletion_requires_approval": true}
+  },
+  "artifacts": [
+    {"logical_path": "RBEdu_0272965_AOP.idml", "role": "source_idml", "media_type": "application/vnd.adobe.indesign-idml-package", "sha256": "5b52e18a67d64b4b0c510f3488e949ebca890b726eb0088c486428400160d7de", "size_bytes": 653031, "access_class": "restricted"},
+    {"logical_path": "RBEdu_0272965_AOP.pdf", "role": "pdf_reference", "media_type": "application/pdf", "sha256": "b5fdf090fc9b0c524080cf26085d294006d549b3cc01bd7f03c161fd2233c5b4", "size_bytes": 1100517, "access_class": "restricted"}
+  ],
+  "expected": {"pages": 19, "stories": 29, "text_frames": 41, "body_sections": null, "body_paragraphs": null, "contributors": null, "affiliations": null, "figures": null, "tables": 2, "inline_formulas": null, "display_formulas": null, "references": null, "notes": null}
+}

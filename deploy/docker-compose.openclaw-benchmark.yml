@@ -1,0 +1,39 @@
+services:
+  openclaw-benchmark-runner:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: idml-foundation:${IDML_BENCHMARK_IMAGE_TAG:-phase6-benchmark-v1}
+    user: "10001:10001"
+    command: ["python", "-m", "idml_foundation.ai.benchmark", "--help"]
+    environment:
+      IDML_OPENCLAW_GATEWAY_URL: http://openclaw-idml:47716
+      IDML_OPENCLAW_GATEWAY_TOKEN: ${IDML_OPENCLAW_GATEWAY_TOKEN:?define the dedicated IDML OpenClaw token}
+      IDML_FEATURE_OPENCLAW: "false"
+      IDML_FEATURE_AI_SWARM: "false"
+      IDML_CONFIRM_AGENT_EXECUTION: ${IDML_CONFIRM_AGENT_EXECUTION:-}
+    volumes:
+      - ../benchmarks/private/input:/benchmark/input:ro
+      - ../benchmarks/private/output:/benchmark/output
+    networks:
+      - idml_openclaw
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m,mode=1777,uid=10001,gid=10001
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    depends_on:
+      openclaw-idml:
+        condition: service_healthy
+    restart: "no"
+    mem_limit: 192m
+    cpus: 0.25
+    pids_limit: 80
+    profiles: ["benchmark"]
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"

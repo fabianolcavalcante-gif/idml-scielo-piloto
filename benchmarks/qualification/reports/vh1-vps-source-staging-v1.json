@@ -1,0 +1,21 @@
+{
+  "version": "vh1-vps-source-staging-1.0",
+  "uploaded": true,
+  "manifest_sha256": "25ca4293d4e180ad32b7751b50fd30cd0f66ace056ff7226cddf01640b69b1e8",
+  "scope": [
+    "esa-e20240086",
+    "esa-e20240135"
+  ],
+  "catalogs": 6,
+  "authority_snapshots": 2,
+  "candidates": 2,
+  "runtime_activated": false,
+  "gold_included": false,
+  "holdout_included": false,
+  "files": 15,
+  "bytes": 2860458,
+  "decision_sha256": "dd8ce44956daabfcf738bb7116dbb221c9c85eaf8db5100d5469ace70fba5086",
+  "vps_path": "/opt/idml-platform/private/source-vault/25ca4293d4e180ad32b7751b50fd30cd0f66ace056ff7226cddf01640b69b1e8",
+  "verified": true,
+  "publicly_exposed": false
+}

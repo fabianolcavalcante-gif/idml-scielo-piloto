@@ -1,0 +1,25 @@
+{
+  "approved": true,
+  "checks": {
+    "candidate_overlays": true,
+    "conversions": true,
+    "deterministic_across_scenarios": true,
+    "existing_services": true,
+    "host_reserves": true,
+    "isolation": true,
+    "no_oom": true,
+    "no_provider": true,
+    "privacy": true,
+    "probe_approved": true,
+    "scenario_matrix": true,
+    "version": true,
+    "watchdog": true
+  },
+  "evidence_sha256": "3dd88a59ffafd92273412f807e3cc8dd869098cb759513154c6a957cbec976df",
+  "production_capacity_qualified": false,
+  "release_ready": false,
+  "restricted_content_emitted": false,
+  "v12_2_complete": false,
+  "v12_complete": false,
+  "version": "phase7-v12-real-queue-gate-1.1"
+}

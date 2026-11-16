@@ -1,0 +1,1575 @@
+{
+  "active_application_changed": false,
+  "cases": [
+    {
+      "case": "esa-e20240086",
+      "validators": [
+        {
+          "authority_evidence": {
+            "binding": {
+              "bundle_sha256": "17429e1b7ca7efee8f87227db054d8612320316515e7174f2e928c63a56a6a7a",
+              "grant_sha256": "442a713c28a54916e0d6c525dcf56665aad659c1e376f67ca8b70ac4c30e3b27",
+              "scope_sha256": "767b1ad812885e528cfc17d6999a601d5423fe0dee063f9861bf59efa4b69d8b"
+            },
+            "checks": {
+              "doi": [
+                true
+              ],
+              "issue": [
+                true
+              ],
+              "orcid": [
+                true,
+                true,
+                true
+              ],
+              "orcid_reasons": [
+                "public_record_and_name_match",
+                "public_record_and_name_match",
+                "public_record_and_name_match"
+              ],
+              "section": [
+                true
+              ]
+            },
+            "expected": {
+              "doi": 1,
+              "issue": 1,
+              "orcid": 3,
+              "section": 1
+            },
+            "version": "scoped-authority-evidence-1.0"
+          },
+          "candidate_sha256": "72886a9fb15a374459779ad2c3c97f1ee3ef90adeec1809d3dde53a4700d3c55",
+          "counts": {
+            "warning": 6
+          },
+          "findings": [
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "app-app-element-app-group-app-exist-6e8b29290a5b",
+              "message": "warning reported by rule app-app-element-app-group-app-exist-6e8b29290a5b",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "sec-sec-content-sec-p-exist-6ca2373fbf26",
+              "message": "warning reported by rule sec-sec-content-sec-p-exist-6ca2373fbf26",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "sec-sec-content-sec-p-exist-6ca2373fbf26",
+              "message": "warning reported by rule sec-sec-content-sec-p-exist-6ca2373fbf26",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            }
+          ],
+          "history_policy_evidence": {
+            "absence_is_not_proof_of_no_revision": true,
+            "candidate_sha256": "72886a9fb15a374459779ad2c3c97f1ee3ef90adeec1809d3dde53a4700d3c55",
+            "invocations": [
+              {
+                "default_failures": [
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-request"
+                  },
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-recd"
+                  }
+                ],
+                "default_rows_sha256": "c1f5c9e2b46bbeffc2126e703deb366240045c815c17b87ed81e311fd8b5ee9b",
+                "effective_failures": [],
+                "effective_rows_sha256": "407800d34607d6c82e593513a45a97a2d50ee9a0ed122d97c9c76164a0769f68",
+                "only_revision_presence_changed": true
+              }
+            ],
+            "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+            "policy": "sps-1.10-history-presence-1.0",
+            "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+            "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+            "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+          },
+          "image_id": "sha256:4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca",
+          "name": "packtools"
+        },
+        {
+          "authority_evidence": {
+            "binding": {
+              "bundle_sha256": "17429e1b7ca7efee8f87227db054d8612320316515e7174f2e928c63a56a6a7a",
+              "grant_sha256": "442a713c28a54916e0d6c525dcf56665aad659c1e376f67ca8b70ac4c30e3b27",
+              "scope_sha256": "767b1ad812885e528cfc17d6999a601d5423fe0dee063f9861bf59efa4b69d8b"
+            },
+            "checks": {
+              "doi": [
+                true
+              ],
+              "issue": [
+                true
+              ],
+              "orcid": [
+                true,
+                true,
+                true
+              ],
+              "orcid_reasons": [
+                "public_record_and_name_match",
+                "public_record_and_name_match",
+                "public_record_and_name_match"
+              ],
+              "section": [
+                true
+              ]
+            },
+            "expected": {
+              "doi": 1,
+              "issue": 1,
+              "orcid": 3,
+              "section": 1
+            },
+            "version": "scoped-authority-evidence-1.0"
+          },
+          "candidate_sha256": "dca147fb06dd8a07d164e3df75f38a254f33b895aa49950cc70097d4f8e7b4c1",
+          "counts": {
+            "warning": 6
+          },
+          "findings": [
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "app-app-app-element-app-group-app-exist-b70163d3b3dc",
+              "message": "warning reported by rule app-app-app-element-app-group-app-exist-b70163d3b3dc",
+              "response": "warning"
+            },
+            {
+              "code": "sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+              "message": "warning reported by rule sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+              "response": "warning"
+            },
+            {
+              "code": "sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+              "message": "warning reported by rule sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+              "response": "warning"
+            }
+          ],
+          "history_policy_evidence": {
+            "absence_is_not_proof_of_no_revision": true,
+            "candidate_sha256": "dca147fb06dd8a07d164e3df75f38a254f33b895aa49950cc70097d4f8e7b4c1",
+            "invocations": [
+              {
+                "default_failures": [
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-request"
+                  },
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-recd"
+                  }
+                ],
+                "default_rows_sha256": "c1f5c9e2b46bbeffc2126e703deb366240045c815c17b87ed81e311fd8b5ee9b",
+                "effective_failures": [],
+                "effective_rows_sha256": "407800d34607d6c82e593513a45a97a2d50ee9a0ed122d97c9c76164a0769f68",
+                "only_revision_presence_changed": true
+              }
+            ],
+            "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+            "policy": "sps-1.10-history-presence-1.0",
+            "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+            "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+            "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+          },
+          "image_id": "sha256:61b90cc8ecca8de508c6cd19701551860de32f053a4899fd056835c8f05ab048",
+          "name": "spsvalidator"
+        }
+      ]
+    },
+    {
+      "case": "esa-e20240135",
+      "validators": [
+        {
+          "authority_evidence": {
+            "binding": {
+              "bundle_sha256": "8415449d3e62002f40b637ffc9f4c49b5f3bd5320f1c682605743e1987896dad",
+              "grant_sha256": "167b57295ee29d4d42ef02f585bd879f106d991494ff56cf800618587be22dd4",
+              "scope_sha256": "9b45d5934058d398553e489570e986ba9a91a33cea990c3aa240703ae7c1f41e"
+            },
+            "checks": {
+              "doi": [
+                true
+              ],
+              "issue": [
+                true
+              ],
+              "orcid": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "orcid_reasons": [
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match"
+              ],
+              "section": [
+                true
+              ]
+            },
+            "expected": {
+              "doi": 1,
+              "issue": 1,
+              "orcid": 4,
+              "section": 1
+            },
+            "version": "scoped-authority-evidence-1.0"
+          },
+          "candidate_sha256": "e0ad6a89cbcfee6ba4b924cf1c1b2d13c2ca30c162aadf5ca707d0af54533239",
+          "counts": {
+            "warning": 5
+          },
+          "findings": [
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            },
+            {
+              "code": "app-app-element-app-group-app-exist-6e8b29290a5b",
+              "message": "warning reported by rule app-app-element-app-group-app-exist-6e8b29290a5b",
+              "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+              "response": "warning"
+            }
+          ],
+          "history_policy_evidence": {
+            "absence_is_not_proof_of_no_revision": true,
+            "candidate_sha256": "e0ad6a89cbcfee6ba4b924cf1c1b2d13c2ca30c162aadf5ca707d0af54533239",
+            "invocations": [
+              {
+                "default_failures": [
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-request"
+                  },
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-recd"
+                  }
+                ],
+                "default_rows_sha256": "184db947290f38135a2b2bc7de130218000d8521bb46b129a36ceebdb7e72d7a",
+                "effective_failures": [],
+                "effective_rows_sha256": "fa73035c21f88fa8c842ef0c5159b0f98c1be376602defcd9421292b59fa5a8d",
+                "only_revision_presence_changed": true
+              }
+            ],
+            "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+            "policy": "sps-1.10-history-presence-1.0",
+            "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+            "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+            "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+          },
+          "image_id": "sha256:4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca",
+          "name": "packtools"
+        },
+        {
+          "authority_evidence": {
+            "binding": {
+              "bundle_sha256": "8415449d3e62002f40b637ffc9f4c49b5f3bd5320f1c682605743e1987896dad",
+              "grant_sha256": "167b57295ee29d4d42ef02f585bd879f106d991494ff56cf800618587be22dd4",
+              "scope_sha256": "9b45d5934058d398553e489570e986ba9a91a33cea990c3aa240703ae7c1f41e"
+            },
+            "checks": {
+              "doi": [
+                true
+              ],
+              "issue": [
+                true
+              ],
+              "orcid": [
+                true,
+                true,
+                true,
+                true
+              ],
+              "orcid_reasons": [
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match",
+                "public_registry_and_crossref_author_match"
+              ],
+              "section": [
+                true
+              ]
+            },
+            "expected": {
+              "doi": 1,
+              "issue": 1,
+              "orcid": 4,
+              "section": 1
+            },
+            "version": "scoped-authority-evidence-1.0"
+          },
+          "candidate_sha256": "cf410d72179431e2eebb7b66b78d7caec92846db0031a8bbb83ebded3bf5a6b3",
+          "counts": {
+            "warning": 5
+          },
+          "findings": [
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+              "response": "warning"
+            },
+            {
+              "code": "app-app-app-element-app-group-app-exist-b70163d3b3dc",
+              "message": "warning reported by rule app-app-app-element-app-group-app-exist-b70163d3b3dc",
+              "response": "warning"
+            }
+          ],
+          "history_policy_evidence": {
+            "absence_is_not_proof_of_no_revision": true,
+            "candidate_sha256": "cf410d72179431e2eebb7b66b78d7caec92846db0031a8bbb83ebded3bf5a6b3",
+            "invocations": [
+              {
+                "default_failures": [
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-request"
+                  },
+                  {
+                    "outcome": "CRITICAL",
+                    "rule": "required date: rev-recd"
+                  }
+                ],
+                "default_rows_sha256": "184db947290f38135a2b2bc7de130218000d8521bb46b129a36ceebdb7e72d7a",
+                "effective_failures": [],
+                "effective_rows_sha256": "fa73035c21f88fa8c842ef0c5159b0f98c1be376602defcd9421292b59fa5a8d",
+                "only_revision_presence_changed": true
+              }
+            ],
+            "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+            "policy": "sps-1.10-history-presence-1.0",
+            "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+            "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+            "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+          },
+          "image_id": "sha256:61b90cc8ecca8de508c6cd19701551860de32f053a4899fd056835c8f05ab048",
+          "name": "spsvalidator"
+        }
+      ]
+    }
+  ],
+  "formal_xml_approved": false,
+  "plan_sha256": "1af84936d5111f50e96babdaa2939e1a829abd8e07814c0383b892de1a2c7857",
+  "qualification": {
+    "active_application_changed": false,
+    "autonomous_application": false,
+    "before_source_sha256": {
+      "benchmarks/qualification/contracts/vh1-reference-field-delta-v1.json": "283d9bc05d5642a0ad91b02bcd204c8fcac5a2167be6b373b31ebeb60f9d05a4",
+      "ops/collect_vh1_affiliation_sources.py": "46c3607057bfa1adfe61a3117edeed1269cb97c253d749c824356495681f9641",
+      "ops/collect_vh1_articlemeta_dates.py": "26664fa36e68dabba3a1ddcff81c7a1b2f19d646ec206c77289cb8cacfab8c67",
+      "ops/collect_vh1_editorial_sources.py": "0307b6d30de3208f4d144bb87ca7b88156dcf1b9718d02009a13acb4d4257e57",
+      "ops/collect_vh1_funding_sources.py": "70f085d2c3116b10aa6654df8fea22af76fec1809ddbdba6473ab8ba54bd4008",
+      "ops/collect_vh1_orcid_sources.py": "3cf171f8d3b7acafca424d4476e9e7bec1d8c4ed688a20c9ac558c5cc1b096b6",
+      "ops/qualify_vh1_formula_links.py": "005bce3872689dabb1fb0a7c361f55fca0b8134d0398ade115a6fe246a96679b",
+      "ops/qualify_vh1_formula_revisions.py": "29f704f16b070ce412cb88811a2d792e44f8677359b9c9cf39b00022a0444e64",
+      "ops/qualify_vh1_glyphs.py": "530b9d517cf84bf7a50fe693bd1780a4e249cdbfbde04466a2de545fb01f2c7e",
+      "ops/qualify_vh1_metadata.py": "a2dec611576e90e4279c37addfc96e1cf3b255173ecbe881935a00c06b1fcafe",
+      "ops/qualify_vh1_references.py": "2296a63fac800802f7206953c41f9c9d0bcae34af8e142632cf24c7eb005b7ac",
+      "ops/vh1_source_evolution.py": "37e9ea7fb5cbc0b04f977651d582b5a62a81f18969802af52219c216ef327e7b",
+      "src/idml_foundation/ai/formula_catalog.py": "78870c9fab28bd3c294aca4b51b68eefd3e5ce4eb07a8887c429826d83416ec4",
+      "src/idml_foundation/pipeline/canonical_mapper.py": "cc55d87b41d98b500cee4a9ceffe0833e2e9263b7ccc9c8a8fac7af16aa20286",
+      "src/idml_foundation/pipeline/funding_parser.py": "47a40964e8da95d62b62c84484b9ed639e8eed6cd47dfdbe58be8c9f4ccc8fad",
+      "src/idml_foundation/pipeline/idml_parser.py": "4f260a042aaaa10469b086adeccf28388a7e5e3e2b5c1c969bd31dd720b9bf98",
+      "src/idml_foundation/pipeline/jats_builder.py": "9ad113044ef77a4fa342ac31a24129631db1f870bdfd64c4bfd723ef6db71430",
+      "src/idml_foundation/pipeline/metadata_normalization.py": "088deaecec3648103c86ea6984a6bbc6a46a7686dde0f196c01c7f1fc1d16ad8",
+      "src/idml_foundation/pipeline/object_reference_resolver.py": "69d38bcf2a199875663a83817b77c95c961287e3e4d06635036f7a72788d347c",
+      "src/idml_foundation/pipeline/reference_parser.py": "4cdc6838568ed11ee820201c70075b53b4048aa8d25865d7354590fbf4e88808",
+      "src/idml_foundation/pipeline/service.py": "310212a49a816bcfad5a6cf9c08af2e888941be3f4d8f0644ac54d1a68199e36",
+      "src/idml_foundation/publication_dates.py": "0f20190f807ac867acf402ed0e5d11fc1fb0ef5491a9ea0e79cd9e7bd08b5eae",
+      "src/idml_foundation/release/articlemeta_dates.py": "3bae62f5bda276d585ce568502c61e7e50f5dc66e9ffa019d304bf846eb80532",
+      "src/idml_foundation/release/articlemeta_orcids.py": "2231ed6f7068226bc7b1088d2d3d051ac396e7eb7358c3aef8caf3fae1795568",
+      "src/idml_foundation/release/formal_metadata.py": "c179194a4704ec137b754a6e088cfcfe4dc2b659e796d44cd6ad975af2bbd1b7",
+      "src/idml_foundation/release/institution_locations.py": "272cad83762e905df22822de84fec177b7563aa1cfd130200d76c9a11d8fa0e3",
+      "src/idml_foundation/release/verified_funding.py": "79fb22afa11f69d5b77a1899782fd154a3459eac4d9d48e501813456c740c03b",
+      "src/idml_foundation/services/enrichment.py": "c291d5729519d7673a3eba2852c10022a1aedbbe4ce88f39a4197585aa8e1288",
+      "src/idml_foundation/services/source_authorization.py": "e1c37189771dc5715f0d951c3f29861d423ab782aa8ef84e20eae5f26695755b"
+    },
+    "cases": {
+      "esa-e20240086": {
+        "before_package_sha256": "2c53550ad878f459356505f407567b25b368176114018e0eca9e6b91328cf55b",
+        "before_xml_sha256": "aeaac3caa534d442b13d67881b67a650bb42c5c93f6184dee8fc4a1225e54e63",
+        "catalog_sha256": "cc6ac811f68b821111f6219891846585f6a7a16196ff13aeaf8c823ef0fd24c9",
+        "delta": {
+          "all_other_xml_unchanged": true,
+          "changed_references": 14,
+          "fields": [
+            {
+              "access_dates": 0,
+              "after_sha256": "b4a291e947f2eb105daf0fb938b15ecda2a72c54c79e15440e04f50980e6bba0",
+              "before_sha256": "b07d378e4dfa43f046f6deb57fc3174f4c5c8aaab29bb5dff9605a0ccbcfe9c8",
+              "field": "element-citation",
+              "id": "reference-b66be01e-0df9-513a-beb5-5b07f718870d",
+              "mixed_citation_sha256": "70794408a0a920096a57f943224806cb2a32d1d67e63ef5e6c5dd09abf7a1318",
+              "position": 2,
+              "publication_type": "book",
+              "source_spans": [
+                {
+                  "end": 25,
+                  "sha256": "ccc8e6f2acefebeb0a2adf732762f49021c10f044e0ead404d12772925ba0f3c",
+                  "start": 0,
+                  "tag": "collab"
+                },
+                {
+                  "end": 53,
+                  "sha256": "c93e3fbacd95cfccad6a05eb7871b29860e03eb60670237679b86bf52952962e",
+                  "start": 27,
+                  "tag": "source"
+                },
+                {
+                  "end": 61,
+                  "sha256": "7261410fba2f27ee65c0c9cc05699d5a0dd09d8cbfe66a2ffac5e5aa58a4aabe",
+                  "start": 55,
+                  "tag": "publisher-loc"
+                },
+                {
+                  "end": 80,
+                  "sha256": "c2fc235e120d977e79de368829d82e588d742c051319a29e1a2d7dbcf4e1457f",
+                  "start": 63,
+                  "tag": "publisher-name"
+                },
+                {
+                  "end": 86,
+                  "sha256": "6f6a4e56098cfd9af29e3ae549503b370211a4e94421457fe4cfd39a38a1fa08",
+                  "start": 82,
+                  "tag": "year"
+                }
+              ]
+            },
+            {
+              "access_dates": 0,
+              "after_sha256": "28218d60adef48207e8e9bcc4aa9ba208c6b313078571bb1bc91df2895a870f1",
+              "before_sha256": "02ab778c34bf3956b4286d5b96fb51cfba3d0b092eaf4dc6181e97f68fbebc01",
+              "field": "element-citation",
+              "id": "reference-c839f9e9-0db1-5a46-902b-85571043169e",
+              "mixed_citation_sha256": "d1e14fd2bfe2fcbea83ffda936d5804671f616c50e614018f355411e4c241b46",
+              "position": 4,
+              "publication_type": "book",
+              "source_spans": [
+                {
+                  "end": 5,
+                  "sha256": "8dba991ac87cfa2bd3bb5f0df806baae70907fe86a68e457b78cf15caf101f41",
+                  "start": 0,
+                  "tag": "surname"
+                },
+                {
+                  "end": 19,
+                  "sha256": "73c030d9f8cc0a1b483977bdc7b1473af4268577b30218ef0240b278cd23d4e2",
+                  "start": 7,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 76,
+                  "sha256": "09fa85aa05e9a059efbeb6779e1efe48d3a9149f5bf9802cc14a791d039ea75e",
+                  "start": 21,
+                  "tag": "source"
+                },
+                {
+                  "end": 83,
+                  "sha256": "88e89bc325790913a88514a2ed88166425a8c698790a54dd6f770388d17bf02b",
+                  "start": 78,
+                  "tag": "edition"
+                },
+                {
+                  "end": 98,
+                  "sha256": "35b757f7bc7167a2ebc19a605b56abae1b4372bafd056029adbcd9774658c481",
+                  "start": 85,
+                  "tag": "publisher-loc"
+                },
+                {
+                  "end": 112,
+                  "sha256": "32e1f81e6817b15319c521e10782bdc3347b190833068c4314798565e4311423",
+                  "start": 100,
+                  "tag": "publisher-name"
+                },
+                {
+                  "end": 118,
+                  "sha256": "483029d526219f816e8e8f6a9de07b422633dba180ffc26faac22862a017519f",
+                  "start": 114,
+                  "tag": "year"
+                }
+              ]
+            },
+            {
+              "access_dates": 0,
+              "after_sha256": "2484e7f61e60cdd0ac01866f69eae22b19443da42a6d710ff23193a14dc2ca2f",
+              "before_sha256": "a0fa661dacf6f054463dd8be0bf51d448edb02a092e2e5a67747c5d42eee3fb1",
+              "field": "element-citation",
+              "id": "reference-da88d46d-4105-515b-86dd-d34160c7d7a8",
+              "mixed_citation_sha256": "8b2a18d66b5c54dda01b96fa095490d79db754b472a8673017e03ff3d64165ec",
+              "position": 5,
+              "publication_type": "book",
+              "source_spans": [
+                {
+                  "end": 9,
+                  "sha256": "4926af972247eab930543b2c4f8cc3f6102aa49bb737e70abae647237bf1a332",
+                  "start": 0,
+                  "tag": "surname"
+                },
+                {
+                  "end": 18,
+                  "sha256": "a2c31f56fad110ecc8b4b6ce3ae6bed9696cd7c2955307358517ffc8b39eb30b",
+                  "start": 11,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 98,
+                  "sha256": "7bea7bfd6a331282bc4fca61dd6040b9614e256be3b290c97d97aef087689f65",
+                  "start": 19,
+                  "tag": "source"
+                },
+                {
+                  "end": 108,
+                  "sha256": "815eca977c7d75f72bd23bccc91bc6f9931a42fbf03451eb0d7db8d2a704d94f",
+                  "start": 100,
+                  "tag": "publisher-loc"
+                },
+                {
+                  "end": 123,
+                  "sha256": "17c85ef47fecc1fd17843bed32c3d040aaaee37c68c33751318e0ece8e75d773",
+                  "start": 110,
+                  "tag": "publisher-name"
+                },
+                {
+                  "end": 129,
+                  "sha256": "a78f19952edd18bf02b3c9eb704b088e2120941d6acb22f6f795c42796e60252",
+                  "start": 125,
+                  "tag": "year"
+                }
+              ]
+            },
+            {
+              "access_dates": 0,
+              "after_sha256": "f86e9fc814762541eb401f1211a134975acb48ca8775a372f71eb718c7ab20b4",
+              "before_sha256": "b76787652e7de093ab24c5b26e3dc215f0e1026503c93839f021d20a058d6ac5",
+              "field": "element-citation",
+              "id": "reference-fe7eaf77-cfa3-5dc3-9925-bb6d0f1b0a50",
+              "mixed_citation_sha256": "6a1ad3fb7ba73732b736ee53179ae829fe002585e8ec5607d23a26b6023042f5",
+              "position": 9,
+              "publication_type": "book",
+              "source_spans": [
+                {
+                  "end": 10,
+                  "sha256": "d1ba6108ec9bd764078a2ec9e8cb4d45537d72feb275a86c63bf3699260c48a1",
+                  "start": 0,
+                  "tag": "surname"
+                },
+                {
+                  "end": 22,
+                  "sha256": "82f1c8264f8e3a9b66f28f99c4cd6c2b7cf1043ad44c2cf66f388eb745b9ee51",
+                  "start": 12,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 30,
+                  "sha256": "2237ef2fe2e9fc41c8849a56dc93c3bf89486ff3d5ffa12c597b4a3fdd593ad8",
+                  "start": 24,
+                  "tag": "surname"
+                },
+                {
+                  "end": 55,
+                  "sha256": "cd042001332b9da6fe85c050c252e28bb6ad54d663084efc921abacecfb03fcd",
+                  "start": 32,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 62,
+                  "sha256": "f63d40d22045d5ba4e1ad616e8c4c0148e00aa8826c98349d5153c9ddbaa6d01",
+                  "start": 57,
+                  "tag": "surname"
+                },
+                {
+                  "end": 87,
+                  "sha256": "efa025db4ec085e77d5512f6d7b6019f82498bf658cf14c5c95c3ba0448ad3c1",
+                  "start": 64,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 133,
+                  "sha256": "09270faf97ee523c31c8c8811c805f79611c2044a1da86f1e51c3a00344a0118",
+                  "start": 89,
+                  "tag": "part-title"
+                },
+                {
+                  "end": 148,
+                  "sha256": "27efa96bdfddd107e86a95b265290cafcac42d5b83b10c1f600448c255a33d82",
+                  "start": 139,
+                  "tag": "surname"
+                },
+                {
+                  "end": 159,
+                  "sha256": "a7dd885b7dd4dd15b8e89ade2152b79797014d084a3bc2d67f13eb7b411eae33",
+                  "start": 150,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 30,
+                  "sha256": "2237ef2fe2e9fc41c8849a56dc93c3bf89486ff3d5ffa12c597b4a3fdd593ad8",
+                  "start": 24,
+                  "tag": "surname"
+                },
+                {
+                  "end": 55,
+                  "sha256": "cd042001332b9da6fe85c050c252e28bb6ad54d663084efc921abacecfb03fcd",
+                  "start": 32,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 199,
+                  "sha256": "8539efc1a0c43486385b2bf054ddabb8c5de2be3d2cc06d61af94cb4a72a76e9",
+                  "start": 194,
+                  "tag": "surname"
+                },
+                {
+                  "end": 214,
+                  "sha256": "eda4459699d5c86a7f53320eef91094d5f6f28d6ef7d408b4bd949d8ca3b7390",
+                  "start": 201,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 328,
+                  "sha256": "02659dd1dd1c4bd4d7faa22fb20d14c0234fa66668f02dd3c899656ade5fc179",
+                  "start": 223,
+                  "tag": "source"
+                },
+                {
+                  "end": 344,
+                  "sha256": "a188a64fb6b392833db7697673b3cc5df6d8409935e71588a3591218e0fd5e61",
+                  "start": 330,
+                  "tag": "publisher-loc"
+                },
+                {
+                  "end": 352,
+                  "sha256": "408dbb66987c718e73e3089f107ab88ce573eb30e3a4606aa10b670613fd20bd",
+                  "start": 346,
+                  "tag": "publisher-name"
+                },
+                {
+                  "end": 358,
+                  "sha256": "6f6a4e56098cfd9af29e3ae549503b370211a4e94421457fe4cfd39a38a1fa08",
+                  "start": 354,
+                  "tag": "year"
+                },
+                {
+                  "end": 366,
+                  "sha256": "3a1dfb05d7257530e6349233688c3e121945c5de50f1273a7620537755d61e45",
+                  "start": 363,
+                  "tag": "fpage"
+                },
+                {
+                  "end": 370,
+                  "sha256": "5426d2ca50f244fb43fe9eafc82da08f33f3b4f8d9140802bd0102e780b629d6",
+                  "start": 367,
+                  "tag": "lpage"
+                }
+              ]
+            },
+            {
+              "access_dates": 0,
+              "after_sha256": "ca010587781b743378613b17d779a3b67d25d86a2b969d1f54f89fa2b2985b03",
+              "before_sha256": "c28bbecbdcfad3fdfd0f659b1c993ae6bf39dadddea9f492551f788a2402a76a",
+              "field": "element-citation",
+              "id": "reference-1f1ca036-d978-5342-a2a7-b70e3c3fbf51",
+              "mixed_citation_sha256": "6b0ac2cbfadd1ae2f182346b024a94d30fabca3851c89dc0c2dbc0bf1f0c574e",
+              "position": 15,
+              "publication_type": "book",
+              "source_spans": [
+                {
+                  "end": 6,
+                  "sha256": "2e35b0d8c05b521721140fbc837646a7c3b5343be7a3803a7f66372ec7667144",
+                  "start": 0,
+                  "tag": "surname"
+                },
+                {
+                  "end": 17,
+                  "sha256": "631af269e6954a06d839db1e180da40f22272a5d07d29d46cd77f6d2b5767577",
+                  "start": 8,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 25,
+                  "sha256": "be3ffdfe504a222ba678ce15da7876d210d4d403146991489f96afd4a0a1b6bf",
+                  "start": 19,
+                  "tag": "surname"
+                },
+                {
+                  "end": 37,
+                  "sha256": "8cedf67031856732a0ab2f5bf095d8b8ec89f227a3c9bc9360fafd585c0260ee",
+                  "start": 27,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 69,
+                  "sha256": "272aca0bf488bb583aa53d5983722dff241d187de8aac2113f8e2ad30dbeca66",
+                  "start": 38,
+                  "tag": "source"
+                },
+                {
+                  "end": 76,
+                  "sha256": "d4f40d44e9a02c97969b2b9ff4bd8fe077b50bbc7f4a395decfb92af4822104c",
+                  "start": 71,
+                  "tag": "edition"
+                },
+                {
+                  "end": 86,
+                  "sha256": "815eca977c7d75f72bd23bccc91bc6f9931a42fbf03451eb0d7db8d2a704d94f",
+                  "start": 78,
+                  "tag": "publisher-loc"
+                },
+                {
+                  "end": 108,
+                  "sha256": "2f96be1eb6a8e06520e03671c433cff621f14492fa27248aabf9679cc4e369cf",
+                  "start": 88,
+                  "tag": "publisher-name"
+                },
+                {
+                  "end": 114,
+                  "sha256": "73a2af8864fc500fa49048bf3003776c19938f360e56bd03663866fb3087884a",
+                  "start": 110,
+                  "tag": "year"
+                }
+              ]
+            },
+            {
+              "access_dates": 1,
+              "after_sha256": "fabf0c60e3fe4e314e47cb0c2b9d95492e882952e467c6e4fbf6b1d767942814",
+              "before_sha256": "438a85c1caf3ca9279ef459b04cfe5f0f3149ee3035332740d47325f6d6da388",
+              "field": "element-citation",
+              "id": "reference-951d3c5b-df31-5886-a160-4afa2ccb04d4",
+              "mixed_citation_sha256": "f688d44f849b43d4911f49027428b700380229de74579e18db34ea60b9f4471f",
+              "position": 16,
+              "publication_type": "thesis",
+              "source_spans": [
+                {
+                  "end": 5,
+                  "sha256": "ad3b248d8f8c3429f2f17a484ea18442488ec5be13333dec0e6a504619f9c6b9",
+                  "start": 0,
+                  "tag": "surname"
+                },
+                {
+                  "end": 20,
+                  "sha256": "a76195878fa84843e178d475eb70229f23327fea1d4f695c88b7532819811644",
+                  "start": 7,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 187,
+                  "sha256": "a03df22dc055aba0879fa259333086541bf62b2a90a53f98aa89bdfee8464b82",
+                  "start": 22,
+                  "tag": "source"
+                },
+                {
+                  "end": 183,
+                  "sha256": "ec944c93c0106e0b3023c52ece85b55743f2bac525d181206e36effc9ced82d0",
+                  "start": 173,
+                  "tag": "publisher-loc"
+                },
+                {
+                  "end": 249,
+                  "sha256": "d9dd034b570f22440306ed583d8c610106bd3193264a301cc0028dcd0b5533f5",
+                  "start": 215,
+                  "tag": "publisher-name"
+                },
+                {
+                  "end": 212,
+                  "sha256": "11f77572175966928beb42ddad559db8022b33a3809e9b1ea16d4aab5a48c167",
+                  "start": 189,
+                  "tag": "comment"
+                },
+                {
+                  "end": 267,
+                  "sha256": "152e69cf3c8e76c8d8b0aed924ddd1708e4c68624611af33d52c2c2814dd5df9",
+                  "start": 263,
+                  "tag": "year"
+                },
+                {
+                  "end": 383,
+                  "sha256": "2fb8bd1fd8d9bb9c99ee6a897145d901f4f3c01179bad653f65b1b749157d0c7",
+                  "start": 357,
+                  "tag": "date-in-citation"
+                },
+                {
+                  "end": 355,
+                  "sha256": "281713999b2f8bab135b9514807c709f28d3deda9fa833edd6e29b47edc1d063",
+                  "start": 283,
+                  "tag": "ext-link"
+                }
+              ]
+            },
+            {
+              "access_dates": 0,
+              "after_sha256": "dcba95f2f8949992ef3886d92c73029f3161ba2c0053c9bae93e7b5d085cfa67",
+              "before_sha256": "1924be5e3efbaa34e661c5027a09f8bf03b56a725d8b73e353b2ae69e55fbf23",
+              "field": "element-citation",
+              "id": "reference-82334187-e21f-5104-860f-b102add32f71",
+              "mixed_citation_sha256": "10005e67d5cf3924bf0eae297e875a1daa7271b773436c2487930b4ea143aba6",
+              "position": 28,
+              "publication_type": "book",
+              "source_spans": [
+                {
+                  "end": 8,
+                  "sha256": "8b62423d52bbfa51dacf18281c5eb4b10cdb7a389e6f18721c3f9841265c412b",
+                  "start": 0,
+                  "tag": "surname"
+                },
+                {
+                  "end": 12,
+                  "sha256": "3f27483f97c94ecf0c8f11148fbbd048dffcdecbe5c62fa23076297ae804f6c6",
+                  "start": 10,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 20,
+                  "sha256": "5a1234aa35b4d246aa5337c5d62a714a5f768538f8138b2f4b147130f32cbefb",
+                  "start": 14,
+                  "tag": "surname"
+                },
+                {
+                  "end": 24,
+                  "sha256": "5bfe62d9f7d85f01c08cd136878aff9508276fa1d75c2ae2f21c43cf29316eec",
+                  "start": 22,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 64,
+                  "sha256": "2485c2cf72d0cea815a9ec194bd7f4bb54240e88d6cdab398b5fd753b21b364a",
+                  "start": 25,
+                  "tag": "part-title"
+                },
+                {
+                  "end": 142,
+                  "sha256": "d5e402e4192df21f9f53960ce3fb309de77b47ac2cf96c19929058eac9462658",
+                  "start": 112,
+                  "tag": "source"
+                },
+                {
+                  "end": 205,
+                  "sha256": "9c1e3bfebfcbe9abd4e1410bc18adcfdb1378c01fb81fa681c13fe292434698a",
+                  "start": 144,
+                  "tag": "publisher-name"
+                },
+                {
+                  "end": 110,
+                  "sha256": "e7afc2ba62a62416a7e18f2e620f6dbf7a0187dd39d857c48bdfd090dec368ba",
+                  "start": 70,
+                  "tag": "comment"
+                },
+                {
+                  "end": 211,
+                  "sha256": "4dea5c7cb70f50322ec9d734aa4aa078be9227c05251e18991c596f387552370",
+                  "start": 207,
+                  "tag": "year"
+                },
+                {
+                  "end": 219,
+                  "sha256": "3a8f6d79cd434dc10588606993976b7b2bc038ff4a2481e857ac0168fc29a683",
+                  "start": 216,
+                  "tag": "fpage"
+                },
+                {
+                  "end": 223,
+                  "sha256": "e13b778ae833ca8c5d757c58e4a85bd71e08c05caedbd096e13ec3f7b228b43a",
+                  "start": 220,
+                  "tag": "lpage"
+                }
+              ]
+            },
+            {
+              "access_dates": 0,
+              "after_sha256": "bffa01bffedb17ad49accf555617be930b434fcc7ee150b7ab1b08fbd0a9b40e",
+              "before_sha256": "dfd2dcb3726b502b00e31936de9e3bfb4dcfa6883d7af1c9d42dd79c4c5aeee6",
+              "field": "element-citation",
+              "id": "reference-de92d8d3-5ad5-56f1-b180-ccb3cb0bb6b8",
+              "mixed_citation_sha256": "d0057b12148967da6f457ac4bd7e2a335b63987b5f0dd2859dd3d6d0ce0775e6",
+              "position": 35,
+              "publication_type": "book",
+              "source_spans": [
+                {
+                  "end": 14,
+                  "sha256": "e5af0d2641b1e7ad308a2548467fbd2945de7ef71ebb28062551fab767820caa",
+                  "start": 0,
+                  "tag": "collab"
+                },
+                {
+                  "end": 71,
+                  "sha256": "14bcbcfcec0f46164ac4d6a6ff7b93fc285f337a9e88e8b01c06c34e49dbfeb1",
+                  "start": 16,
+                  "tag": "source"
+                },
+                {
+                  "end": 79,
+                  "sha256": "e3740557126b369073bb55ee8cbaf7168f04081663459d9955af620d40795e6f",
+                  "start": 73,
+                  "tag": "edition"
+                },
+                {
+                  "end": 89,
+                  "sha256": "815eca977c7d75f72bd23bccc91bc6f9931a42fbf03451eb0d7db8d2a704d94f",
+                  "start": 81,
+                  "tag": "publisher-loc"
+                },
+                {
+                  "end": 102,
+                  "sha256": "872eb0cd2268657ecc80d20f18cf5740d7ba74ea6ad3997bc2dc28974037fa87",
+                  "start": 91,
+                  "tag": "publisher-name"
+                },
+                {
+                  "end": 108,
+                  "sha256": "96da37e95d5cc34fe3bef6c89428df859b8a217630d0c664da1daf1539caacf5",
+                  "start": 104,
+                  "tag": "year"
+                }
+              ]
+            },
+            {
+              "access_dates": 0,
+              "after_sha256": "dd1afb8e8ee8b1e6f7df0c9545458511eff44b2e29283a0d7b972f99841657b8",
+              "before_sha256": "d32a471a055837435c995a71fe0fcb6937debdc6cc7068f7ce470b79e2201a6f",
+              "field": "element-citation",
+              "id": "reference-d069fd00-9e01-54b2-94b0-04fa446d2870",
+              "mixed_citation_sha256": "48462bb266c2aab6454dc02a13dc64ea81e791c14929d99e85abe2b8c8f6a4f1",
+              "position": 38,
+              "publication_type": "book",
+              "source_spans": [
+                {
+                  "end": 5,
+                  "sha256": "8dcae5347c4876050d4c34055cf63e87a98506817fdb0b0be673e043b839103c",
+                  "start": 0,
+                  "tag": "surname"
+                },
+                {
+                  "end": 12,
+                  "sha256": "5b708d9b08ea2bb5f4455c87425aa3ed18180dcf1c4217018642be6f72acc551",
+                  "start": 7,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 38,
+                  "sha256": "dd61e3eb6d678ca6a8e6a3e566e87cf098a8282c10db8de33c30227ee2cc9557",
+                  "start": 13,
+                  "tag": "source"
+                },
+                {
+                  "end": 46,
+                  "sha256": "f25844a920196488c3d4b7295d818953568b6cbfba3c6d2ab5c06e3f749e8d16",
+                  "start": 40,
+                  "tag": "edition"
+                },
+                {
+                  "end": 53,
+                  "sha256": "af748057fa2956d8465363eb298976aed8f477c836b66b7135bae78dadfa1ce5",
+                  "start": 48,
+                  "tag": "publisher-loc"
+                },
+                {
+                  "end": 85,
+                  "sha256": "f5d5b2862819a7b0cb002dea3b8734042760e8e973a8e497c51d9cc8b0f24210",
+                  "start": 55,
+                  "tag": "publisher-name"
+                },
+                {
+                  "end": 91,
+                  "sha256": "11d1ff4edd53407199c92b00cbc3abe8c9c5d5bed4414ad07b55c896b0e7a713",
+                  "start": 87,
+                  "tag": "year"
+                }
+              ]
+            },
+            {
+              "access_dates": 0,
+              "after_sha256": "c986698a2448ceb43e680b7c6a70a281373e29327d626fce8cc38483558c8e01",
+              "before_sha256": "56af52a9fd797a56b8b1357028b1e6dab3ec526ea0c1302926ad801bbb8e27ec",
+              "field": "element-citation",
+              "id": "reference-29a1323e-de7d-5928-a27e-615a0a5016be",
+              "mixed_citation_sha256": "d406fc48a904e3b0d1684a5f6357990e48c322891ad98ba3739fbc56122575ba",
+              "position": 39,
+              "publication_type": "book",
+              "source_spans": [
+                {
+                  "end": 5,
+                  "sha256": "cf453c1f6666595e3363c01970eb5a99f5e85cf9e8b9907e57c50b4431570701",
+                  "start": 0,
+                  "tag": "surname"
+                },
+                {
+                  "end": 12,
+                  "sha256": "73775dda35f29057ed9ba0133932eab560df7d5d1e957ed9f8e93d1aae05ad5a",
+                  "start": 7,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 72,
+                  "sha256": "462d1518d36a68f83292ea8b3f29497916dfb6676b9a1f9bba6c8bf49ba57c98",
+                  "start": 13,
+                  "tag": "source"
+                },
+                {
+                  "end": 78,
+                  "sha256": "9acf456ddf6f2b6a9241ec5d47f0e705dd2928eccd50ae6a9f6660f689c6843a",
+                  "start": 74,
+                  "tag": "publisher-loc"
+                },
+                {
+                  "end": 100,
+                  "sha256": "063940543c190d37a95ac35834f1b7291bbe2cb14122b1c4f855c7f2c83912b8",
+                  "start": 80,
+                  "tag": "publisher-name"
+                },
+                {
+                  "end": 106,
+                  "sha256": "78e370b587b145920213731b7c7c725e512b3b6577c51c800218a7c764c532ae",
+                  "start": 102,
+                  "tag": "year"
+                }
+              ]
+            },
+            {
+              "access_dates": 1,
+              "after_sha256": "462aa0d63fdc7ee1f42d098481efcdfff7d2d0c5b53bb93772aa09f8cfc8cc0b",
+              "before_sha256": "b5c9a14b0d6649e751f5abe85a8e9179d5a0a38b43480c7a4785eaaefb242227",
+              "field": "element-citation",
+              "id": "reference-a3f6a367-c1f9-5543-9306-a2e7615fc0d1",
+              "mixed_citation_sha256": "77c377509bc7ef29c598895a21e4dc3c544db8a4e9e56adfc561e44a62052e23",
+              "position": 44,
+              "publication_type": "other",
+              "source_spans": [
+                {
+                  "end": 40,
+                  "sha256": "318612daea789f4d2809632700ea85429c816f3ba7833edef47b842da19865f1",
+                  "start": 0,
+                  "tag": "collab"
+                },
+                {
+                  "end": 52,
+                  "sha256": "c4e7ea52da69a40b14ad141cf1fa28f121bc32bca57781813deb60bf6d1435be",
+                  "start": 42,
+                  "tag": "article-title"
+                },
+                {
+                  "end": 39,
+                  "sha256": "b4baeecd9628585160db6ffb9a362663d2d55650af5c1d15cc81b699b60c3cf8",
+                  "start": 35,
+                  "tag": "source"
+                },
+                {
+                  "end": 64,
+                  "sha256": "73a2af8864fc500fa49048bf3003776c19938f360e56bd03663866fb3087884a",
+                  "start": 60,
+                  "tag": "year"
+                },
+                {
+                  "end": 173,
+                  "sha256": "f49db1502cd43dc2586e88dc8cf2f036b3a9854a42e3c3f9211a968e13e0cb9f",
+                  "start": 147,
+                  "tag": "date-in-citation"
+                },
+                {
+                  "end": 145,
+                  "sha256": "2d405e26ed331d7253eb39a27feb9a5cdbeb2341a149d420fe130bcff117494a",
+                  "start": 80,
+                  "tag": "ext-link"
+                }
+              ]
+            },
+            {
+              "access_dates": 0,
+              "after_sha256": "f9f8ed418a1c1f3e46301b1de51ffb87d7b15361211d215d7ea0851763a16c0e",
+              "before_sha256": "03652b8269d21ad0c84c8f85266b6b84379b570b0c94f15a377085420d81e41c",
+              "field": "element-citation",
+              "id": "reference-db876db5-adfa-5e46-bfa3-6ce6feaf0cc0",
+              "mixed_citation_sha256": "6f806220fdc7ce5e75f73277e086a9e043057f55235321ce47e48397b13b4087",
+              "position": 46,
+              "publication_type": "book",
+              "source_spans": [
+                {
+                  "end": 5,
+                  "sha256": "3988f9cdee55f3fc036635a2bf89d1c35d3ab18494be29e27a567c6409eddf3e",
+                  "start": 0,
+                  "tag": "surname"
+                },
+                {
+                  "end": 21,
+                  "sha256": "76283e28206d046c05668c9db10939225330f2f0f901105ceb99e0122564a412",
+                  "start": 7,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 28,
+                  "sha256": "e479772d2b327f8a13ab3c94ac231a1770ba78ef56280a4501174abf077160d8",
+                  "start": 23,
+                  "tag": "surname"
+                },
+                {
+                  "end": 43,
+                  "sha256": "b53c91ec27137c816cab70e6ac59b3d69f2de41312245351a661eff362183e7e",
+                  "start": 30,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 51,
+                  "sha256": "e3e63ecc08033a232a08615f063d71e6cb22077cdb010017af28754d5d6dd1c8",
+                  "start": 45,
+                  "tag": "surname"
+                },
+                {
+                  "end": 61,
+                  "sha256": "f3c1b1901c9ffd8e26e5a05f1229fb33d0835293be08487358c234d8fca8da7e",
+                  "start": 53,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 188,
+                  "sha256": "f697c2dda62527a0ab7b6f1315e69af9289f06beefb423c544bf18f7679e3e20",
+                  "start": 62,
+                  "tag": "source"
+                },
+                {
+                  "end": 199,
+                  "sha256": "651e86fd5b4d08165f1eb856c3c2ba6459774e46a9c70880441ba73bb5dbeb13",
+                  "start": 190,
+                  "tag": "publisher-loc"
+                },
+                {
+                  "end": 231,
+                  "sha256": "b27bd270829a6677e75f163058ed68fb543d0e901c7dfd7453294d1a0db76f08",
+                  "start": 201,
+                  "tag": "publisher-name"
+                },
+                {
+                  "end": 237,
+                  "sha256": "72d1b5da6eeaf1789df86487da50ad5e9dadb5ffaecb56b6de592aa286c9c1b8",
+                  "start": 233,
+                  "tag": "year"
+                }
+              ]
+            },
+            {
+              "access_dates": 0,
+              "after_sha256": "5ab37785fc4457a6d66a57b38d7d9234b8b26a64f1de7dd9be4bbfcee77df4cf",
+              "before_sha256": "c25e09cedd8798dd9f323454a3d94be2aa3014b28026e0e0cc209c92f514facf",
+              "field": "element-citation",
+              "id": "reference-3b023eb3-6b3f-5b0e-9c59-1c89dea7684c",
+              "mixed_citation_sha256": "9fba4f96ba8951a77a2e627b00516e4df54c6d3e71a99f974e60e017905fe0b6",
+              "position": 47,
+              "publication_type": "book",
+              "source_spans": [
+                {
+                  "end": 8,
+                  "sha256": "3cf5301e259c1560bcb6d074bbb0c3aab20d3956b771db668cdc957ed85f3fb4",
+                  "start": 0,
+                  "tag": "surname"
+                },
+                {
+                  "end": 20,
+                  "sha256": "96e26f385fba33f5c23db3d07fc3935bf0080f40bf679555365d192568ed1702",
+                  "start": 10,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 61,
+                  "sha256": "6cc929d9a710eafd87947d64b318c61ef2287fb4c8f8ff9325c73ae7e1471207",
+                  "start": 22,
+                  "tag": "source"
+                },
+                {
+                  "end": 69,
+                  "sha256": "ecc0e7dc084f141b29479058967d0bc07dee25d9690a98ee4e6fdad5168274d7",
+                  "start": 63,
+                  "tag": "publisher-loc"
+                },
+                {
+                  "end": 85,
+                  "sha256": "47bbb509ada07ab37802a15dc8b6c2d61998cde1a5c2e4250eb7a27ea536b329",
+                  "start": 71,
+                  "tag": "publisher-name"
+                },
+                {
+                  "end": 91,
+                  "sha256": "f1cfa5ebb149e8099d561aae57beed6c68f990f45a910ea9d7b460dbcc5350be",
+                  "start": 87,
+                  "tag": "year"
+                }
+              ]
+            },
+            {
+              "access_dates": 1,
+              "after_sha256": "ad4b4e48e2202cf8bbb1ee680d9337edf4b780e96773804ca5aea23928f6e4e1",
+              "before_sha256": "ad5e17059f6cf63e3f4d1c220ff98a2bd56bc378ca9bf3e552a1ea99a4827171",
+              "field": "element-citation",
+              "id": "reference-d1f110b2-25dc-5f3f-8d0b-dfbbaf5e3ba7",
+              "mixed_citation_sha256": "83bc30ccab4d261095df9183af7f500329d7ae2d4984c031d04b940c898294ff",
+              "position": 49,
+              "publication_type": "other",
+              "source_spans": [
+                {
+                  "end": 6,
+                  "sha256": "f1da68639105e7f356ceb1e63dd75965e11b40f00a51986d4e8ef944c533ba10",
+                  "start": 0,
+                  "tag": "surname"
+                },
+                {
+                  "end": 16,
+                  "sha256": "020bb5a58d1d21204f92e3b017f7ac3854a02917de0c9adb35348da8f2085b39",
+                  "start": 8,
+                  "tag": "given-names"
+                },
+                {
+                  "end": 30,
+                  "sha256": "504c4e029045d03e77c52b7baff1f26dbd7895bc794f7cc96678a08113742fe5",
+                  "start": 17,
+                  "tag": "article-title"
+                },
+                {
+                  "end": 36,
+                  "sha256": "743f46d35d1a8ffd8b3728abdc81ebc025abc1f88db0157a27297d3660616444",
+                  "start": 32,
+                  "tag": "source"
+                },
+                {
+                  "end": 42,
+                  "sha256": "a20a2b7bb0842d5cf8a0c06c626421fd51ec103925c1819a51271f2779afa730",
+                  "start": 38,
+                  "tag": "year"
+                },
+                {
+                  "end": 155,
+                  "sha256": "52b6285bbdf831985d2d5144f25716d189085440b33bd3579660bca698074d11",
+                  "start": 130,
+                  "tag": "date-in-citation"
+                },
+                {
+                  "end": 128,
+                  "sha256": "544a09ee4b85ab71c3dd3a967b0c8eb668826b28d52e4382136e06f7d49b7168",
+                  "start": 58,
+                  "tag": "ext-link"
+                }
+              ]
+            }
+          ],
+          "mixed_citations_unchanged": true,
+          "reference_count": 52
+        },
+        "deterministic": true,
+        "files": {
+          "candidate.xml": "72886a9fb15a374459779ad2c3c97f1ee3ef90adeec1809d3dde53a4700d3c55",
+          "candidate.zip": "dca147fb06dd8a07d164e3df75f38a254f33b895aa49950cc70097d4f8e7b4c1",
+          "canonical.json": "803b84b9e9595adcf6c207efdd7d90161193cdf0f006d7a9b0ccccacd2733a43",
+          "formula_catalog.json": "cc6ac811f68b821111f6219891846585f6a7a16196ff13aeaf8c823ef0fd24c9",
+          "grant.json": "442a713c28a54916e0d6c525dcf56665aad659c1e376f67ca8b70ac4c30e3b27",
+          "incoming/0000-0002-0839-9947.json": "8e88176120496aa1a9293abf3cd2940f607e382f5dee6e96113176e637a6f26b",
+          "incoming/0000-0002-3963-5973.json": "e81c0ed401ba8a09569816458ec3de4ab432893a0effb6483545e121a16a2324",
+          "incoming/0000-0003-1136-7986.json": "36109949ff7b73425b30f4bc29600beabaa5ddf1d1f613b97856143bd74fce6c",
+          "incoming/crossref.json": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3",
+          "incoming/doi-manifest.json": "fbc96c2a94e262b5efaaeb4e48df5cf7dc2a3d61218c03cfe0597e9f805b99e6",
+          "incoming/editorial-manifest.json": "e91fed2b7034ee40f7354f937302b1c119bc926b1cebe72c1f3c9a8c110c293a",
+          "incoming/journal.json": "ecb356e02ecfc04718dd3fc36127359ccc04083796a5b6037a08b0a36ff52caf",
+          "incoming/manifest.json": "17429e1b7ca7efee8f87227db054d8612320316515e7174f2e928c63a56a6a7a",
+          "scope.json": "d2f4148fc817e98084a28a0c3c70505b4fe72465000d5a52a177770d514664d5"
+        },
+        "fresh_authorities": {
+          "doi": {
+            "retrieved_at": "2026-10-09T19:50:17.906373+00:00",
+            "sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3"
+          },
+          "editorial": {
+            "0000-0002-0839-9947": {
+              "retrieved_at": "2026-10-09T19:50:19.303472+00:00",
+              "sha256": "8e88176120496aa1a9293abf3cd2940f607e382f5dee6e96113176e637a6f26b"
+            },
+            "0000-0002-3963-5973": {
+              "retrieved_at": "2026-10-09T19:50:19.888260+00:00",
+              "sha256": "e81c0ed401ba8a09569816458ec3de4ab432893a0effb6483545e121a16a2324"
+            },
+            "0000-0003-1136-7986": {
+              "retrieved_at": "2026-10-09T19:50:20.427290+00:00",
+              "sha256": "36109949ff7b73425b30f4bc29600beabaa5ddf1d1f613b97856143bd74fce6c"
+            },
+            "journal": {
+              "retrieved_at": "2026-10-09T19:50:20.623533+00:00",
+              "sha256": "ecb356e02ecfc04718dd3fc36127359ccc04083796a5b6037a08b0a36ff52caf"
+            }
+          }
+        },
+        "offline_valid": true,
+        "package_sha256": "dca147fb06dd8a07d164e3df75f38a254f33b895aa49950cc70097d4f8e7b4c1",
+        "scope_sha256": "767b1ad812885e528cfc17d6999a601d5423fe0dee063f9861bf59efa4b69d8b",
+        "source_idml_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+        "source_pdf_sha256": "232fb2428bbdf344af192d24865a4e39848fd4e4fae20f2325aa9ecef6ff2496",
+        "unchanged_assets": {
+          "1809-4457-esa-30-e20240086-gf01.jpg": "df078062a48950f2b9ca63f4746a901ae1ebc7e0f6f4b48ab0bb9f12a6378681",
+          "1809-4457-esa-30-e20240086-gf02.jpg": "3eb3d32a852fe99a2e53f7bc1fe3d48e34c380fccc25b990c1c08a246708d416",
+          "1809-4457-esa-30-e20240086-gf03.jpg": "078f9c29910b59b170e2542a9726de0dc58fd40fd913ed8f57dd1e6cf4c32a2f",
+          "1809-4457-esa-30-e20240086-gf04.jpg": "ed7c61692bc1445bd335772dc6e47d80b1f9dbd4f064dde9380539e4b55f9482",
+          "1809-4457-esa-30-e20240086-gf05.jpg": "59014924b128e7057c3c478efdd8638726a8ec456ee1bf3d639b140631bb5b7d",
+          "1809-4457-esa-30-e20240086.pdf": "232fb2428bbdf344af192d24865a4e39848fd4e4fae20f2325aa9ecef6ff2496"
+        },
+        "xml_sha256": "72886a9fb15a374459779ad2c3c97f1ee3ef90adeec1809d3dde53a4700d3c55"
+      },
+      "esa-e20240135": {
+        "before_package_sha256": "146f934528744f5c048b5e5282018f4cf840bd5fb74fb24e9948ba71c173e025",
+        "before_xml_sha256": "ccc0553baa5c11d17b7ce1fd47d7e4da766a59543c2ae8e2bc41d2269ff51992",
+        "catalog_sha256": "ea1709d6d5955c7080b9584747296ed8450cd60dafe3281349c4dff8dc8dea9c",
+        "delta": {
+          "all_other_xml_unchanged": true,
+          "changed_references": 1,
+          "fields": [
+            {
+              "access_dates": 1,
+              "after_sha256": "37d8436ae2f8f3df323f2b9e29ac2068e3c21078d0806449da8e436d975340d5",
+              "before_sha256": "98471e64915dd6c270039aaf265f15748565b7cef7f90445acd7c11f4a1b7e6f",
+              "field": "element-citation",
+              "id": "reference-ff139fbc-b398-59da-9326-587309014e6a",
+              "mixed_citation_sha256": "f31a522bceb91f7ffa17d0981aa70447f010ad58c4b4ea18a7a707774c8905f8",
+              "position": 31,
+              "publication_type": "other",
+              "source_spans": [
+                {
+                  "end": 25,
+                  "sha256": "268f3a2a41bfdba74649abda4d02a71f8cdaa51bb898a362ef9d9af16f9ff52b",
+                  "start": 0,
+                  "tag": "collab"
+                },
+                {
+                  "end": 63,
+                  "sha256": "2fe05095261038a688c220eb3318f1189e5dfa318ef7a9ceb70db63dda792c2d",
+                  "start": 27,
+                  "tag": "article-title"
+                },
+                {
+                  "end": 90,
+                  "sha256": "24cae19901b9e21bea32887383dd7010c57015f5e14b50076cab633b218aa2bb",
+                  "start": 65,
+                  "tag": "source"
+                },
+                {
+                  "end": 96,
+                  "sha256": "73a2af8864fc500fa49048bf3003776c19938f360e56bd03663866fb3087884a",
+                  "start": 92,
+                  "tag": "year"
+                },
+                {
+                  "end": 201,
+                  "sha256": "db655553ca9efd5089193011b6ccc4dc1e0d404562d6aa0be5f5fe99b8e33e5d",
+                  "start": 177,
+                  "tag": "date-in-citation"
+                },
+                {
+                  "end": 175,
+                  "sha256": "f14ea4abd6bd5104ed6ddd54e0aa2cb0a96b2ae679a891428e94c8711f480fad",
+                  "start": 112,
+                  "tag": "ext-link"
+                }
+              ]
+            }
+          ],
+          "mixed_citations_unchanged": true,
+          "reference_count": 35
+        },
+        "deterministic": true,
+        "files": {
+          "candidate.xml": "e0ad6a89cbcfee6ba4b924cf1c1b2d13c2ca30c162aadf5ca707d0af54533239",
+          "candidate.zip": "cf410d72179431e2eebb7b66b78d7caec92846db0031a8bbb83ebded3bf5a6b3",
+          "canonical.json": "58299ab5ecc6353819e4c5ffc3fb4f3c44c85d5e2872b3204327e96aaa603c99",
+          "formula_catalog.json": "ea1709d6d5955c7080b9584747296ed8450cd60dafe3281349c4dff8dc8dea9c",
+          "grant.json": "167b57295ee29d4d42ef02f585bd879f106d991494ff56cf800618587be22dd4",
+          "incoming/0000-0001-6095-4568.json": "3de4b93ada52dce38d1087399e2d2bcb141f92847c7fc4499b9e6e8ec3f0e3b0",
+          "incoming/0000-0002-0767-779X.json": "399b9526ea5cb9c1d94a79031936029f9762aabe94ce42324c0c2e1fa0cdb036",
+          "incoming/0000-0002-9395-9493.json": "6eaa97ca928562e1f820432ff882ab536f921176da2eb16fe7287f56a647a1a3",
+          "incoming/0000-0003-3715-2940.json": "c1912ad41e77c25a9865fedfccdf0ceca0b75f78fb99f111aa364107050871b8",
+          "incoming/crossref.json": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+          "incoming/doi-manifest.json": "e323182d492ba0eb399e50f30b0824f64ec229030b1f6108081f05da4943b92d",
+          "incoming/editorial-manifest.json": "e666ae4e5e829c9b1ce0ec5af9e6e6222217caabb0f55d1672fbcc8d9e0d6f92",
+          "incoming/journal.json": "ecb356e02ecfc04718dd3fc36127359ccc04083796a5b6037a08b0a36ff52caf",
+          "incoming/manifest.json": "8415449d3e62002f40b637ffc9f4c49b5f3bd5320f1c682605743e1987896dad",
+          "scope.json": "38420e2eacdff11913f8d906a7b40227ace1dec0a19a08dc556ee4c84fef0fcb"
+        },
+        "fresh_authorities": {
+          "doi": {
+            "retrieved_at": "2026-10-09T19:50:28.650714+00:00",
+            "sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50"
+          },
+          "editorial": {
+            "0000-0001-6095-4568": {
+              "retrieved_at": "2026-10-09T19:50:29.295554+00:00",
+              "sha256": "3de4b93ada52dce38d1087399e2d2bcb141f92847c7fc4499b9e6e8ec3f0e3b0"
+            },
+            "0000-0002-0767-779X": {
+              "retrieved_at": "2026-10-09T19:50:30.079925+00:00",
+              "sha256": "399b9526ea5cb9c1d94a79031936029f9762aabe94ce42324c0c2e1fa0cdb036"
+            },
+            "0000-0002-9395-9493": {
+              "retrieved_at": "2026-10-09T19:50:30.715614+00:00",
+              "sha256": "6eaa97ca928562e1f820432ff882ab536f921176da2eb16fe7287f56a647a1a3"
+            },
+            "0000-0003-3715-2940": {
+              "retrieved_at": "2026-10-09T19:50:31.295715+00:00",
+              "sha256": "c1912ad41e77c25a9865fedfccdf0ceca0b75f78fb99f111aa364107050871b8"
+            },
+            "journal": {
+              "retrieved_at": "2026-10-09T19:50:20.623533+00:00",
+              "sha256": "ecb356e02ecfc04718dd3fc36127359ccc04083796a5b6037a08b0a36ff52caf"
+            }
+          }
+        },
+        "offline_valid": true,
+        "package_sha256": "cf410d72179431e2eebb7b66b78d7caec92846db0031a8bbb83ebded3bf5a6b3",
+        "scope_sha256": "9b45d5934058d398553e489570e986ba9a91a33cea990c3aa240703ae7c1f41e",
+        "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+        "source_pdf_sha256": "d997b54fdac501397b80e7a4526d6fff705509a99b52e90bd70310d8cdba6157",
+        "unchanged_assets": {
+          "1809-4457-esa-30-e20240135-gf01.jpg": "d5271693c4ea6aa0711a2a5bb9b61df7c9f2afd95f5b57668eb0aa2203fbf3a8",
+          "1809-4457-esa-30-e20240135-gf02.jpg": "dc7d711a910fa0bb66166af504982a5bf916d6371f69f7a1cb8633d23274425a",
+          "1809-4457-esa-30-e20240135-gf03.jpg": "a18b38923350cb857cbc402e74879c6abfcc5c1ea7cf6fdf299f7ac476f02a29",
+          "1809-4457-esa-30-e20240135-gf04.jpg": "0418804c16c8a026c67fecf3bf4483076974fea628945638c5e1b798809aeb0a",
+          "1809-4457-esa-30-e20240135-gf05.jpg": "b592cb2ebc7ab6e9b772b092c0c4e4614121ed426b6b72b39ca391e3a397e24a",
+          "1809-4457-esa-30-e20240135-gf06.jpg": "c276a2dda7563baaaa08b5ba43554e198bc976e0b018d146e8a8efe308c6918f",
+          "1809-4457-esa-30-e20240135-gf07.jpg": "53f597cca0364192ecbcb8df7390b986363b339b828865f5228ca5160f7528b8",
+          "1809-4457-esa-30-e20240135.pdf": "d997b54fdac501397b80e7a4526d6fff705509a99b52e90bd70310d8cdba6157"
+        },
+        "xml_sha256": "e0ad6a89cbcfee6ba4b924cf1c1b2d13c2ca30c162aadf5ca707d0af54533239"
+      }
+    },
+    "code_sha256": {
+      "doi_authority_transport.py": "ab83fbe18e6e688335d6dc69296773285ed52b6854dc98a32326f7db34dcd6a3",
+      "doi_package_binding.py": "4a4e768050bff7669cac414ac49ec5433f7490a42c88c8e39cce385711acc318",
+      "package_validation.py": "728f9e4d565967a8e5d4c6084fe1c19c898d53193ed6536c18ef529865880aec",
+      "probe_scoped_socket.py": "4f96186ed1887478baf8fe51cd30a41e5b7d0e78e4856f7eb50009e32accaafc",
+      "provision_scoped_authorities.py": "280c4dbeba72db68e7822ba515d3700037f352911ab1f31e20708d2f52a8ea23",
+      "run_vh1_history_linux.py": "9e212b91d252148b775378027efd5595cb0141a3454811529335cd59b72cc45b",
+      "run_vh1_metadata_linux.py": "482158e396879ebc86454ab1d538406ac89d3bc4698e01dd2b07d691c1ee4d24",
+      "run_vh1_scoped_socket.py": "fd8742aa4fd861e7e09e6f705f7d5902fb25ef886c28761b419b19eeb906e540",
+      "scoped_authority_transport.py": "2d6a8cd07056464bb64b25739b1c9c423e3ec4ba94e674b992d6ad8baaced0f2",
+      "scoped_validator_broker.py": "e3cd6ccafe54523db1e70b76ecd7cc6f33da143487ae4206f1b7b7e80c5cb83f",
+      "scoped_validator_transport.py": "7a8c633911fb8abcaf24e9a4882a90a7f669b55fc1c1928a1ccad33cd75e1856",
+      "validation_engine.py": "ee32a0c44e9a7cb60f9d65d85281b0eb7e55dba79d846e687bdd95139f275b1d",
+      "validation_scope.py": "7df6a7f2255faec390c2f11228a61f70ef741fd28031170566e97a901883af63",
+      "validator_broker.py": "487df9390980f6505b33545df14bc687c4b91824159eadfce2263f8b7aa17f7f",
+      "validator_registry.py": "72331f5e3c95a459c81f17e617f209031e334a9a0b28edb508f6a65f27704723",
+      "validator_transport.py": "68e69b1332a1e68cc0812c488efc263f6b405fdcfd2eb20db6a8174f3b8311b4"
+    },
+    "created_at": "2026-10-09T19:50:09.924163+00:00",
+    "formal_xml_approved": false,
+    "gold_read": false,
+    "human_review_required": true,
+    "inspection_only": false,
+    "registry_sha256": "f938efed9ba4db86ad1e6c0e487576540d62d3619d22694531108fe98d6fa061",
+    "remaining_ambiguous_glyphs": 1,
+    "source_sha256": {
+      "benchmarks/qualification/contracts/vh1-reference-field-delta-v1.json": "283d9bc05d5642a0ad91b02bcd204c8fcac5a2167be6b373b31ebeb60f9d05a4",
+      "benchmarks/qualification/contracts/vh1-reference-metadata-delta-v1.json": "7635f5bda823090303a161a98b985d3ce08052ab44e0c171533b9ac125db00f7",
+      "ops/collect_vh1_affiliation_sources.py": "46c3607057bfa1adfe61a3117edeed1269cb97c253d749c824356495681f9641",
+      "ops/collect_vh1_articlemeta_dates.py": "26664fa36e68dabba3a1ddcff81c7a1b2f19d646ec206c77289cb8cacfab8c67",
+      "ops/collect_vh1_editorial_sources.py": "0307b6d30de3208f4d144bb87ca7b88156dcf1b9718d02009a13acb4d4257e57",
+      "ops/collect_vh1_funding_sources.py": "70f085d2c3116b10aa6654df8fea22af76fec1809ddbdba6473ab8ba54bd4008",
+      "ops/collect_vh1_orcid_sources.py": "3cf171f8d3b7acafca424d4476e9e7bec1d8c4ed688a20c9ac558c5cc1b096b6",
+      "ops/qualify_vh1_formula_links.py": "005bce3872689dabb1fb0a7c361f55fca0b8134d0398ade115a6fe246a96679b",
+      "ops/qualify_vh1_formula_revisions.py": "29f704f16b070ce412cb88811a2d792e44f8677359b9c9cf39b00022a0444e64",
+      "ops/qualify_vh1_glyphs.py": "530b9d517cf84bf7a50fe693bd1780a4e249cdbfbde04466a2de545fb01f2c7e",
+      "ops/qualify_vh1_metadata.py": "a2dec611576e90e4279c37addfc96e1cf3b255173ecbe881935a00c06b1fcafe",
+      "ops/qualify_vh1_reference_metadata.py": "4063ce1561505d8f1ae771189bca55e2076df43b52b0be4d42df1830220a3c6b",
+      "ops/qualify_vh1_references.py": "2296a63fac800802f7206953c41f9c9d0bcae34af8e142632cf24c7eb005b7ac",
+      "ops/vh1_source_evolution.py": "670c5e88cbe6538131ba35ba203e9064f56788232a459b9db44a5b9ca94c6794",
+      "schemas/canonical-article-1.5.0.schema.json": "97ee6ff8ea7ce86bb685a4b891cf30ec9f308909c06b6f951c2cdaa041195259",
+      "src/idml_foundation/ai/formula_catalog.py": "78870c9fab28bd3c294aca4b51b68eefd3e5ce4eb07a8887c429826d83416ec4",
+      "src/idml_foundation/domain/canonical.py": "d657732a9c706ca7eb448d7a982112fecc1475a575fa760292987af0bc97570e",
+      "src/idml_foundation/domain/schema_migrations.py": "5ec7959eb7330e642ad0fb0dad744aac979252a5201eb7d54785fdab01e78564",
+      "src/idml_foundation/pipeline/canonical_mapper.py": "acae6cca29f27f0855810eaf64abc8c08616445188ad633a8f9aeb7868532e8e",
+      "src/idml_foundation/pipeline/funding_parser.py": "47a40964e8da95d62b62c84484b9ed639e8eed6cd47dfdbe58be8c9f4ccc8fad",
+      "src/idml_foundation/pipeline/idml_parser.py": "4f260a042aaaa10469b086adeccf28388a7e5e3e2b5c1c969bd31dd720b9bf98",
+      "src/idml_foundation/pipeline/jats_builder.py": "1afdbe03337648d21ab79aa8fe16d268c50e0ec3b4c33a2450d544c4810543bb",
+      "src/idml_foundation/pipeline/metadata_normalization.py": "088deaecec3648103c86ea6984a6bbc6a46a7686dde0f196c01c7f1fc1d16ad8",
+      "src/idml_foundation/pipeline/object_reference_resolver.py": "69d38bcf2a199875663a83817b77c95c961287e3e4d06635036f7a72788d347c",
+      "src/idml_foundation/pipeline/reference_metadata.py": "e24472fd6349847a20f11e362397eab4591af976724308cb43a96e084a7f0574",
+      "src/idml_foundation/pipeline/reference_parser.py": "4cdc6838568ed11ee820201c70075b53b4048aa8d25865d7354590fbf4e88808",
+      "src/idml_foundation/pipeline/service.py": "310212a49a816bcfad5a6cf9c08af2e888941be3f4d8f0644ac54d1a68199e36",
+      "src/idml_foundation/publication_dates.py": "0f20190f807ac867acf402ed0e5d11fc1fb0ef5491a9ea0e79cd9e7bd08b5eae",
+      "src/idml_foundation/release/articlemeta_dates.py": "3bae62f5bda276d585ce568502c61e7e50f5dc66e9ffa019d304bf846eb80532",
+      "src/idml_foundation/release/articlemeta_orcids.py": "2231ed6f7068226bc7b1088d2d3d051ac396e7eb7358c3aef8caf3fae1795568",
+      "src/idml_foundation/release/formal_metadata.py": "c179194a4704ec137b754a6e088cfcfe4dc2b659e796d44cd6ad975af2bbd1b7",
+      "src/idml_foundation/release/institution_locations.py": "272cad83762e905df22822de84fec177b7563aa1cfd130200d76c9a11d8fa0e3",
+      "src/idml_foundation/release/verified_funding.py": "79fb22afa11f69d5b77a1899782fd154a3459eac4d9d48e501813456c740c03b",
+      "src/idml_foundation/services/enrichment.py": "c291d5729519d7673a3eba2852c10022a1aedbbe4ce88f39a4197585aa8e1288",
+      "src/idml_foundation/services/source_authorization.py": "e1c37189771dc5715f0d951c3f29861d423ab782aa8ef84e20eae5f26695755b"
+    },
+    "version": "vh1-reference-metadata-local-1.0"
+  },
+  "transport": "scoped-broker-executor-not-socket",
+  "version": "vh1-history-linux-1.0"
+}

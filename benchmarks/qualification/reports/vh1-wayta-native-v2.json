@@ -1,0 +1,169 @@
+{
+  "version": "xpm-wayta-native-1.0",
+  "network": "none",
+  "probe_sha256": "87ad20d46684431a9afeafe8afb567cc763f8886a2fd42560f2c207c978a8bfe",
+  "vendor_sha256": {
+    "xml/app_modules/app/ws/ws_institutions.py": "fde363c6461aa3a2f7e52f8de1e0300934b8d1cfc5d321beed6583f583f9807c",
+    "xml/app_modules/app/validations/article_content_validations.py": "e0882113d47ee4fd64e2e4290e1e63d933c6324d6cf542f2f9323aedfc78c3b8"
+  },
+  "vendor_files_unchanged": true,
+  "requester_is_synthetic": true,
+  "native_missing_country_gap": true,
+  "query_cases": [
+    {
+      "case": "match",
+      "result_count": 1
+    },
+    {
+      "case": "empty",
+      "result_count": 0
+    },
+    {
+      "case": "malformed",
+      "result_count": 0
+    },
+    {
+      "case": "absent",
+      "result_count": 0
+    },
+    {
+      "case": "timeout",
+      "result_count": 0
+    }
+  ],
+  "affiliation_cases": [
+    {
+      "case": "valid",
+      "query_state": "unavailable",
+      "normalized_findings": 0,
+      "error_statuses": []
+    },
+    {
+      "case": "valid",
+      "query_state": "empty",
+      "normalized_findings": 0,
+      "error_statuses": []
+    },
+    {
+      "case": "valid",
+      "query_state": "present",
+      "normalized_findings": 0,
+      "error_statuses": []
+    },
+    {
+      "case": "missing_orgname",
+      "query_state": "unavailable",
+      "normalized_findings": 0,
+      "error_statuses": [
+        "[ERROR]"
+      ]
+    },
+    {
+      "case": "missing_orgname",
+      "query_state": "empty",
+      "normalized_findings": 0,
+      "error_statuses": [
+        "[ERROR]"
+      ]
+    },
+    {
+      "case": "missing_orgname",
+      "query_state": "present",
+      "normalized_findings": 0,
+      "error_statuses": [
+        "[ERROR]"
+      ]
+    },
+    {
+      "case": "missing_country",
+      "query_state": "unavailable",
+      "normalized_findings": 0,
+      "error_statuses": []
+    },
+    {
+      "case": "missing_country",
+      "query_state": "empty",
+      "normalized_findings": 0,
+      "error_statuses": []
+    },
+    {
+      "case": "missing_country",
+      "query_state": "present",
+      "normalized_findings": 0,
+      "error_statuses": []
+    },
+    {
+      "case": "invalid_country",
+      "query_state": "unavailable",
+      "normalized_findings": 0,
+      "error_statuses": [
+        "[FATAL ERROR]"
+      ]
+    },
+    {
+      "case": "invalid_country",
+      "query_state": "empty",
+      "normalized_findings": 0,
+      "error_statuses": [
+        "[FATAL ERROR]"
+      ]
+    },
+    {
+      "case": "invalid_country",
+      "query_state": "present",
+      "normalized_findings": 0,
+      "error_statuses": [
+        "[FATAL ERROR]"
+      ]
+    },
+    {
+      "case": "missing_original",
+      "query_state": "unavailable",
+      "normalized_findings": 0,
+      "error_statuses": [
+        "[ERROR]"
+      ]
+    },
+    {
+      "case": "missing_original",
+      "query_state": "empty",
+      "normalized_findings": 0,
+      "error_statuses": [
+        "[ERROR]"
+      ]
+    },
+    {
+      "case": "missing_original",
+      "query_state": "present",
+      "normalized_findings": 0,
+      "error_statuses": [
+        "[ERROR]"
+      ]
+    },
+    {
+      "case": "broken_xref",
+      "query_state": "unavailable",
+      "normalized_findings": 0,
+      "error_statuses": [
+        "[FATAL ERROR]"
+      ]
+    },
+    {
+      "case": "broken_xref",
+      "query_state": "empty",
+      "normalized_findings": 0,
+      "error_statuses": [
+        "[FATAL ERROR]"
+      ]
+    },
+    {
+      "case": "broken_xref",
+      "query_state": "present",
+      "normalized_findings": 0,
+      "error_statuses": [
+        "[FATAL ERROR]"
+      ]
+    }
+  ],
+  "release_approved": false
+}

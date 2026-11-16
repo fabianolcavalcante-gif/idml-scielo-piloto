@@ -1,0 +1,107 @@
+{
+  "version": "phase7-v10-operational-workflow-1.0",
+  "family": "V-10",
+  "executed_at": "2026-09-21",
+  "dedicated_tests": 3,
+  "full_tests": 380,
+  "line_coverage_percent": 87.31,
+  "critical_scenarios": [
+    {
+      "id": "V10-IDENTITY-TENANT",
+      "result": "passed",
+      "evidence": "multi-role tenant-bound sessions and the existing invitation lifecycle"
+    },
+    {
+      "id": "V10-INGEST-PROCESS",
+      "result": "passed",
+      "evidence": "resource plus IDML, PDF, and image uploads followed by durable idml.process execution"
+    },
+    {
+      "id": "V10-XML-DOWNLOAD",
+      "result": "passed",
+      "evidence": "generated XML download SHA-256 equals the persisted job and artifact digest"
+    },
+    {
+      "id": "V10-IDEMPOTENCY",
+      "result": "passed",
+      "evidence": "same request reuses job without duplicate job, effect, artifact, snapshot, or job.create audit; conflicting reuse returns 409"
+    },
+    {
+      "id": "V10-REVIEW",
+      "result": "passed",
+      "evidence": "claim, canonical patch, immutable revision, JATS rebuild, validation, and audit"
+    },
+    {
+      "id": "V10-PACKAGE",
+      "result": "passed",
+      "evidence": "scielo.package creates deterministic ZIP from reviewed snapshot, PDF, and referenced asset"
+    },
+    {
+      "id": "V10-MANIFEST-INTEGRITY",
+      "result": "passed",
+      "evidence": "downloaded package, persisted package hash, manifest, member sizes, member hashes, and candidate-set hash agree"
+    },
+    {
+      "id": "V10-EDITORIAL-APPROVAL",
+      "result": "passed",
+      "evidence": "MFA requester plus two distinct MFA release managers reach editorially_approved"
+    },
+    {
+      "id": "V10-JOB-CONTROL",
+      "result": "passed",
+      "evidence": "queued cancellation, stale-version conflict, manual retry, and retry wake-up are reproducible"
+    },
+    {
+      "id": "V10-TRANSIENT-RESUME",
+      "result": "passed",
+      "evidence": "failed_retryable attempt resumes to success with an ordered six-event timeline"
+    },
+    {
+      "id": "V10-AUDIT",
+      "result": "passed",
+      "evidence": "upload, download, job, review, and release actions are present in the tenant audit trail"
+    },
+    {
+      "id": "V10-DEGRADED-AI-OFF",
+      "result": "passed",
+      "evidence": "complete deterministic workflow with OpenClaw and swarm flags false and zero agent runs/proposals"
+    },
+    {
+      "id": "V10-OPERATOR-UI",
+      "result": "passed",
+      "evidence": "resource, upload, process, package, review, cancel, retry, result, error, timeline, download, approval, and audit controls exposed; JavaScript syntax checked"
+    }
+  ],
+  "authorized_article_probe": {
+    "source_idml_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+    "pipeline_valid": true,
+    "xml_sha256": "4059767d2f72e129d648db5a51ba82bfe26b66603319c2ba40c3e26d201454ad",
+    "article_text_emitted": false
+  },
+  "source_sha256": {
+    "src/idml_foundation/routers/artifacts.py": "e834d246eebbbc32ba2ab5d1fb5202531d6bb9328d3676e1ac3bcc529e387ad6",
+    "src/idml_foundation/routers/jobs.py": "3b20edd53b6240b9b2bc6cb6be5c628f9edf3a4dd477a15ea82a67d843696cbf",
+    "src/idml_foundation/routers/ui.py": "1fc588fd26b864c237f63c2a7cf8b4d35e5d20b294921c94abf05969fa756bb1",
+    "src/idml_foundation/schemas.py": "22a09c7ed02b1751de7512a2edc5cf1b05bc81457c9a373e6ab97d2ce668c5f8",
+    "src/idml_foundation/services/artifacts.py": "905cce52d49e209e53ef0ff511b25c24bb0841108680ebcb73ebf75ce14348ec",
+    "src/idml_foundation/services/jobs.py": "3e199e58798192d5a22f2fc459b894219247de971433c8ef7eea4df113d6b655",
+    "src/idml_foundation/worker.py": "b0b10c9bd141fb5bacbbdcae77eb66e41ddc6202e32d71117775e75eef1d4c5b",
+    "tests/test_phase7_v10_workflow.py": "f1afbb789d9401511f407b60428c11d5cf74f0ca65811d5fbd82a54a92a9c57f",
+    "tests/test_jobs.py": "2bf5201bece9927eefe7e31798f2ffad77f29ef96e158bc4b2c924cbdc396fcd"
+  },
+  "residual_constraints": [
+    "Cancellation is qualified before execution; cooperative interruption of an in-flight conversion remains in V-13.",
+    "Editorial approval is not READY_FOR_SCIELO and does not replace the technical release policy.",
+    "XPM on the final candidate and human specialist homologation remain pending by plan."
+  ],
+  "privacy": {
+    "contains_article_text": false,
+    "contains_raw_credentials": false,
+    "contains_raw_agent_output": false,
+    "restricted_content_emitted": false
+  },
+  "v10_approved": true,
+  "release_candidate_approved": false,
+  "production_activation_authorized": false,
+  "requalification_of": "v10-operational-workflow-v1.json"
+}

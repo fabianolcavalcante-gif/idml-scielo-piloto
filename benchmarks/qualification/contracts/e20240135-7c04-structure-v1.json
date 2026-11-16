@@ -1,0 +1,169 @@
+{
+  "contract_version": "1.0.0",
+  "stage": "7C-04",
+  "corpus_id": "esa-e20240135",
+  "expected": {
+    "role_counts": {
+      "source_idml": 1,
+      "approved_xml_reference": 1,
+      "approved_pdf_reference": 1
+    },
+    "qualification": {
+      "report_sha256": "45a5238690801de91b72189019251aeb1eb451da8f024a0ed505e3ea8424f9c5",
+      "catalog_id": "6089705c07ec4144164b10ad3f6beefe7da8b269b80f77c70edb3e636a00e986",
+      "dataset_sha256": "493074f8e5999745ba5029340107cbcee5e8b4e2221d7a8101a4013803635798",
+      "formula_cases": 43,
+      "human_review_required": true,
+      "restricted_content_emitted": false
+    },
+    "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+    "catalog_id": "6089705c07ec4144164b10ad3f6beefe7da8b269b80f77c70edb3e636a00e986",
+    "candidate_xml_sha256": "57b96c946c5ba613d5fe54901412cc953a869188f5e491df8f0e0919b2d914f4",
+    "deterministic": true,
+    "validation": {
+      "issues": 1,
+      "valid": true
+    },
+    "semantic_blocking_findings_before_qualification": 30,
+    "semantic_blocking_findings_after_qualification": 6,
+    "qualified_formula_alterations": 24,
+    "hierarchy": {
+      "actual": 26,
+      "candidate_sha256": "ed2ba5dabba90af562df1c57d2d0f8ad5d17b09526243b28a0ea74da316f0b59",
+      "expected": 26,
+      "levels": {
+        "1": 6,
+        "2": 11,
+        "3": 9
+      },
+      "passed": true,
+      "reference_sha256": "ed2ba5dabba90af562df1c57d2d0f8ad5d17b09526243b28a0ea74da316f0b59"
+    },
+    "structure": {
+      "actual": 26,
+      "altered": 0,
+      "displacements": 0,
+      "duplications": 0,
+      "exact": 26,
+      "expected": 26,
+      "f1": 1.0,
+      "inventions": 0,
+      "normalized": 0,
+      "omissions": 0,
+      "passed": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "text_fidelity": 1.0
+    },
+    "notes": {
+      "actual": 10,
+      "altered": 0,
+      "displacements": 0,
+      "duplications": 0,
+      "exact": 7,
+      "expected": 10,
+      "f1": 1.0,
+      "inventions": 0,
+      "normalized": 3,
+      "omissions": 0,
+      "passed": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "text_fidelity": 1.0
+    },
+    "structural_notes": {
+      "author_notes": 2,
+      "funding_disclosures": 1,
+      "table_footnote_paragraphs": 6,
+      "table_footnotes": 4,
+      "total": 7
+    },
+    "body_flow": {
+      "actual": 5820,
+      "altered": 0,
+      "displacements": 0,
+      "duplications": 6,
+      "exact": 5814,
+      "expected": 5814,
+      "f1": 0.999484,
+      "inventions": 0,
+      "normalized": 0,
+      "omissions": 0,
+      "passed": true,
+      "precision": 0.998969,
+      "recall": 1.0,
+      "text_fidelity": 0.998366,
+      "unauthenticated_tokens": 0
+    },
+    "tables": {
+      "actual": 5,
+      "altered": 0,
+      "displacements": 0,
+      "duplications": 0,
+      "exact": 0,
+      "expected": 5,
+      "f1": 1.0,
+      "inventions": 0,
+      "normalized": 5,
+      "omissions": 0,
+      "passed": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "text_fidelity": 1.0
+    },
+    "references": {
+      "actual": 35,
+      "altered": 0,
+      "displacements": 0,
+      "duplications": 0,
+      "exact": 0,
+      "expected": 35,
+      "f1": 1.0,
+      "inventions": 0,
+      "normalized": 35,
+      "omissions": 0,
+      "passed": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "text_fidelity": 0.998325
+    },
+    "formulas": {
+      "actual": 43,
+      "altered": 0,
+      "displacements": 0,
+      "duplications": 0,
+      "exact": 43,
+      "expected": 43,
+      "f1": 1.0,
+      "inventions": 0,
+      "normalized": 0,
+      "omissions": 0,
+      "passed": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "text_fidelity": 1.0
+    },
+    "formula_content": {
+      "actual": 43,
+      "altered": 24,
+      "displacements": 0,
+      "duplications": 0,
+      "exact": 1,
+      "expected": 43,
+      "f1": 0.44186,
+      "inventions": 0,
+      "normalized": 18,
+      "omissions": 0,
+      "passed": true,
+      "precision": 0.44186,
+      "recall": 0.44186,
+      "text_fidelity": 0.89668
+    },
+    "cross_references": {
+      "actual": 38,
+      "decision": "needs_review",
+      "expected": 39
+    },
+    "general_candidate_blocked": true
+  }
+}

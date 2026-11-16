@@ -1,0 +1,3 @@
+FROM idml-spsvalidator:h1-rendition-compat-v1
+COPY affiliation_compat.py /validator/
+COPY spsvalidator_affiliation_validate.py /validator/spsvalidator_validate.py

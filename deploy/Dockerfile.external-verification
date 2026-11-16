@@ -1,0 +1,3 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+COPY validator_adapter_common.py external_verification.py /validator/

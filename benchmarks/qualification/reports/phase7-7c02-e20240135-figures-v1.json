@@ -1,0 +1,88 @@
+{
+  "actual": {
+    "candidate_xml_sha256": "18c8e8beb07355bb2d51021cad2328184244ce8593d608038018aeb37b76a747",
+    "deterministic": true,
+    "figure_xml": {
+      "artificial_section_absent": true,
+      "figures": 7,
+      "graphics": 7,
+      "labels_in_order": true,
+      "review_blockers": [],
+      "unique_hrefs": 7
+    },
+    "figures": {
+      "actual": 7,
+      "displacements": 0,
+      "duplications": 0,
+      "expected": 7,
+      "f1": 1.0,
+      "inventions": 0,
+      "omissions": 0,
+      "passed": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "text_fidelity": 1.0
+    },
+    "media": {
+      "actual": 7,
+      "displacements": 0,
+      "duplications": 0,
+      "expected": 7,
+      "f1": 1.0,
+      "inventions": 0,
+      "omissions": 0,
+      "passed": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "text_fidelity": 1.0
+    },
+    "package_preflight": {
+      "figure_assets": 7,
+      "final_names_in_order": true,
+      "full_package_blocker_outside_figures": true,
+      "resolved_assets": 7
+    },
+    "semantic_blocking_findings": 94,
+    "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+    "structure": {
+      "actual": 17,
+      "displacements": 0,
+      "duplications": 0,
+      "expected": 26,
+      "f1": 0.55814,
+      "inventions": 5,
+      "omissions": 14,
+      "passed": false,
+      "precision": 0.705882,
+      "recall": 0.461538,
+      "text_fidelity": 0.552381
+    },
+    "validation": {
+      "issues": 1,
+      "valid": true
+    }
+  },
+  "approved": true,
+  "candidate_approved": false,
+  "contract_mismatches": [],
+  "corpus_id": "esa-e20240135",
+  "metadata": {
+    "approved": true,
+    "contract_sha256": "8b4cc60925f93154e56076225d9def510eac7029c9b891de896e2d33e4b62036",
+    "manifest_sha256": "080c9de54d5b91a8d45f5aba87a544eb3de5d178f7589d6047b5521aa9601c18",
+    "role_counts": {
+      "approved_xml_reference": 1,
+      "figure_asset": 7,
+      "source_idml": 1
+    }
+  },
+  "network_required_by_gate": false,
+  "physical_verification": {
+    "artifacts": 12,
+    "valid": true,
+    "verified": 12
+  },
+  "restricted_content_emitted": false,
+  "stage": "7C-02",
+  "version": "phase7-7c02-gate-1.0"
+}

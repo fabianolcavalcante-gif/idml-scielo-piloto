@@ -1,0 +1,23 @@
+{
+  "version": "visual-formula-crops-1.0",
+  "source_pdf_sha256": "232fb2428bbdf344af192d24865a4e39848fd4e4fae20f2325aa9ecef6ff2496",
+  "crops": [
+    {"case_id": "esa-math-notes-observed-001", "page_index": 2, "bbox": [35.0, 685.0, 300.0, 730.0]},
+    {"case_id": "esa-math-notes-observed-002", "page_index": 2, "bbox": [300.0, 210.0, 555.0, 250.0]},
+    {"case_id": "esa-math-notes-observed-003", "page_index": 2, "bbox": [300.0, 300.0, 555.0, 342.0]},
+    {"case_id": "esa-math-notes-observed-004", "page_index": 2, "bbox": [300.0, 405.0, 555.0, 455.0]},
+    {"case_id": "esa-math-notes-observed-005", "page_index": 2, "bbox": [300.0, 450.0, 555.0, 490.0]},
+    {"case_id": "esa-math-notes-observed-006", "page_index": 2, "bbox": [300.0, 555.0, 555.0, 600.0]},
+    {"case_id": "esa-math-notes-observed-007", "page_index": 3, "bbox": [35.0, 200.0, 300.0, 240.0]},
+    {"case_id": "esa-math-notes-observed-008", "page_index": 3, "bbox": [35.0, 235.0, 300.0, 280.0]},
+    {"case_id": "esa-math-notes-observed-009", "page_index": 3, "bbox": [35.0, 410.0, 300.0, 455.0]},
+    {"case_id": "esa-math-notes-observed-010", "page_index": 3, "bbox": [35.0, 590.0, 300.0, 630.0]},
+    {"case_id": "esa-math-notes-observed-011", "page_index": 3, "bbox": [35.0, 690.0, 300.0, 730.0]},
+    {"case_id": "esa-math-notes-observed-012", "page_index": 3, "bbox": [35.0, 720.0, 300.0, 752.0]},
+    {"case_id": "esa-math-notes-observed-013", "page_index": 3, "bbox": [300.0, 90.0, 555.0, 130.0]},
+    {"case_id": "esa-math-notes-observed-014", "page_index": 3, "bbox": [300.0, 125.0, 555.0, 165.0]},
+    {"case_id": "esa-math-notes-observed-015", "page_index": 6, "bbox": [300.0, 245.0, 555.0, 290.0]},
+    {"case_id": "esa-math-notes-inline-001", "page_index": 2, "bbox": [35.0, 720.0, 260.0, 750.0]},
+    {"case_id": "esa-math-notes-inline-002", "page_index": 2, "bbox": [300.0, 638.0, 555.0, 656.0]}
+  ]
+}

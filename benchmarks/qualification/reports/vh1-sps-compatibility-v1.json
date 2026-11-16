@@ -1,0 +1,248 @@
+{
+  "active_application_changed": false,
+  "assessments": {
+    "esa-e20240086": {
+      "base": {
+        "exceptions": [
+          {
+            "crossref_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3",
+            "occurrence_sha256": "2404a57728963b889cc34e4aa630000f18befe0ff6481833ab950559cf58dc0a",
+            "original_severity": "error",
+            "rule_id": "xpm-doi-journal-exact-1.0"
+          },
+          {
+            "crossref_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3",
+            "occurrence_sha256": "26ce7f3b567036c771e1adc9a5b5046d741164d16929b7d7ed0f0536d2a3756b",
+            "original_severity": "error",
+            "rule_id": "xpm-doi-article-exact-1.0"
+          }
+        ],
+        "homologation_ready": false,
+        "original": {
+          "attested": true,
+          "blocking_errors": 3,
+          "candidate_package_sha256": "2f9c5b6529fb193a38b965d366fec1cda5afcaf89e1d8a3eb146022969f1bfee",
+          "command_id": "20261016T214400Z:esa-e20240086",
+          "contract_version": "1.1.0",
+          "environment": "same-vps-isolated-qualification",
+          "errors": 4,
+          "failure_code": null,
+          "fatal_errors": 1,
+          "parser_errors": 100,
+          "parser_recovered": true,
+          "report_sha256": "fe7d45cba242e8dde0c441798b6ea8999dd6d0fbc70bf093501e5c3c8e81e74d",
+          "status": "completed",
+          "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+          "warning_acceptance": null,
+          "warnings": 2,
+          "xpm_version": "4.0.096"
+        },
+        "policy_version": "xpm-homologation-compatibility-1.0",
+        "reasons": [
+          "compatibility-qualification-incomplete",
+          "required-queries-incomplete",
+          "unresolved-xpm-findings"
+        ],
+        "release_approved": false,
+        "scope_sha256": "0983b742d2cebf08d3afb767f3f666b09300a8411eac843af497b75417ce145f",
+        "unresolved_counts": {
+          "blocking_errors": 3,
+          "errors": 2,
+          "fatal_errors": 1,
+          "warnings": 2
+        }
+      },
+      "exceptions": [
+        {
+          "independent_report_sha256": "61c57c43c081a537fc95d12c1c1e802a092cbf5ee3a26c093debcfb89d3ad66a",
+          "normative_sources": [
+            "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+            "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+          ],
+          "occurrence_sha256": "8b640ce36cc83e4c135964ccd358acb6adbd455b3c34429e3778cc8be0261163",
+          "original_severity": "error",
+          "rule_id": "xpm-sps110-version-table-1.0"
+        },
+        {
+          "independent_report_sha256": "61c57c43c081a537fc95d12c1c1e802a092cbf5ee3a26c093debcfb89d3ad66a",
+          "normative_sources": [
+            "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+            "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+          ],
+          "occurrence_sha256": "b235261473a4dcb07b3877fdaae5bfaec0ad1e39c7610982a2a1e5f9b3e4e452",
+          "original_severity": "blocking",
+          "rule_id": "xpm-sps110-date-type-1.0"
+        },
+        {
+          "independent_report_sha256": "61c57c43c081a537fc95d12c1c1e802a092cbf5ee3a26c093debcfb89d3ad66a",
+          "normative_sources": [
+            "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+            "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+          ],
+          "occurrence_sha256": "7ad5399f7fcff02210d28823c9b496874e5dc17302aabc8dc785d78c1e5dba5f",
+          "original_severity": "blocking",
+          "rule_id": "xpm-sps110-date-type-1.0"
+        },
+        {
+          "independent_report_sha256": "61c57c43c081a537fc95d12c1c1e802a092cbf5ee3a26c093debcfb89d3ad66a",
+          "normative_sources": [
+            "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+            "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+          ],
+          "occurrence_sha256": "08fff5748ea592182a46e6691ecb3673c0aea866860c93e089e5c8dc54d3a7ca",
+          "original_severity": "blocking",
+          "rule_id": "xpm-sps110-date-combination-1.0"
+        }
+      ],
+      "homologation_ready": false,
+      "policy_version": "xpm-homologation-sps-compatibility-1.0",
+      "reasons": [
+        "compatibility-qualification-incomplete",
+        "required-queries-incomplete",
+        "unresolved-xpm-findings",
+        "doctype-jats-decision-pending"
+      ],
+      "release_approved": false,
+      "unresolved_counts": {
+        "blocking_errors": 0,
+        "errors": 1,
+        "fatal_errors": 1,
+        "warnings": 2
+      }
+    },
+    "esa-e20240135": {
+      "base": {
+        "exceptions": [
+          {
+            "crossref_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+            "occurrence_sha256": "e3c3d96d390fe6d6b7aefe75975d751027bb27552124d89a8711080eb95060dd",
+            "original_severity": "error",
+            "rule_id": "xpm-doi-journal-exact-1.0"
+          },
+          {
+            "crossref_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+            "occurrence_sha256": "e7086ebb9776b9391e96573634cb53a25920d67f7d32d127d054c0138ef80928",
+            "original_severity": "error",
+            "rule_id": "xpm-doi-article-exact-1.0"
+          }
+        ],
+        "homologation_ready": false,
+        "original": {
+          "attested": true,
+          "blocking_errors": 3,
+          "candidate_package_sha256": "54f71f50669cacdda2ff7323777574c82e6f4bedf85cd7743abe4d6de5e90ea3",
+          "command_id": "20261016T214400Z:esa-e20240135",
+          "contract_version": "1.1.0",
+          "environment": "same-vps-isolated-qualification",
+          "errors": 4,
+          "failure_code": null,
+          "fatal_errors": 1,
+          "parser_errors": 100,
+          "parser_recovered": true,
+          "report_sha256": "b5a8f9836128a4f26f07b4366be09befbfcb0f774a88413cc500c2d28822b6db",
+          "status": "completed",
+          "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+          "warning_acceptance": null,
+          "warnings": 3,
+          "xpm_version": "4.0.096"
+        },
+        "policy_version": "xpm-homologation-compatibility-1.0",
+        "reasons": [
+          "compatibility-qualification-incomplete",
+          "required-queries-incomplete",
+          "unresolved-xpm-findings"
+        ],
+        "release_approved": false,
+        "scope_sha256": "6f1f0f64143c82be2de27fd6b21aaaa7dbf116038ec867e45fe34fb2581bb004",
+        "unresolved_counts": {
+          "blocking_errors": 3,
+          "errors": 2,
+          "fatal_errors": 1,
+          "warnings": 3
+        }
+      },
+      "exceptions": [
+        {
+          "independent_report_sha256": "61c57c43c081a537fc95d12c1c1e802a092cbf5ee3a26c093debcfb89d3ad66a",
+          "normative_sources": [
+            "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+            "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+          ],
+          "occurrence_sha256": "dc4f82b1a1dfbac9dfddb28b72677bb65e13cb359a3f86b87bb300cdb4156ea3",
+          "original_severity": "error",
+          "rule_id": "xpm-sps110-version-table-1.0"
+        },
+        {
+          "independent_report_sha256": "61c57c43c081a537fc95d12c1c1e802a092cbf5ee3a26c093debcfb89d3ad66a",
+          "normative_sources": [
+            "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+            "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+          ],
+          "occurrence_sha256": "48f204da7ac48912e5b3d33a4f3542a16d020d6b7278e8f56b9a102730dcd1ee",
+          "original_severity": "blocking",
+          "rule_id": "xpm-sps110-date-type-1.0"
+        },
+        {
+          "independent_report_sha256": "61c57c43c081a537fc95d12c1c1e802a092cbf5ee3a26c093debcfb89d3ad66a",
+          "normative_sources": [
+            "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+            "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+          ],
+          "occurrence_sha256": "7ad5399f7fcff02210d28823c9b496874e5dc17302aabc8dc785d78c1e5dba5f",
+          "original_severity": "blocking",
+          "rule_id": "xpm-sps110-date-type-1.0"
+        },
+        {
+          "independent_report_sha256": "61c57c43c081a537fc95d12c1c1e802a092cbf5ee3a26c093debcfb89d3ad66a",
+          "normative_sources": [
+            "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+            "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+          ],
+          "occurrence_sha256": "56812977354701878530e8fd223c13866045b2cac27ab9f2a87eaa0eabce6abd",
+          "original_severity": "blocking",
+          "rule_id": "xpm-sps110-date-combination-1.0"
+        }
+      ],
+      "homologation_ready": false,
+      "policy_version": "xpm-homologation-sps-compatibility-1.0",
+      "reasons": [
+        "compatibility-qualification-incomplete",
+        "required-queries-incomplete",
+        "unresolved-xpm-findings",
+        "doctype-jats-decision-pending"
+      ],
+      "release_approved": false,
+      "unresolved_counts": {
+        "blocking_errors": 0,
+        "errors": 1,
+        "fatal_errors": 1,
+        "warnings": 3
+      }
+    }
+  },
+  "candidate_changed": false,
+  "created_at": "2026-10-17T12:37:43.219409+00:00",
+  "homologation_ready": false,
+  "independent_report_sha256": "61c57c43c081a537fc95d12c1c1e802a092cbf5ee3a26c093debcfb89d3ad66a",
+  "native_probe_cases": 10,
+  "native_run_id": "20261016T214400Z",
+  "native_xpm_rerun": false,
+  "outstanding": [
+    "DOCTYPE_JATS_DELIVERY_DECISION",
+    "EMBEDDED_XPM_PACKTOOLS_ERROR",
+    "REQUIRED_WAYTA_QUERIES",
+    "SUPERVISED_WEB_INTEGRATION"
+  ],
+  "plan_sha256": "478ea3ee76e7ccee3db39d0d05c5d6c84fb8f643a703cdd0de9665afa64ba784",
+  "previous_xpm_proof_sha256": "9eb3a0e724a8f2de6d2773661c29f4d00cf444696d463966e1da0a2c149dbf41",
+  "probe_sha256": "e5f3bfeb57e8c06b60b25cca94d7c86611ebea1bf27bb14d20337c4d980a44de",
+  "release_approved": false,
+  "source_sha256": {
+    "ops/audit_vh1_sps_compatibility.py": "30cd34e7b09437865aeb6caac8dc7114fb60cea30f9e1a27fc055dcaad16cd63",
+    "ops/probe_xpm_sps_dates.py": "c802afe28d73de72f3c34207a0f36644a0abdac6538e7c9c02b3c1396c3419bd",
+    "src/idml_foundation/release/xpm_sps_compatibility.py": "5e313ada8cf0b9d015eea5ba0614393723e06742635abb13d035f993db198708",
+    "tests/test_xpm_sps_compatibility.py": "fcf88e0b87731b9d1b2703dd2a20cfb9d9243e6a360ff3d9f7948c29b68e1d89"
+  },
+  "vendor_changed": false,
+  "version": "vh1-sps-compatibility-1.0"
+}

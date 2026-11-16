@@ -1,0 +1,68 @@
+{
+  "contract_version": "1.0.0",
+  "stage": "7C-02",
+  "corpus_id": "esa-e20240135",
+  "expected": {
+    "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+    "candidate_xml_sha256": "18c8e8beb07355bb2d51021cad2328184244ce8593d608038018aeb37b76a747",
+    "deterministic": true,
+    "validation": {
+      "valid": true,
+      "issues": 1
+    },
+    "semantic_blocking_findings": 94,
+    "figures": {
+      "expected": 7,
+      "actual": 7,
+      "omissions": 0,
+      "inventions": 0,
+      "duplications": 0,
+      "displacements": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_fidelity": 1.0,
+      "passed": true
+    },
+    "media": {
+      "expected": 7,
+      "actual": 7,
+      "omissions": 0,
+      "inventions": 0,
+      "duplications": 0,
+      "displacements": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_fidelity": 1.0,
+      "passed": true
+    },
+    "structure": {
+      "expected": 26,
+      "actual": 17,
+      "omissions": 14,
+      "inventions": 5,
+      "duplications": 0,
+      "displacements": 0,
+      "precision": 0.705882,
+      "recall": 0.461538,
+      "f1": 0.55814,
+      "text_fidelity": 0.552381,
+      "passed": false
+    },
+    "figure_xml": {
+      "figures": 7,
+      "graphics": 7,
+      "unique_hrefs": 7,
+      "labels_in_order": true,
+      "artificial_section_absent": true,
+      "review_blockers": []
+    },
+    "package_preflight": {
+      "figure_assets": 7,
+      "resolved_assets": 7,
+      "final_names_in_order": true,
+      "full_package_blocker_outside_figures": true
+    }
+  }
+}

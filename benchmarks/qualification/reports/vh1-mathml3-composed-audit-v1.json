@@ -1,0 +1,238 @@
+{
+  "version": "mathml3-composed-native-audit-1.0",
+  "verified_reports": 4,
+  "sealed_root_0600": 22,
+  "verified_receipts": 13,
+  "verified_native_reports": 6,
+  "reproduced_composition_hashes": 2,
+  "wayta_service_outcomes": [
+    "timeout",
+    "timeout",
+    "timeout"
+  ],
+  "cases": [
+    {
+      "case": "esa-e20240086-baseline",
+      "raw_counts": {
+        "blocking_errors": 3,
+        "fatal_errors": 1,
+        "errors": 4,
+        "warnings": 2
+      },
+      "derived_counts": {
+        "blocking_errors": 0,
+        "fatal_errors": 1,
+        "errors": 1,
+        "warnings": 2
+      }
+    },
+    {
+      "case": "esa-e20240135-baseline",
+      "raw_counts": {
+        "blocking_errors": 3,
+        "fatal_errors": 1,
+        "errors": 4,
+        "warnings": 3
+      },
+      "derived_counts": {
+        "blocking_errors": 0,
+        "fatal_errors": 1,
+        "errors": 1,
+        "warnings": 3
+      }
+    },
+    {
+      "case": "esa-e20240086-missing_journal_title",
+      "raw_counts": {
+        "blocking_errors": 4,
+        "fatal_errors": 4,
+        "errors": 3,
+        "warnings": 2
+      },
+      "derived_counts": null
+    },
+    {
+      "case": "esa-e20240086-malformed_xml",
+      "raw_counts": {
+        "blocking_errors": 4,
+        "fatal_errors": 3,
+        "errors": 1,
+        "warnings": 0
+      },
+      "derived_counts": null
+    }
+  ],
+  "publication_approved": false,
+  "audited_at": "2026-10-28T11:30:24.676261+00:00",
+  "current_corrected_package_hashes_verified": true,
+  "diagnosis_replayed": true,
+  "current_cases": [
+    {
+      "case": "esa-e20240086-baseline",
+      "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+      "package_sha256": "07a4789dfcb70aed8436b3f69a67be9b3112954f054857b249f693b20f00f7d4",
+      "offline_valid": true,
+      "offline_codes": [],
+      "formal_state": "blocked",
+      "modern": [
+        {
+          "name": "packtools",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        },
+        {
+          "name": "spsvalidator",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        }
+      ],
+      "warning_groups": {
+        "packtools": {
+          "affiliation": 2,
+          "appendix": 1,
+          "section": 2
+        },
+        "spsvalidator": {
+          "affiliation": 2,
+          "appendix": 1,
+          "section": 2
+        }
+      },
+      "diagnosis_items": 19,
+      "diagnosis_sha256": "ed6524e1fa8fee38a3b0e9ccbab01896e9907126d6f33770fa32ec761d934601",
+      "warnings_accepted": false,
+      "ready_for_scielo": false
+    },
+    {
+      "case": "esa-e20240135-baseline",
+      "xml_sha256": "f2540405e65898aa2d5bd045075fbc22d2e06177f782e3a649ba891738002412",
+      "package_sha256": "de753e0aad72debdf6fee7c770b1c82f2ed6d59824bf9548c0cc45ba4b3d8a1b",
+      "offline_valid": true,
+      "offline_codes": [],
+      "formal_state": "blocked",
+      "modern": [
+        {
+          "name": "packtools",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        },
+        {
+          "name": "spsvalidator",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        }
+      ],
+      "warning_groups": {
+        "packtools": {
+          "affiliation": 4,
+          "appendix": 1
+        },
+        "spsvalidator": {
+          "affiliation": 4,
+          "appendix": 1
+        }
+      },
+      "diagnosis_items": 21,
+      "diagnosis_sha256": "3e0d2b5be6e0bcf7e32fa29fad35a34ced56665689541a43470dfb33bba15462",
+      "warnings_accepted": false,
+      "ready_for_scielo": false
+    },
+    {
+      "case": "esa-e20240086-missing_journal_title",
+      "xml_sha256": "220e057a15ab84ee5da02b502e97fe1268576700df5d4ce0ed1e304be8408ce7",
+      "package_sha256": "a04a1369cac1076a689187c72dda778ecce12c13b59187a26ac280713f2259cc",
+      "offline_valid": false,
+      "offline_codes": [
+        "missing-journal-title"
+      ],
+      "formal_state": "blocked",
+      "modern": [
+        {
+          "name": "packtools",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        },
+        {
+          "name": "spsvalidator",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        }
+      ],
+      "warning_groups": {},
+      "diagnosis_items": 17,
+      "diagnosis_sha256": "5a68b557d3ae24b66029279e1923c783fdd67423a7c5922033aa13eae3ab3aef",
+      "warnings_accepted": false,
+      "ready_for_scielo": false
+    },
+    {
+      "case": "esa-e20240086-malformed_xml",
+      "xml_sha256": "e0db26146d473d8199c5f8c9f3a10167c30701c2369ca4a509f92958de7b9896",
+      "package_sha256": "b90339042f950e93c3cfd100dbe399d675afed9a81773c77698ba9c7de12cb9f",
+      "offline_valid": false,
+      "offline_codes": [
+        "xml-not-well-formed"
+      ],
+      "formal_state": "blocked",
+      "modern": [
+        {
+          "name": "packtools",
+          "status": "unavailable",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 0
+          }
+        },
+        {
+          "name": "spsvalidator",
+          "status": "unavailable",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 0
+          }
+        }
+      ],
+      "warning_groups": {},
+      "diagnosis_items": 10,
+      "diagnosis_sha256": "058b03aef898be395c8e4240bf387d682c1d333488e0198ddb4db55f3642d6b8",
+      "warnings_accepted": false,
+      "ready_for_scielo": false
+    }
+  ],
+  "summary_sha256": "54e1ee9ddb0291828aa9f9092482ffbadcd920c7e8ebf97296404d023349003c",
+  "historical_reports_reused": false,
+  "new_online_xpm_executions": 4
+}

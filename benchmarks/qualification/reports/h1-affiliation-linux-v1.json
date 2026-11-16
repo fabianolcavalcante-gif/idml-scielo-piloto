@@ -1,0 +1,334 @@
+{
+  "version": "h1-affiliation-linux-1.0",
+  "date": "2026-09-30",
+  "source_sha256": "418a3c3f44bfd169a1bea325b0ff53eb0df721150ba7e45e11a656802ddef830",
+  "first_article": {
+    "case": "esa-e20240086",
+    "scope": "curated execution summary",
+    "executions_completed": true,
+    "existing_services_unchanged": true,
+    "socket_removed": true,
+    "scratch_empty": true,
+    "cases": [
+      {
+        "name": "packtools",
+        "status": "completed",
+        "passed": false,
+        "counts": {
+          "critical": 22,
+          "error": 4,
+          "warning": 12
+        },
+        "candidate_sha256": "7081d302358f8c022114a0ebf568372af43e115bda38a748cc7c2ebbc1494ad0",
+        "tool_sha256": "c1fcc21b4e6e26136aa33543c239ec37bee1cc613c3356f310f223a10acb882e",
+        "report_sha256": "461b7176e17135373a12fef88a6a418fa4b3b0e9df9d7bef979a0f7bf0e116b6"
+      },
+      {
+        "name": "spsvalidator",
+        "status": "completed",
+        "passed": false,
+        "counts": {
+          "critical": 22,
+          "error": 4,
+          "warning": 12
+        },
+        "candidate_sha256": "6b209eb4209e20aff17b653545f5553af3b562c9549ee34b5a2ca49671d9c4f6",
+        "tool_sha256": "e2a57de6c2f6d8bb5fa466fbe4fa375caa4a893769d8d22c496c958a0d57fab4",
+        "report_sha256": "53783e54e53a565e106f7741a9213b6cfb0941fcaa36c417ba06cef922ad558e"
+      }
+    ]
+  },
+  "second_article": {
+    "version": "h1-validator-socket-smoke-1.1",
+    "case": "real",
+    "executions_completed": true,
+    "cases": [
+      {
+        "name": "packtools",
+        "case": "real",
+        "status": "completed",
+        "counts": {
+          "blocking": 0,
+          "critical": 6,
+          "error": 4,
+          "warning": 8
+        },
+        "candidate_sha256": "1757cdb3a15b7fd44beb009e794ff812995eb59cd6e2c1eee2cabee15f9a9706",
+        "tool_sha256": "c1fcc21b4e6e26136aa33543c239ec37bee1cc613c3356f310f223a10acb882e",
+        "report_sha256": "54e461ef0622eba7a433d33a5b931b892a25f507502bf62a1892b915620f83a8",
+        "failure_code": null,
+        "passed": false,
+        "issue_codes": [
+          "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+          "aff-state-addr-line-state-exist-b767117669fa",
+          "app-app-element-app-group-app-exist-6e8b29290a5b",
+          "article-id-registered-doi-article-id-pub-id-type-doi-registered-235505bec3f8",
+          "bibliographic-strip-registered-issue-volume-number-supplement-value-in-list-f004897586f4",
+          "contrib-registered-orcid-contrib-id-contrib-id-type-orcid-registered-26d9e269d583",
+          "history-required-date-rev-recd-history-date-date-type-rev-recd-exist-3e953fb9b41f",
+          "history-required-date-rev-request-history-date-date-type-rev-request-exist-4f1d58f9fc9d",
+          "subject-table-of-contents-section-subj-group-subject-value-in-list-59eb58580f67"
+        ],
+        "transport_completed": true,
+        "client_exit_code": 0
+      },
+      {
+        "name": "spsvalidator",
+        "case": "real",
+        "status": "completed",
+        "counts": {
+          "blocking": 0,
+          "critical": 6,
+          "error": 4,
+          "warning": 8
+        },
+        "candidate_sha256": "e0be244b52eb524328a3f260c426617850bb057e3bbc9ecb82c43134929950c8",
+        "tool_sha256": "e2a57de6c2f6d8bb5fa466fbe4fa375caa4a893769d8d22c496c958a0d57fab4",
+        "report_sha256": "2372849aa5daffd0a62c7aa9acd12fdc38994ccb457f520871c5c1aab5933f2a",
+        "failure_code": null,
+        "passed": false,
+        "issue_codes": [
+          "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+          "aff-aff-state-addr-line-state-exist-302311123921",
+          "app-app-app-element-app-group-app-exist-b70163d3b3dc",
+          "article-id-article-id-registered-doi-article-id-pub-id-type-doi-registered-98aca8200e0d",
+          "bibliographic-strip-bibliographic-strip-registered-issue-volume-number-supplement-value-in-list-f6922614fc5f",
+          "contrib-contrib-registered-orcid-contrib-id-contrib-id-type-orcid-registered-2ca467ac0cf7",
+          "history-history-required-date-rev-recd-history-date-date-type-rev-recd-exist-ef912a098978",
+          "history-history-required-date-rev-request-history-date-date-type-rev-request-exist-23889e3b4763",
+          "subject-subject-table-of-contents-section-subj-group-subject-value-in-list-6a9b7648cf8d"
+        ],
+        "transport_completed": true,
+        "client_exit_code": 0
+      }
+    ],
+    "existing_services_unchanged": true,
+    "socket_removed": true,
+    "scratch_empty": true,
+    "private_corpus_used": true,
+    "production_activated": false
+  },
+  "synthetic_matrix_order": ["packtools", "spsvalidator"],
+  "synthetic_matrices": [
+    {
+      "synthetic_only": true,
+      "passed": true,
+      "cases": [
+        {
+          "case": "valid",
+          "expected": "OK",
+          "responses": [
+            "OK"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "missing-target",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "no-reference",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "wrong-type",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "duplicate-id",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "mixed-targets",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "multiple-targets",
+          "expected": "OK",
+          "responses": [
+            "OK"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "empty-rid",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "non-aff-target",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "out-of-scope",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "synthetic_only": true,
+      "passed": true,
+      "cases": [
+        {
+          "case": "valid",
+          "expected": "OK",
+          "responses": [
+            "OK"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "missing-target",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "no-reference",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "wrong-type",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "duplicate-id",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "mixed-targets",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "multiple-targets",
+          "expected": "OK",
+          "responses": [
+            "OK"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "empty-rid",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "non-aff-target",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        },
+        {
+          "case": "out-of-scope",
+          "expected": "ERROR",
+          "responses": [
+            "ERROR"
+          ],
+          "other_rule_decisions_unchanged": true,
+          "xml_unchanged": true,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "regression": {
+    "tests": 708,
+    "warnings": 3,
+    "application_coverage_percent": 88
+  },
+  "private_copies_removed": 4,
+  "active_application_changed": false,
+  "formal_validation_passed": false
+}

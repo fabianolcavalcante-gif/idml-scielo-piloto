@@ -1,0 +1,134 @@
+{
+  "version": "phase7-v11-robustness-mutation-1.0",
+  "family": "V-11",
+  "executed_at": "2026-10-06T12:18:31.826931+00:00",
+  "dedicated_tests": 9,
+  "full_tests": null,
+  "line_coverage_percent": null,
+  "fuzz_cases": {
+    "arbitrary_binary_inputs": 121,
+    "single_bit_zip_mutations": 128,
+    "hostile_internal_xml": 5,
+    "unexpected_exceptions": 0
+  },
+  "property_cases": {
+    "unicode_title_variants": 6,
+    "mixed_content_combinations": 16,
+    "zip_order_variants": 2,
+    "xml_whitespace_variants": 1,
+    "source_id_renaming_variants": 1,
+    "package_order_variants": 3
+  },
+  "mutation_assessment": {
+    "approach": "behavioral mutation matrix over security and integrity invariants",
+    "mutants_total": 13,
+    "mutants_killed": 13,
+    "score_percent": 100,
+    "covered_guards": [
+      "invalid ZIP",
+      "corrupt deflate stream",
+      "path traversal and collision",
+      "DOCTYPE/entity declaration",
+      "malformed XML",
+      "canonical RichText mismatch",
+      "dangling cross-reference",
+      "duplicate package member",
+      "missing required package role",
+      "package member byte mutation",
+      "artifact SHA mismatch",
+      "idempotency key conflict",
+      "unknown tenant field in job payload"
+    ],
+    "minimum_future_score_percent": {
+      "ingest_safe_zip": 90,
+      "domain_and_jats": 85,
+      "artifact_job_package": 90,
+      "ai_contracts": 90
+    }
+  },
+  "resolved_findings": [
+    {
+      "id": "V11-ZIP-ZLIB-ESCAPE",
+      "severity": "major",
+      "resolution": "zlib.error from ZipFile.testzip is normalized to UnsafeArchiveError(corrupt_entry)",
+      "regression": "128 deterministic single-bit mutations"
+    }
+  ],
+  "source_sha256": {
+    "ops/collect_vh1_articlemeta_dates.py": "26664fa36e68dabba3a1ddcff81c7a1b2f19d646ec206c77289cb8cacfab8c67",
+    "ops/collect_vh1_orcid_sources.py": "3cf171f8d3b7acafca424d4476e9e7bec1d8c4ed688a20c9ac558c5cc1b096b6",
+    "ops/qualify_vh1_metadata.py": "a09408352fa16c675905b0442db1b92fbd8c30b7bb132232d2f8d3eb81f930e5",
+    "ops/requalify_vh1_articlemeta_workflow.py": "e319aed25082f20007af22df80e126e61530ff90aca5adb728938839c2419e10",
+    "src/idml_foundation/domain/canonical.py": "610d0ae8a72a752d68a428292c8480a826607aea15146c3985ca765af4576db8",
+    "src/idml_foundation/ingest/safe_zip.py": "93faa91755c6fee6997f80b6249a446a11b17257069e76f07c7f8152d16fe829",
+    "src/idml_foundation/ingest/xml_security.py": "a6f062e7620bda07a4e0fadf6b8a20b6c75371e566b5fd2295e4bb1a96058a90",
+    "src/idml_foundation/pipeline/canonical_mapper.py": "5380a66f15e0eb475f7c1f5104ce93181009d2e1cdda7f3a6082cc288284f462",
+    "src/idml_foundation/pipeline/funding_parser.py": "47a40964e8da95d62b62c84484b9ed639e8eed6cd47dfdbe58be8c9f4ccc8fad",
+    "src/idml_foundation/pipeline/idml_parser.py": "fc268c682809829072cd2018ac3536bae319f88b421945f6da638f955963a10c",
+    "src/idml_foundation/pipeline/jats_builder.py": "9ad113044ef77a4fa342ac31a24129631db1f870bdfd64c4bfd723ef6db71430",
+    "src/idml_foundation/pipeline/metadata_normalization.py": "088deaecec3648103c86ea6984a6bbc6a46a7686dde0f196c01c7f1fc1d16ad8",
+    "src/idml_foundation/pipeline/service.py": "af2cf520e3ffe575c710ae2e0f7511799003ec92dfde4628c8adfc2ff37b0037",
+    "src/idml_foundation/publication_dates.py": "0f20190f807ac867acf402ed0e5d11fc1fb0ef5491a9ea0e79cd9e7bd08b5eae",
+    "src/idml_foundation/release/articlemeta_dates.py": "3bae62f5bda276d585ce568502c61e7e50f5dc66e9ffa019d304bf846eb80532",
+    "src/idml_foundation/release/articlemeta_orcids.py": "2231ed6f7068226bc7b1088d2d3d051ac396e7eb7358c3aef8caf3fae1795568",
+    "src/idml_foundation/release/formal_metadata.py": "c179194a4704ec137b754a6e088cfcfe4dc2b659e796d44cd6ad975af2bbd1b7",
+    "src/idml_foundation/release/package_builder.py": "10dcbd0043bedcb0041924c9fa2467a0cb56cd420e3866c988f729892d78002a",
+    "src/idml_foundation/services/enrichment.py": "86efb2f8e548494c1d0efab4cfd08d255bd922ea639ef78264641e521bec9643",
+    "src/idml_foundation/services/source_authorization.py": "003839355b24abe8c9f4bde8fb5ec28bb4ddca36290c106e1a172696642bbae4",
+    "tests/test_articlemeta_dates.py": "59dd7f8446a0d168c17a95d13831453e32b966c76f1cf4dd71b51cdff520a3cf",
+    "tests/test_articlemeta_orcids.py": "cf14faf513c05b4cb4e86bc144e7d4d5dba06e28dd63d52d6b7c55ab31924f15",
+    "tests/test_phase7_v11_robustness.py": "a2e64b4061198f86e54157826e9ccc085cc49c2006c452ab6ae812f8c2521ef6",
+    "tests/test_vh1_dates_funding.py": "bbe350ae9b55df07bc5f381544314cfb2c699fad3424819856d3ea5be41153bb",
+    "tests/test_vh1_metadata_normalization.py": "12c1ffcb7adb229a2feb811533f1f54e62a810106695f997056fca60cabf5379"
+  },
+  "privacy": {
+    "contains_article_text": false,
+    "contains_raw_credentials": false,
+    "contains_raw_agent_output": false,
+    "restricted_content_emitted": false
+  },
+  "critical_findings_open": 0,
+  "major_findings_open": 0,
+  "v11_approved": true,
+  "release_candidate_approved": false,
+  "production_activation_authorized": false,
+  "requalification_of": "v11-robustness-mutation-vh1-articlemeta-v1.json",
+  "scope": "ArticleMeta dates and author ORCIDs, scoped worker and current robustness; not deployment or XML approval.",
+  "previous_report_sha256": "57bc4efff4055c0c5b76cd6beaee73f0ccfadb8b960d10d80e64b6030c532d91",
+  "focused_tests": 250,
+  "focused_junit_sha256": "35620b27cec93a35aef35a2289d67c5493db3870d4cab43ec03c574da0ea1645",
+  "current_gates": {
+    "fuzz": {
+      "arbitrary_rejections": 121,
+      "zip_mutations": 128,
+      "controlled_rejections": 128,
+      "accepted_non_structural_mutations": 0
+    },
+    "xml_unicode": {
+      "hostile_xml_rejected": 5,
+      "unicode_round_trips": 128
+    },
+    "package": {
+      "order_permutations": 3,
+      "member_mutation_detected": true,
+      "package_sha256": "8e85bff234201e22d0c521030a1d30ebce4a89a33912bb6672bd0f77a908d7cb"
+    }
+  },
+  "articlemeta_current_checks": {
+    "fuzz": {
+      "arbitrary_rejections": 121,
+      "zip_mutations": 128,
+      "controlled_rejections": 128,
+      "accepted_non_structural_mutations": 0
+    },
+    "xml_unicode": {
+      "hostile_xml_rejected": 5,
+      "unicode_round_trips": 128
+    },
+    "package": {
+      "order_permutations": 3,
+      "member_mutation_detected": true,
+      "package_sha256": "8e85bff234201e22d0c521030a1d30ebce4a89a33912bb6672bd0f77a908d7cb"
+    }
+  }
+}

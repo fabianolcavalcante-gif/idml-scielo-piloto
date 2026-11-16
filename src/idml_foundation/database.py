@@ -1,3 +1,4 @@
+import sqlite3
 from collections.abc import Generator
 from contextlib import contextmanager
 
@@ -9,6 +10,17 @@ from idml_foundation.settings import Settings, get_settings
 
 class Base(DeclarativeBase):
     pass
+
+
+def ensure_write_transaction(db: Session) -> None:
+    """Make SQLite savepoints subordinate to the caller's real transaction."""
+    connection = db.connection()
+    if connection.dialect.name == "sqlite":
+        driver = connection.connection.driver_connection
+        if not isinstance(driver, sqlite3.Connection):
+            raise RuntimeError("unsupported_sqlite_transaction_driver")
+        if not driver.in_transaction:
+            connection.exec_driver_sql("BEGIN IMMEDIATE")
 
 
 def create_database_engine(settings: Settings | None = None) -> Engine:

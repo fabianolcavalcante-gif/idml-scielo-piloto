@@ -83,6 +83,20 @@ Essas evidências cobrem o ambiente atual. Na Fase 1 o novo projeto precisará d
 
 O container executa como root, não é privilegiado, não é read-only e não possui limites explícitos de CPU/RAM. A advertência principal é ausência de `trustedProxies` caso o gateway seja colocado atrás de proxy. O próprio modelo de segurança é de assistente pessoal, não de serviço multiempresa hostil. Por isso, o novo sistema não poderá expor o OpenClaw diretamente aos usuários nem usá-lo como fronteira de autorização.
 
+### OpenClaw dedicado ao IDML — atualização de 2026-08-27
+
+| Item | Resultado |
+|---|---|
+| Imagem | 2026.6.11 fixada pelo digest `sha256:3814fb...a61ce7` |
+| Serviço | `idml-development-openclaw-idml-1`, saudável |
+| Rede | `idml_development_openclaw`, interna e sem porta publicada |
+| Estado | volume exclusivo, configuração modo 600 e backup/restore testado |
+| Limites | 384 MiB, 0,35 CPU, 120 PIDs, root filesystem read-only, capabilities removidas |
+| Superfície | `/v1/responses`; UI, Chat Completions, tools, Skills, plugins e canais desligados |
+| Inferência | bloqueada por flags falsas, heartbeat em `0m`, ausência de provider key e de egress |
+
+Essa instância não reutiliza redes, volumes ou credenciais do OpenClaw compartilhado.
+
 ## Condições para coexistência
 
 O ambiente inicial do novo projeto deverá:

@@ -1,0 +1,15 @@
+{
+  "version": "agent-pricing-1.1",
+  "currency": "USD",
+  "unit": "usd_per_million_tokens",
+  "source_policy": "provider_or_exact_catalog_fail_closed",
+  "models": {
+    "openai/gpt-5.4-mini": {
+      "input_usd_per_million_tokens": "0.75",
+      "cached_input_usd_per_million_tokens": "0.075",
+      "output_usd_per_million_tokens": "4.50",
+      "source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+      "effective_date": "2026-08-27"
+    }
+  }
+}

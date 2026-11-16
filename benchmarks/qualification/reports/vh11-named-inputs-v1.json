@@ -1,0 +1,285 @@
+{
+  "date": "2026-11-06",
+  "release": "vh11-named-inputs-20261106-v1",
+  "runtime_sha256": "sha256:a68b0496d37275e9863b8d8e9184baa91a0ab6da4a0891def057289e87e41e0b",
+  "runtime_files": {
+    "idml-development-api-1": 351,
+    "idml-development-worker-1": 351
+  },
+  "tests": {
+    "windows": 766,
+    "linux": 766,
+    "warnings_per_platform": 4,
+    "postgresql": true,
+    "mypy_modules": 150,
+    "chrome_simulated": [
+      "empty_article",
+      "retry_ambiguous_submit_same_key",
+      "switch_tenant"
+    ]
+  },
+  "articles": {
+    "esa-e20240086": {
+      "xml_sha256": "370422b77d7251b582882a39b90a08f773bcbab7f97634e7539b1c297b46e2b6",
+      "package_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+      "formal": [
+        {
+          "name": "packtools",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        },
+        {
+          "name": "spsvalidator",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        }
+      ],
+      "xpm": {
+        "blocking_errors": 0,
+        "fatal_errors": 0,
+        "errors": 0,
+        "warnings": 2
+      },
+      "reviewer_abstention": true,
+      "reviewer_download": true,
+      "reviewer_diagnosis": true,
+      "reviewer_write_status": 403,
+      "figures": 5,
+      "downloaded_xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690"
+    },
+    "esa-e20240135": {
+      "xml_sha256": "6619435c0f88659714f5f48b677b6a64702ca9cb4de4283f49f4eafa186b1cc5",
+      "package_sha256": "985d3789ba5d9b9a1d8f6fc8b3c96ae9af0d63523663a164263b4b9d6de3ad45",
+      "formal": [
+        {
+          "name": "packtools",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        },
+        {
+          "name": "spsvalidator",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        }
+      ],
+      "xpm": {
+        "blocking_errors": 0,
+        "fatal_errors": 0,
+        "errors": 0,
+        "warnings": 3
+      },
+      "reviewer_abstention": true,
+      "reviewer_download": true,
+      "reviewer_diagnosis": true,
+      "reviewer_write_status": 403,
+      "figures": 7,
+      "downloaded_xml_sha256": "f2540405e65898aa2d5bd045075fbc22d2e06177f782e3a649ba891738002412"
+    }
+  },
+  "v10": {
+    "approved": true,
+    "family": "V-10",
+    "network_required_by_gate": false,
+    "production_activation_authorized": false,
+    "release_candidate_approved": false,
+    "restricted_content_emitted": false,
+    "rows": [
+      {
+        "case": "published_report",
+        "metrics": {
+          "critical_scenarios": 13,
+          "full_tests": null,
+          "line_coverage_percent": null,
+          "report_sha256": "3a38589e9c6282ec41eef62a594845d02dbfb73c4e1afd0f3434a732f42c7271",
+          "source_files": 196
+        },
+        "passed": true
+      },
+      {
+        "case": "api_contract",
+        "metrics": {
+          "authenticated": true,
+          "operational_endpoints": 14
+        },
+        "passed": true
+      },
+      {
+        "case": "job_contract",
+        "metrics": {
+          "job_kinds": [
+            "idml.process",
+            "scielo.package"
+          ],
+          "required_transitions": 4,
+          "strict_payloads": true
+        },
+        "passed": true
+      },
+      {
+        "case": "package_integrity",
+        "metrics": {
+          "deterministic": true,
+          "manifest_files": 2,
+          "package_sha256": "b63e60f1a68429b885a30643b82e5da0c7cb63111d56063543b1a6eff5dbdb46"
+        },
+        "passed": true
+      },
+      {
+        "case": "interface_degraded",
+        "metrics": {
+          "interface_controls": 15,
+          "openclaw_enabled": false,
+          "swarm_enabled": false
+        },
+        "passed": true
+      }
+    ],
+    "version": "phase7-v10-gate-1.0"
+  },
+  "v09": {
+    "approved": false,
+    "critical_findings_open": 0,
+    "family": "V-09",
+    "high_findings_open": 0,
+    "known_cross_tenant_leaks": 0,
+    "network_required_by_gate": false,
+    "production_activation_authorized": false,
+    "release_candidate_approved": false,
+    "restricted_content_emitted": false,
+    "rows": [
+      {
+        "case": "published_report",
+        "error": "ValueError",
+        "passed": false
+      },
+      {
+        "case": "route_contract",
+        "metrics": {
+          "protected_operations": 49,
+          "tenant_bound_operations": 39
+        },
+        "passed": true
+      },
+      {
+        "case": "identity_rbac",
+        "metrics": {
+          "permissions": 11,
+          "roles": 4,
+          "strict_write_contracts": 16
+        },
+        "passed": true
+      },
+      {
+        "case": "rate_limiting",
+        "metrics": {
+          "identities_hmac_only": true,
+          "threshold": 5,
+          "window_seconds": 900
+        },
+        "passed": true
+      },
+      {
+        "case": "untrusted_content_logging",
+        "metrics": {
+          "prompt_injection_carriers": 5,
+          "secret_patterns_checked": 3
+        },
+        "passed": true
+      },
+      {
+        "case": "deployment_contract",
+        "metrics": {
+          "application_agent_flags_false": true,
+          "deployment_controls": 6
+        },
+        "passed": true
+      }
+    ],
+    "version": "phase7-v09-gate-1.0"
+  },
+  "v11": {
+    "approved": false,
+    "family": "V-11",
+    "network_required_by_gate": false,
+    "production_activation_authorized": false,
+    "release_candidate_approved": false,
+    "restricted_content_emitted": false,
+    "rows": [
+      {
+        "case": "published_report",
+        "error": "ValueError",
+        "passed": false
+      },
+      {
+        "case": "binary_fuzz",
+        "metrics": {
+          "accepted_non_structural_mutations": 0,
+          "arbitrary_rejections": 121,
+          "controlled_rejections": 128,
+          "zip_mutations": 128
+        },
+        "passed": true
+      },
+      {
+        "case": "xml_unicode_properties",
+        "metrics": {
+          "hostile_xml_rejected": 5,
+          "unicode_round_trips": 128
+        },
+        "passed": true
+      },
+      {
+        "case": "package_properties",
+        "metrics": {
+          "member_mutation_detected": true,
+          "order_permutations": 3,
+          "package_sha256": "8e85bff234201e22d0c521030a1d30ebce4a89a33912bb6672bd0f77a908d7cb"
+        },
+        "passed": true
+      }
+    ],
+    "version": "phase7-v11-gate-1.0"
+  },
+  "real_browser_roles": [
+    "operator",
+    "reviewer"
+  ],
+  "source_admin_temporarily_enabled": true,
+  "qa_accounts_disabled": true,
+  "live_evaluations": "read previous abstentions",
+  "private_backup_restored": true,
+  "rollback_test": true,
+  "postcheck": {
+    "reader_membership": true,
+    "test_operator_disabled": true,
+    "worker_mount_verified": true,
+    "smoke": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "unchanged_other_containers": true,
+    "healthy_idml": 5
+  },
+  "human_acceptance": false
+}

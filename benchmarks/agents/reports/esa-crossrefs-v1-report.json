@@ -1,0 +1,51 @@
+{
+  "version": "esa-crossrefs-1.0",
+  "corpus_id": "esa-e20240086",
+  "restricted": true,
+  "source_idml_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+  "approved_xml_sha256": "739b4c3247a06d6d5253ad2805fb830d09692cb306cbb5c785ad99707e539de9",
+  "generated_xml_sha256": "924e5734161bf95c72fd412a81d580f6bfa5181a2f468e8ba6bd23d7c4abdbec",
+  "runtime_uses_approved_xml": false,
+  "generated_xml_valid": true,
+  "generated_validation_issues": 0,
+  "approved_xml_comparison": {
+    "expected": 78,
+    "actual": 81,
+    "matched_targets": 75,
+    "precision": 0.9259259259259259,
+    "recall": 0.9615384615384616,
+    "f1": 0.9433962264150944,
+    "expected_unique_targets": 51,
+    "actual_unique_targets": 52,
+    "decision": "needs_review"
+  },
+  "target_deltas": {
+    "expected_deficits": [
+      {"reference_ordinal": 10, "occurrences": 1},
+      {"reference_ordinal": 11, "occurrences": 2}
+    ],
+    "actual_surpluses": [
+      {"reference_ordinal": 13, "occurrences": 3},
+      {"reference_ordinal": 37, "occurrences": 3}
+    ]
+  },
+  "technical_adjudication_candidates": [
+    {
+      "code": "approved-target-conflicts-with-author-year",
+      "occurrences": 3,
+      "approved_reference_ordinals": [10, 11],
+      "deterministic_reference_ordinal": 13
+    },
+    {
+      "code": "approved-reference-present-but-uncited",
+      "occurrences": 3,
+      "reference_ordinal": 37
+    }
+  ],
+  "decision": "needs_review",
+  "reasons": [
+    "cross-reference-target-below-100-percent-against-approved-xml",
+    "approved-baseline-has-six-evidence-backed-adjudication-candidates",
+    "human-adjudication-unavailable"
+  ]
+}

@@ -1,0 +1,992 @@
+{
+  "active_application_changed": false,
+  "native_libraries_unchanged": true,
+  "source_sha256": {
+    "deploy/Dockerfile.validator-history-compat": "fae64fe0cc2d18b67c013a5dcd4dc148b2eaf10bda98fc6018f3f96e4b4d3719",
+    "ops/history_compat.py": "d050634ec8f0ee5a97fb6ca49f3a08fbf330c55c05e1833490a295b9714f589b",
+    "ops/history_validator_adapter.py": "b95f386fbd6b9c987f2244f0d9470bc5892552aea7a99d3329a918cdeaa1f9fd",
+    "ops/probe_vh1_history.py": "52dc86d01526636d89de2bacefd06428d1a678722eb5b4079195f059fc8d76db",
+    "ops/qualify_vh1_history_images.py": "9bffb15b00f57d887dc168829d63dbca768ee57f84365592bea770c3c41f3527",
+    "ops/scoped_validator_adapter.py": "dfc585716ea94e28834352dd225f80300d7f9a5a4324d026396cdd1da70b6509"
+  },
+  "validators": {
+    "packtools": {
+      "image_id": "sha256:4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca",
+      "native_probe": {
+        "checks": {
+          "absent_optional_revision": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    }
+                  ],
+                  "default_rows_sha256": "73b59d66b4da0feea8daef3a98ab4ce60293616b873ba8e44cd2314f397d8abc",
+                  "effective_failures": [],
+                  "effective_rows_sha256": "bea9c577d72c09ff61d8c24335e863c6857aa2f1acc9c85e63d676dec6192ba6",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "duplicate_history": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "history uniqueness"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    }
+                  ],
+                  "default_rows_sha256": "2ae8284105eece85c68d4e4558bea02eccc7ded895fa29d574148f4637634001",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "history uniqueness"
+                    }
+                  ],
+                  "effective_rows_sha256": "ad48ddcc7eb6ba7837bd56f66d251ed0616a011ea7ef4ce0c0f842a2d944e559",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "incomplete_received": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "complete date for received"
+                    }
+                  ],
+                  "default_rows_sha256": "47bb64c0f67b4b561c08753c381a6f2590a890b0335f9ac6215fa56603178ac5",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "complete date for received"
+                    }
+                  ],
+                  "effective_rows_sha256": "4cd1d7460421ecbac8953fc201552156dd6ef28d4282dbd039600ec160669f24",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "missing_accepted": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: accepted"
+                    }
+                  ],
+                  "default_rows_sha256": "b491406205f60487564fba95155df13963da89803c424288b13c6cf9faeadda6",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: accepted"
+                    }
+                  ],
+                  "effective_rows_sha256": "69d56eda95682851513beef74e01dab130b7df8787d8857308f82898c8b2486f",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "missing_pub_still_required": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: pub"
+                    }
+                  ],
+                  "default_rows_sha256": "e3496d6d7b377e7b3b391ecfa643ce2ca98d96f3db5b960c3bbe5c6c6eab8848",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: pub"
+                    }
+                  ],
+                  "effective_rows_sha256": "f42daae3343d4e7d4ea34e431733f6d7145b22fb0a57175b678afe6680eb221b",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "missing_received": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: received"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    }
+                  ],
+                  "default_rows_sha256": "786eee449575aa0db7a61df64a481786daa55f9a09f5e21c80f27b518cd24d87",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: received"
+                    }
+                  ],
+                  "effective_rows_sha256": "f800288e20a4a15d7a967b21b88095cf1a8cea3a1d55c2b0c00108a4dad5d521",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "missing_type": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "date-type presence"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    }
+                  ],
+                  "default_rows_sha256": "dbf9a37cb230cc22df763835deeed3e53c022aa91ffa8753a4fb15d5674d61af",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "date-type presence"
+                    }
+                  ],
+                  "effective_rows_sha256": "41fa3e9daa812ddc33981f4d6c6f161a17bf91e903a293678d26d05b8d460342",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "present_complete_revisions": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [],
+                  "default_rows_sha256": "4cb6c9a0a1700e5d067dd16c06ea67f6c9e616ab0a649ec61e539f1052d703a4",
+                  "effective_failures": [],
+                  "effective_rows_sha256": "ff49f400c075b6850aedd5a0b833c0b5a12716980cfdfb2095ba77b0198d2d7d",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "present_year_only_revision": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    }
+                  ],
+                  "default_rows_sha256": "c3150ab0797a06763a2b3b71b92f80462e72fc01fec404e8bfed79272dfc1957",
+                  "effective_failures": [],
+                  "effective_rows_sha256": "a1d192ab05f9aa50ddce85f55b432a299d554f0e5535013be2ff66e7088582c4",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "request_without_year": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "year presence for rev-request"
+                    }
+                  ],
+                  "default_rows_sha256": "9d1722b40ba4dc3b4876de114ed8097bbffb11273bc4b4c390bad215948a5fad",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "year presence for rev-request"
+                    }
+                  ],
+                  "effective_rows_sha256": "c81ddf281775388227fae7eae14856b75181a078b03ddec26442f762f0ef9f99",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "revision_without_year": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "year presence for rev-recd"
+                    }
+                  ],
+                  "default_rows_sha256": "630e10389077954bf67b45e30d857f26427edbc884256975b024bacb59ea9f4d",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "year presence for rev-recd"
+                    }
+                  ],
+                  "effective_rows_sha256": "cc5f1439d22b9ec98dfb737ca57d6df4f3db64798ecc3459ab9b32380feb9221",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "translation_missing_received": {
+            "passed": true
+          },
+          "unknown_type": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "date-type value"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    }
+                  ],
+                  "default_rows_sha256": "72d563b5641a4ba054db23ff933bb3ebf41145cf824363f39a4c65232b66e946",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "date-type value"
+                    }
+                  ],
+                  "effective_rows_sha256": "d92591ad882741e500c4182a10a010efe1e4e94f89ac0a46dd7ff53440b7d9dd",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          }
+        },
+        "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+        "passed": true
+      },
+      "parent_image_id": "sha256:8b10e0d37580ed5c018e86049281010968eac05ee07e4cbc640cc9f2358aa266",
+      "runtime": {
+        "machine": "x86_64",
+        "package_trees": {
+          "packtools": {
+            "file_count": 727,
+            "sha256": "35d2f43773027b1a4b0fdfb77d786a5c3f5ab82dd88ae1c15a46456fce83d188"
+          }
+        },
+        "packages": {
+          "aiohappyeyeballs": "2.7.1",
+          "aiohttp": "3.14.3",
+          "aiosignal": "1.4.0",
+          "attrs": "26.1.0",
+          "babel": "2.18.0",
+          "certifi": "2026.7.22",
+          "charset-normalizer": "3.5.1",
+          "et-xmlfile": "2.0.0",
+          "frozenlist": "1.8.0",
+          "idna": "3.19",
+          "langcodes": "3.5.1",
+          "langdetect": "1.0.9",
+          "lxml": "6.1.3",
+          "multidict": "6.7.1",
+          "openpyxl": "3.1.5",
+          "packtools": "4.17.2rc20260909",
+          "picles.plumber": "0.11",
+          "pillow": "12.3.0",
+          "pip": "25.0.1",
+          "propcache": "0.5.2",
+          "python-docx": "1.2.0",
+          "requests": "2.34.2",
+          "six": "1.17.0",
+          "tenacity": "9.1.4",
+          "typing-extensions": "4.16.0",
+          "urllib3": "2.7.0",
+          "yarl": "1.24.5"
+        },
+        "platform": "Linux",
+        "python": "3.12.14",
+        "wrappers_sha256": {
+          "affiliation_compat.py": "418a3c3f44bfd169a1bea325b0ff53eb0df721150ba7e45e11a656802ddef830",
+          "doi_authority_runtime.py": "700d11e3e4eb25c80229b6e372ed5494b6d77e70b139c52f5aa9848b06559db5",
+          "doi_model_compat.py": "4292190bf916483f339efca80b3038e70574b78ef3b940a2a15478d831b813c4",
+          "doi_package_binding.py": "4a4e768050bff7669cac414ac49ec5433f7490a42c88c8e39cce385711acc318",
+          "doi_snapshot.py": "48ea4ffb755d40464cce0c2c07567312b5b121130a7fd8b0d0d1886c7fb2c19b",
+          "doi_validation_evidence.py": "ae4edc1c2c878ed86bcea10e857104d60e423b7f6ab332f8136df313c5b3660c",
+          "editorial_authority.py": "ec274acfde43ca4165a7734e438daa2bffd1747a59dbb5cb063acca104d21c44",
+          "editorial_authority_runtime.py": "07d58ce1965fe0e064502722dd4c9361151dbedaf5addab9396f038c78395615",
+          "external_verification.py": "afe54ce01b490153289a3b4d167a067771afc2ad6fe7af27c0aa5ef2eaf3cd0a",
+          "history_compat.py": "d050634ec8f0ee5a97fb6ca49f3a08fbf330c55c05e1833490a295b9714f589b",
+          "packtools_pinned_adapter.py": "ab2b73ac17c94e1237c87a9dd7ffca1b7d050a0eca1aee5bf645d5a9c213b06b",
+          "packtools_validate.py": "b95f386fbd6b9c987f2244f0d9470bc5892552aea7a99d3329a918cdeaa1f9fd",
+          "probe_doi_authority.py": "0387bc63dcaea13fc73c93bae8388c789b26ceed6ad305d1f696fac74bdef49f",
+          "scoped_validator_adapter.py": "dfc585716ea94e28834352dd225f80300d7f9a5a4324d026396cdd1da70b6509",
+          "validation_scope.py": "7df6a7f2255faec390c2f11228a61f70ef741fd28031170566e97a901883af63",
+          "validator_adapter_common.py": "16ee3002394b041a1512a6ed0044d2a086c83d2772a88f0a2710d37d18b2c16b"
+        }
+      }
+    },
+    "spsvalidator": {
+      "image_id": "sha256:61b90cc8ecca8de508c6cd19701551860de32f053a4899fd056835c8f05ab048",
+      "native_probe": {
+        "checks": {
+          "absent_optional_revision": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    }
+                  ],
+                  "default_rows_sha256": "73b59d66b4da0feea8daef3a98ab4ce60293616b873ba8e44cd2314f397d8abc",
+                  "effective_failures": [],
+                  "effective_rows_sha256": "bea9c577d72c09ff61d8c24335e863c6857aa2f1acc9c85e63d676dec6192ba6",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "duplicate_history": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "history uniqueness"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    }
+                  ],
+                  "default_rows_sha256": "2ae8284105eece85c68d4e4558bea02eccc7ded895fa29d574148f4637634001",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "history uniqueness"
+                    }
+                  ],
+                  "effective_rows_sha256": "ad48ddcc7eb6ba7837bd56f66d251ed0616a011ea7ef4ce0c0f842a2d944e559",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "incomplete_received": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "complete date for received"
+                    }
+                  ],
+                  "default_rows_sha256": "47bb64c0f67b4b561c08753c381a6f2590a890b0335f9ac6215fa56603178ac5",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "complete date for received"
+                    }
+                  ],
+                  "effective_rows_sha256": "4cd1d7460421ecbac8953fc201552156dd6ef28d4282dbd039600ec160669f24",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "missing_accepted": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: accepted"
+                    }
+                  ],
+                  "default_rows_sha256": "b491406205f60487564fba95155df13963da89803c424288b13c6cf9faeadda6",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: accepted"
+                    }
+                  ],
+                  "effective_rows_sha256": "69d56eda95682851513beef74e01dab130b7df8787d8857308f82898c8b2486f",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "missing_pub_still_required": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: pub"
+                    }
+                  ],
+                  "default_rows_sha256": "e3496d6d7b377e7b3b391ecfa643ce2ca98d96f3db5b960c3bbe5c6c6eab8848",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: pub"
+                    }
+                  ],
+                  "effective_rows_sha256": "f42daae3343d4e7d4ea34e431733f6d7145b22fb0a57175b678afe6680eb221b",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "missing_received": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: received"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    }
+                  ],
+                  "default_rows_sha256": "786eee449575aa0db7a61df64a481786daa55f9a09f5e21c80f27b518cd24d87",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: received"
+                    }
+                  ],
+                  "effective_rows_sha256": "f800288e20a4a15d7a967b21b88095cf1a8cea3a1d55c2b0c00108a4dad5d521",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "missing_type": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "date-type presence"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    }
+                  ],
+                  "default_rows_sha256": "dbf9a37cb230cc22df763835deeed3e53c022aa91ffa8753a4fb15d5674d61af",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "date-type presence"
+                    }
+                  ],
+                  "effective_rows_sha256": "41fa3e9daa812ddc33981f4d6c6f161a17bf91e903a293678d26d05b8d460342",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "present_complete_revisions": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [],
+                  "default_rows_sha256": "4cb6c9a0a1700e5d067dd16c06ea67f6c9e616ab0a649ec61e539f1052d703a4",
+                  "effective_failures": [],
+                  "effective_rows_sha256": "ff49f400c075b6850aedd5a0b833c0b5a12716980cfdfb2095ba77b0198d2d7d",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "present_year_only_revision": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    }
+                  ],
+                  "default_rows_sha256": "c3150ab0797a06763a2b3b71b92f80462e72fc01fec404e8bfed79272dfc1957",
+                  "effective_failures": [],
+                  "effective_rows_sha256": "a1d192ab05f9aa50ddce85f55b432a299d554f0e5535013be2ff66e7088582c4",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "request_without_year": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "year presence for rev-request"
+                    }
+                  ],
+                  "default_rows_sha256": "9d1722b40ba4dc3b4876de114ed8097bbffb11273bc4b4c390bad215948a5fad",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "year presence for rev-request"
+                    }
+                  ],
+                  "effective_rows_sha256": "c81ddf281775388227fae7eae14856b75181a078b03ddec26442f762f0ef9f99",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "revision_without_year": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "year presence for rev-recd"
+                    }
+                  ],
+                  "default_rows_sha256": "630e10389077954bf67b45e30d857f26427edbc884256975b024bacb59ea9f4d",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "year presence for rev-recd"
+                    }
+                  ],
+                  "effective_rows_sha256": "cc5f1439d22b9ec98dfb737ca57d6df4f3db64798ecc3459ab9b32380feb9221",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          },
+          "translation_missing_received": {
+            "passed": true
+          },
+          "unknown_type": {
+            "evidence": {
+              "absence_is_not_proof_of_no_revision": true,
+              "invocations": [
+                {
+                  "default_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "date-type value"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-request"
+                    },
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "required date: rev-recd"
+                    }
+                  ],
+                  "default_rows_sha256": "72d563b5641a4ba054db23ff933bb3ebf41145cf824363f39a4c65232b66e946",
+                  "effective_failures": [
+                    {
+                      "outcome": "CRITICAL",
+                      "rule": "date-type value"
+                    }
+                  ],
+                  "effective_rows_sha256": "d92591ad882741e500c4182a10a010efe1e4e94f89ac0a46dd7ff53440b7d9dd",
+                  "only_revision_presence_changed": true
+                }
+              ],
+              "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+              "policy": "sps-1.10-history-presence-1.0",
+              "section_sha256": "111b37673931946a14ae021c1c646afa8422fa582b31e17026c02a48cf0b675e",
+              "specification_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "specification_url": "https://docs.google.com/document/d/1GTv4Inc2LS_AXY-ToHT3HmO66UT0VAHWJNOIqzBNSgA/edit#heading=h.history"
+            },
+            "passed": true
+          }
+        },
+        "native_config_sha256": "a6a62e10d817310f922d8acbe0a99bdabdd8354f6f98e5c306ffa7593a7c4f5d",
+        "passed": true
+      },
+      "parent_image_id": "sha256:3832b370222634f1eb9ddbd8aa9aa74e31acf2ee4e2cfba398eb72ff3d918ff7",
+      "runtime": {
+        "machine": "x86_64",
+        "package_trees": {
+          "packtools": {
+            "file_count": 725,
+            "sha256": "56423ae0c7ef4b3c6a1415642e21326b49cb274fc70a3dcbaf5b0da19d76f4dd"
+          },
+          "spsvalidator": {
+            "file_count": 32,
+            "sha256": "3c9953fd2291757d182499e0b3bbd74d14e54cc6192f00a7d29f170ac0d294b4"
+          }
+        },
+        "packages": {
+          "aiohappyeyeballs": "2.7.1",
+          "aiohttp": "3.14.3",
+          "aiosignal": "1.4.0",
+          "attrs": "26.1.0",
+          "babel": "2.18.0",
+          "blinker": "1.9.0",
+          "bottle": "0.13.4",
+          "certifi": "2026.7.22",
+          "charset-normalizer": "3.5.1",
+          "click": "8.5.0",
+          "et-xmlfile": "2.0.0",
+          "flask": "3.1.3",
+          "flask-babel": "4.0.0",
+          "frozenlist": "1.8.0",
+          "idna": "3.19",
+          "itsdangerous": "2.2.0",
+          "jinja2": "3.1.6",
+          "langcodes": "3.5.1",
+          "langdetect": "1.0.9",
+          "lxml": "6.1.3",
+          "markupsafe": "3.0.3",
+          "multidict": "6.7.1",
+          "openpyxl": "3.1.5",
+          "packtools": "4.16.9rc20260909",
+          "picles.plumber": "0.11",
+          "pillow": "12.3.0",
+          "pip": "25.0.1",
+          "propcache": "0.5.2",
+          "proxy-tools": "0.1.0",
+          "python-docx": "1.2.0",
+          "pytz": "2026.3.post1",
+          "pywebview": "6.2.1",
+          "requests": "2.34.2",
+          "setuptools": "81.0.0",
+          "six": "1.17.0",
+          "spsvalidator": "0.3.0",
+          "tenacity": "9.1.4",
+          "typing-extensions": "4.16.0",
+          "urllib3": "2.7.0",
+          "werkzeug": "3.1.8",
+          "yarl": "1.24.5"
+        },
+        "platform": "Linux",
+        "python": "3.12.14",
+        "wrappers_sha256": {
+          "affiliation_compat.py": "418a3c3f44bfd169a1bea325b0ff53eb0df721150ba7e45e11a656802ddef830",
+          "doi_authority_runtime.py": "4115bfc86ad8da2e571ca663f84e63fff7a8710067415bbdad537b06d58cd8a1",
+          "doi_model_compat.py": "4292190bf916483f339efca80b3038e70574b78ef3b940a2a15478d831b813c4",
+          "doi_package_binding.py": "4a4e768050bff7669cac414ac49ec5433f7490a42c88c8e39cce385711acc318",
+          "doi_snapshot.py": "48ea4ffb755d40464cce0c2c07567312b5b121130a7fd8b0d0d1886c7fb2c19b",
+          "doi_validation_evidence.py": "ae4edc1c2c878ed86bcea10e857104d60e423b7f6ab332f8136df313c5b3660c",
+          "editorial_authority.py": "ec274acfde43ca4165a7734e438daa2bffd1747a59dbb5cb063acca104d21c44",
+          "editorial_authority_runtime.py": "07d58ce1965fe0e064502722dd4c9361151dbedaf5addab9396f038c78395615",
+          "external_verification.py": "afe54ce01b490153289a3b4d167a067771afc2ad6fe7af27c0aa5ef2eaf3cd0a",
+          "history_compat.py": "d050634ec8f0ee5a97fb6ca49f3a08fbf330c55c05e1833490a295b9714f589b",
+          "scoped_validator_adapter.py": "dfc585716ea94e28834352dd225f80300d7f9a5a4324d026396cdd1da70b6509",
+          "sps_rendition_compat.py": "fd1e112fa6b249c2d7bd3bb120f7e36fe7bd46c730bda988c1405a52bb14982a",
+          "spsvalidator_pinned_adapter.py": "a105652ba6cd74302d5ab0f3bd890c54258615ef6103baab0a9f28c2dda1b090",
+          "spsvalidator_validate.py": "b95f386fbd6b9c987f2244f0d9470bc5892552aea7a99d3329a918cdeaa1f9fd",
+          "validation_scope.py": "7df6a7f2255faec390c2f11228a61f70ef741fd28031170566e97a901883af63",
+          "validator_adapter_common.py": "16ee3002394b041a1512a6ed0044d2a086c83d2772a88f0a2710d37d18b2c16b"
+        }
+      }
+    }
+  },
+  "version": "vh1-history-images-1.0",
+  "wrapper_sources_verified": true
+}

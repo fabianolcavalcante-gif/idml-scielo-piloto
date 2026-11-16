@@ -1,0 +1,28 @@
+{
+  "approved": true,
+  "checks": {
+    "bounded_rss": true,
+    "cases": true,
+    "cleanup": true,
+    "conversion": true,
+    "disk_pressure": true,
+    "expanded_limit": true,
+    "file_quota": true,
+    "host": true,
+    "isolation": true,
+    "matrix": true,
+    "privacy": true,
+    "services": true,
+    "sources": true,
+    "stored_limits": true,
+    "text_volume": true,
+    "version": true,
+    "watchdog": true
+  },
+  "evidence_sha256": "7174640fa14b8e6ba0c681088fc78ae57efb594a23ea844fc55a057390a42510",
+  "production_capacity_qualified": false,
+  "release_ready": false,
+  "restricted_content_emitted": false,
+  "v12_2_complete": false,
+  "version": "phase7-v12-volume-gate-1.0"
+}

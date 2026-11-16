@@ -1,0 +1,110 @@
+{
+  "version": "vh1-xpm-socket-real-1.0",
+  "root": "/opt/idml-platform/private/qualification/vh1-xpm-socket-20261022T180433Z",
+  "cases": [
+    {
+      "article": "esa-e20240086",
+      "mutation": "baseline",
+      "assessment": {
+        "status": "completed",
+        "attested": true,
+        "candidate_package_sha256": "2f9c5b6529fb193a38b965d366fec1cda5afcaf89e1d8a3eb146022969f1bfee",
+        "report_sha256": "a47526db7a38c8b4e664b52bc47ed57ae10fb4d5904dc9a960329a27fd9a3de7",
+        "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+        "xpm_version": "4.0.096",
+        "counts": {
+          "blocking_errors": 3,
+          "fatal_errors": 4,
+          "errors": 4,
+          "warnings": 6
+        },
+        "parser_recovered": true,
+        "parser_errors": 16,
+        "required_queries_complete": false,
+        "raw_passed": false,
+        "failure_code": null
+      },
+      "package_sha256": "2f9c5b6529fb193a38b965d366fec1cda5afcaf89e1d8a3eb146022969f1bfee",
+      "xml_sha256": "414de2ea7329379b98d06f5018839f7de7ac9487501f1b1b2eea44ed2019264f"
+    },
+    {
+      "article": "esa-e20240135",
+      "mutation": "baseline",
+      "assessment": {
+        "status": "completed",
+        "attested": true,
+        "candidate_package_sha256": "54f71f50669cacdda2ff7323777574c82e6f4bedf85cd7743abe4d6de5e90ea3",
+        "report_sha256": "e88b51845ea1ad3db0aa001c060073804dfd82530b44d03f67f8cdf2aea97914",
+        "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+        "xpm_version": "4.0.096",
+        "counts": {
+          "blocking_errors": 3,
+          "fatal_errors": 4,
+          "errors": 4,
+          "warnings": 8
+        },
+        "parser_recovered": true,
+        "parser_errors": 13,
+        "required_queries_complete": false,
+        "raw_passed": false,
+        "failure_code": null
+      },
+      "package_sha256": "54f71f50669cacdda2ff7323777574c82e6f4bedf85cd7743abe4d6de5e90ea3",
+      "xml_sha256": "31224a085f49ce7d570069f8d266993979dd46beed720c7edc22324e1c11f1e5"
+    },
+    {
+      "article": "esa-e20240086",
+      "mutation": "missing_journal_title",
+      "assessment": {
+        "status": "completed",
+        "attested": true,
+        "candidate_package_sha256": "446bc151028da26944ccfd52d0835c5ada260113a7eafcf88cd05f0ecd6327b7",
+        "report_sha256": "5cbf1fd046e5f665062463f5f27dcd4580b970b93e408a7fc634dff0a8fedf94",
+        "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+        "xpm_version": "4.0.096",
+        "counts": {
+          "blocking_errors": 4,
+          "fatal_errors": 4,
+          "errors": 4,
+          "warnings": 6
+        },
+        "parser_recovered": true,
+        "parser_errors": 16,
+        "required_queries_complete": false,
+        "raw_passed": false,
+        "failure_code": null
+      },
+      "package_sha256": "446bc151028da26944ccfd52d0835c5ada260113a7eafcf88cd05f0ecd6327b7",
+      "xml_sha256": "61a7d17a9af5d3d34d3e6eec35b36dabccb9dd3f5a02a20fb103895f532b1e16"
+    },
+    {
+      "article": "esa-e20240086",
+      "mutation": "malformed_xml",
+      "assessment": {
+        "status": "completed",
+        "attested": true,
+        "candidate_package_sha256": "47345064a1e08b1331a190f44d985009e9bd890f084cced140a429051e1eaa21",
+        "report_sha256": "b3213704b1e449cb5b8abc5a64ff0b719c2bd1abc72a8fbe6c6a52116349d323",
+        "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+        "xpm_version": "4.0.096",
+        "counts": {
+          "blocking_errors": 4,
+          "fatal_errors": 3,
+          "errors": 1,
+          "warnings": 0
+        },
+        "parser_recovered": true,
+        "parser_errors": 5,
+        "required_queries_complete": false,
+        "raw_passed": false,
+        "failure_code": null
+      },
+      "package_sha256": "47345064a1e08b1331a190f44d985009e9bd890f084cced140a429051e1eaa21",
+      "xml_sha256": "e0db26146d473d8199c5f8c9f3a10167c30701c2369ca4a509f92958de7b9896"
+    }
+  ],
+  "active_services_unchanged": true,
+  "production_activated": false,
+  "formal_xml_approved": false,
+  "laboratory_scope_only": true
+}

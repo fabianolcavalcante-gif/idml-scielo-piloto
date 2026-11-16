@@ -1,0 +1,13 @@
+{
+  "version": "h1-corrected-package-1.0",
+  "corpus_id": "esa-e20240086",
+  "metadata_report_sha256": "97b39d48b0f6e172640618086f9eda08cabac7b53188374d2083012000c3f748",
+  "xml_sha256": "32e71ba24570b2c43f7f8d190cc8055b521768941a7519970d91dfeb8f7a747c",
+  "package_sha256": "44f30381779f0f520780b272b95dfcfd54312a70a7c17012f08ace7aaaabe825",
+  "package_size_bytes": 1094843,
+  "files": 7,
+  "deterministic": true,
+  "offline_valid": true,
+  "vps_validation": "not-run-memory-reserve",
+  "ready_for_scielo": false
+}

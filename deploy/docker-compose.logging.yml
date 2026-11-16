@@ -1,0 +1,8 @@
+# Candidate overlay; activation requires controlled service recreation.
+services:
+  openclaw-idml:
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

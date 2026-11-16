@@ -1,0 +1,71 @@
+{
+  "version": "qa-repair-validation-report-1.0",
+  "dataset_version": "idml-agent-real-domain-eval-1.1",
+  "corpus_id": "esa-e20240086",
+  "source_gold_exposed_to_agents": false,
+  "model": "openai/gpt-5.4-mini",
+  "thinking_level": "medium",
+  "role_models_independent": false,
+  "human_review_required": true,
+  "automatic_application_enabled": false,
+  "final_run": {
+    "run_id": "qa-repair-medium-v14",
+    "manifest_id": "c6d8b15343a4a740f6ef7655ff9c8a63b0d4bcf4b2972f8c156e81e846c0e3d2",
+    "completed": true,
+    "cases": [
+      "esa-math-notes-observed-001",
+      "esa-math-notes-inline-001",
+      "esa-math-notes-inline-002"
+    ],
+    "cost_microusd": 85654,
+    "maximum_preflight_cost_microusd": 567000
+  },
+  "metrics": {
+    "cases": 3,
+    "completed": 3,
+    "accepted_for_human_review": 2,
+    "abstained": 1,
+    "rejected": 0,
+    "deterministic_checks_passed": 24,
+    "critic_passes": 6,
+    "adjudicator_accepts": 2,
+    "adjudicator_abstentions": 1,
+    "mathml_semantically_equivalent_to_hidden_gold": 3,
+    "false_consensus_candidates": 0,
+    "automatic_applications": 0,
+    "final_run_cost_microusd": 85654,
+    "qa_repair_window_cost_microusd": 392565,
+    "article_cumulative_observed_cost_microusd": 1327798
+  },
+  "repair_validation": {
+    "maximum_cycles": 2,
+    "final_run_cycles_used": 0,
+    "live_diagnostic_path_exercised": true,
+    "live_diagnostic_fail_closed_on_limit_or_provider_error": true,
+    "automated_successful_repair_path_tested": true,
+    "no_progress_and_oscillation_tested": true,
+    "hidden_gold_excluded_from_repair_envelope": true,
+    "evidence_policy_and_injection_failures_never_repaired": true
+  },
+  "safety": {
+    "provider_disabled_after_run": true,
+    "temporary_proxy_and_networks_removed": true,
+    "application_agent_runs_persisted": 0,
+    "application_agent_proposals_persisted": 0,
+    "application_feature_flags_false": true,
+    "tools_exposed": 0,
+    "skills_exposed": 0,
+    "shared_model_consensus_never_authorizes_release": true,
+    "release_authority_remains_deterministic": true
+  },
+  "verification": {
+    "tests_passed": 192,
+    "coverage_percent": 84.86,
+    "ruff": "passed",
+    "mypy_strict": "passed",
+    "backup_restore": "passed",
+    "services_after_deploy": "healthy"
+  },
+  "gate_g6_t_decision": "approved_for_phase_7_only",
+  "production_activation_authorized": false
+}

@@ -1,0 +1,12 @@
+{
+  "article_identifiers": 1,
+  "authors": 4,
+  "catalog_id": "a5219854415a01310d5e3b29b9adb30eddd4a1696889683c40c7db76a0879879",
+  "corpus_id": "esa-e20240135",
+  "crossref_response_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+  "human_review_required": true,
+  "journal_titles": 1,
+  "restricted_content_emitted": false,
+  "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+  "version": "crossref-metadata-authority-qualification-1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-01T17:09:27.598527+00:00",
+  "source": "https://documentacao.scielo.org/books/scielo-pc-programs/page/download",
+  "downloaded": false,
+  "executed": false,
+  "compatible_distribution_proven": false,
+  "status": "source_unavailable_or_changed",
+  "failed_step": "public_access_instructions",
+  "error_type": "ValueError"
+}

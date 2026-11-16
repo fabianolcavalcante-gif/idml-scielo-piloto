@@ -1,0 +1,1318 @@
+{
+  "version": "vh1-xpm-socket-real-1.0",
+  "root": "/var/lib/idml-vh1-qualification/composed-mathml3-20261028-v1/vh1-xpm-composed-20261028T112542Z",
+  "cases": [
+    {
+      "article": "esa-e20240086",
+      "mutation": "baseline",
+      "assessment": {
+        "status": "completed",
+        "attested": true,
+        "candidate_package_sha256": "07a4789dfcb70aed8436b3f69a67be9b3112954f054857b249f693b20f00f7d4",
+        "report_sha256": "ed73c898a945d8f771572c2230e52cba2dc69464c4443ee809a79fe3bb619057",
+        "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+        "xpm_version": "4.0.096",
+        "counts": {
+          "blocking_errors": 3,
+          "fatal_errors": 1,
+          "errors": 4,
+          "warnings": 2
+        },
+        "parser_recovered": true,
+        "parser_errors": 15,
+        "required_queries_complete": false,
+        "raw_passed": false,
+        "failure_code": null,
+        "selected_queries": {
+          "version": "xpm-selected-query-assessment-1.0",
+          "checks": [
+            {
+              "kind": "crossref",
+              "identifier_sha256": "c645f1d5e4c1ff772bc2d705f419ce08b411caedeed3e5a2352b25966768eeb3",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "83837041e226ec46192ddb10451ccf98375c33ffcec98158955d6429fd84edab",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "36109949ff7b73425b30f4bc29600beabaa5ddf1d1f613b97856143bd74fce6c",
+              "public_name_check": "exact-public-name-match"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "fdfb53c01599d1fc02f11d58d4395234c33a002481562149c45131a268672843",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "e81c0ed401ba8a09569816458ec3de4ab432893a0effb6483545e121a16a2324",
+              "public_name_check": "exact-public-name-match"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "329dac380d3a3ac66785ada963a74402647046e665b6c1c18df9197c8dd2b0d3",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "8e88176120496aa1a9293abf3cd2940f607e382f5dee6e96113176e637a6f26b",
+              "public_name_check": "exact-public-name-match"
+            }
+          ],
+          "crossref_author_links": {
+            "version": "orcid-deposit-diagnostic-1.0",
+            "status": "assessed",
+            "response_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3",
+            "checks": [
+              {
+                "identifier_sha256": "83837041e226ec46192ddb10451ccf98375c33ffcec98158955d6429fd84edab",
+                "status": "matched",
+                "reason": "exact-deposited-author-orcid-link"
+              },
+              {
+                "identifier_sha256": "fdfb53c01599d1fc02f11d58d4395234c33a002481562149c45131a268672843",
+                "status": "matched",
+                "reason": "exact-deposited-author-orcid-link"
+              },
+              {
+                "identifier_sha256": "329dac380d3a3ac66785ada963a74402647046e665b6c1c18df9197c8dd2b0d3",
+                "status": "matched",
+                "reason": "exact-deposited-author-orcid-link"
+              }
+            ],
+            "authenticated_ownership": false
+          },
+          "selected_checks_matched": true,
+          "required_queries_complete": false,
+          "authenticated_orcid_ownership": false
+        },
+        "compatibility": {
+          "status": "assessed",
+          "policy_version": "xpm-homologation-sps-compatibility-1.0",
+          "scope_sha256": "54d6affc23af2a91799c949812c711c944bd2520294302f5256335cfe2ed7c3d",
+          "exceptions": [
+            {
+              "rule_id": "xpm-doi-journal-exact-1.0",
+              "occurrence_sha256": "2404a57728963b889cc34e4aa630000f18befe0ff6481833ab950559cf58dc0a",
+              "crossref_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3",
+              "original_severity": "error"
+            },
+            {
+              "rule_id": "xpm-doi-article-exact-1.0",
+              "occurrence_sha256": "26ce7f3b567036c771e1adc9a5b5046d741164d16929b7d7ed0f0536d2a3756b",
+              "crossref_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3",
+              "original_severity": "error"
+            },
+            {
+              "rule_id": "xpm-sps110-version-table-1.0",
+              "occurrence_sha256": "8b640ce36cc83e4c135964ccd358acb6adbd455b3c34429e3778cc8be0261163",
+              "original_severity": "error",
+              "independent_report_sha256": "ea7b1469c958c6bd2bed73d233355920f1115cb857ad1071888e717829f5f7a8",
+              "normative_sources": [
+                "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+              ]
+            },
+            {
+              "rule_id": "xpm-sps110-date-type-1.0",
+              "occurrence_sha256": "b235261473a4dcb07b3877fdaae5bfaec0ad1e39c7610982a2a1e5f9b3e4e452",
+              "original_severity": "blocking",
+              "independent_report_sha256": "ea7b1469c958c6bd2bed73d233355920f1115cb857ad1071888e717829f5f7a8",
+              "normative_sources": [
+                "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+              ]
+            },
+            {
+              "rule_id": "xpm-sps110-date-type-1.0",
+              "occurrence_sha256": "7ad5399f7fcff02210d28823c9b496874e5dc17302aabc8dc785d78c1e5dba5f",
+              "original_severity": "blocking",
+              "independent_report_sha256": "ea7b1469c958c6bd2bed73d233355920f1115cb857ad1071888e717829f5f7a8",
+              "normative_sources": [
+                "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+              ]
+            },
+            {
+              "rule_id": "xpm-sps110-date-combination-1.0",
+              "occurrence_sha256": "56812977354701878530e8fd223c13866045b2cac27ab9f2a87eaa0eabce6abd",
+              "original_severity": "blocking",
+              "independent_report_sha256": "ea7b1469c958c6bd2bed73d233355920f1115cb857ad1071888e717829f5f7a8",
+              "normative_sources": [
+                "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+              ]
+            }
+          ],
+          "unresolved_counts": {
+            "blocking_errors": 0,
+            "fatal_errors": 1,
+            "errors": 1,
+            "warnings": 2
+          },
+          "reasons": [
+            "compatibility-qualification-incomplete",
+            "required-queries-incomplete",
+            "unresolved-xpm-findings",
+            "doctype-jats-decision-pending"
+          ],
+          "integrated_rule_families": [
+            "doi",
+            "sps-date",
+            "wayta-applicability"
+          ],
+          "pending_rule_families": [
+            "doctype-jats"
+          ],
+          "homologation_ready": false,
+          "release_approved": false,
+          "independent_evidence_sha256": "ea7b1469c958c6bd2bed73d233355920f1115cb857ad1071888e717829f5f7a8",
+          "independent_assembled_at": "2026-10-28T11:26:07.538222+00:00",
+          "independent_contract": "xpm-sps-runtime-evidence-2.0",
+          "independent_runs": [
+            {
+              "name": "packtools",
+              "report_sha256": "0c4a02d6ac6ea6770240b7c8b1835440cde2bfe081ff842d2fd91081f5634f07",
+              "candidate_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+              "tool_sha256": "4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca"
+            },
+            {
+              "name": "spsvalidator",
+              "report_sha256": "70cca8904e6ffcc436ef781d2c0396ca907099862f0956b9197af730a70b8bf1",
+              "candidate_sha256": "07a4789dfcb70aed8436b3f69a67be9b3112954f054857b249f693b20f00f7d4",
+              "tool_sha256": "61b90cc8ecca8de508c6cd19701551860de32f053a4899fd056835c8f05ab048"
+            }
+          ],
+          "sps_status": "assessed",
+          "wayta": {
+            "policy_version": "xpm-wayta-requirement-1.0",
+            "requirement": "advisory_for_qualified_profile",
+            "reasons": [
+              "service-probe-is-not-article-query",
+              "institution-identity-not-verified"
+            ],
+            "affiliation_count": 3,
+            "author_count": 3,
+            "service_observation": {
+              "contract_version": "wayta-service-observation-1.0",
+              "endpoint": "https://wayta.scielo.org/api/v1/institution",
+              "observed_at": "2026-10-28T11:25:59.493866Z",
+              "outcome": "timeout",
+              "http_status": null,
+              "response_sha256": null,
+              "public_addresses": 1,
+              "article_query_performed": false,
+              "semantic_result_validated": false,
+              "elapsed_seconds": 8.018
+            },
+            "service_report_sha256": "21e29fdef3434c4fe2365280c9939ec6ad1c720f9194c5bf69400d495f3bc597",
+            "normative_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+            "native_proof_sha256": "144d937523f966751d2ce73300131c1fbde1e6e380cbd1ad5de022e411459802",
+            "article_query_completed": false,
+            "institution_identity_verified": false,
+            "mandatory_affiliation_validation_required": true,
+            "homologation_ready": false,
+            "release_approved": false
+          }
+        }
+      },
+      "package_sha256": "07a4789dfcb70aed8436b3f69a67be9b3112954f054857b249f693b20f00f7d4",
+      "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+      "package_assessment": {
+        "version": "package-formal-assessment-1.0",
+        "package_sha256": "07a4789dfcb70aed8436b3f69a67be9b3112954f054857b249f693b20f00f7d4",
+        "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+        "state": "blocked",
+        "reasons": [
+          "xpm-validator-findings",
+          "xpm-warnings-pending",
+          "xpm-required-queries-incomplete",
+          "formal-approval-integration-pending",
+          "external-validator-findings"
+        ],
+        "required_validators": [
+          "packtools",
+          "spsvalidator",
+          "xpm"
+        ],
+        "external_runs": [
+          {
+            "name": "packtools",
+            "version": "4.17.2+ef0e6f874ea7",
+            "status": "completed",
+            "candidate_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+            "input_kind": ".xml",
+            "tool_sha256": "4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca",
+            "passed": false,
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            },
+            "unavailable_external_checks": [],
+            "report_sha256": "0c4a02d6ac6ea6770240b7c8b1835440cde2bfe081ff842d2fd91081f5634f07",
+            "failure_code": null
+          },
+          {
+            "name": "spsvalidator",
+            "version": "0.3.0+d1aa774d4e33",
+            "status": "completed",
+            "candidate_sha256": "07a4789dfcb70aed8436b3f69a67be9b3112954f054857b249f693b20f00f7d4",
+            "input_kind": ".zip",
+            "tool_sha256": "61b90cc8ecca8de508c6cd19701551860de32f053a4899fd056835c8f05ab048",
+            "passed": false,
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            },
+            "unavailable_external_checks": [],
+            "report_sha256": "70cca8904e6ffcc436ef781d2c0396ca907099862f0956b9197af730a70b8bf1",
+            "failure_code": null
+          }
+        ],
+        "xpm": {
+          "status": "completed",
+          "attested": true,
+          "candidate_package_sha256": "07a4789dfcb70aed8436b3f69a67be9b3112954f054857b249f693b20f00f7d4",
+          "report_sha256": "ed73c898a945d8f771572c2230e52cba2dc69464c4443ee809a79fe3bb619057",
+          "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+          "xpm_version": "4.0.096",
+          "counts": {
+            "blocking_errors": 3,
+            "fatal_errors": 1,
+            "errors": 4,
+            "warnings": 2
+          },
+          "parser_recovered": true,
+          "parser_errors": 15,
+          "required_queries_complete": false,
+          "raw_passed": false,
+          "failure_code": null,
+          "selected_queries": {
+            "version": "xpm-selected-query-assessment-1.0",
+            "checks": [
+              {
+                "kind": "crossref",
+                "identifier_sha256": "c645f1d5e4c1ff772bc2d705f419ce08b411caedeed3e5a2352b25966768eeb3",
+                "status": "matched",
+                "reason": "exact-public-record-match",
+                "response_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3"
+              },
+              {
+                "kind": "orcid",
+                "identifier_sha256": "83837041e226ec46192ddb10451ccf98375c33ffcec98158955d6429fd84edab",
+                "status": "matched",
+                "reason": "exact-public-record-match",
+                "response_sha256": "36109949ff7b73425b30f4bc29600beabaa5ddf1d1f613b97856143bd74fce6c",
+                "public_name_check": "exact-public-name-match"
+              },
+              {
+                "kind": "orcid",
+                "identifier_sha256": "fdfb53c01599d1fc02f11d58d4395234c33a002481562149c45131a268672843",
+                "status": "matched",
+                "reason": "exact-public-record-match",
+                "response_sha256": "e81c0ed401ba8a09569816458ec3de4ab432893a0effb6483545e121a16a2324",
+                "public_name_check": "exact-public-name-match"
+              },
+              {
+                "kind": "orcid",
+                "identifier_sha256": "329dac380d3a3ac66785ada963a74402647046e665b6c1c18df9197c8dd2b0d3",
+                "status": "matched",
+                "reason": "exact-public-record-match",
+                "response_sha256": "8e88176120496aa1a9293abf3cd2940f607e382f5dee6e96113176e637a6f26b",
+                "public_name_check": "exact-public-name-match"
+              }
+            ],
+            "crossref_author_links": {
+              "version": "orcid-deposit-diagnostic-1.0",
+              "status": "assessed",
+              "response_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3",
+              "checks": [
+                {
+                  "identifier_sha256": "83837041e226ec46192ddb10451ccf98375c33ffcec98158955d6429fd84edab",
+                  "status": "matched",
+                  "reason": "exact-deposited-author-orcid-link"
+                },
+                {
+                  "identifier_sha256": "fdfb53c01599d1fc02f11d58d4395234c33a002481562149c45131a268672843",
+                  "status": "matched",
+                  "reason": "exact-deposited-author-orcid-link"
+                },
+                {
+                  "identifier_sha256": "329dac380d3a3ac66785ada963a74402647046e665b6c1c18df9197c8dd2b0d3",
+                  "status": "matched",
+                  "reason": "exact-deposited-author-orcid-link"
+                }
+              ],
+              "authenticated_ownership": false
+            },
+            "selected_checks_matched": true,
+            "required_queries_complete": false,
+            "authenticated_orcid_ownership": false
+          },
+          "compatibility": {
+            "status": "assessed",
+            "policy_version": "xpm-homologation-sps-compatibility-1.0",
+            "scope_sha256": "54d6affc23af2a91799c949812c711c944bd2520294302f5256335cfe2ed7c3d",
+            "exceptions": [
+              {
+                "rule_id": "xpm-doi-journal-exact-1.0",
+                "occurrence_sha256": "2404a57728963b889cc34e4aa630000f18befe0ff6481833ab950559cf58dc0a",
+                "crossref_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3",
+                "original_severity": "error"
+              },
+              {
+                "rule_id": "xpm-doi-article-exact-1.0",
+                "occurrence_sha256": "26ce7f3b567036c771e1adc9a5b5046d741164d16929b7d7ed0f0536d2a3756b",
+                "crossref_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3",
+                "original_severity": "error"
+              },
+              {
+                "rule_id": "xpm-sps110-version-table-1.0",
+                "occurrence_sha256": "8b640ce36cc83e4c135964ccd358acb6adbd455b3c34429e3778cc8be0261163",
+                "original_severity": "error",
+                "independent_report_sha256": "ea7b1469c958c6bd2bed73d233355920f1115cb857ad1071888e717829f5f7a8",
+                "normative_sources": [
+                  "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                  "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+                ]
+              },
+              {
+                "rule_id": "xpm-sps110-date-type-1.0",
+                "occurrence_sha256": "b235261473a4dcb07b3877fdaae5bfaec0ad1e39c7610982a2a1e5f9b3e4e452",
+                "original_severity": "blocking",
+                "independent_report_sha256": "ea7b1469c958c6bd2bed73d233355920f1115cb857ad1071888e717829f5f7a8",
+                "normative_sources": [
+                  "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                  "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+                ]
+              },
+              {
+                "rule_id": "xpm-sps110-date-type-1.0",
+                "occurrence_sha256": "7ad5399f7fcff02210d28823c9b496874e5dc17302aabc8dc785d78c1e5dba5f",
+                "original_severity": "blocking",
+                "independent_report_sha256": "ea7b1469c958c6bd2bed73d233355920f1115cb857ad1071888e717829f5f7a8",
+                "normative_sources": [
+                  "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                  "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+                ]
+              },
+              {
+                "rule_id": "xpm-sps110-date-combination-1.0",
+                "occurrence_sha256": "56812977354701878530e8fd223c13866045b2cac27ab9f2a87eaa0eabce6abd",
+                "original_severity": "blocking",
+                "independent_report_sha256": "ea7b1469c958c6bd2bed73d233355920f1115cb857ad1071888e717829f5f7a8",
+                "normative_sources": [
+                  "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                  "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+                ]
+              }
+            ],
+            "unresolved_counts": {
+              "blocking_errors": 0,
+              "fatal_errors": 1,
+              "errors": 1,
+              "warnings": 2
+            },
+            "reasons": [
+              "compatibility-qualification-incomplete",
+              "required-queries-incomplete",
+              "unresolved-xpm-findings",
+              "doctype-jats-decision-pending"
+            ],
+            "integrated_rule_families": [
+              "doi",
+              "sps-date",
+              "wayta-applicability"
+            ],
+            "pending_rule_families": [
+              "doctype-jats"
+            ],
+            "homologation_ready": false,
+            "release_approved": false,
+            "independent_evidence_sha256": "ea7b1469c958c6bd2bed73d233355920f1115cb857ad1071888e717829f5f7a8",
+            "independent_assembled_at": "2026-10-28T11:26:07.538222+00:00",
+            "independent_contract": "xpm-sps-runtime-evidence-2.0",
+            "independent_runs": [
+              {
+                "name": "packtools",
+                "report_sha256": "0c4a02d6ac6ea6770240b7c8b1835440cde2bfe081ff842d2fd91081f5634f07",
+                "candidate_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+                "tool_sha256": "4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca"
+              },
+              {
+                "name": "spsvalidator",
+                "report_sha256": "70cca8904e6ffcc436ef781d2c0396ca907099862f0956b9197af730a70b8bf1",
+                "candidate_sha256": "07a4789dfcb70aed8436b3f69a67be9b3112954f054857b249f693b20f00f7d4",
+                "tool_sha256": "61b90cc8ecca8de508c6cd19701551860de32f053a4899fd056835c8f05ab048"
+              }
+            ],
+            "sps_status": "assessed",
+            "wayta": {
+              "policy_version": "xpm-wayta-requirement-1.0",
+              "requirement": "advisory_for_qualified_profile",
+              "reasons": [
+                "service-probe-is-not-article-query",
+                "institution-identity-not-verified"
+              ],
+              "affiliation_count": 3,
+              "author_count": 3,
+              "service_observation": {
+                "contract_version": "wayta-service-observation-1.0",
+                "endpoint": "https://wayta.scielo.org/api/v1/institution",
+                "observed_at": "2026-10-28T11:25:59.493866Z",
+                "outcome": "timeout",
+                "http_status": null,
+                "response_sha256": null,
+                "public_addresses": 1,
+                "article_query_performed": false,
+                "semantic_result_validated": false,
+                "elapsed_seconds": 8.018
+              },
+              "service_report_sha256": "21e29fdef3434c4fe2365280c9939ec6ad1c720f9194c5bf69400d495f3bc597",
+              "normative_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "native_proof_sha256": "144d937523f966751d2ce73300131c1fbde1e6e380cbd1ad5de022e411459802",
+              "article_query_completed": false,
+              "institution_identity_verified": false,
+              "mandatory_affiliation_validation_required": true,
+              "homologation_ready": false,
+              "release_approved": false
+            }
+          }
+        },
+        "complete": false,
+        "ready_for_scielo": false,
+        "editorial_approval": "separate-workflow",
+        "production_activation_authorized": false
+      }
+    },
+    {
+      "article": "esa-e20240135",
+      "mutation": "baseline",
+      "assessment": {
+        "status": "completed",
+        "attested": true,
+        "candidate_package_sha256": "de753e0aad72debdf6fee7c770b1c82f2ed6d59824bf9548c0cc45ba4b3d8a1b",
+        "report_sha256": "cef24b7adcac15f31f3bdf44dd725b9b18d7ef3f6ee0b316e21f8c6df0d5b79a",
+        "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+        "xpm_version": "4.0.096",
+        "counts": {
+          "blocking_errors": 3,
+          "fatal_errors": 1,
+          "errors": 4,
+          "warnings": 3
+        },
+        "parser_recovered": true,
+        "parser_errors": 12,
+        "required_queries_complete": false,
+        "raw_passed": false,
+        "failure_code": null,
+        "selected_queries": {
+          "version": "xpm-selected-query-assessment-1.0",
+          "checks": [
+            {
+              "kind": "crossref",
+              "identifier_sha256": "70e40f3ec29817b7a0df43f1d55afa59d7b542e089df1c5c650f18e7e2749c75",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "07779555c3693999d79b5a2099551d7b44935c6ea5f8dc7167ba6af3ecd04b25",
+              "status": "conflict",
+              "reason": "authority-response-does-not-match",
+              "response_sha256": "3de4b93ada52dce38d1087399e2d2bcb141f92847c7fc4499b9e6e8ec3f0e3b0",
+              "public_name_check": "public-name-incomplete"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "b0e8f3250c042739b570b02f50a8a114eb106b373b9ee93ca9ee217956be5eb3",
+              "status": "conflict",
+              "reason": "authority-response-does-not-match",
+              "response_sha256": "399b9526ea5cb9c1d94a79031936029f9762aabe94ce42324c0c2e1fa0cdb036",
+              "public_name_check": "public-name-incomplete"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "be18c2848fa1d7edca2df30ea44c4b867b476fd4939c61d0e59e4d5a253b7d18",
+              "status": "conflict",
+              "reason": "authority-response-does-not-match",
+              "response_sha256": "c1912ad41e77c25a9865fedfccdf0ceca0b75f78fb99f111aa364107050871b8",
+              "public_name_check": "public-name-not-exact"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "0e43f4cb9db026ac46b8ceeb8876706f159857f85a29d290a089af8bafeb6ef4",
+              "status": "conflict",
+              "reason": "authority-response-does-not-match",
+              "response_sha256": "6eaa97ca928562e1f820432ff882ab536f921176da2eb16fe7287f56a647a1a3",
+              "public_name_check": "public-name-not-exact"
+            }
+          ],
+          "crossref_author_links": {
+            "version": "orcid-deposit-diagnostic-1.0",
+            "status": "assessed",
+            "response_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+            "checks": [
+              {
+                "identifier_sha256": "07779555c3693999d79b5a2099551d7b44935c6ea5f8dc7167ba6af3ecd04b25",
+                "status": "matched",
+                "reason": "exact-deposited-author-orcid-link"
+              },
+              {
+                "identifier_sha256": "b0e8f3250c042739b570b02f50a8a114eb106b373b9ee93ca9ee217956be5eb3",
+                "status": "matched",
+                "reason": "exact-deposited-author-orcid-link"
+              },
+              {
+                "identifier_sha256": "be18c2848fa1d7edca2df30ea44c4b867b476fd4939c61d0e59e4d5a253b7d18",
+                "status": "matched",
+                "reason": "exact-deposited-author-orcid-link"
+              },
+              {
+                "identifier_sha256": "0e43f4cb9db026ac46b8ceeb8876706f159857f85a29d290a089af8bafeb6ef4",
+                "status": "matched",
+                "reason": "exact-deposited-author-orcid-link"
+              }
+            ],
+            "authenticated_ownership": false
+          },
+          "selected_checks_matched": false,
+          "required_queries_complete": false,
+          "authenticated_orcid_ownership": false
+        },
+        "compatibility": {
+          "status": "assessed",
+          "policy_version": "xpm-homologation-sps-compatibility-1.0",
+          "scope_sha256": "ac09c09e1627e21d3ff558fb6604aaf71ce1e5a0897d1f5d8e6b7850ad79af4d",
+          "exceptions": [
+            {
+              "rule_id": "xpm-doi-journal-exact-1.0",
+              "occurrence_sha256": "e3c3d96d390fe6d6b7aefe75975d751027bb27552124d89a8711080eb95060dd",
+              "crossref_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+              "original_severity": "error"
+            },
+            {
+              "rule_id": "xpm-doi-article-exact-1.0",
+              "occurrence_sha256": "e7086ebb9776b9391e96573634cb53a25920d67f7d32d127d054c0138ef80928",
+              "crossref_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+              "original_severity": "error"
+            },
+            {
+              "rule_id": "xpm-sps110-version-table-1.0",
+              "occurrence_sha256": "dc4f82b1a1dfbac9dfddb28b72677bb65e13cb359a3f86b87bb300cdb4156ea3",
+              "original_severity": "error",
+              "independent_report_sha256": "6373411d45af5fc1678498149bf0511c071afe311743322de715c34ed7f99098",
+              "normative_sources": [
+                "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+              ]
+            },
+            {
+              "rule_id": "xpm-sps110-date-type-1.0",
+              "occurrence_sha256": "48f204da7ac48912e5b3d33a4f3542a16d020d6b7278e8f56b9a102730dcd1ee",
+              "original_severity": "blocking",
+              "independent_report_sha256": "6373411d45af5fc1678498149bf0511c071afe311743322de715c34ed7f99098",
+              "normative_sources": [
+                "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+              ]
+            },
+            {
+              "rule_id": "xpm-sps110-date-type-1.0",
+              "occurrence_sha256": "7ad5399f7fcff02210d28823c9b496874e5dc17302aabc8dc785d78c1e5dba5f",
+              "original_severity": "blocking",
+              "independent_report_sha256": "6373411d45af5fc1678498149bf0511c071afe311743322de715c34ed7f99098",
+              "normative_sources": [
+                "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+              ]
+            },
+            {
+              "rule_id": "xpm-sps110-date-combination-1.0",
+              "occurrence_sha256": "08fff5748ea592182a46e6691ecb3673c0aea866860c93e089e5c8dc54d3a7ca",
+              "original_severity": "blocking",
+              "independent_report_sha256": "6373411d45af5fc1678498149bf0511c071afe311743322de715c34ed7f99098",
+              "normative_sources": [
+                "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+              ]
+            }
+          ],
+          "unresolved_counts": {
+            "blocking_errors": 0,
+            "fatal_errors": 1,
+            "errors": 1,
+            "warnings": 3
+          },
+          "reasons": [
+            "compatibility-qualification-incomplete",
+            "required-queries-incomplete",
+            "unresolved-xpm-findings",
+            "doctype-jats-decision-pending"
+          ],
+          "integrated_rule_families": [
+            "doi",
+            "sps-date",
+            "wayta-applicability"
+          ],
+          "pending_rule_families": [
+            "doctype-jats"
+          ],
+          "homologation_ready": false,
+          "release_approved": false,
+          "independent_evidence_sha256": "6373411d45af5fc1678498149bf0511c071afe311743322de715c34ed7f99098",
+          "independent_assembled_at": "2026-10-28T11:26:35.274870+00:00",
+          "independent_contract": "xpm-sps-runtime-evidence-2.0",
+          "independent_runs": [
+            {
+              "name": "packtools",
+              "report_sha256": "55869d0bcdfc5f14af9730142c8591ec25f24decca0c5292f43b4e2e197c0727",
+              "candidate_sha256": "f2540405e65898aa2d5bd045075fbc22d2e06177f782e3a649ba891738002412",
+              "tool_sha256": "4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca"
+            },
+            {
+              "name": "spsvalidator",
+              "report_sha256": "61e8d8304583d436a8f38dda871514b190aa080d0253b6c39259fe3fb0a46f9e",
+              "candidate_sha256": "de753e0aad72debdf6fee7c770b1c82f2ed6d59824bf9548c0cc45ba4b3d8a1b",
+              "tool_sha256": "61b90cc8ecca8de508c6cd19701551860de32f053a4899fd056835c8f05ab048"
+            }
+          ],
+          "sps_status": "assessed",
+          "wayta": {
+            "policy_version": "xpm-wayta-requirement-1.0",
+            "requirement": "advisory_for_qualified_profile",
+            "reasons": [
+              "service-probe-is-not-article-query",
+              "institution-identity-not-verified"
+            ],
+            "affiliation_count": 4,
+            "author_count": 4,
+            "service_observation": {
+              "contract_version": "wayta-service-observation-1.0",
+              "endpoint": "https://wayta.scielo.org/api/v1/institution",
+              "observed_at": "2026-10-28T11:26:27.168516Z",
+              "outcome": "timeout",
+              "http_status": null,
+              "response_sha256": null,
+              "public_addresses": 1,
+              "article_query_performed": false,
+              "semantic_result_validated": false,
+              "elapsed_seconds": 8.017
+            },
+            "service_report_sha256": "01110d06cb13c512a1762e51b10fd2bcd1ee8396d252237d1b816a2e2442e6a9",
+            "normative_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+            "native_proof_sha256": "144d937523f966751d2ce73300131c1fbde1e6e380cbd1ad5de022e411459802",
+            "article_query_completed": false,
+            "institution_identity_verified": false,
+            "mandatory_affiliation_validation_required": true,
+            "homologation_ready": false,
+            "release_approved": false
+          }
+        }
+      },
+      "package_sha256": "de753e0aad72debdf6fee7c770b1c82f2ed6d59824bf9548c0cc45ba4b3d8a1b",
+      "xml_sha256": "f2540405e65898aa2d5bd045075fbc22d2e06177f782e3a649ba891738002412",
+      "package_assessment": {
+        "version": "package-formal-assessment-1.0",
+        "package_sha256": "de753e0aad72debdf6fee7c770b1c82f2ed6d59824bf9548c0cc45ba4b3d8a1b",
+        "xml_sha256": "f2540405e65898aa2d5bd045075fbc22d2e06177f782e3a649ba891738002412",
+        "state": "blocked",
+        "reasons": [
+          "xpm-validator-findings",
+          "xpm-warnings-pending",
+          "xpm-required-queries-incomplete",
+          "xpm-authority-response-conflict",
+          "formal-approval-integration-pending",
+          "external-validator-findings"
+        ],
+        "required_validators": [
+          "packtools",
+          "spsvalidator",
+          "xpm"
+        ],
+        "external_runs": [
+          {
+            "name": "packtools",
+            "version": "4.17.2+ef0e6f874ea7",
+            "status": "completed",
+            "candidate_sha256": "f2540405e65898aa2d5bd045075fbc22d2e06177f782e3a649ba891738002412",
+            "input_kind": ".xml",
+            "tool_sha256": "4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca",
+            "passed": false,
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            },
+            "unavailable_external_checks": [],
+            "report_sha256": "55869d0bcdfc5f14af9730142c8591ec25f24decca0c5292f43b4e2e197c0727",
+            "failure_code": null
+          },
+          {
+            "name": "spsvalidator",
+            "version": "0.3.0+d1aa774d4e33",
+            "status": "completed",
+            "candidate_sha256": "de753e0aad72debdf6fee7c770b1c82f2ed6d59824bf9548c0cc45ba4b3d8a1b",
+            "input_kind": ".zip",
+            "tool_sha256": "61b90cc8ecca8de508c6cd19701551860de32f053a4899fd056835c8f05ab048",
+            "passed": false,
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            },
+            "unavailable_external_checks": [],
+            "report_sha256": "61e8d8304583d436a8f38dda871514b190aa080d0253b6c39259fe3fb0a46f9e",
+            "failure_code": null
+          }
+        ],
+        "xpm": {
+          "status": "completed",
+          "attested": true,
+          "candidate_package_sha256": "de753e0aad72debdf6fee7c770b1c82f2ed6d59824bf9548c0cc45ba4b3d8a1b",
+          "report_sha256": "cef24b7adcac15f31f3bdf44dd725b9b18d7ef3f6ee0b316e21f8c6df0d5b79a",
+          "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+          "xpm_version": "4.0.096",
+          "counts": {
+            "blocking_errors": 3,
+            "fatal_errors": 1,
+            "errors": 4,
+            "warnings": 3
+          },
+          "parser_recovered": true,
+          "parser_errors": 12,
+          "required_queries_complete": false,
+          "raw_passed": false,
+          "failure_code": null,
+          "selected_queries": {
+            "version": "xpm-selected-query-assessment-1.0",
+            "checks": [
+              {
+                "kind": "crossref",
+                "identifier_sha256": "70e40f3ec29817b7a0df43f1d55afa59d7b542e089df1c5c650f18e7e2749c75",
+                "status": "matched",
+                "reason": "exact-public-record-match",
+                "response_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50"
+              },
+              {
+                "kind": "orcid",
+                "identifier_sha256": "07779555c3693999d79b5a2099551d7b44935c6ea5f8dc7167ba6af3ecd04b25",
+                "status": "conflict",
+                "reason": "authority-response-does-not-match",
+                "response_sha256": "3de4b93ada52dce38d1087399e2d2bcb141f92847c7fc4499b9e6e8ec3f0e3b0",
+                "public_name_check": "public-name-incomplete"
+              },
+              {
+                "kind": "orcid",
+                "identifier_sha256": "b0e8f3250c042739b570b02f50a8a114eb106b373b9ee93ca9ee217956be5eb3",
+                "status": "conflict",
+                "reason": "authority-response-does-not-match",
+                "response_sha256": "399b9526ea5cb9c1d94a79031936029f9762aabe94ce42324c0c2e1fa0cdb036",
+                "public_name_check": "public-name-incomplete"
+              },
+              {
+                "kind": "orcid",
+                "identifier_sha256": "be18c2848fa1d7edca2df30ea44c4b867b476fd4939c61d0e59e4d5a253b7d18",
+                "status": "conflict",
+                "reason": "authority-response-does-not-match",
+                "response_sha256": "c1912ad41e77c25a9865fedfccdf0ceca0b75f78fb99f111aa364107050871b8",
+                "public_name_check": "public-name-not-exact"
+              },
+              {
+                "kind": "orcid",
+                "identifier_sha256": "0e43f4cb9db026ac46b8ceeb8876706f159857f85a29d290a089af8bafeb6ef4",
+                "status": "conflict",
+                "reason": "authority-response-does-not-match",
+                "response_sha256": "6eaa97ca928562e1f820432ff882ab536f921176da2eb16fe7287f56a647a1a3",
+                "public_name_check": "public-name-not-exact"
+              }
+            ],
+            "crossref_author_links": {
+              "version": "orcid-deposit-diagnostic-1.0",
+              "status": "assessed",
+              "response_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+              "checks": [
+                {
+                  "identifier_sha256": "07779555c3693999d79b5a2099551d7b44935c6ea5f8dc7167ba6af3ecd04b25",
+                  "status": "matched",
+                  "reason": "exact-deposited-author-orcid-link"
+                },
+                {
+                  "identifier_sha256": "b0e8f3250c042739b570b02f50a8a114eb106b373b9ee93ca9ee217956be5eb3",
+                  "status": "matched",
+                  "reason": "exact-deposited-author-orcid-link"
+                },
+                {
+                  "identifier_sha256": "be18c2848fa1d7edca2df30ea44c4b867b476fd4939c61d0e59e4d5a253b7d18",
+                  "status": "matched",
+                  "reason": "exact-deposited-author-orcid-link"
+                },
+                {
+                  "identifier_sha256": "0e43f4cb9db026ac46b8ceeb8876706f159857f85a29d290a089af8bafeb6ef4",
+                  "status": "matched",
+                  "reason": "exact-deposited-author-orcid-link"
+                }
+              ],
+              "authenticated_ownership": false
+            },
+            "selected_checks_matched": false,
+            "required_queries_complete": false,
+            "authenticated_orcid_ownership": false
+          },
+          "compatibility": {
+            "status": "assessed",
+            "policy_version": "xpm-homologation-sps-compatibility-1.0",
+            "scope_sha256": "ac09c09e1627e21d3ff558fb6604aaf71ce1e5a0897d1f5d8e6b7850ad79af4d",
+            "exceptions": [
+              {
+                "rule_id": "xpm-doi-journal-exact-1.0",
+                "occurrence_sha256": "e3c3d96d390fe6d6b7aefe75975d751027bb27552124d89a8711080eb95060dd",
+                "crossref_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+                "original_severity": "error"
+              },
+              {
+                "rule_id": "xpm-doi-article-exact-1.0",
+                "occurrence_sha256": "e7086ebb9776b9391e96573634cb53a25920d67f7d32d127d054c0138ef80928",
+                "crossref_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+                "original_severity": "error"
+              },
+              {
+                "rule_id": "xpm-sps110-version-table-1.0",
+                "occurrence_sha256": "dc4f82b1a1dfbac9dfddb28b72677bb65e13cb359a3f86b87bb300cdb4156ea3",
+                "original_severity": "error",
+                "independent_report_sha256": "6373411d45af5fc1678498149bf0511c071afe311743322de715c34ed7f99098",
+                "normative_sources": [
+                  "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                  "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+                ]
+              },
+              {
+                "rule_id": "xpm-sps110-date-type-1.0",
+                "occurrence_sha256": "48f204da7ac48912e5b3d33a4f3542a16d020d6b7278e8f56b9a102730dcd1ee",
+                "original_severity": "blocking",
+                "independent_report_sha256": "6373411d45af5fc1678498149bf0511c071afe311743322de715c34ed7f99098",
+                "normative_sources": [
+                  "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                  "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+                ]
+              },
+              {
+                "rule_id": "xpm-sps110-date-type-1.0",
+                "occurrence_sha256": "7ad5399f7fcff02210d28823c9b496874e5dc17302aabc8dc785d78c1e5dba5f",
+                "original_severity": "blocking",
+                "independent_report_sha256": "6373411d45af5fc1678498149bf0511c071afe311743322de715c34ed7f99098",
+                "normative_sources": [
+                  "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                  "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+                ]
+              },
+              {
+                "rule_id": "xpm-sps110-date-combination-1.0",
+                "occurrence_sha256": "08fff5748ea592182a46e6691ecb3673c0aea866860c93e089e5c8dc54d3a7ca",
+                "original_severity": "blocking",
+                "independent_report_sha256": "6373411d45af5fc1678498149bf0511c071afe311743322de715c34ed7f99098",
+                "normative_sources": [
+                  "https://groups.google.com/g/scielo-xml/c/MJHQuqRwsgs",
+                  "https://groups.google.com/g/scielo-xml/c/KiC-TDlazJE"
+                ]
+              }
+            ],
+            "unresolved_counts": {
+              "blocking_errors": 0,
+              "fatal_errors": 1,
+              "errors": 1,
+              "warnings": 3
+            },
+            "reasons": [
+              "compatibility-qualification-incomplete",
+              "required-queries-incomplete",
+              "unresolved-xpm-findings",
+              "doctype-jats-decision-pending"
+            ],
+            "integrated_rule_families": [
+              "doi",
+              "sps-date",
+              "wayta-applicability"
+            ],
+            "pending_rule_families": [
+              "doctype-jats"
+            ],
+            "homologation_ready": false,
+            "release_approved": false,
+            "independent_evidence_sha256": "6373411d45af5fc1678498149bf0511c071afe311743322de715c34ed7f99098",
+            "independent_assembled_at": "2026-10-28T11:26:35.274870+00:00",
+            "independent_contract": "xpm-sps-runtime-evidence-2.0",
+            "independent_runs": [
+              {
+                "name": "packtools",
+                "report_sha256": "55869d0bcdfc5f14af9730142c8591ec25f24decca0c5292f43b4e2e197c0727",
+                "candidate_sha256": "f2540405e65898aa2d5bd045075fbc22d2e06177f782e3a649ba891738002412",
+                "tool_sha256": "4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca"
+              },
+              {
+                "name": "spsvalidator",
+                "report_sha256": "61e8d8304583d436a8f38dda871514b190aa080d0253b6c39259fe3fb0a46f9e",
+                "candidate_sha256": "de753e0aad72debdf6fee7c770b1c82f2ed6d59824bf9548c0cc45ba4b3d8a1b",
+                "tool_sha256": "61b90cc8ecca8de508c6cd19701551860de32f053a4899fd056835c8f05ab048"
+              }
+            ],
+            "sps_status": "assessed",
+            "wayta": {
+              "policy_version": "xpm-wayta-requirement-1.0",
+              "requirement": "advisory_for_qualified_profile",
+              "reasons": [
+                "service-probe-is-not-article-query",
+                "institution-identity-not-verified"
+              ],
+              "affiliation_count": 4,
+              "author_count": 4,
+              "service_observation": {
+                "contract_version": "wayta-service-observation-1.0",
+                "endpoint": "https://wayta.scielo.org/api/v1/institution",
+                "observed_at": "2026-10-28T11:26:27.168516Z",
+                "outcome": "timeout",
+                "http_status": null,
+                "response_sha256": null,
+                "public_addresses": 1,
+                "article_query_performed": false,
+                "semantic_result_validated": false,
+                "elapsed_seconds": 8.017
+              },
+              "service_report_sha256": "01110d06cb13c512a1762e51b10fd2bcd1ee8396d252237d1b816a2e2442e6a9",
+              "normative_sha256": "09ade688acbf1aa6c48324b660bf4baeb9293c92ff315a2d68c371251909bbef",
+              "native_proof_sha256": "144d937523f966751d2ce73300131c1fbde1e6e380cbd1ad5de022e411459802",
+              "article_query_completed": false,
+              "institution_identity_verified": false,
+              "mandatory_affiliation_validation_required": true,
+              "homologation_ready": false,
+              "release_approved": false
+            }
+          }
+        },
+        "complete": false,
+        "ready_for_scielo": false,
+        "editorial_approval": "separate-workflow",
+        "production_activation_authorized": false
+      }
+    },
+    {
+      "article": "esa-e20240086",
+      "mutation": "missing_journal_title",
+      "assessment": {
+        "status": "completed",
+        "attested": true,
+        "candidate_package_sha256": "a04a1369cac1076a689187c72dda778ecce12c13b59187a26ac280713f2259cc",
+        "report_sha256": "7dda5e9bec79affe82e06be4ca107ecac74083dedf67a9e6c9ae4d0cd637ef63",
+        "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+        "xpm_version": "4.0.096",
+        "counts": {
+          "blocking_errors": 4,
+          "fatal_errors": 4,
+          "errors": 3,
+          "warnings": 2
+        },
+        "parser_recovered": true,
+        "parser_errors": 16,
+        "required_queries_complete": false,
+        "raw_passed": false,
+        "failure_code": null,
+        "selected_queries": {
+          "version": "xpm-selected-query-assessment-1.0",
+          "checks": [
+            {
+              "kind": "crossref",
+              "identifier_sha256": "c645f1d5e4c1ff772bc2d705f419ce08b411caedeed3e5a2352b25966768eeb3",
+              "status": "conflict",
+              "reason": "authority-response-does-not-match",
+              "response_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "83837041e226ec46192ddb10451ccf98375c33ffcec98158955d6429fd84edab",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "36109949ff7b73425b30f4bc29600beabaa5ddf1d1f613b97856143bd74fce6c",
+              "public_name_check": "exact-public-name-match"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "fdfb53c01599d1fc02f11d58d4395234c33a002481562149c45131a268672843",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "e81c0ed401ba8a09569816458ec3de4ab432893a0effb6483545e121a16a2324",
+              "public_name_check": "exact-public-name-match"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "329dac380d3a3ac66785ada963a74402647046e665b6c1c18df9197c8dd2b0d3",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "8e88176120496aa1a9293abf3cd2940f607e382f5dee6e96113176e637a6f26b",
+              "public_name_check": "exact-public-name-match"
+            }
+          ],
+          "crossref_author_links": {
+            "version": "orcid-deposit-diagnostic-1.0",
+            "status": "unavailable",
+            "response_sha256": null,
+            "checks": [],
+            "authenticated_ownership": false
+          },
+          "selected_checks_matched": false,
+          "required_queries_complete": false,
+          "authenticated_orcid_ownership": false
+        },
+        "compatibility": {
+          "status": "unavailable",
+          "reason": "compatibility-evidence-unqualified"
+        }
+      },
+      "package_sha256": "a04a1369cac1076a689187c72dda778ecce12c13b59187a26ac280713f2259cc",
+      "xml_sha256": "220e057a15ab84ee5da02b502e97fe1268576700df5d4ce0ed1e304be8408ce7",
+      "package_assessment": {
+        "version": "package-formal-assessment-1.0",
+        "package_sha256": "a04a1369cac1076a689187c72dda778ecce12c13b59187a26ac280713f2259cc",
+        "xml_sha256": "220e057a15ab84ee5da02b502e97fe1268576700df5d4ce0ed1e304be8408ce7",
+        "state": "blocked",
+        "reasons": [
+          "xpm-validator-findings",
+          "xpm-warnings-pending",
+          "xpm-required-queries-incomplete",
+          "xpm-authority-response-conflict",
+          "formal-approval-integration-pending",
+          "external-validator-findings"
+        ],
+        "required_validators": [
+          "packtools",
+          "spsvalidator",
+          "xpm"
+        ],
+        "external_runs": [
+          {
+            "name": "packtools",
+            "version": "4.17.2+ef0e6f874ea7",
+            "status": "completed",
+            "candidate_sha256": "220e057a15ab84ee5da02b502e97fe1268576700df5d4ce0ed1e304be8408ce7",
+            "input_kind": ".xml",
+            "tool_sha256": "4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca",
+            "passed": false,
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            },
+            "unavailable_external_checks": [],
+            "report_sha256": "3d6e0dc1740b911c7d8ca317c1d3808239ab47c7604747a382c5f017ea2d77e5",
+            "failure_code": null
+          },
+          {
+            "name": "spsvalidator",
+            "version": "0.3.0+d1aa774d4e33",
+            "status": "completed",
+            "candidate_sha256": "a04a1369cac1076a689187c72dda778ecce12c13b59187a26ac280713f2259cc",
+            "input_kind": ".zip",
+            "tool_sha256": "61b90cc8ecca8de508c6cd19701551860de32f053a4899fd056835c8f05ab048",
+            "passed": false,
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            },
+            "unavailable_external_checks": [],
+            "report_sha256": "dbb788077a7fb4540f88ba808300bef065ee9c1e9334c6e29c53fc0ee86587d7",
+            "failure_code": null
+          }
+        ],
+        "xpm": {
+          "status": "completed",
+          "attested": true,
+          "candidate_package_sha256": "a04a1369cac1076a689187c72dda778ecce12c13b59187a26ac280713f2259cc",
+          "report_sha256": "7dda5e9bec79affe82e06be4ca107ecac74083dedf67a9e6c9ae4d0cd637ef63",
+          "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+          "xpm_version": "4.0.096",
+          "counts": {
+            "blocking_errors": 4,
+            "fatal_errors": 4,
+            "errors": 3,
+            "warnings": 2
+          },
+          "parser_recovered": true,
+          "parser_errors": 16,
+          "required_queries_complete": false,
+          "raw_passed": false,
+          "failure_code": null,
+          "selected_queries": {
+            "version": "xpm-selected-query-assessment-1.0",
+            "checks": [
+              {
+                "kind": "crossref",
+                "identifier_sha256": "c645f1d5e4c1ff772bc2d705f419ce08b411caedeed3e5a2352b25966768eeb3",
+                "status": "conflict",
+                "reason": "authority-response-does-not-match",
+                "response_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3"
+              },
+              {
+                "kind": "orcid",
+                "identifier_sha256": "83837041e226ec46192ddb10451ccf98375c33ffcec98158955d6429fd84edab",
+                "status": "matched",
+                "reason": "exact-public-record-match",
+                "response_sha256": "36109949ff7b73425b30f4bc29600beabaa5ddf1d1f613b97856143bd74fce6c",
+                "public_name_check": "exact-public-name-match"
+              },
+              {
+                "kind": "orcid",
+                "identifier_sha256": "fdfb53c01599d1fc02f11d58d4395234c33a002481562149c45131a268672843",
+                "status": "matched",
+                "reason": "exact-public-record-match",
+                "response_sha256": "e81c0ed401ba8a09569816458ec3de4ab432893a0effb6483545e121a16a2324",
+                "public_name_check": "exact-public-name-match"
+              },
+              {
+                "kind": "orcid",
+                "identifier_sha256": "329dac380d3a3ac66785ada963a74402647046e665b6c1c18df9197c8dd2b0d3",
+                "status": "matched",
+                "reason": "exact-public-record-match",
+                "response_sha256": "8e88176120496aa1a9293abf3cd2940f607e382f5dee6e96113176e637a6f26b",
+                "public_name_check": "exact-public-name-match"
+              }
+            ],
+            "crossref_author_links": {
+              "version": "orcid-deposit-diagnostic-1.0",
+              "status": "unavailable",
+              "response_sha256": null,
+              "checks": [],
+              "authenticated_ownership": false
+            },
+            "selected_checks_matched": false,
+            "required_queries_complete": false,
+            "authenticated_orcid_ownership": false
+          },
+          "compatibility": {
+            "status": "unavailable",
+            "reason": "compatibility-evidence-unqualified"
+          }
+        },
+        "complete": false,
+        "ready_for_scielo": false,
+        "editorial_approval": "separate-workflow",
+        "production_activation_authorized": false
+      }
+    },
+    {
+      "article": "esa-e20240086",
+      "mutation": "malformed_xml",
+      "assessment": {
+        "status": "completed",
+        "attested": true,
+        "candidate_package_sha256": "b90339042f950e93c3cfd100dbe399d675afed9a81773c77698ba9c7de12cb9f",
+        "report_sha256": "4f2888186d3e9dc5b7b7181ec3f1f80119dde35f8c535973318544789771147e",
+        "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+        "xpm_version": "4.0.096",
+        "counts": {
+          "blocking_errors": 4,
+          "fatal_errors": 3,
+          "errors": 1,
+          "warnings": 0
+        },
+        "parser_recovered": true,
+        "parser_errors": 5,
+        "required_queries_complete": false,
+        "raw_passed": false,
+        "failure_code": null
+      },
+      "package_sha256": "b90339042f950e93c3cfd100dbe399d675afed9a81773c77698ba9c7de12cb9f",
+      "xml_sha256": "e0db26146d473d8199c5f8c9f3a10167c30701c2369ca4a509f92958de7b9896",
+      "package_assessment": {
+        "version": "package-formal-assessment-1.0",
+        "package_sha256": "b90339042f950e93c3cfd100dbe399d675afed9a81773c77698ba9c7de12cb9f",
+        "xml_sha256": "e0db26146d473d8199c5f8c9f3a10167c30701c2369ca4a509f92958de7b9896",
+        "state": "blocked",
+        "reasons": [
+          "xpm-validator-findings",
+          "xpm-required-queries-incomplete",
+          "formal-approval-integration-pending",
+          "external-validator-findings",
+          "required-validator-unavailable"
+        ],
+        "required_validators": [
+          "packtools",
+          "spsvalidator",
+          "xpm"
+        ],
+        "external_runs": [
+          {
+            "name": "packtools",
+            "version": "4.17.2+ef0e6f874ea7",
+            "status": "unavailable",
+            "candidate_sha256": "e0db26146d473d8199c5f8c9f3a10167c30701c2369ca4a509f92958de7b9896",
+            "input_kind": ".xml",
+            "tool_sha256": "4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca",
+            "passed": false,
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 0
+            },
+            "unavailable_external_checks": [],
+            "report_sha256": null,
+            "failure_code": "validator-unavailable-or-failed"
+          },
+          {
+            "name": "spsvalidator",
+            "version": "0.3.0+d1aa774d4e33",
+            "status": "unavailable",
+            "candidate_sha256": "b90339042f950e93c3cfd100dbe399d675afed9a81773c77698ba9c7de12cb9f",
+            "input_kind": ".zip",
+            "tool_sha256": "61b90cc8ecca8de508c6cd19701551860de32f053a4899fd056835c8f05ab048",
+            "passed": false,
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 0
+            },
+            "unavailable_external_checks": [],
+            "report_sha256": null,
+            "failure_code": "validator-unavailable-or-failed"
+          }
+        ],
+        "xpm": {
+          "status": "completed",
+          "attested": true,
+          "candidate_package_sha256": "b90339042f950e93c3cfd100dbe399d675afed9a81773c77698ba9c7de12cb9f",
+          "report_sha256": "4f2888186d3e9dc5b7b7181ec3f1f80119dde35f8c535973318544789771147e",
+          "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+          "xpm_version": "4.0.096",
+          "counts": {
+            "blocking_errors": 4,
+            "fatal_errors": 3,
+            "errors": 1,
+            "warnings": 0
+          },
+          "parser_recovered": true,
+          "parser_errors": 5,
+          "required_queries_complete": false,
+          "raw_passed": false,
+          "failure_code": null
+        },
+        "complete": false,
+        "ready_for_scielo": false,
+        "editorial_approval": "separate-workflow",
+        "production_activation_authorized": false
+      }
+    }
+  ],
+  "active_services_unchanged": true,
+  "production_activated": false,
+  "formal_xml_approved": false,
+  "laboratory_scope_only": true
+}

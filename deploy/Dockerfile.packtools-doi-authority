@@ -1,0 +1,6 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+COPY doi_snapshot.py doi_authority_runtime.py /validator/
+COPY doi_model_compat.py /validator/
+COPY packtools_doi_validate.py /validator/packtools_validate.py
+COPY probe_doi_authority.py /validator/

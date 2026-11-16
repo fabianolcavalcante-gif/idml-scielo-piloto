@@ -1,0 +1,147 @@
+{
+  "adversarial_matrix": {
+    "cases": 30,
+    "domains": 6,
+    "expectation_pass_rate": 1.0,
+    "monetary_cost_microusd": 0,
+    "provider_calls": 0,
+    "role_calls": 84,
+    "scenarios_per_domain": 5
+  },
+  "approved": true,
+  "automatic_application_authorized": false,
+  "corpus_id": "esa-e20240135",
+  "human_review_required": true,
+  "live_evidence": {
+    "abstentions": 0,
+    "accepted_for_human_review": 6,
+    "all_deterministic_checks_passed": true,
+    "cached_input_tokens": 0,
+    "cases": 6,
+    "cost_microusd": 140447,
+    "duration_ms": 136145,
+    "exact_cases": 5,
+    "false_consensus_candidates": 0,
+    "input_tokens": 121676,
+    "maximum_call_duration_ms": 11609,
+    "output_tokens": 10929,
+    "qualified_expected_change_precision": 1.0,
+    "qualified_expected_change_recall": 1.0,
+    "rejections": 0,
+    "repair_cycles": 0,
+    "role_calls": 24,
+    "role_models_independent": false,
+    "run_id": "phase7-7c07-domains-v34-001",
+    "semantically_equivalent_cases": 6,
+    "skills_exposed": 0,
+    "tools_exposed": 0
+  },
+  "metadata": {
+    "actual": {
+      "dataset_qualification": {
+        "atomic_formula_cases": 1,
+        "atomic_rich_text_cases": 2,
+        "candidate_xml_sha256": "20a03a91496ac0b447bd2abe589c2be6c231547793dcf5289bd3e66cc1990880",
+        "dataset_cases": 6,
+        "dataset_version": "idml-agent-e20240135-7c07-1.0",
+        "domains": {
+          "contributors_affiliations": 1,
+          "figures_tables": 1,
+          "math_notes": 1,
+          "metadata": 1,
+          "references": 1,
+          "structure": 1
+        },
+        "hidden_gold_exposed_to_provider": false,
+        "human_review_required": true,
+        "report_sha256": "67bda42b9fd57ce8da21040dd70577ef1246d11ef3f84476049df694f9e46c4f",
+        "restricted_content_emitted": false,
+        "visual_cases": 1
+      },
+      "execution_plan": {
+        "concurrency": 1,
+        "max_attempts": 2,
+        "max_repair_cycles": 2,
+        "max_total_cost_microusd": 5000000,
+        "model_key": "openai/gpt-5.4-mini",
+        "plan_sha256": "3a149b5a63965d2cd9c807b8ab4b428603afdb7506da91481cf0519b0ed0b54e",
+        "require_application_flags_false": true,
+        "require_human_review": true,
+        "roles": 4,
+        "selected_cases": 6,
+        "thinking_level": "medium"
+      },
+      "role_counts": {
+        "approved_pdf_reference": 1,
+        "approved_xml_reference": 1,
+        "figure_asset": 7,
+        "source_idml": 1,
+        "validator_exception_evidence": 1,
+        "xpm_report": 1
+      },
+      "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+      "vps_postcheck": {
+        "agent_proposals": 0,
+        "agent_runs": 0,
+        "application_flags_false": 2,
+        "egress_proxy_present": false,
+        "openclaw_sessions": 0,
+        "provider_credential_present": false,
+        "report_sha256": "16089f9045ffa26014b964518b673d236174a89a6fee3ec59b4ceb0f636b1d40",
+        "restricted_content_emitted": false,
+        "services_healthy": 3,
+        "transient_networks_present": 0
+      }
+    },
+    "approved": true,
+    "mismatches": []
+  },
+  "metadata_only": false,
+  "negative_controls": {
+    "all_failed_closed": true,
+    "cases": 5,
+    "false_consensus_accepted": 0,
+    "monetary_cost_microusd": 0,
+    "provider_calls": 0,
+    "rows": [
+      {
+        "decision": "rejected",
+        "error_code": "PROPOSAL_DETERMINISTIC_REJECTED_EVIDENCE_GROUNDED",
+        "false_consensus_accepted": false,
+        "name": "omission"
+      },
+      {
+        "decision": "rejected",
+        "error_code": "PROPOSAL_DETERMINISTIC_REJECTED_EVIDENCE_GROUNDED",
+        "false_consensus_accepted": false,
+        "name": "invention"
+      },
+      {
+        "decision": "rejected",
+        "error_code": "PROPOSAL_DETERMINISTIC_REJECTED_EVIDENCE_GROUNDED",
+        "false_consensus_accepted": false,
+        "name": "author_swap"
+      },
+      {
+        "decision": "abstained",
+        "error_code": null,
+        "false_consensus_accepted": false,
+        "name": "ambiguous_visual_formula"
+      },
+      {
+        "decision": "rejected",
+        "error_code": "VISUAL_EVIDENCE_IMAGE_HASH_INVALID",
+        "false_consensus_accepted": false,
+        "name": "wrong_asset_association"
+      }
+    ]
+  },
+  "network_required_by_gate": false,
+  "production_activation_authorized": false,
+  "release_ready": false,
+  "restricted_content_emitted": false,
+  "role_models_independent": false,
+  "shared_model_consensus_authorizes_release": false,
+  "stage": "7C-07",
+  "version": "phase7-7c07-assistive-gate-1.0"
+}

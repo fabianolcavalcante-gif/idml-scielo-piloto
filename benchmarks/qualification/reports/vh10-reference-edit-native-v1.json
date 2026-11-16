@@ -1,0 +1,309 @@
+{
+  "date": "2026-11-03",
+  "release": "vh10-reference-20261103-v2",
+  "scope": "Isolated e20240086 experiment; publication renditions supplied by user, complete enriched baseline, exact IDML affiliation recovery. Not a raw IDML E2E or release approval.",
+  "source": {
+    "release": "vh10-reference-20261103-v2",
+    "files": 1280,
+    "bytes": 2545574,
+    "sha256": "1c72c7df403b5762391e6134f9bf16ca71340ac9593f91ea24c6a5932737d2e4",
+    "private_inputs_included": false
+  },
+  "initial_candidate_source": {
+    "release": "vh10-reference-20261103-v1",
+    "files": 1280,
+    "bytes": 2543970,
+    "sha256": "95bf4029e0c91390c776d3e107c908cb5786b8267ed1c70ab415361399e01148",
+    "private_inputs_included": false
+  },
+  "case": {
+    "article": "esa-e20240086",
+    "source_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+    "authorized_literal_sha256": "d82618003ddeefada882444a0fd46ad2a1cc5952a33d454a4bb3293fb857891f",
+    "expected_candidate_xml_sha256": "370422b77d7251b582882a39b90a08f773bcbab7f97634e7539b1c297b46e2b6",
+    "package_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+    "package_xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+    "masked_package_sha256": "f27fa733088ba236617fe8931e6023c170eaaada903a7b99e6a6df52787daea5",
+    "bindings": [
+      {
+        "xml_reference": "1809-4457-esa-30-e20240086-gf01.jpg",
+        "canonical_reference": "Figure1.jpg",
+        "sha256": "df078062a48950f2b9ca63f4746a901ae1ebc7e0f6f4b48ab0bb9f12a6378681"
+      },
+      {
+        "xml_reference": "1809-4457-esa-30-e20240086-gf02.jpg",
+        "canonical_reference": "Figure2.jpg",
+        "sha256": "3eb3d32a852fe99a2e53f7bc1fe3d48e34c380fccc25b990c1c08a246708d416"
+      },
+      {
+        "xml_reference": "1809-4457-esa-30-e20240086-gf03.jpg",
+        "canonical_reference": "Figure3.jpg",
+        "sha256": "078f9c29910b59b170e2542a9726de0dc58fd40fd913ed8f57dd1e6cf4c32a2f"
+      },
+      {
+        "xml_reference": "1809-4457-esa-30-e20240086-gf04.jpg",
+        "canonical_reference": "Figure4.jpg",
+        "sha256": "ed7c61692bc1445bd335772dc6e47d80b1f9dbd4f064dde9380539e4b55f9482"
+      },
+      {
+        "xml_reference": "1809-4457-esa-30-e20240086-gf05.jpg",
+        "canonical_reference": "Figure5.jpg",
+        "sha256": "59014924b128e7057c3c478efdd8638726a8ec456ee1bf3d639b140631bb5b7d"
+      }
+    ],
+    "original_link_bytes_verified": false
+  },
+  "agent_votes": {
+    "state": "supported_for_revalidation",
+    "xml_sha256": "370422b77d7251b582882a39b90a08f773bcbab7f97634e7539b1c297b46e2b6",
+    "calls": [
+      {
+        "role": "proposer",
+        "round": 1,
+        "input_sha256": "383f9d116a31a89f6891f311cd2a5f9e77b35f328c3bf85441e5a20dd1e84663",
+        "reserved_microusd": 15750,
+        "input_tokens": 3552,
+        "output_tokens": 134,
+        "cached_input_tokens": 0,
+        "cost_microusd": 3267,
+        "vote": "support"
+      },
+      {
+        "role": "xml_critic",
+        "round": 1,
+        "input_sha256": "b282be6dfe2c0a08dadf308344c44b681541c34b2d63ad09a0548ac03df6ce2d",
+        "reserved_microusd": 15750,
+        "input_tokens": 3565,
+        "output_tokens": 144,
+        "cached_input_tokens": 0,
+        "cost_microusd": 3322,
+        "vote": "support"
+      },
+      {
+        "role": "editorial_critic",
+        "round": 1,
+        "input_sha256": "fad569b2d76734d515f7a4c2ba2c166f554776126a8f1ec7f1e6078dc2c84d4b",
+        "reserved_microusd": 15750,
+        "input_tokens": 3580,
+        "output_tokens": 172,
+        "cached_input_tokens": 0,
+        "cost_microusd": 3459,
+        "vote": "support"
+      },
+      {
+        "role": "adjudicator",
+        "round": 1,
+        "input_sha256": "d934a645312293174b3ff4b0aaffb66cee1550ca1dc516d61e898fc96f3300c6",
+        "reserved_microusd": 15750,
+        "input_tokens": 3595,
+        "output_tokens": 124,
+        "cached_input_tokens": 0,
+        "cost_microusd": 3255,
+        "vote": "support"
+      }
+    ],
+    "cost_microusd": 13303,
+    "budget_microusd": 250000,
+    "release_approved": false
+  },
+  "native": {
+    "applied": true,
+    "controlled": false,
+    "offline_valid": true,
+    "formal_runs": [
+      {
+        "name": "packtools",
+        "status": "completed",
+        "counts": {
+          "blocking": 0,
+          "critical": 0,
+          "error": 0,
+          "warning": 5
+        }
+      },
+      {
+        "name": "spsvalidator",
+        "status": "completed",
+        "counts": {
+          "blocking": 0,
+          "critical": 0,
+          "error": 0,
+          "warning": 5
+        }
+      }
+    ],
+    "xpm": {
+      "status": "completed",
+      "counts": {
+        "blocking_errors": 3,
+        "fatal_errors": 1,
+        "errors": 4,
+        "warnings": 2
+      }
+    },
+    "reasons": [],
+    "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+    "package_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+    "pending_review": [
+      "affiliation-source-review",
+      "delivery-doctype-editorial-review",
+      "orcid-ownership-not-authenticated",
+      "packtools-warnings-review",
+      "spsvalidator-warnings-review",
+      "xpm-warnings-review"
+    ],
+    "restore_state": "blocked",
+    "restored_xml_sha256": "f6f25a46b38f04059898b70fe53ab46c8bb5591ffc5ac14273f7467a257ac36f",
+    "restored_package_sha256": "f27fa733088ba236617fe8931e6023c170eaaada903a7b99e6a6df52787daea5",
+    "restore_modern": [
+      {
+        "name": "packtools",
+        "status": "completed",
+        "counts": {
+          "blocking": 0,
+          "critical": 1,
+          "error": 0,
+          "warning": 6
+        }
+      },
+      {
+        "name": "spsvalidator",
+        "status": "completed",
+        "counts": {
+          "blocking": 0,
+          "critical": 1,
+          "error": 0,
+          "warning": 6
+        }
+      }
+    ],
+    "restore_xpm": {
+      "status": "completed",
+      "counts": {
+        "blocking_errors": 3,
+        "fatal_errors": 1,
+        "errors": 5,
+        "warnings": 2
+      }
+    },
+    "restore_pending_review": [],
+    "restore_xpm_derived": {
+      "blocking_errors": 3,
+      "fatal_errors": 1,
+      "errors": 3,
+      "warnings": 2
+    },
+    "xpm_derived": {
+      "blocking_errors": 0,
+      "fatal_errors": 0,
+      "errors": 0,
+      "warnings": 2
+    },
+    "recovered_valid_revision": {
+      "state": "revalidated-working-draft",
+      "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+      "package_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+      "modern": [
+        {
+          "name": "packtools",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        },
+        {
+          "name": "spsvalidator",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        }
+      ],
+      "xpm": {
+        "status": "completed",
+        "counts": {
+          "blocking_errors": 3,
+          "fatal_errors": 1,
+          "errors": 4,
+          "warnings": 2
+        }
+      },
+      "xpm_derived": {
+        "blocking_errors": 0,
+        "fatal_errors": 0,
+        "errors": 0,
+        "warnings": 2
+      },
+      "pending_review": [
+        "affiliation-source-review",
+        "delivery-doctype-editorial-review",
+        "orcid-ownership-not-authenticated",
+        "packtools-warnings-review",
+        "spsvalidator-warnings-review",
+        "xpm-warnings-review"
+      ],
+      "approval_inherited": false,
+      "release_approved": false
+    }
+  },
+  "deployment": {
+    "release": "vh10-reference-20261103-v2",
+    "image": "idml-foundation:vh10-reference-20261103-v2",
+    "image_id": "sha256:49ba75feaf9af510834167505a02c6383a1937a1dec4de4dc2406d0f496dbf31",
+    "migration": "e2f314253647",
+    "schema_changed": false,
+    "runtime_files_verified": {
+      "idml-development-api-1": 346,
+      "idml-development-worker-1": 346
+    },
+    "backup": "/opt/idml-platform/backups/20261103T135329Z",
+    "restore_test": true,
+    "image_rollback_test": true,
+    "other_services_unchanged": true,
+    "existing_data_counts_unchanged": true,
+    "flags_disabled": true,
+    "smoke": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "homologation_ready": false,
+    "release_approved": false
+  },
+  "postcheck": {
+    "mapalead_unchanged": true,
+    "provider_detached": true,
+    "worker_decisions_read_only": true,
+    "active_article_decisions": 0,
+    "api_native_scan": "clamav_clean",
+    "socket_and_update_enabled": true,
+    "smoke": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "containers": 25,
+    "healthy_idml": 5,
+    "image_id": "sha256:49ba75feaf9af510834167505a02c6383a1937a1dec4de4dc2406d0f496dbf31",
+    "manifest_sha256": "1f6697dbd66b7499bed064ed9b488b923d041868fca81c0817aa7adb94864339",
+    "brokers_reachable": true,
+    "scoped_sources_required": true,
+    "active_db_counts_unchanged": true,
+    "agents_enabled": false,
+    "homologation_ready": false
+  },
+  "tests": {
+    "local": 622,
+    "linux": 622,
+    "warnings_per_platform": 2,
+    "postgres": true,
+    "mypy_modules": 145
+  },
+  "homologation_ready": false
+}

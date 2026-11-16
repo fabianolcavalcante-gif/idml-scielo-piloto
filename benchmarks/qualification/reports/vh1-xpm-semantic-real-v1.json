@@ -1,0 +1,225 @@
+{
+  "version": "vh1-xpm-socket-real-1.0",
+  "root": "/opt/idml-platform/private/qualification/vh1-xpm-semantic-20261023T150553Z",
+  "cases": [
+    {
+      "article": "esa-e20240086",
+      "mutation": "baseline",
+      "assessment": {
+        "status": "completed",
+        "attested": true,
+        "candidate_package_sha256": "2f9c5b6529fb193a38b965d366fec1cda5afcaf89e1d8a3eb146022969f1bfee",
+        "report_sha256": "841ce5bb2faf8bef6d9be00ad6e8404f4df5c1e0d2d150ca14c247bd93f66fec",
+        "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+        "xpm_version": "4.0.096",
+        "counts": {
+          "blocking_errors": 3,
+          "fatal_errors": 1,
+          "errors": 4,
+          "warnings": 2
+        },
+        "parser_recovered": true,
+        "parser_errors": 15,
+        "required_queries_complete": false,
+        "raw_passed": false,
+        "failure_code": null,
+        "selected_queries": {
+          "version": "xpm-selected-query-assessment-1.0",
+          "checks": [
+            {
+              "kind": "crossref",
+              "identifier_sha256": "c645f1d5e4c1ff772bc2d705f419ce08b411caedeed3e5a2352b25966768eeb3",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "83837041e226ec46192ddb10451ccf98375c33ffcec98158955d6429fd84edab",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "36109949ff7b73425b30f4bc29600beabaa5ddf1d1f613b97856143bd74fce6c"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "fdfb53c01599d1fc02f11d58d4395234c33a002481562149c45131a268672843",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "e81c0ed401ba8a09569816458ec3de4ab432893a0effb6483545e121a16a2324"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "329dac380d3a3ac66785ada963a74402647046e665b6c1c18df9197c8dd2b0d3",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "8e88176120496aa1a9293abf3cd2940f607e382f5dee6e96113176e637a6f26b"
+            }
+          ],
+          "selected_checks_matched": true,
+          "required_queries_complete": false,
+          "authenticated_orcid_ownership": false
+        }
+      },
+      "package_sha256": "2f9c5b6529fb193a38b965d366fec1cda5afcaf89e1d8a3eb146022969f1bfee",
+      "xml_sha256": "414de2ea7329379b98d06f5018839f7de7ac9487501f1b1b2eea44ed2019264f"
+    },
+    {
+      "article": "esa-e20240135",
+      "mutation": "baseline",
+      "assessment": {
+        "status": "completed",
+        "attested": true,
+        "candidate_package_sha256": "54f71f50669cacdda2ff7323777574c82e6f4bedf85cd7743abe4d6de5e90ea3",
+        "report_sha256": "d10f7f54ac98cec3134e6d1f68b2ef7c6d1f97ecf6f5962c2ec74a8b0b5e5c09",
+        "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+        "xpm_version": "4.0.096",
+        "counts": {
+          "blocking_errors": 3,
+          "fatal_errors": 1,
+          "errors": 4,
+          "warnings": 3
+        },
+        "parser_recovered": true,
+        "parser_errors": 12,
+        "required_queries_complete": false,
+        "raw_passed": false,
+        "failure_code": null,
+        "selected_queries": {
+          "version": "xpm-selected-query-assessment-1.0",
+          "checks": [
+            {
+              "kind": "crossref",
+              "identifier_sha256": "70e40f3ec29817b7a0df43f1d55afa59d7b542e089df1c5c650f18e7e2749c75",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "07779555c3693999d79b5a2099551d7b44935c6ea5f8dc7167ba6af3ecd04b25",
+              "status": "conflict",
+              "reason": "authority-response-does-not-match",
+              "response_sha256": "3de4b93ada52dce38d1087399e2d2bcb141f92847c7fc4499b9e6e8ec3f0e3b0"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "b0e8f3250c042739b570b02f50a8a114eb106b373b9ee93ca9ee217956be5eb3",
+              "status": "conflict",
+              "reason": "authority-response-does-not-match",
+              "response_sha256": "399b9526ea5cb9c1d94a79031936029f9762aabe94ce42324c0c2e1fa0cdb036"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "be18c2848fa1d7edca2df30ea44c4b867b476fd4939c61d0e59e4d5a253b7d18",
+              "status": "conflict",
+              "reason": "authority-response-does-not-match",
+              "response_sha256": "c1912ad41e77c25a9865fedfccdf0ceca0b75f78fb99f111aa364107050871b8"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "0e43f4cb9db026ac46b8ceeb8876706f159857f85a29d290a089af8bafeb6ef4",
+              "status": "conflict",
+              "reason": "authority-response-does-not-match",
+              "response_sha256": "6eaa97ca928562e1f820432ff882ab536f921176da2eb16fe7287f56a647a1a3"
+            }
+          ],
+          "selected_checks_matched": false,
+          "required_queries_complete": false,
+          "authenticated_orcid_ownership": false
+        }
+      },
+      "package_sha256": "54f71f50669cacdda2ff7323777574c82e6f4bedf85cd7743abe4d6de5e90ea3",
+      "xml_sha256": "31224a085f49ce7d570069f8d266993979dd46beed720c7edc22324e1c11f1e5"
+    },
+    {
+      "article": "esa-e20240086",
+      "mutation": "missing_journal_title",
+      "assessment": {
+        "status": "completed",
+        "attested": true,
+        "candidate_package_sha256": "1f1ea16b52aa41ce3af5c4e651ccc99d691c0c2dfe978bb6fe3512775dd17b2a",
+        "report_sha256": "42595ac916f8a9c289807afb6b2fe51eba55f704d4099c9cb1d08d5ab91e80b9",
+        "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+        "xpm_version": "4.0.096",
+        "counts": {
+          "blocking_errors": 4,
+          "fatal_errors": 4,
+          "errors": 3,
+          "warnings": 2
+        },
+        "parser_recovered": true,
+        "parser_errors": 16,
+        "required_queries_complete": false,
+        "raw_passed": false,
+        "failure_code": null,
+        "selected_queries": {
+          "version": "xpm-selected-query-assessment-1.0",
+          "checks": [
+            {
+              "kind": "crossref",
+              "identifier_sha256": "c645f1d5e4c1ff772bc2d705f419ce08b411caedeed3e5a2352b25966768eeb3",
+              "status": "conflict",
+              "reason": "authority-response-does-not-match",
+              "response_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "83837041e226ec46192ddb10451ccf98375c33ffcec98158955d6429fd84edab",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "36109949ff7b73425b30f4bc29600beabaa5ddf1d1f613b97856143bd74fce6c"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "fdfb53c01599d1fc02f11d58d4395234c33a002481562149c45131a268672843",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "e81c0ed401ba8a09569816458ec3de4ab432893a0effb6483545e121a16a2324"
+            },
+            {
+              "kind": "orcid",
+              "identifier_sha256": "329dac380d3a3ac66785ada963a74402647046e665b6c1c18df9197c8dd2b0d3",
+              "status": "matched",
+              "reason": "exact-public-record-match",
+              "response_sha256": "8e88176120496aa1a9293abf3cd2940f607e382f5dee6e96113176e637a6f26b"
+            }
+          ],
+          "selected_checks_matched": false,
+          "required_queries_complete": false,
+          "authenticated_orcid_ownership": false
+        }
+      },
+      "package_sha256": "1f1ea16b52aa41ce3af5c4e651ccc99d691c0c2dfe978bb6fe3512775dd17b2a",
+      "xml_sha256": "61a7d17a9af5d3d34d3e6eec35b36dabccb9dd3f5a02a20fb103895f532b1e16"
+    },
+    {
+      "article": "esa-e20240086",
+      "mutation": "malformed_xml",
+      "assessment": {
+        "status": "completed",
+        "attested": true,
+        "candidate_package_sha256": "495670ab8b7b3b36b7b860aa87a9aded1a9b4952b0d0c4c9c38df1e8b9c26845",
+        "report_sha256": "8120324c38d4c2cb44210dd06ba656fff55d7beccc2d8b2b89379741c18a0872",
+        "tool_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+        "xpm_version": "4.0.096",
+        "counts": {
+          "blocking_errors": 4,
+          "fatal_errors": 3,
+          "errors": 1,
+          "warnings": 0
+        },
+        "parser_recovered": true,
+        "parser_errors": 5,
+        "required_queries_complete": false,
+        "raw_passed": false,
+        "failure_code": null
+      },
+      "package_sha256": "495670ab8b7b3b36b7b860aa87a9aded1a9b4952b0d0c4c9c38df1e8b9c26845",
+      "xml_sha256": "e0db26146d473d8199c5f8c9f3a10167c30701c2369ca4a509f92958de7b9896"
+    }
+  ],
+  "active_services_unchanged": true,
+  "production_activated": false,
+  "formal_xml_approved": false,
+  "laboratory_scope_only": true
+}

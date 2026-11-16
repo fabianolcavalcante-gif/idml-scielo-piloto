@@ -1,0 +1,33 @@
+{
+  "content_emitted": false,
+  "diagnosis": "previously_misassigned_access_text_now_detected_as_unstructured",
+  "formal_xml_approved": false,
+  "model_sha256": "8a5992ed8381c5579f4b4435e75cb7e11eaa0130bdc2944cf5cb8d89e2cc6195",
+  "rows": {
+    "after": {
+      "access_date_present_in_literal_citation": true,
+      "access_date_structured": false,
+      "candidate_sha256": "ccc0553baa5c11d17b7ce1fd47d7e4da766a59543c2ae8e2bc41d2269ff51992",
+      "filtered_not_marked_sha256": [
+        "db655553ca9efd5089193011b6ccc4dc1e0d404562d6aa0be5f5fe99b8e33e5d"
+      ],
+      "native_rule_findings": 1,
+      "native_severities": [
+        "WARNING"
+      ],
+      "reference_ordinal": 31
+    },
+    "before": {
+      "access_date_present_in_literal_citation": true,
+      "access_date_structured": false,
+      "candidate_sha256": "84ab07204bd7debff2fc9f4c1623926f1637a722d12cbe964f4d5f4b178e899e",
+      "filtered_not_marked_sha256": [],
+      "native_rule_findings": 0,
+      "native_severities": [],
+      "reference_ordinal": 31
+    }
+  },
+  "rule_sha256": "7f80da3de543112081f6320bb1a595144d6cb97cae50720c9613ce8ed95bceb8",
+  "version": "vh1-reference-access-date-diagnostic-1.0",
+  "image_id": "sha256:4d5aadab7d75822c778890e1704e0533d9fc0578aed87034b128f20ec6da2eca"
+}

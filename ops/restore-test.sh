@@ -55,9 +55,29 @@ test "$table_count" -ge 10
 docker run --rm --read-only \
   -v "$backup_dir:/backup:ro" \
   -v "$restore_dir:/restore" \
-  alpine:3.21 sh -c 'cd /restore && tar -xzf /backup/artifacts.tar.gz'
-artifact_count=$(find "$restore_dir" -type f | wc -l)
+  alpine:3.21 sh -c 'mkdir -p /restore/artifacts && cd /restore/artifacts && tar -xzf /backup/artifacts.tar.gz'
+artifact_count=$(find "$restore_dir/artifacts" -type f | wc -l)
 test "$artifact_count" -ge 1
 
-printf 'restore test passed with %s public tables and %s artifact files\n' \
-  "$table_count" "$artifact_count"
+docker run --rm --read-only \
+  -v "$backup_dir:/backup:ro" \
+  -v "$restore_dir:/restore" \
+  alpine:3.21 sh -c 'mkdir -p /restore/openclaw && cd /restore/openclaw && tar -xzf /backup/openclaw-state.tar.gz'
+test -f "$restore_dir/openclaw/openclaw.json"
+test -f "$restore_dir/openclaw/state/openclaw.sqlite"
+python3 - "$restore_dir/openclaw/state/openclaw.sqlite" <<'PY'
+import sqlite3
+import sys
+
+connection = sqlite3.connect(f"file:{sys.argv[1]}?mode=ro", uri=True)
+try:
+    result = connection.execute("PRAGMA integrity_check").fetchone()
+    assert result == ("ok",), result
+finally:
+    connection.close()
+PY
+openclaw_file_count=$(find "$restore_dir/openclaw" -type f | wc -l)
+test "$openclaw_file_count" -ge 1
+
+printf 'restore test passed with %s public tables, %s artifact files and %s OpenClaw state files\n' \
+  "$table_count" "$artifact_count" "$openclaw_file_count"

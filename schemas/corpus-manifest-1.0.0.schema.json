@@ -1,0 +1,366 @@
+{
+  "$defs": {
+    "AccessClass": {
+      "enum": [
+        "restricted",
+        "internal",
+        "public"
+      ],
+      "title": "AccessClass",
+      "type": "string"
+    },
+    "CorpusArtifact": {
+      "additionalProperties": false,
+      "properties": {
+        "access_class": {
+          "$ref": "#/$defs/AccessClass"
+        },
+        "logical_path": {
+          "title": "Logical Path",
+          "type": "string"
+        },
+        "media_type": {
+          "title": "Media Type",
+          "type": "string"
+        },
+        "role": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Role",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "size_bytes": {
+          "minimum": 0,
+          "title": "Size Bytes",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "logical_path",
+        "role",
+        "media_type",
+        "sha256",
+        "size_bytes",
+        "access_class"
+      ],
+      "title": "CorpusArtifact",
+      "type": "object"
+    },
+    "CorpusPolicy": {
+      "additionalProperties": false,
+      "properties": {
+        "anonymization": {
+          "title": "Anonymization",
+          "type": "string"
+        },
+        "confidentiality": {
+          "$ref": "#/$defs/AccessClass"
+        },
+        "contains_personal_data": {
+          "title": "Contains Personal Data",
+          "type": "boolean"
+        },
+        "license_status": {
+          "title": "License Status",
+          "type": "string"
+        },
+        "purpose": {
+          "title": "Purpose",
+          "type": "string"
+        },
+        "redistribution_allowed": {
+          "title": "Redistribution Allowed",
+          "type": "boolean"
+        },
+        "retention": {
+          "$ref": "#/$defs/RetentionPolicy"
+        }
+      },
+      "required": [
+        "purpose",
+        "license_status",
+        "confidentiality",
+        "contains_personal_data",
+        "redistribution_allowed",
+        "anonymization",
+        "retention"
+      ],
+      "title": "CorpusPolicy",
+      "type": "object"
+    },
+    "CorpusSplit": {
+      "enum": [
+        "development",
+        "contrast",
+        "homologation_holdout"
+      ],
+      "title": "CorpusSplit",
+      "type": "string"
+    },
+    "ExpectedStructure": {
+      "additionalProperties": false,
+      "properties": {
+        "affiliations": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Affiliations"
+        },
+        "body_paragraphs": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Body Paragraphs"
+        },
+        "body_sections": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Body Sections"
+        },
+        "contributors": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Contributors"
+        },
+        "display_formulas": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Display Formulas"
+        },
+        "figures": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Figures"
+        },
+        "inline_formulas": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Inline Formulas"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        },
+        "pages": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pages"
+        },
+        "references": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "References"
+        },
+        "stories": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stories"
+        },
+        "tables": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tables"
+        },
+        "text_frames": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Text Frames"
+        }
+      },
+      "title": "ExpectedStructure",
+      "type": "object"
+    },
+    "RetentionPolicy": {
+      "additionalProperties": false,
+      "properties": {
+        "deletion_requires_approval": {
+          "default": true,
+          "title": "Deletion Requires Approval",
+          "type": "boolean"
+        },
+        "retain_until": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Retain Until"
+        },
+        "review_interval_days": {
+          "minimum": 1,
+          "title": "Review Interval Days",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "review_interval_days"
+      ],
+      "title": "RetentionPolicy",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "artifacts": {
+      "items": {
+        "$ref": "#/$defs/CorpusArtifact"
+      },
+      "title": "Artifacts",
+      "type": "array"
+    },
+    "corpus_id": {
+      "title": "Corpus Id",
+      "type": "string"
+    },
+    "expected": {
+      "$ref": "#/$defs/ExpectedStructure"
+    },
+    "journal": {
+      "title": "Journal",
+      "type": "string"
+    },
+    "manifest_version": {
+      "title": "Manifest Version",
+      "type": "string"
+    },
+    "policy": {
+      "$ref": "#/$defs/CorpusPolicy"
+    },
+    "source_root_hint": {
+      "title": "Source Root Hint",
+      "type": "string"
+    },
+    "split": {
+      "$ref": "#/$defs/CorpusSplit"
+    },
+    "template": {
+      "title": "Template",
+      "type": "string"
+    }
+  },
+  "required": [
+    "manifest_version",
+    "corpus_id",
+    "journal",
+    "template",
+    "split",
+    "source_root_hint",
+    "policy",
+    "artifacts",
+    "expected"
+  ],
+  "title": "CorpusManifest",
+  "type": "object"
+}

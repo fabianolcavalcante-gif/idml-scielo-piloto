@@ -22,6 +22,7 @@ class Permission(StrEnum):
     JOB_CREATE = "job:create"
     JOB_READ = "job:read"
     REVIEW_WRITE = "review:write"
+    RELEASE_REQUEST = "release:request"
     RELEASE_APPROVE = "release:approve"
     AUDIT_READ = "audit:read"
 
@@ -35,15 +36,22 @@ ROLE_PERMISSIONS: dict[Role, frozenset[Permission]] = {
             Permission.ARTIFACT_UPLOAD,
             Permission.JOB_CREATE,
             Permission.JOB_READ,
+            Permission.RELEASE_REQUEST,
         }
     ),
     Role.REVIEWER: frozenset(
-        {Permission.RESOURCE_READ, Permission.JOB_READ, Permission.REVIEW_WRITE}
+        {
+            Permission.RESOURCE_READ,
+            Permission.JOB_READ,
+            Permission.REVIEW_WRITE,
+            Permission.RELEASE_REQUEST,
+        }
     ),
     Role.RELEASE_MANAGER: frozenset(
         {
             Permission.RESOURCE_READ,
             Permission.JOB_READ,
+            Permission.RELEASE_REQUEST,
             Permission.RELEASE_APPROVE,
             Permission.AUDIT_READ,
         }

@@ -1,0 +1,6 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+USER root
+COPY requirements-dev.lock /tmp/requirements-dev.lock
+RUN python -m pip install --require-hashes -r /tmp/requirements-dev.lock
+USER 10001:10001

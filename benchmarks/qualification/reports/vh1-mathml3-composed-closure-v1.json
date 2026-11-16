@@ -1,0 +1,52 @@
+{
+  "active": "vh09-heads-20261021-v1",
+  "active_runtime_changed": false,
+  "ai_invoked": false,
+  "candidate": "vh1-followups-20261027-v1",
+  "candidate_tests_reference": "benchmarks/qualification/reports/vh1-followups-closure-v1.json",
+  "current_corrected_packages_verified": true,
+  "date": "2026-10-28",
+  "driver_sha256": {
+    "tmp/audit_mathml3_composition.py": "c1d30cb3309f1ebf2683b41e8a289b5e3995bcc9f63785d553cbfc00169967ce",
+    "tmp/run_mathml3_composition.py": "6c1cd63939eb417afa3c9e212a76808aa09efb366765cc61451446e91eccfa82",
+    "tmp/verify_composed.py": "56038ae1e19189d2b1c9c0636cbcf83fc6bb0758512d90e87082ec2ef8344561"
+  },
+  "evidence_sha256": {
+    "benchmarks/qualification/reports/vh1-mathml3-composed-audit-v1.json": "3ec9442f704cdfac1d291b0bd653f5db33f55c82aa2f2c1f722b59c96787c17d",
+    "benchmarks/qualification/reports/vh1-mathml3-composed-real-v1.json": "54e1ee9ddb0291828aa9f9092482ffbadcd920c7e8ebf97296404d023349003c"
+  },
+  "formal_xml_approved": false,
+  "homologation_ready": false,
+  "modern_completed_receipts": 6,
+  "native_xpm_executions": 4,
+  "new_compatibility_exceptions": 0,
+  "postcheck": {
+    "active_runtime_changed": false,
+    "app_status": 200,
+    "audit_sha256": "3ec9442f704cdfac1d291b0bd653f5db33f55c82aa2f2c1f722b59c96787c17d",
+    "ready_status": 200,
+    "services": 25,
+    "services_unchanged": true,
+    "source_files_verified": 1191
+  },
+  "postcheck_sha256": "a27600cc993412fc52cf86c09ece0faf43235c10aa6bf7e369fe2221085a1652",
+  "query_receipts": 13,
+  "sealed_files_root_0600": 22,
+  "source_archive_sha256": "896fc996abbd2f92e43966be33ba4d9ad9791f1c267f37b7ba250443758fe811",
+  "source_sha256": {
+    "config/validator-registry-vh1-composed.json": "f2c951dcb6b4bf5d5a1423f8967c8f9095ad9798ad1490f4d79a2a646a7d4774",
+    "ops/qualify_vh1_composed.py": "cdc6cfc817cb285d3487f645a5e45dd930b56c5c3f4da17493dfadef657834c2",
+    "ops/qualify_vh1_xpm_socket.py": "6d731d4cc6c8e052bfc27ae5bd4ca58cbf72d5cd9f0c1c3a58bf19ebf33a7e43",
+    "ops/triage_vh1_final_warnings.py": "f9b94ba8c53024981a882e147c66d15b6e8fa8e48bcf4a924a026a1f3879c65b",
+    "src/idml_foundation/pipeline/jats_builder.py": "561dbaa94361c4bba630aa146559fc333ca686716acbb95d33e31f77ae83b946",
+    "src/idml_foundation/pipeline/validation.py": "b8cc31b18df9c143a0733cfec3b0057cf2a11351e3108804bb285bdc554e4f08",
+    "src/idml_foundation/services/package_validation.py": "77cbebd8c588f4baa8c40ca409b60b4a232952411d467371019d427c1d65bf68",
+    "src/idml_foundation/services/validation_diagnosis.py": "0a882470a1b419424ab945cdb3ec544700d687de4816c21938d15ade3028e94c",
+    "src/idml_foundation/services/validation_followups.py": "1aedf410bdc09b6d4099a901e96f0d0f5fdc92861e79fec582e011a5384c3519",
+    "src/idml_foundation/services/xpm_execution.py": "756ba3132b6759a8e94f56ab0104c9752909f590d07a8e271be7d4132dffaaf6",
+    "src/idml_foundation/services/xpm_runtime_compatibility.py": "c11b65e7fa2b95623608bd05c5994265b4d9a6cb0d76049a941231698b05b95d"
+  },
+  "tests_not_rerun_in_native_composition": true,
+  "version": "vh1-mathml3-composed-closure-1.0",
+  "warnings_accepted": false
+}

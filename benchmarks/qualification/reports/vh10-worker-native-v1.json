@@ -1,0 +1,112 @@
+{
+  "version": "vh10-worker-native-1.0",
+  "date": "2026-10-30",
+  "cases": [
+    {
+      "case": "esa-e20240086-baseline",
+      "report_sha256": "fdf8f660f23790ea71ffad8aeec6f3575305153a25856634f7a4e93a42863364",
+      "job_state": "succeeded",
+      "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+      "package_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+      "formal_state": "blocked",
+      "modern": [
+        {
+          "name": "packtools",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          },
+          "report_sha256": "6fdbde6bd3de5fc3cd85555ac0f83828cc9b1d5556941eaf6fc7d5829334a7c1"
+        },
+        {
+          "name": "spsvalidator",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          },
+          "report_sha256": "d91cb459b0428c33f4f4f2fe57c5bf7ee59b95d7cc252be470fd4627cfb3199f"
+        }
+      ],
+      "xpm_status": "completed",
+      "xpm_raw_counts": {
+        "blocking_errors": 3,
+        "fatal_errors": 1,
+        "errors": 4,
+        "warnings": 2
+      },
+      "xpm_unresolved_counts": {
+        "blocking_errors": 0,
+        "fatal_errors": 0,
+        "errors": 0,
+        "warnings": 2
+      },
+      "technical_errors_resolved": true,
+      "required_queries_complete": false,
+      "offline_valid": true,
+      "release_approved": false
+    },
+    {
+      "case": "esa-e20240135-baseline",
+      "report_sha256": "89adec1c57952fbe8ef8f3b3f2d67f01198eeaaf328c7de309f19cbc842f1783",
+      "job_state": "succeeded",
+      "xml_sha256": "f2540405e65898aa2d5bd045075fbc22d2e06177f782e3a649ba891738002412",
+      "package_sha256": "985d3789ba5d9b9a1d8f6fc8b3c96ae9af0d63523663a164263b4b9d6de3ad45",
+      "formal_state": "blocked",
+      "modern": [
+        {
+          "name": "packtools",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          },
+          "report_sha256": "43bee29f1ab2cf82d310ef6afe8f700deeed477bd1f5fc5f67b272f035c1e308"
+        },
+        {
+          "name": "spsvalidator",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          },
+          "report_sha256": "8a8fb0ca54b8bcb21df517caf2d19b6c88db681410129521d712211ab2ec0763"
+        }
+      ],
+      "xpm_status": "completed",
+      "xpm_raw_counts": {
+        "blocking_errors": 3,
+        "fatal_errors": 1,
+        "errors": 4,
+        "warnings": 3
+      },
+      "xpm_unresolved_counts": {
+        "blocking_errors": 0,
+        "fatal_errors": 0,
+        "errors": 0,
+        "warnings": 3
+      },
+      "technical_errors_resolved": true,
+      "required_queries_complete": false,
+      "offline_valid": true,
+      "release_approved": false
+    }
+  ],
+  "actual_worker_package_job": true,
+  "isolated_database": true,
+  "idml_ingestion_exercised": false,
+  "ai_invoked": false,
+  "xml_and_asset_bytes_unchanged": true,
+  "zip_manifest_validator_versions_added": true,
+  "authorities_refetched_and_rebound_to_new_zip": true,
+  "homologation_ready": false
+}

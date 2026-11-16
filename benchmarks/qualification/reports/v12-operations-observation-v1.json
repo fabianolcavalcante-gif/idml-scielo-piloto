@@ -1,0 +1,43 @@
+{
+  "version": "v12-operations-observation-1.0",
+  "date": "2026-09-25",
+  "evidence_type": "sanitized_operator_record",
+  "read_only_diagnostics": true,
+  "storage": {
+    "complete": true,
+    "severity": "ok",
+    "registered": 1,
+    "files": 1,
+    "orphan_candidates": 0,
+    "missing": 0,
+    "size_mismatch": 0,
+    "unsafe_entries": 0,
+    "invalid_records": 0,
+    "tenants_warning": 0,
+    "tenants_full": 0,
+    "disk_free_bytes": 15836581888,
+    "hashes_verified": false,
+    "consistency": "best_effort",
+    "policy_source": "candidate_defaults_for_legacy_runtime"
+  },
+  "backup_inventory": {
+    "complete": true,
+    "protected": 90,
+    "unrecognized_or_incomplete": 49,
+    "manual_review_candidates": [],
+    "keep_latest": 7,
+    "keep_days": 30,
+    "checksums_verified": false,
+    "restore_verified": false,
+    "delete_authorized": false
+  },
+  "logging_compose_config_valid": true,
+  "logging_overlay_activated": false,
+  "audit_timer_activated": false,
+  "ready_before": true,
+  "ready_after": true,
+  "api_started_at_before_and_after": "2026-09-21T12:25:37.56454542Z",
+  "deployment_performed": false,
+  "v12_2_complete": false,
+  "release_ready": false
+}

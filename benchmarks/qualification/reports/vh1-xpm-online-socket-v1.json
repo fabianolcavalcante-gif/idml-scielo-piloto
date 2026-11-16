@@ -1,0 +1,80 @@
+{
+  "version": "vh1-xpm-online-socket-qualification-1.0",
+  "date": "2026-10-22",
+  "scope": "supervised-online-transport-through-private-xpm-socket",
+  "source_archive": {
+    "release": "vh1-xpm-online-socket-20261022-v1",
+    "sha256": "954f2fd9512c5a7eac7f22be4a9330d4f49926bb2f8136286dee07f90da76456",
+    "files": 1136,
+    "private_inputs_included": false
+  },
+  "tests": {
+    "local_passed": 267,
+    "linux_passed": 267,
+    "new_cases": 24,
+    "counts_overlap": true,
+    "final_failures": 0,
+    "final_errors": 0,
+    "final_skipped": 0,
+    "warnings_per_final_run": 1,
+    "local_duration_seconds": 28.64,
+    "linux_duration_seconds": 22.10,
+    "full_suite_repeated": false,
+    "global_coverage_measured": false,
+    "initial_test_harness_failure": "Windows lacks os.chown; corrected mock with raising=False before final runs"
+  },
+  "real_execution": {
+    "summary": "benchmarks/qualification/reports/vh1-xpm-online-socket-real-v1.json",
+    "postcheck": "tmp/vh1-xpm-online-socket-postcheck.json",
+    "root": "/opt/idml-platform/private/qualification/vh1-xpm-socket-online-20261022T183211Z",
+    "articles": 2,
+    "negative_cases": 2,
+    "attested_reports": 4,
+    "sealed_files_root_0600": 16,
+    "boundary_denials": 12,
+    "catalogue_https_responses": 4,
+    "baseline_catalogue_exact_unique_matches": 2,
+    "catalogue_sha256": "003921e3d6597dd57406ef86885d140990a0174fe2b326be1e501be70dbfc00a",
+    "client_uid": 10001,
+    "broker_uid": 0,
+    "all_raw_passed": false,
+    "required_queries_complete": false,
+    "vendor_network": "internal_bridge_via_allowlisted_proxy",
+    "original_inputs_and_vendor_files_unchanged": true,
+    "active_services_unchanged": 25,
+    "temporary_networks_remaining": 0,
+    "baseline_raw_counts": {
+      "esa-e20240086": {"blocking_errors": 3, "fatal_errors": 1, "errors": 4, "warnings": 2},
+      "esa-e20240135": {"blocking_errors": 3, "fatal_errors": 1, "errors": 4, "warnings": 3}
+    }
+  },
+  "checks": {
+    "ruff_global": true,
+    "mypy_source_files": 128,
+    "formatted_files": 4,
+    "source_manifest_verified": true
+  },
+  "source_and_evidence_sha256": {
+    "ops/xpm_online_transport.py": "8576e8623a723fda0ee33e2a65b65158976666929d7073e1d20cc1cce4ce4864",
+    "ops/xpm_validator_broker.py": "029053e2fe95be16363fbd31fe32bff0277e26061e611d25cf93c6843c3f934c",
+    "ops/qualify_vh1_xpm_socket.py": "cbdf1b0b5d73277f22c6f1f0300e6b33fed107e4331966e5668223eaa27c4999",
+    "tests/test_xpm_online_transport.py": "75e0f4192de035897f1c47c788ef3edebe0e34c7df24c9500b54e72ec330f121",
+    "tmp/vh1-xpm-online-socket-tests.xml": "54540351c62eb7589362a61878d53d777cb6a09853c2296e5a42cc232f8afcf0",
+    "tmp/vh1-xpm-online-socket-linux-tests.log": "d5a757cd577d12981e2ce73d2e9c3acce4617a8a34a5e27af17165833a6a0773",
+    "tmp/vh1-xpm-online-socket-postcheck.json": "1760e4fbbf34a65ca6560dd4a037cf9b247abe4d5f543b7d4c4617addb05ade8",
+    "benchmarks/qualification/reports/vh1-xpm-online-socket-real-v1.json": "b3408d82cb8c4987f597a5159e11b8624d152aab58cde9d06cdea429a0c246a5"
+  },
+  "limitations": [
+    "TLS tunnels are not semantic validation of Crossref/ORCID responses",
+    "Wayta denials remain visible; applicability policy does not transform unavailability into success",
+    "No new compatibility exception or change in raw counts",
+    "DOCTYPE/JATS, residual finding and final compatibility integration remain pending",
+    "Private laboratory qualification; not provisioned in active API/worker",
+    "No global CI, coverage, XML approval, human acceptance or G-HOMOLOG claim"
+  ],
+  "candidate_stored_on_vps": true,
+  "active_runtime_changed": false,
+  "database_changed": false,
+  "formal_xml_approved": false,
+  "ai_invoked": false
+}

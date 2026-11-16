@@ -1,0 +1,6 @@
+{
+  "version": "agent-skills-1.1",
+  "openclaw_skills_loaded": [],
+  "instruction_bundle": "openclaw/idml-assist-v1.1/SKILL.md",
+  "status": "versioned-not-installed"
+}

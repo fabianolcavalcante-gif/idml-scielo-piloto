@@ -1,0 +1,154 @@
+{
+  "archive_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+  "boundary_denials": 3,
+  "cases": [
+    {
+      "article": "esa-e20240086",
+      "catalogue_comparison": {
+        "journal_title": {
+          "candidate_value_sha256": "ded2353cc31f7e7ae9f9f2551d98c5d3d219f7f26b8d9217f2cbf6af5dd51c78",
+          "catalogue_value_sha256": "c9cf9a27aeca0331c6a5d500390e0b9d366531a01a26d69fec35a244532acc5e",
+          "matches": false
+        },
+        "publisher_name": {
+          "candidate_value_sha256": "7fe0210044b5b08d4e3a5bf6225cbe3681566866901cbc423e7427cab637a67f",
+          "catalogue_value_sha256": "1e5d703d1905af284d464266b4d489e5ab4021d4f4c8f50c638be19171f6a409",
+          "matches": false
+        }
+      },
+      "child_max_rss_kib": 60244,
+      "counts": {
+        "blocking_errors": 3,
+        "errors": 5,
+        "fatal_errors": 2,
+        "warnings": 2
+      },
+      "elapsed_seconds": 8.688,
+      "execution_completed": true,
+      "generated_doctype_unchanged": true,
+      "generated_xml_differs": true,
+      "input_and_vendor_unchanged": true,
+      "input_identity_sha256": "ba685142396801ed3901d8c63e3ad5da0c81af3b753c6a16b27bb63457a66c6c",
+      "mutation": "baseline",
+      "parser_errors": 100,
+      "report_sha256": "83bb39c93bd16792b64eada761432c49273df27a7c25e655973891cc5498cedb",
+      "validation_approved": false
+    },
+    {
+      "article": "esa-e20240135",
+      "catalogue_comparison": {
+        "journal_title": {
+          "candidate_value_sha256": "c9cf9a27aeca0331c6a5d500390e0b9d366531a01a26d69fec35a244532acc5e",
+          "catalogue_value_sha256": "c9cf9a27aeca0331c6a5d500390e0b9d366531a01a26d69fec35a244532acc5e",
+          "matches": true
+        },
+        "publisher_name": {
+          "candidate_value_sha256": "7fe0210044b5b08d4e3a5bf6225cbe3681566866901cbc423e7427cab637a67f",
+          "catalogue_value_sha256": "1e5d703d1905af284d464266b4d489e5ab4021d4f4c8f50c638be19171f6a409",
+          "matches": false
+        }
+      },
+      "child_max_rss_kib": 62532,
+      "counts": {
+        "blocking_errors": 3,
+        "errors": 5,
+        "fatal_errors": 1,
+        "warnings": 3
+      },
+      "elapsed_seconds": 8.494,
+      "execution_completed": true,
+      "generated_doctype_unchanged": true,
+      "generated_xml_differs": true,
+      "input_and_vendor_unchanged": true,
+      "input_identity_sha256": "2c4aad2df2b1b61316d6bf2f44795c0b4c1acbb7088fb6fd822020a974f9583f",
+      "mutation": "baseline",
+      "parser_errors": 100,
+      "report_sha256": "47a91273ee06a281d98627dc2abe074c86c39c27da55be301feb13e6fe524707",
+      "validation_approved": false
+    },
+    {
+      "article": "esa-e20240086",
+      "catalogue_comparison": {
+        "journal_title": {
+          "candidate_value_sha256": "ded2353cc31f7e7ae9f9f2551d98c5d3d219f7f26b8d9217f2cbf6af5dd51c78",
+          "catalogue_value_sha256": "c9cf9a27aeca0331c6a5d500390e0b9d366531a01a26d69fec35a244532acc5e",
+          "matches": false
+        },
+        "publisher_name": {
+          "candidate_value_sha256": "7fe0210044b5b08d4e3a5bf6225cbe3681566866901cbc423e7427cab637a67f",
+          "catalogue_value_sha256": "1e5d703d1905af284d464266b4d489e5ab4021d4f4c8f50c638be19171f6a409",
+          "matches": false
+        }
+      },
+      "child_max_rss_kib": 58144,
+      "counts": {
+        "blocking_errors": 4,
+        "errors": 5,
+        "fatal_errors": 2,
+        "warnings": 2
+      },
+      "elapsed_seconds": 8.466,
+      "execution_completed": true,
+      "generated_doctype_unchanged": true,
+      "generated_xml_differs": true,
+      "input_and_vendor_unchanged": true,
+      "input_identity_sha256": "6c744b5d9d3cbaa152304ff7a3733979945f99d8b22c6c807d479c9b6c26282a",
+      "mutation": "missing_graphic",
+      "parser_errors": 100,
+      "report_sha256": "f63d948cd7a00f0076988a9206de79d18620cac210a73472f9f2b67ced42c4e5",
+      "validation_approved": false
+    }
+  ],
+  "catalogue_bytes": 516455,
+  "catalogue_sha256": "003921e3d6597dd57406ef86885d140990a0174fe2b326be1e501be70dbfc00a",
+  "image": "sha256:43ca49864959e4106d7cbb571f6f64a1222f9865068fee1ce61953aa19886d63",
+  "negative_control_detected": true,
+  "observed_service_count": 25,
+  "outstanding": [
+    "JOURNAL_CATALOGUE_METADATA_CORRECTIONS",
+    "SPS_1_10_JATS_1_3_DELIVERY_POLICY",
+    "LEGACY_DOI_FALSE_POSITIVES",
+    "WAYTA_QUERY_DENIED",
+    "SUPERVISED_WEB_INTEGRATION_AND_HARDENING"
+  ],
+  "private_report_sha256": "3cd9e57c5b86c97d06cb954218e6454db024f799656c42a126747f3ee11647af",
+  "production_deployed": false,
+  "proxy_events_sha256": "1354077dd1a259004c4ef7e75231cf4685f772034089852828f0b4b80f4bc19f",
+  "release_approved": false,
+  "run_id": "20261016T102428Z",
+  "services_unchanged": true,
+  "source_sha256": {
+    "deploy/Dockerfile.xpm-online-qualification": "d4bb1bd25f9c04de76131070b6ecbe796b5655a54a39642f8e353f7aff745479",
+    "ops/audit_vh1_xpm_online.py": "ba6d2978c7561035e6d83fbd3b8db239c6556b080f8f337510d1d802176b1b4e",
+    "ops/qualify_vh1_xpm_linux.py": "512e22a01808671a98df01cfe9b665744c7167264bfc867ffc92879223ef2f0f",
+    "ops/qualify_vh1_xpm_online.py": "c24eb42db52eb7326c1acacabd39b466cc67b0ea65787688cf245a19b1e527e8",
+    "ops/run_xpm_online_qualification.py": "076457ae76da4439a5f113d3a2d33c8a8799434752e7b838f40f449e6f1d4a7e",
+    "ops/run_xpm_qualification.py": "98ca377db6e984fe4bdd094c1018497e1c3158254926f6f9bd17ce0da300e76a",
+    "ops/summarize_vh1_xpm_linux.py": "04b1d7a3009734918dd7281eccd0a9de607b5e79683344b24475b43f8d9d286e",
+    "ops/xpm_egress_proxy.py": "0b8cae1b046c55d471b4a51be0da0d5aa41b3ca4f0c08d937c210ade2ff2ba97",
+    "src/idml_foundation/release/xpm.py": "f242feb261473e84005a0e04465aeab0e50f03267356a9dfbe6f405a784dd19b",
+    "tests/test_vh1_xpm_online.py": "8111ebb10d9e842de16d082e5e249553ee9ba8638d9db693807e21be35a391ef",
+    "tests/test_xpm_egress_proxy.py": "85d6d9bcf345c6cd639fab3df97f31d3bc51001a9fc2f2d7e4ab010ff6ae652d"
+  },
+  "sps_1_10_compatibility_proven": false,
+  "transport": {
+    "all_external_queries_completed": false,
+    "authenticated_orcid_ownership_proven": false,
+    "catalogue_https_responses": 3,
+    "catalogue_last_modified": [
+      "Wed, 03 Sep 2025 04:21:19 GMT"
+    ],
+    "denied_http_authorities": {
+      "wayta": 10
+    },
+    "tls_outcomes": {
+      "ConnectionResetError": 1,
+      "closed": 24
+    },
+    "tls_tunnels_by_authority": {
+      "api.crossref.org": 12,
+      "orcid.org": 13
+    }
+  },
+  "version": "vh1-xpm-online-public-1.0"
+}

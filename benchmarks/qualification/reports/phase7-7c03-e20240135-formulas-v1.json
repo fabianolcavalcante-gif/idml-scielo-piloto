@@ -1,0 +1,115 @@
+{
+  "actual": {
+    "candidate_xml_sha256": "cd98d20cd2d38755443fc28cf80665dab7553d6a9b7094607a20dcd082c7e871",
+    "catalog_id": "6089705c07ec4144164b10ad3f6beefe7da8b269b80f77c70edb3e636a00e986",
+    "dataset_sha256": "493074f8e5999745ba5029340107cbcee5e8b4e2221d7a8101a4013803635798",
+    "deterministic": true,
+    "formula_content": {
+      "actual": 43,
+      "altered": 24,
+      "displacements": 0,
+      "duplications": 0,
+      "exact": 1,
+      "expected": 43,
+      "f1": 0.44186,
+      "inventions": 0,
+      "normalized": 18,
+      "omissions": 0,
+      "passed": true,
+      "precision": 0.44186,
+      "recall": 0.44186,
+      "text_fidelity": 0.89668
+    },
+    "formula_xml": {
+      "display": 11,
+      "graphic_formulas": 0,
+      "inline": 32,
+      "total": 43
+    },
+    "formulas": {
+      "actual": 43,
+      "altered": 0,
+      "displacements": 0,
+      "duplications": 0,
+      "exact": 43,
+      "expected": 43,
+      "f1": 1.0,
+      "inventions": 0,
+      "normalized": 0,
+      "omissions": 0,
+      "passed": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "text_fidelity": 1.0
+    },
+    "general_candidate_blocked": true,
+    "qualification": {
+      "adjudicator_accepts": 43,
+      "catalog_id": "6089705c07ec4144164b10ad3f6beefe7da8b269b80f77c70edb3e636a00e986",
+      "controlled_abstentions": 0,
+      "critic_passes": 86,
+      "dataset_sha256": "493074f8e5999745ba5029340107cbcee5e8b4e2221d7a8101a4013803635798",
+      "display_formulas": 11,
+      "formula_cases": 43,
+      "human_review_required": true,
+      "inline_formulas": 32,
+      "report_sha256": "45a5238690801de91b72189019251aeb1eb451da8f024a0ed505e3ea8424f9c5",
+      "restricted_content_emitted": false
+    },
+    "qualified_formula_alterations": 24,
+    "review": {
+      "pending_human_marker": 1,
+      "transcription_blockers": []
+    },
+    "role_counts": {
+      "approved_pdf_reference": 1,
+      "approved_xml_reference": 1,
+      "source_idml": 1
+    },
+    "semantic_blocking_findings_after_qualification": 33,
+    "semantic_blocking_findings_before_qualification": 57,
+    "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+    "validation": {
+      "issues": 1,
+      "valid": true
+    }
+  },
+  "approved": true,
+  "contract_mismatches": [],
+  "corpus_id": "esa-e20240135",
+  "formulas_approved": true,
+  "general_candidate_approved": false,
+  "metadata": {
+    "approved": true,
+    "contract_sha256": "38009b3b3e9e07aa9ead83b2743ea83d84ed1907e8b1b16df82577651912ba59",
+    "manifest_sha256": "080c9de54d5b91a8d45f5aba87a544eb3de5d178f7589d6047b5521aa9601c18",
+    "mismatches": [],
+    "qualification": {
+      "adjudicator_accepts": 43,
+      "catalog_id": "6089705c07ec4144164b10ad3f6beefe7da8b269b80f77c70edb3e636a00e986",
+      "controlled_abstentions": 0,
+      "critic_passes": 86,
+      "dataset_sha256": "493074f8e5999745ba5029340107cbcee5e8b4e2221d7a8101a4013803635798",
+      "display_formulas": 11,
+      "formula_cases": 43,
+      "human_review_required": true,
+      "inline_formulas": 32,
+      "report_sha256": "45a5238690801de91b72189019251aeb1eb451da8f024a0ed505e3ea8424f9c5",
+      "restricted_content_emitted": false
+    },
+    "role_counts": {
+      "approved_pdf_reference": 1,
+      "approved_xml_reference": 1,
+      "source_idml": 1
+    }
+  },
+  "network_required_by_gate": false,
+  "physical_verification": {
+    "artifacts": 12,
+    "valid": true,
+    "verified": 12
+  },
+  "restricted_content_emitted": false,
+  "stage": "7C-03",
+  "version": "phase7-7c03-gate-1.0"
+}

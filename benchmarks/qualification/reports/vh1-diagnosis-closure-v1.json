@@ -1,0 +1,82 @@
+{
+  "active": "vh09-heads-20261021-v1",
+  "active_runtime_changed": false,
+  "ai_invoked": false,
+  "candidate": "vh1-diagnosis-20261027-v1",
+  "checks": {
+    "diff_whitespace": true,
+    "mypy_modules": 133,
+    "ruff_global": true
+  },
+  "date": "2026-10-27",
+  "external_postgresql_rerun": false,
+  "formal_xml_approved": false,
+  "full_suite_rerun": false,
+  "homologation_ready": false,
+  "javascript": {
+    "checks": 6,
+    "passed": true,
+    "real_browser": false
+  },
+  "limitation": "Stored-result presentation only; no per-occurrence legacy waiver or refreshed evidence.",
+  "linux": {
+    "errors": 0,
+    "failures": 0,
+    "file": "tmp/vh1-diagnosis-linux.xml",
+    "seconds": 19.328,
+    "sha256": "678ef09727f1bf12302cd67c8d3c5c67b8b443be899a0ea58b673f4e18afef58",
+    "skipped": 0,
+    "tests": 139
+  },
+  "local_focused": {
+    "errors": 0,
+    "failures": 0,
+    "file": "tmp/vh1-diagnosis-focused.xml",
+    "seconds": 12.024,
+    "sha256": "35d8d0782843c38529d108e3afd72fef1e18cab2d2dc8504ae4089d91f16f5ba",
+    "skipped": 0,
+    "tests": 127
+  },
+  "local_linux_sets_overlap": true,
+  "local_web": {
+    "errors": 0,
+    "failures": 0,
+    "file": "tmp/vh1-diagnosis-web-regression.xml",
+    "seconds": 4.674,
+    "sha256": "95e88e3296cdb1b8e74d5f5867aca3d194f0c32beefa125dc7cab2ccecacdb35",
+    "skipped": 0,
+    "tests": 12
+  },
+  "new_compatibility_exceptions": 0,
+  "new_global_coverage": false,
+  "new_online_xpm_execution": false,
+  "new_test_cases": 34,
+  "postcheck": {
+    "app_status": 200,
+    "gates": {
+      "ops.gate_phase7_v10": true,
+      "ops.gate_phase7_v11": true
+    },
+    "ready_status": 200,
+    "services": 25,
+    "services_unchanged": true,
+    "source_files_verified": 1184
+  },
+  "postcheck_sha256": "b5a13e2e050bdce4daf6c1e88cd58b471a91d689b8a201ab720667ef3c50ac44",
+  "source_archive_files": 1184,
+  "source_archive_sha256": "331816364134d70d659adbd6a7777c5f470ae83593e0e1407e89d947d8cadd66",
+  "source_sha256": {
+    "benchmarks/qualification/reports/v10-operational-workflow-vh1-diagnosis-v2.json": "86ba13da211f675187d754733363960a5c1c38de4245d5188eac97f4f4d87dc5",
+    "benchmarks/qualification/reports/v11-robustness-mutation-vh1-diagnosis-v2.json": "a88563667ac2dfadd9e7e143e61f43038f34cd3bbfb8e2a13fd51ae204041e02",
+    "ops/gate_phase7_v10.py": "a4eca874fdf6157d74ede3a512dbbbfb19fd145a7e1c1ffacddda9ed51bb6196",
+    "ops/gate_phase7_v11.py": "54396241cf378fc9e8da9d082eba773ef07175b56f6e28187fdff5189e38a427",
+    "ops/requalify_vh1_diagnosis.py": "0d9f40af31a96dee157bed598915f72efa5805e025029ec08bf6b4374d5a1bf2",
+    "src/idml_foundation/routers/jobs.py": "d48b260a897b40eb4a9fcab7ff45a2ac4813f7af48804206e8834f8cc0b43d65",
+    "src/idml_foundation/routers/ui.py": "a6392a468cdbf648a96da48f442d44e97271e88672e7e8fa4c3df00cec0da5b9",
+    "src/idml_foundation/services/validation_diagnosis.py": "bcf251307feccfa76e95ad370f891308318432b8dcd3b674a3e063779a34b34d",
+    "tests/test_validation_diagnosis.py": "5487c0ed11ce73cdc2dece4df3bfc57324d53e5a006d4434370647802da4baca",
+    "tests/ui_validation_diagnosis.cjs": "2e31f673a945ee09ff29befebb225542d19588e19da701cba1b0521d0860cb80"
+  },
+  "unique_local_tests": 139,
+  "version": "vh1-diagnosis-closure-1.0"
+}

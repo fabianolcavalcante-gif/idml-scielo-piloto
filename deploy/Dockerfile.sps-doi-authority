@@ -1,0 +1,4 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+COPY doi_snapshot.py doi_authority_runtime.py doi_package_binding.py doi_model_compat.py /validator/
+COPY spsvalidator_doi_validate.py /validator/spsvalidator_validate.py

@@ -1,0 +1,11 @@
+{
+  "approved_xml_sha256": "739b4c3247a06d6d5253ad2805fb830d09692cb306cbb5c785ad99707e539de9",
+  "article_identifiers": 1,
+  "catalog_id": "a0e2fdee1cb37d446c6e84e16b51afe4315951dd4f0e0f63a2b5ecf1808a36f4",
+  "corpus_id": "esa-e20240086",
+  "editorial_orcids": 2,
+  "human_review_required": true,
+  "restricted_content_emitted": false,
+  "source_idml_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+  "version": "editorial-enrichment-qualification-1.0"
+}

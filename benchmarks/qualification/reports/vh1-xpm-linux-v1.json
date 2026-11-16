@@ -1,0 +1,142 @@
+{
+  "all_required_validations_completed": false,
+  "archive_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+  "cases": [
+    {
+      "article": "esa-e20240086",
+      "child_max_rss_kib": 57292,
+      "counts": {
+        "blocking_errors": 3,
+        "errors": 4,
+        "fatal_errors": 4,
+        "warnings": 6
+      },
+      "elapsed_seconds": 2.966,
+      "execution_completed": true,
+      "generated_xml_differs": true,
+      "input_identity_sha256": "ba685142396801ed3901d8c63e3ad5da0c81af3b753c6a16b27bb63457a66c6c",
+      "input_unchanged": true,
+      "mutation": "baseline",
+      "parser_errors": 100,
+      "report_sha256": "20ac621f3fb7737b9a3a7888dad085e69ca6702cc56f218331b559bc7cd7031b",
+      "validation_approved": false,
+      "vendor_files_unchanged": true,
+      "xpm_version": "4.0.096"
+    },
+    {
+      "article": "esa-e20240135",
+      "child_max_rss_kib": 59048,
+      "counts": {
+        "blocking_errors": 3,
+        "errors": 4,
+        "fatal_errors": 4,
+        "warnings": 8
+      },
+      "elapsed_seconds": 3.092,
+      "execution_completed": true,
+      "generated_xml_differs": true,
+      "input_identity_sha256": "2c4aad2df2b1b61316d6bf2f44795c0b4c1acbb7088fb6fd822020a974f9583f",
+      "input_unchanged": true,
+      "mutation": "baseline",
+      "parser_errors": 100,
+      "report_sha256": "099c862567e1ca8824dab38e5f5a3ab185c57f873f5b655dd80fa401ef70fb83",
+      "validation_approved": false,
+      "vendor_files_unchanged": true,
+      "xpm_version": "4.0.096"
+    },
+    {
+      "article": "esa-e20240086",
+      "child_max_rss_kib": 56732,
+      "counts": {
+        "blocking_errors": 4,
+        "errors": 4,
+        "fatal_errors": 4,
+        "warnings": 6
+      },
+      "elapsed_seconds": 2.801,
+      "execution_completed": true,
+      "generated_xml_differs": true,
+      "input_identity_sha256": "8af415d81b27d04759e67d9e15bf0bdac116124fac183d8cbb2ef80e3b3a2c38",
+      "input_unchanged": true,
+      "mutation": "missing_journal_title",
+      "negative_control_detected": true,
+      "parser_errors": 100,
+      "report_sha256": "26dbd19155b9f947350693409973c3398cac99b7e239adeab5a90c2dfeaad915",
+      "validation_approved": false,
+      "vendor_files_unchanged": true,
+      "xpm_version": "4.0.096"
+    },
+    {
+      "article": "esa-e20240086",
+      "child_max_rss_kib": 59988,
+      "counts": {
+        "blocking_errors": 4,
+        "errors": 4,
+        "fatal_errors": 4,
+        "warnings": 6
+      },
+      "elapsed_seconds": 2.975,
+      "execution_completed": true,
+      "generated_xml_differs": true,
+      "input_identity_sha256": "6c744b5d9d3cbaa152304ff7a3733979945f99d8b22c6c807d479c9b6c26282a",
+      "input_unchanged": true,
+      "mutation": "missing_graphic",
+      "negative_control_detected": true,
+      "parser_errors": 100,
+      "report_sha256": "81ac69ea29489c45ec71582937a3dbff98e08b027872031f02e3caa08df8b59b",
+      "validation_approved": false,
+      "vendor_files_unchanged": true,
+      "xpm_version": "4.0.096"
+    },
+    {
+      "article": "esa-e20240086",
+      "child_max_rss_kib": 55120,
+      "counts": {
+        "blocking_errors": 4,
+        "errors": 1,
+        "fatal_errors": 3,
+        "warnings": 0
+      },
+      "elapsed_seconds": 2.387,
+      "execution_completed": true,
+      "generated_xml_differs": true,
+      "input_identity_sha256": "c6749fc557da839c6ec859d8c1270da8eb95d4ed2ef41fc36061d3bcf0edb0b1",
+      "input_unchanged": true,
+      "mutation": "malformed_xml",
+      "negative_control_detected": true,
+      "parser_errors": 5,
+      "report_sha256": "f8a8005e4975e414d3112a910a2398c00c91db0d5698d88f3e4f1ee7d354bdd2",
+      "validation_approved": false,
+      "vendor_files_unchanged": true,
+      "xpm_version": "4.0.096"
+    }
+  ],
+  "external_queries_completed": false,
+  "image": "sha256:dfcc38f04950f075f03a6f1d48ab654ec4fc3be32c600c62b25ee76f9da98116",
+  "negative_controls_detected": 3,
+  "network": "none",
+  "observed_service_count": 25,
+  "outstanding": [
+    "SPS_1_10_AND_JATS_1_3_COMPATIBILITY",
+    "EXTERNAL_QUERIES",
+    "SUPERVISED_WEB_WORKER_INTEGRATION",
+    "LEGACY_RUNTIME_HARDENING"
+  ],
+  "private_report_sha256": "de3f16eb0d74d45ccb7c3affdb34a4ea7e7373ed4e93efc6e8c090f515944df9",
+  "production_deployed": false,
+  "release_approved": false,
+  "run_id": "20261015T141256Z",
+  "same_vps_headless_execution_proven": true,
+  "services_unchanged": true,
+  "source_sha256": {
+    "deploy/Dockerfile.xpm-qualification": "649b2adb6fad33ad4f5641f18e3fef22a86d5250206caa0c01753847cbcf632f",
+    "ops/export_vh1_xpm_evidence.py": "c04c5d6057460344798a4d99a1c4fab6f98dae2f9c09873dd3b1a33e1575fde9",
+    "ops/qualify_vh1_xpm_linux.py": "512e22a01808671a98df01cfe9b665744c7167264bfc867ffc92879223ef2f0f",
+    "ops/run_xpm_qualification.py": "98ca377db6e984fe4bdd094c1018497e1c3158254926f6f9bd17ce0da300e76a",
+    "ops/summarize_vh1_xpm_linux.py": "04b1d7a3009734918dd7281eccd0a9de607b5e79683344b24475b43f8d9d286e",
+    "src/idml_foundation/release/xpm.py": "f242feb261473e84005a0e04465aeab0e50f03267356a9dfbe6f405a784dd19b",
+    "tests/test_vh1_xpm_linux.py": "18737cbbce3c5a8ed3ca96017c79d6acdcfe689d17839876d23adc9b5511d122"
+  },
+  "sps_1_10_compatibility_proven": false,
+  "version": "vh1-xpm-linux-feasibility-public-1.0"
+}

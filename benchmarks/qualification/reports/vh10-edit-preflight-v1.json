@@ -1,0 +1,172 @@
+{
+  "release": "vh10-edit-20261101-v2",
+  "date": "2026-11-01",
+  "scope": "Exact-revision editing preflight. Isolated tests only.",
+  "source": {
+    "release": "vh10-edit-20261101-v2",
+    "files": 1270,
+    "bytes": 2519731,
+    "sha256": "bf1bf588bb33acef1952da0720825c487c737fb5149f60a618c77a64e90079d3",
+    "private_inputs_included": false
+  },
+  "deployment": {
+    "release": "vh10-edit-20261101-v2",
+    "image": "idml-foundation:vh10-edit-20261101-v2",
+    "image_id": "sha256:5d32d16e4cddd8737b9916b547c89800bce4e99d837ac3dc0e8664ff1fad0e51",
+    "migration": "e2f314253647",
+    "schema_changed": false,
+    "runtime_files_verified": {
+      "idml-development-api-1": 346,
+      "idml-development-worker-1": 346
+    },
+    "backup": "/opt/idml-platform/backups/20261101T113309Z",
+    "restore_test": true,
+    "image_rollback_test": true,
+    "other_services_unchanged": true,
+    "existing_data_counts_unchanged": true,
+    "flags_disabled": true,
+    "smoke": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "homologation_ready": false,
+    "release_approved": false
+  },
+  "postcheck": {
+    "worker_decisions_read_only": true,
+    "active_article_decisions": 0,
+    "api_native_scan": "clamav_clean",
+    "socket_and_update_enabled": true,
+    "smoke": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "containers": 25,
+    "healthy_idml": 5,
+    "image_id": "sha256:5d32d16e4cddd8737b9916b547c89800bce4e99d837ac3dc0e8664ff1fad0e51",
+    "manifest_sha256": "68affbf12084ed140b1dc0504afeab6699b651989985cd23745f8def1c7e098b",
+    "brokers_reachable": true,
+    "scoped_sources_required": true,
+    "active_db_counts_unchanged": true,
+    "agents_enabled": false,
+    "homologation_ready": false
+  },
+  "qualification": {
+    "linux_tests": true,
+    "postgresql_native": true,
+    "migration": "e2f314253647",
+    "release_approved": false
+  },
+  "regressions": {
+    "local": 578,
+    "linux": 578,
+    "warnings_per_platform": 2,
+    "mypy_modules": 145
+  },
+  "linux_cases": {
+    "cases": [
+      {
+        "source_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+        "positive_fixture": false,
+        "state": "abstained",
+        "catalog_sha256": "70552ae0347672b995493138296367e6561138814dd7bcf2b6408b8160cd0ddb",
+        "bindings": 0,
+        "xml_input_sha256": "f0753f472b391058341a8979cfad4cc7c86fe4e8f15c9da5d94a1f250ab58f5f",
+        "candidate_xml_sha256": null,
+        "offline_valid": null,
+        "provider_calls": 0
+      },
+      {
+        "source_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+        "positive_fixture": false,
+        "state": "abstained",
+        "catalog_sha256": "6fb0b8282be59f38074b91d376978b26fc62ef07f3fe9aaff617827e5bcec769",
+        "bindings": 0,
+        "xml_input_sha256": "22c63e1b7b9008385ef3c54999b6279e8d11faaade0a897d1fdac72b5e887f3c",
+        "candidate_xml_sha256": null,
+        "offline_valid": null,
+        "provider_calls": 0
+      },
+      {
+        "source_sha256": "9aa22b23308fa9c4dff3daf5994bf4be882c45b6ff36a3ea4928ab3d0db98dab",
+        "positive_fixture": true,
+        "state": "staged",
+        "catalog_sha256": "e18db2ac51903392345712c2c163720ce4356e8a28db5272d856abd5f3b42db8",
+        "bindings": 1,
+        "xml_input_sha256": "75ac4b948afc92650f1dbe1c5bf585f2bc1f7400fbea582628f0a673412fa6a1",
+        "candidate_xml_sha256": "49eddbd15d83edacb3c4f478677fb791beca5cf431802631c4ff0b04ba3ba69f",
+        "offline_valid": true,
+        "provider_calls": 0
+      }
+    ],
+    "active_head_preserved": true,
+    "replay_idempotent": true,
+    "revocation_enforced": true,
+    "new_review_requires_new_decision": true
+  },
+  "local_cases": {
+    "cases": [
+      {
+        "source_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+        "positive_fixture": false,
+        "state": "abstained",
+        "catalog_sha256": "70552ae0347672b995493138296367e6561138814dd7bcf2b6408b8160cd0ddb",
+        "bindings": 0,
+        "xml_input_sha256": "f0753f472b391058341a8979cfad4cc7c86fe4e8f15c9da5d94a1f250ab58f5f",
+        "candidate_xml_sha256": null,
+        "offline_valid": null,
+        "provider_calls": 0
+      },
+      {
+        "source_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+        "positive_fixture": false,
+        "state": "abstained",
+        "catalog_sha256": "6fb0b8282be59f38074b91d376978b26fc62ef07f3fe9aaff617827e5bcec769",
+        "bindings": 0,
+        "xml_input_sha256": "22c63e1b7b9008385ef3c54999b6279e8d11faaade0a897d1fdac72b5e887f3c",
+        "candidate_xml_sha256": null,
+        "offline_valid": null,
+        "provider_calls": 0
+      },
+      {
+        "source_sha256": "b6b69a5866ca83d57c6b32ce60290d4e09a46e80dbf5ce6da783a72dc6e7f77e",
+        "positive_fixture": true,
+        "state": "staged",
+        "catalog_sha256": "753bd2b5908784c6333a7cb2055d0c11e83b253f60d613d22c0198e2c74dcd88",
+        "bindings": 1,
+        "xml_input_sha256": "75ac4b948afc92650f1dbe1c5bf585f2bc1f7400fbea582628f0a673412fa6a1",
+        "candidate_xml_sha256": "49eddbd15d83edacb3c4f478677fb791beca5cf431802631c4ff0b04ba3ba69f",
+        "offline_valid": true,
+        "provider_calls": 0
+      }
+    ],
+    "active_head_preserved": true,
+    "replay_idempotent": true,
+    "revocation_enforced": true,
+    "new_review_requires_new_decision": true
+  },
+  "local_scanner": "test double",
+  "linux_scanner": "real ClamAV, private socket",
+  "negative_controls": [
+    "missing decision",
+    "wrong organization",
+    "wrong article",
+    "wrong snapshot",
+    "wrong revision",
+    "expired decision",
+    "wrong source hash",
+    "wrong canonical hash",
+    "wrong catalog hash",
+    "revocation",
+    "legacy v1 batch decision",
+    "foreign resource denied via HTTP job",
+    "agent controls rejected in job payload"
+  ],
+  "positive_control": "A synthetic IDML provided the exact missing affiliation. XML XPath and offline validation checked.",
+  "formal_validators_invoked": false,
+  "provider_calls": 0,
+  "production_article_edits": 0,
+  "human_homologation_ready": false
+}

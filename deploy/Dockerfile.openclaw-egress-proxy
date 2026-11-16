@@ -1,0 +1,11 @@
+FROM alpine:3.21@sha256:48b0309ca019d89d40f670aa1bc06e426dc0931948452e8491e3d65087abc07d
+
+RUN apk add --no-cache squid=6.12-r0
+
+COPY config/squid-openai.conf /etc/squid/squid.conf
+
+USER 31:31
+
+EXPOSE 3128
+
+ENTRYPOINT ["/usr/sbin/squid", "-N", "-f", "/etc/squid/squid.conf"]

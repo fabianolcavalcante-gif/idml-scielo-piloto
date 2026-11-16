@@ -1,0 +1,143 @@
+{
+  "version": "vh09-working-head-vps-qualification-1.0",
+  "implementation_date": "2026-10-21",
+  "deployment_date": "2026-10-22",
+  "recorded_date": "2026-10-22",
+  "scope": "internal-working-head-and-conservative-draft-restore",
+  "source_archive": {
+    "release": "vh09-heads-20261021-v1",
+    "files": 1123,
+    "sha256": "0bde59491871395b70431f2eb9b12d6b40a0f6da0ce02b03d703a1f65bcd8898",
+    "manifest": "/opt/idml-platform/releases/vh09-heads-20261021-v1/release-source-manifest.json",
+    "private_inputs_included": false,
+    "runtime_and_tests_match_local": true,
+    "closing_documents_updated_separately": true
+  },
+  "tests": {
+    "full": {
+      "passed": 2654,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "warnings": 6,
+      "duration_seconds": 1185.251
+    },
+    "focused": {
+      "passed": 180,
+      "duration_seconds": 45.065
+    },
+    "linux": {
+      "passed": 223,
+      "warnings": 1,
+      "duration_seconds": 40.11
+    },
+    "policy_requalification": {
+      "passed": 102,
+      "measured_module_count": 2,
+      "line_and_branch_percent": 100,
+      "contract_recheck_passed": 11,
+      "proof": "benchmarks/qualification/reports/vh08-autocorrection-policy-v2.json"
+    },
+    "new_tests": 23,
+    "counts_overlap": true,
+    "previous_incomplete_full_run_not_counted": true
+  },
+  "coverage": {
+    "scope": "idml_foundation",
+    "covered_lines": 13087,
+    "statements": 14534,
+    "percent": 90.04403467730837,
+    "branch_measurement": false
+  },
+  "postgresql": {
+    "passed": true,
+    "migration": "c0e1f2031425",
+    "isolated": true,
+    "concurrent_sessions": 2,
+    "same_request_single_restore": true,
+    "different_requests_one_conflict": true,
+    "human_claim_lock_timeout_verified": true,
+    "human_claim_refused_after_commit": true,
+    "outer_rollback": true,
+    "sql_guards": 2,
+    "active_database_used_as_fixture": false
+  },
+  "deployment": {
+    "release": "vh09-heads-20261021-v1",
+    "image": "idml-foundation:vh09-heads-20261021-v1",
+    "migration": "c0e1f2031425",
+    "runtime_files_verified": 324,
+    "backup": "/opt/idml-platform/backups/20261021T133104Z",
+    "restore_test": true,
+    "image_rollback_test": true,
+    "other_services_unchanged": true,
+    "existing_data_counts_unchanged": true,
+    "flags_disabled": true,
+    "homologation_ready": false,
+    "release_approved": false,
+    "image_id": "sha256:e62c59509fdf366c7d95b0d9b49c53ecd0320f576b1822b887cbe2296d5aeec5",
+    "backup_at_preparation": "/opt/idml-platform/backups/20261021T133104Z",
+    "additional_pre_activation_backup": "/opt/idml-platform/backups/20261022T120540Z",
+    "additional_restore_test": true,
+    "runtime_sources_not_writable_by_app": true,
+    "five_idml_services_healthy": true,
+    "environment_tag_matches": true,
+    "canonical_head_events_observed_after_activation": 0,
+    "smoke": {
+      "/health/ready": {
+        "status": 200,
+        "nosniff": true,
+        "csp": true
+      },
+      "/app": {
+        "status": 200,
+        "nosniff": true,
+        "csp": true
+      },
+      "/v1/resources": {
+        "status": 401,
+        "nosniff": true,
+        "csp": true
+      }
+    },
+    "new_public_port_or_url": false
+  },
+  "evidence_sha256": {
+    "tmp/vh09-head-final-tests-20261022.xml": "520590ec398f6cf869f63031a77aac627c8cc6dbb08171b66a2203f59c5196eb",
+    "tmp/vh09-head-final-coverage-20261022.json": "517b56a2c8a7734c1b821ab2096ea3d8b82bbdfbee8a24174b2edab97a714616",
+    "tmp/vh09-head-integration-tests.xml": "eb108dff8b406511c5d958774b1abd3125bfe029b0c8d3b2eaf7182f2d003e24",
+    "tmp/vh09-head-policy-recheck.xml": "9b7d93155bbf6f28ba48b3964a2495ae6aff7048d28bd8acb504084ee24f01a7",
+    "tmp/vh09-head-vps-qualification.json": "227459c13a20e6286e2e7329fa4a06e8da72d4b462f0b7b63a80c5a14ae1bafd",
+    "tmp/vh09-head-vps-deployment.json": "392f7a2842e62eafaf57567ecc85aed58be5b105262fe42b147dca47c1ce86f5",
+    "tmp/vh09-head-vps-postgres-tests.log": "fd3aa59d5b22646da0f1a522c282545fb9b4dd6e61f16c113c2f15eb4d4d7d77",
+    "tmp/vh09-head-vps-linux-tests.log": "19a655197b0da2085ed6cec2fc47f69ef9547e75369915289b9c7167ed2dc82b",
+    "tmp/vh09-head-vps-preactivation-20261022.json": "e27188c9ad5943bc1dc717b8ab7801c710805770c1139727b5ecd66b9134a179",
+    "tmp/vh09-head-vps-postcheck-20261022.json": "535be98f543049947ca485b05dc2b19e3b14e88de4cdf83af109f06f5787b158",
+    "benchmarks/qualification/reports/vh08-autocorrection-policy-v2.json": "caa3a138d4f495f468226b882065ea88fae2b16c0759c7ed5d1470f9796b4319"
+  },
+  "checks": {
+    "ruff_global": true,
+    "mypy_source_files": 126,
+    "increment_formatted_files": 18,
+    "vh08_policy_proof": true,
+    "global_ci_approved": false
+  },
+  "limitations": [
+    "Frozen source archive proof, not blanket approval of a later working tree",
+    "Restore is internal and conservative: no new HTTP endpoint, worker loop or agent tool",
+    "Formal promotion and reconstruction/revalidation of a restored package are not implemented",
+    "Human decisions or claimed review items prevent automatic draft restore",
+    "External validation tests use synthetic executors; no new real-article/XPM run",
+    "XPM is not connected to package assessment; mandatory validation remains incomplete",
+    "No live AI cycle or real-article head restoration was executed",
+    "Image rollback is only qualified with zero head events; it is not article restoration",
+    "Global CI still needs the existing VH-17 source-proof, formatting and runner-time follow-up",
+    "Not final RC, SciELO approval, expert homologation or production activation"
+  ],
+  "full_vh09_complete": false,
+  "live_ai_called": false,
+  "vps_changed": true,
+  "active_snapshot_changed": false,
+  "homologation_ready": false,
+  "release_approved": false
+}

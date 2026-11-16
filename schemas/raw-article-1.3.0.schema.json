@@ -1,0 +1,1155 @@
+{
+  "$defs": {
+    "AnchoredPlacement": {
+      "enum": [
+        "block",
+        "inline",
+        "unknown"
+      ],
+      "title": "AnchoredPlacement",
+      "type": "string"
+    },
+    "BoundingBox": {
+      "additionalProperties": false,
+      "properties": {
+        "height": {
+          "minimum": 0,
+          "title": "Height",
+          "type": "number"
+        },
+        "width": {
+          "minimum": 0,
+          "title": "Width",
+          "type": "number"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "title": "BoundingBox",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "content_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Content Sha256"
+        },
+        "description": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "locator": {
+          "$ref": "#/$defs/EvidenceLocator"
+        },
+        "source_kind": {
+          "$ref": "#/$defs/SourceKind"
+        }
+      },
+      "required": [
+        "id",
+        "source_kind",
+        "locator",
+        "description"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "EvidenceLocator": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Artifact Sha256",
+          "type": "string"
+        },
+        "box": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BoundingBox"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "element_id": {
+          "anyOf": [
+            {
+              "maxLength": 200,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Element Id"
+        },
+        "end_offset": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End Offset"
+        },
+        "logical_path": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Logical Path",
+          "type": "string"
+        },
+        "page_index": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page Index"
+        },
+        "start_offset": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start Offset"
+        }
+      },
+      "required": [
+        "artifact_sha256",
+        "logical_path"
+      ],
+      "title": "EvidenceLocator",
+      "type": "object"
+    },
+    "RawAnchoredObject": {
+      "additionalProperties": false,
+      "properties": {
+        "anchor_run_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Anchor Run Id"
+        },
+        "asset_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Asset Ids",
+          "type": "array"
+        },
+        "box": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BoundingBox"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/RawObjectKind"
+        },
+        "label": {
+          "anyOf": [
+            {
+              "maxLength": 80,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Label"
+        },
+        "page_index": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page Index"
+        },
+        "placement": {
+          "$ref": "#/$defs/AnchoredPlacement",
+          "default": "unknown"
+        },
+        "source_self_id": {
+          "title": "Source Self Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source_self_id",
+        "kind"
+      ],
+      "title": "RawAnchoredObject",
+      "type": "object"
+    },
+    "RawAsset": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "external": {
+          "default": false,
+          "title": "External",
+          "type": "boolean"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "logical_path": {
+          "title": "Logical Path",
+          "type": "string"
+        },
+        "media_type": {
+          "title": "Media Type",
+          "type": "string"
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sha256"
+        },
+        "size_bytes": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Size Bytes"
+        }
+      },
+      "required": [
+        "id",
+        "logical_path",
+        "media_type"
+      ],
+      "title": "RawAsset",
+      "type": "object"
+    },
+    "RawLink": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "relationship": {
+          "title": "Relationship",
+          "type": "string"
+        },
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "target": {
+          "title": "Target",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source_id",
+        "target",
+        "relationship"
+      ],
+      "title": "RawLink",
+      "type": "object"
+    },
+    "RawNote": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "source_self_id": {
+          "title": "Source Self Id",
+          "type": "string"
+        },
+        "text_run_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Text Run Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "source_self_id",
+        "text_run_ids"
+      ],
+      "title": "RawNote",
+      "type": "object"
+    },
+    "RawObjectKind": {
+      "enum": [
+        "figure",
+        "table",
+        "formula",
+        "media",
+        "unknown"
+      ],
+      "title": "RawObjectKind",
+      "type": "string"
+    },
+    "RawParagraph": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "paragraph_style_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Paragraph Style Id"
+        },
+        "position": {
+          "minimum": 0,
+          "title": "Position",
+          "type": "integer"
+        },
+        "table_cell_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Table Cell Id"
+        },
+        "text_run_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Text Run Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "position"
+      ],
+      "title": "RawParagraph",
+      "type": "object"
+    },
+    "RawSpread": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "frame_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Frame Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "page_indices": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Page Indices",
+          "type": "array"
+        },
+        "source_self_id": {
+          "title": "Source Self Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source_self_id",
+        "page_indices"
+      ],
+      "title": "RawSpread",
+      "type": "object"
+    },
+    "RawStory": {
+      "additionalProperties": false,
+      "properties": {
+        "anchored_object_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Anchored Object Ids",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "note_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Note Ids",
+          "type": "array"
+        },
+        "paragraphs": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/RawParagraph"
+          },
+          "title": "Paragraphs",
+          "type": "array"
+        },
+        "runs": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/RawTextRun"
+          },
+          "title": "Runs",
+          "type": "array"
+        },
+        "source_self_id": {
+          "title": "Source Self Id",
+          "type": "string"
+        },
+        "table_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Table Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "source_self_id"
+      ],
+      "title": "RawStory",
+      "type": "object"
+    },
+    "RawStyle": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/StyleKind"
+        },
+        "normalized_name": {
+          "title": "Normalized Name",
+          "type": "string"
+        },
+        "parent_style_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Style Id"
+        },
+        "properties": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Properties",
+          "type": "object"
+        },
+        "source_name": {
+          "title": "Source Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "source_name",
+        "normalized_name",
+        "kind"
+      ],
+      "title": "RawStyle",
+      "type": "object"
+    },
+    "RawTable": {
+      "additionalProperties": false,
+      "properties": {
+        "cells": {
+          "items": {
+            "$ref": "#/$defs/RawTableCell"
+          },
+          "title": "Cells",
+          "type": "array"
+        },
+        "column_count": {
+          "minimum": 1,
+          "title": "Column Count",
+          "type": "integer"
+        },
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "row_count": {
+          "minimum": 1,
+          "title": "Row Count",
+          "type": "integer"
+        },
+        "source_self_id": {
+          "title": "Source Self Id",
+          "type": "string"
+        },
+        "style_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Style Id"
+        }
+      },
+      "required": [
+        "id",
+        "source_self_id",
+        "row_count",
+        "column_count",
+        "cells"
+      ],
+      "title": "RawTable",
+      "type": "object"
+    },
+    "RawTableCell": {
+      "additionalProperties": false,
+      "properties": {
+        "column": {
+          "minimum": 0,
+          "title": "Column",
+          "type": "integer"
+        },
+        "column_span": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Column Span",
+          "type": "integer"
+        },
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "row": {
+          "minimum": 0,
+          "title": "Row",
+          "type": "integer"
+        },
+        "row_span": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Row Span",
+          "type": "integer"
+        },
+        "text_run_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Text Run Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "row",
+        "column"
+      ],
+      "title": "RawTableCell",
+      "type": "object"
+    },
+    "RawTextFrame": {
+      "additionalProperties": false,
+      "properties": {
+        "box": {
+          "$ref": "#/$defs/BoundingBox"
+        },
+        "column_index": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Column Index"
+        },
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "next_frame_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Next Frame Id"
+        },
+        "page_index": {
+          "minimum": 0,
+          "title": "Page Index",
+          "type": "integer"
+        },
+        "parent_story_id": {
+          "title": "Parent Story Id",
+          "type": "string"
+        },
+        "previous_frame_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Previous Frame Id"
+        },
+        "source_self_id": {
+          "title": "Source Self Id",
+          "type": "string"
+        },
+        "transform": {
+          "maxItems": 6,
+          "minItems": 6,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Transform",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "source_self_id",
+        "parent_story_id",
+        "page_index",
+        "box",
+        "transform"
+      ],
+      "title": "RawTextFrame",
+      "type": "object"
+    },
+    "RawTextRun": {
+      "additionalProperties": false,
+      "properties": {
+        "character_style_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Character Style Id"
+        },
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "paragraph_style_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Paragraph Style Id"
+        },
+        "position": {
+          "minimum": 0,
+          "title": "Position",
+          "type": "integer"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "position"
+      ],
+      "title": "RawTextRun",
+      "type": "object"
+    },
+    "ReadingOrderIssue": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "details": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Details",
+          "type": "object"
+        },
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "frame_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Frame Id"
+        },
+        "story_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Story Id"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "title": "ReadingOrderIssue",
+      "type": "object"
+    },
+    "SourceKind": {
+      "enum": [
+        "idml",
+        "pdf",
+        "approved_xml",
+        "asset",
+        "human",
+        "system"
+      ],
+      "title": "SourceKind",
+      "type": "string"
+    },
+    "StyleKind": {
+      "enum": [
+        "paragraph",
+        "character",
+        "table",
+        "cell"
+      ],
+      "title": "StyleKind",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "adobe_dom_version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Adobe Dom Version"
+    },
+    "anchored_objects": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/RawAnchoredObject"
+      },
+      "title": "Anchored Objects",
+      "type": "array"
+    },
+    "article_id": {
+      "title": "Article Id",
+      "type": "string"
+    },
+    "assets": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/RawAsset"
+      },
+      "title": "Assets",
+      "type": "array"
+    },
+    "document_self_id": {
+      "title": "Document Self Id",
+      "type": "string"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/Evidence"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "frames": {
+      "items": {
+        "$ref": "#/$defs/RawTextFrame"
+      },
+      "title": "Frames",
+      "type": "array"
+    },
+    "links": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/RawLink"
+      },
+      "title": "Links",
+      "type": "array"
+    },
+    "notes": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/RawNote"
+      },
+      "title": "Notes",
+      "type": "array"
+    },
+    "reading_order": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Reading Order",
+      "type": "array"
+    },
+    "reading_order_issues": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/ReadingOrderIssue"
+      },
+      "title": "Reading Order Issues",
+      "type": "array"
+    },
+    "schema_version": {
+      "default": "1.3.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "source_artifact_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Source Artifact Sha256",
+      "type": "string"
+    },
+    "spreads": {
+      "items": {
+        "$ref": "#/$defs/RawSpread"
+      },
+      "title": "Spreads",
+      "type": "array"
+    },
+    "stories": {
+      "items": {
+        "$ref": "#/$defs/RawStory"
+      },
+      "title": "Stories",
+      "type": "array"
+    },
+    "styles": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/RawStyle"
+      },
+      "title": "Styles",
+      "type": "array"
+    },
+    "tables": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/RawTable"
+      },
+      "title": "Tables",
+      "type": "array"
+    }
+  },
+  "required": [
+    "article_id",
+    "source_artifact_sha256",
+    "document_self_id",
+    "stories",
+    "frames",
+    "spreads",
+    "evidence"
+  ],
+  "title": "RawArticle",
+  "type": "object"
+}

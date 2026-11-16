@@ -1,0 +1,11 @@
+{
+  "catalog_id": "a805eeb61ccc5cb44f1fb0f80d31bf4e683f89bb9fcac0aa126ae55b46262163",
+  "corpus_id": "esa-e20240135",
+  "crossref_response_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+  "formal_reference_sha256": "356936b42a1c30f0b3317a8520b04f730fa72c65edca41f3a15bb89c581b9d2c",
+  "human_review_required": true,
+  "publication_fields": 3,
+  "restricted_content_emitted": false,
+  "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+  "version": "formal-metadata-authority-qualification-1.0"
+}

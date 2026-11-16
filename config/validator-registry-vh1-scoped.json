@@ -1,0 +1,94 @@
+{
+  "profile_id": "sps-1.10/jats-1.3",
+  "registry_version": "1.0.0",
+  "validators": [
+    {
+      "adapter_contract": "1.1.0",
+      "channel": "active",
+      "command": [
+        "python",
+        "/validator/packtools_validate.py",
+        "{candidate}"
+      ],
+      "dockerfile": "deploy/Dockerfile.validator-scoped-authority",
+      "environment": "linux-container/read-only/no-network/non-root",
+      "image_id": "sha256:8b10e0d37580ed5c018e86049281010968eac05ee07e4cbc640cc9f2358aa266",
+      "input_suffix": ".xml",
+      "max_output_bytes": 8388608,
+      "name": "packtools",
+      "profile_id": "sps-1.10/jats-1.3",
+      "source_revision": "ef0e6f874ea7eb26cfc406c888b3c95d405d2613",
+      "source_url": "https://github.com/scieloorg/packtools",
+      "timeout_seconds": 300,
+      "version": "4.17.2+ef0e6f874ea7"
+    },
+    {
+      "adapter_contract": "1.1.0",
+      "channel": "rollback",
+      "command": [
+        "python",
+        "/validator/packtools_validate.py",
+        "{candidate}"
+      ],
+      "dockerfile": "deploy/Dockerfile.packtools",
+      "environment": "linux-container/read-only/no-network/non-root",
+      "image_id": "sha256:8c7e3a41c1f1e4b9fac6d20f2c74419fbcb3fc19acd820a2a8d0deb3f3174e2b",
+      "input_suffix": ".xml",
+      "max_output_bytes": 8388608,
+      "name": "packtools",
+      "profile_id": "sps-1.10/jats-1.3",
+      "source_revision": "fe1ada8cd7cc638c8eab7ab1651f3b4f891d08e7",
+      "source_url": "https://github.com/scieloorg/packtools",
+      "timeout_seconds": 300,
+      "version": "4.16.10+fe1ada8cd7cc"
+    },
+    {
+      "adapter_contract": "1.1.0",
+      "channel": "active",
+      "command": [
+        "python",
+        "/validator/spsvalidator_validate.py",
+        "{candidate}"
+      ],
+      "dockerfile": "deploy/Dockerfile.validator-scoped-authority",
+      "environment": "linux-container/read-only/no-network/non-root",
+      "image_id": "sha256:3832b370222634f1eb9ddbd8aa9aa74e31acf2ee4e2cfba398eb72ff3d918ff7",
+      "input_suffix": ".zip",
+      "max_output_bytes": 16777216,
+      "name": "spsvalidator",
+      "profile_id": "sps-1.10/jats-1.3",
+      "source_revision": "d1aa774d4e335d6559c24c2c728471b8fd2e6e42",
+      "source_url": "https://github.com/scieloorg/spsvalidator",
+      "timeout_seconds": 600,
+      "version": "0.3.0+d1aa774d4e33"
+    },
+    {
+      "adapter_contract": "1.1.0",
+      "channel": "rollback",
+      "command": [
+        "python",
+        "/validator/spsvalidator_validate.py",
+        "{candidate}"
+      ],
+      "dockerfile": "deploy/Dockerfile.spsvalidator",
+      "environment": "linux-container/read-only/no-network/non-root",
+      "image_id": "sha256:3242051dd4dfc065fa74bcd49ddcef73f5bd7c21ed8b1a941ecbbdf47fdd3095",
+      "input_suffix": ".zip",
+      "max_output_bytes": 16777216,
+      "name": "spsvalidator",
+      "profile_id": "sps-1.10/jats-1.3",
+      "source_revision": "235465e214749e9a5d603c94e539695811849d69",
+      "source_url": "https://github.com/scieloorg/spsvalidator",
+      "timeout_seconds": 600,
+      "version": "0.3.0+235465e21474"
+    }
+  ],
+  "xpm": {
+    "archive_name": "SciELO_XPM_4.0.096-R20231215.zip",
+    "archive_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+    "environment": "dedicated-windows-worker",
+    "integration_status": "worker-pending",
+    "profile_compatibility": "sps-1.9-only",
+    "version": "4.0.096"
+  }
+}

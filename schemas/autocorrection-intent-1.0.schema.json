@@ -1,0 +1,154 @@
+{
+  "$defs": {
+    "AutomationOperation": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "expected_value_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Expected Value Sha256",
+          "type": "string"
+        },
+        "finding_id": {
+          "format": "uuid",
+          "title": "Finding Id",
+          "type": "string"
+        },
+        "operation": {
+          "enum": [
+            "country-code-exact",
+            "figure-asset-exact",
+            "affiliation-original-literal"
+          ],
+          "title": "Operation",
+          "type": "string"
+        },
+        "subject_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Subject Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "operation",
+        "subject_id",
+        "evidence_id",
+        "finding_id",
+        "expected_value_sha256"
+      ],
+      "title": "AutomationOperation",
+      "type": "object"
+    },
+    "AutomationScope": {
+      "additionalProperties": false,
+      "properties": {
+        "article_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Article Id",
+          "type": "string"
+        },
+        "organization_id": {
+          "format": "uuid",
+          "title": "Organization Id",
+          "type": "string"
+        },
+        "profile_id": {
+          "const": "esa-aop-1.1.0",
+          "title": "Profile Id",
+          "type": "string"
+        },
+        "resource_id": {
+          "format": "uuid",
+          "title": "Resource Id",
+          "type": "string"
+        },
+        "review_version": {
+          "minimum": 1,
+          "title": "Review Version",
+          "type": "integer"
+        },
+        "snapshot_id": {
+          "format": "uuid",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "snapshot_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Snapshot Sha256",
+          "type": "string"
+        },
+        "source_idml_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Idml Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "organization_id",
+        "resource_id",
+        "snapshot_id",
+        "snapshot_sha256",
+        "source_idml_sha256",
+        "article_id",
+        "profile_id",
+        "review_version"
+      ],
+      "title": "AutomationScope",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "needs_human": {
+      "title": "Needs Human",
+      "type": "boolean"
+    },
+    "operations": {
+      "items": {
+        "$ref": "#/$defs/AutomationOperation"
+      },
+      "maxItems": 5,
+      "minItems": 1,
+      "title": "Operations",
+      "type": "array"
+    },
+    "policy_version": {
+      "const": "vh1-autocorrection-1.0",
+      "title": "Policy Version",
+      "type": "string"
+    },
+    "proposal_id": {
+      "format": "uuid",
+      "title": "Proposal Id",
+      "type": "string"
+    },
+    "scope": {
+      "$ref": "#/$defs/AutomationScope"
+    },
+    "version": {
+      "const": "autocorrection-intent-1.0",
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "version",
+    "policy_version",
+    "proposal_id",
+    "scope",
+    "needs_human",
+    "operations"
+  ],
+  "title": "AutomationIntent",
+  "type": "object"
+}

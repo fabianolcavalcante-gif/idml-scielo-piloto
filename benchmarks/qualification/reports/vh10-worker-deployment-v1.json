@@ -1,0 +1,111 @@
+{
+  "version": "vh10-worker-deployment-1.0",
+  "date": "2026-10-30",
+  "deployment": {
+    "release": "vh10-worker-20261030-v1",
+    "image": "idml-foundation:vh10-worker-20261030-v1",
+    "migration": "d1f203142536",
+    "runtime_files_verified": 340,
+    "backup": "/opt/idml-platform/backups/20261030T115545Z",
+    "restore_test": true,
+    "image_rollback_test": true,
+    "other_services_unchanged": true,
+    "existing_data_counts_unchanged": true,
+    "flags_disabled": true,
+    "homologation_ready": false,
+    "release_approved": false
+  },
+  "postcheck": {
+    "runtime_files_verified": {
+      "idml-development-api-1": 340,
+      "idml-development-worker-1": 340
+    },
+    "services": [
+      {
+        "service": "idml-validation-modern-vh1.service",
+        "enabled": true,
+        "automatic_restart_after_sigkill": true,
+        "bind_directory_preserved": true,
+        "worker_reconnected": true,
+        "unauthorized_uid_denied": true,
+        "socket_mode": "0660"
+      },
+      {
+        "service": "idml-validation-xpm-vh1.service",
+        "enabled": true,
+        "automatic_restart_after_sigkill": true,
+        "bind_directory_preserved": true,
+        "worker_reconnected": true,
+        "unauthorized_uid_denied": true,
+        "socket_mode": "0660"
+      }
+    ],
+    "smoke": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "containers": 25,
+    "idml_containers_healthy": 5,
+    "image_id": "sha256:e4f9649a4a158c0185235012f628ecd85acc8c24f3cdb591a4586ae47a8ac225",
+    "migration": "d1f203142536",
+    "data_and_jobs_unchanged": true,
+    "source_manifest_sha256": "6128565b0649490323f81d3481d67baa78ce39bb26634aadf6f2ca4c135c6866",
+    "authority_grants_created": 0,
+    "ai_invoked": false,
+    "homologation_ready": false
+  },
+  "worker_smoke": {
+    "http": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "api_profile_matches_worker": true,
+    "worker_sockets_reachable": true,
+    "no_application_docker_socket": true,
+    "ai_enabled": false,
+    "real_article_authority_provisioning_pending": true,
+    "homologation_ready": false
+  },
+  "local_tests": {
+    "tests": 242,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "new_tests": 25
+  },
+  "linux_tests": {
+    "tests": 465,
+    "failures": 0,
+    "warnings": 2,
+    "overlaps_local": true
+  },
+  "postgres": {
+    "passed": true,
+    "additive_migration_no_backfill": true,
+    "downgrade_upgrade_preserves_heads": true,
+    "same_request_one_restore_and_record": true,
+    "distinct_requests_one_conflict": true,
+    "outer_rollback": true,
+    "human_claim_lock_and_refusal": true,
+    "sql_guards": 2,
+    "synthetic_validators": true,
+    "active_database_changed": false,
+    "release_approved": false
+  },
+  "ruff_passed": true,
+  "mypy_modules": 140,
+  "source_files": 1235,
+  "source_archive_sha256": "82d6f8b61852f1411dcb5eeb658145a6124c5c738d40b017079ddac59384b202",
+  "evidence_sha256": {
+    "tmp/worker-integration-tests-final.xml": "6fb170dac265727f2c2965d9d166d83ae09b954e196b2deaf57d5101c1e1258b",
+    "tmp/vh10-worker-linux-tests.log": "b2118948bea73cba6fbcdfc0ede0210cedc5c0908b62c5062acdb899ff5c6e91",
+    "tmp/vh10-worker-postgres-tests.log": "1277e2a2782ddbcae61aeb8522b0c4ee305c2b9f2c0c219df5691c33c1a86745",
+    "benchmarks/qualification/reports/vh10-worker-native-v1.json": "4efbac80ae3b8f808b5385a40999653d8ea286a6a81f597def0e4b6044167167"
+  },
+  "ai_invoked": false,
+  "full_idml_to_human_workflow_tested": false,
+  "homologation_ready": false,
+  "release_approved": false
+}

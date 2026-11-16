@@ -1,0 +1,53 @@
+{
+  "version": "h1-complete-package-1.0",
+  "executed_at": "2026-09-29",
+  "fixture": "synthetic-file-complete-not-editorially-valid",
+  "source_sha256": {
+    "ops/build_h1_synthetic_package.py": "8a4db517009224abbe889fc38f7e493a7a242ff5aad840dc500be1b3f2948528",
+    "ops/observe_validator_socket.py": "0ba7a0f2f2535cd3273cc8ddb9094623cc43f5388f4a7ea5b40d4ede2b0376e6",
+    "ops/smoke_validator_socket.py": "d12c3d4646a9a40050192f32df0964e36d37b9ed2631c0127e893fffdb1cf2e2",
+    "ops/validator_broker.py": "bba13b95b571bc604428c82e4e6548e47bfafe73d0d799d303ead327bc8fef55",
+    "src/idml_foundation/services/validator_transport.py": "68e69b1332a1e68cc0812c488efc263f6b405fdcfd2eb20db6a8174f3b8311b4",
+    "config/validator-registry-v1.json": "5c17b26e40d9621ca9f344c09306b626f2c596b2fa04dec1deb0ddb444ebbab5",
+    "tests/test_h1_synthetic_package.py": "9215463abd508bd00cab12932aed58697176cf4b413b95176881702d683872b0"
+  },
+  "full_tests_passed": 645,
+  "warnings": 3,
+  "application_line_coverage_percent": 87.83,
+  "cases": [
+    {
+      "name": "packtools",
+      "status": "completed",
+      "counts": {
+        "critical": 1,
+        "error": 3,
+        "warning": 7
+      },
+      "candidate_sha256": "02a405e124fa6ec2fbed6a5df5b78bd764427047a8c665fa2ec12bd8213a6769",
+      "tool_sha256": "412a7502295ebb12fcbe417335eae203e99d6c585e4058659c9fa683beeca175",
+      "report_sha256": "29725f7ae762675529a407caa070ceaafa0a4777a44b8d30c55a7f8840c10949",
+      "passed": false
+    },
+    {
+      "name": "spsvalidator",
+      "status": "completed",
+      "counts": {
+        "critical": 1,
+        "error": 4,
+        "warning": 7
+      },
+      "candidate_sha256": "f1459bccf04a65c50f8485a0ff7763803c4bc8c301dde460690798cc273a3251",
+      "tool_sha256": "2806ed5ee19d141be1cc6d0dbbfd54741c7ec4ae6ae7422f3ba0fae21b878526",
+      "report_sha256": "98b6ebf99431bf5d666b643e091d158536d3798f9b1ed1e541836cb58bb55316",
+      "passed": false
+    }
+  ],
+  "executions_completed": true,
+  "existing_services_unchanged": true,
+  "socket_removed": true,
+  "scratch_empty": true,
+  "private_corpus_used": false,
+  "production_activated": false,
+  "worker_deployed": false,
+  "homologation_authorized": false
+}

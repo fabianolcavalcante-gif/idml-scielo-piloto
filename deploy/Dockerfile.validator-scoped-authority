@@ -1,0 +1,6 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+ARG VALIDATOR_NAME
+COPY editorial_authority.py editorial_authority_runtime.py doi_validation_evidence.py /validator/
+COPY doi_snapshot.py doi_package_binding.py validation_scope.py /validator/
+COPY scoped_validator_adapter.py /validator/${VALIDATOR_NAME}_validate.py

@@ -1,0 +1,321 @@
+{
+  "version": "vh1-scoped-socket-1.0",
+  "plan_sha256": "cd8104eb206e746d6cdef2e278ddf1dfa8f9086da94621216df206cbd0a0bb96",
+  "code_sha256": {
+    "doi_authority_transport.py": "ab83fbe18e6e688335d6dc69296773285ed52b6854dc98a32326f7db34dcd6a3",
+    "doi_package_binding.py": "4a4e768050bff7669cac414ac49ec5433f7490a42c88c8e39cce385711acc318",
+    "package_validation.py": "2679f47fcf97fa51e1699ce45b3f259e942b3819a0edc733261688e86af0c4cc",
+    "probe_scoped_socket.py": "4f96186ed1887478baf8fe51cd30a41e5b7d0e78e4856f7eb50009e32accaafc",
+    "provision_scoped_authorities.py": "280c4dbeba72db68e7822ba515d3700037f352911ab1f31e20708d2f52a8ea23",
+    "run_vh1_scoped_socket.py": "fd8742aa4fd861e7e09e6f705f7d5902fb25ef886c28761b419b19eeb906e540",
+    "scoped_authority_transport.py": "2d6a8cd07056464bb64b25739b1c9c423e3ec4ba94e674b992d6ad8baaced0f2",
+    "scoped_validator_broker.py": "a8f63dea6bfc7b500178c619409061addbc4e8500072e4810abc141d1f2bb900",
+    "scoped_validator_transport.py": "5e89c7963a04ed3d72ede37d77f9004bff7f9d04e579b235b5b0598186ed2576",
+    "validation_engine.py": "ee32a0c44e9a7cb60f9d65d85281b0eb7e55dba79d846e687bdd95139f275b1d",
+    "validation_scope.py": "7df6a7f2255faec390c2f11228a61f70ef741fd28031170566e97a901883af63",
+    "validator_broker.py": "487df9390980f6505b33545df14bc687c4b91824159eadfce2263f8b7aa17f7f",
+    "validator_registry.py": "72331f5e3c95a459c81f17e617f209031e334a9a0b28edb508f6a65f27704723",
+    "validator_transport.py": "68e69b1332a1e68cc0812c488efc263f6b405fdcfd2eb20db6a8174f3b8311b4"
+  },
+  "registry_sha256": "4b95158a52e9bd2cd7ad143797c5441f635b87d426284db862bbd356ea4dac7f",
+  "synthetic_scopes_only": true,
+  "active_application_changed": false,
+  "formal_xml_approved": false,
+  "cases": [
+    {
+      "case": "esa-e20240086",
+      "assessment": {
+        "complete": false,
+        "editorial_approval": "separate-workflow",
+        "external_runs": [
+          {
+            "authority_verification": {
+              "binding": {
+                "bundle_sha256": "a79c1c4bab37a8da02c3956074627a21295c28b933b91d8fce8cb6238324f85a",
+                "grant_sha256": "9023619ca0312055c5c63485809760a3556d811f107c2a9300e809eb3c11a9b7",
+                "scope_sha256": "587c7187f9bc338b3ed0b951bd38906edd15ba45bb010a46316b2c43eb5d4808"
+              },
+              "checks": {
+                "doi": [
+                  true
+                ],
+                "issue": [
+                  true
+                ],
+                "orcid": [],
+                "orcid_reasons": [],
+                "section": [
+                  true
+                ]
+              },
+              "expected": {
+                "doi": 1,
+                "issue": 1,
+                "orcid": 0,
+                "section": 1
+              },
+              "version": "scoped-authority-evidence-1.0"
+            },
+            "candidate_sha256": "7081d302358f8c022114a0ebf568372af43e115bda38a748cc7c2ebbc1494ad0",
+            "counts": {
+              "blocking": 0,
+              "critical": 22,
+              "error": 4,
+              "warning": 9
+            },
+            "failure_code": null,
+            "input_kind": ".xml",
+            "name": "packtools",
+            "passed": false,
+            "report_sha256": "964f65072e3190d12d89a78c7acefea2d359abe28943bc058151f74fc3ed0835",
+            "status": "completed",
+            "tool_sha256": "8b10e0d37580ed5c018e86049281010968eac05ee07e4cbc640cc9f2358aa266",
+            "unavailable_external_checks": [],
+            "version": "4.17.2+ef0e6f874ea7"
+          },
+          {
+            "authority_verification": {
+              "binding": {
+                "bundle_sha256": "a79c1c4bab37a8da02c3956074627a21295c28b933b91d8fce8cb6238324f85a",
+                "grant_sha256": "9023619ca0312055c5c63485809760a3556d811f107c2a9300e809eb3c11a9b7",
+                "scope_sha256": "587c7187f9bc338b3ed0b951bd38906edd15ba45bb010a46316b2c43eb5d4808"
+              },
+              "checks": {
+                "doi": [
+                  true
+                ],
+                "issue": [
+                  true
+                ],
+                "orcid": [],
+                "orcid_reasons": [],
+                "section": [
+                  true
+                ]
+              },
+              "expected": {
+                "doi": 1,
+                "issue": 1,
+                "orcid": 0,
+                "section": 1
+              },
+              "version": "scoped-authority-evidence-1.0"
+            },
+            "candidate_sha256": "6b209eb4209e20aff17b653545f5553af3b562c9549ee34b5a2ca49671d9c4f6",
+            "counts": {
+              "blocking": 0,
+              "critical": 22,
+              "error": 4,
+              "warning": 9
+            },
+            "failure_code": null,
+            "input_kind": ".zip",
+            "name": "spsvalidator",
+            "passed": false,
+            "report_sha256": "0f4d94c579273fa05db385f4f2f09ca16ec85fddb3b0b56e7d7b53bbb31f86ed",
+            "status": "completed",
+            "tool_sha256": "3832b370222634f1eb9ddbd8aa9aa74e31acf2ee4e2cfba398eb72ff3d918ff7",
+            "unavailable_external_checks": [],
+            "version": "0.3.0+d1aa774d4e33"
+          }
+        ],
+        "package_sha256": "6b209eb4209e20aff17b653545f5553af3b562c9549ee34b5a2ca49671d9c4f6",
+        "production_activation_authorized": false,
+        "ready_for_scielo": false,
+        "reasons": [
+          "xpm-executor-not-configured",
+          "external-validator-findings"
+        ],
+        "required_validators": [
+          "packtools",
+          "spsvalidator",
+          "xpm"
+        ],
+        "state": "blocked",
+        "version": "package-formal-assessment-1.0",
+        "xml_sha256": "7081d302358f8c022114a0ebf568372af43e115bda38a748cc7c2ebbc1494ad0",
+        "xpm": {
+          "attested": false,
+          "failure_code": "xpm-executor-not-configured",
+          "status": "unavailable"
+        }
+      }
+    },
+    {
+      "case": "esa-e20240135",
+      "assessment": {
+        "complete": false,
+        "editorial_approval": "separate-workflow",
+        "external_runs": [
+          {
+            "authority_verification": {
+              "binding": {
+                "bundle_sha256": "990ce9875b5e69a12dfd77956b7f9f6cdb0425b27144bb7b77945f88e59a96d2",
+                "grant_sha256": "e0add5eed8e0a70f7008a9726d4ef2ecc48262e9cf761cf91cc996b8a2466e9e",
+                "scope_sha256": "a690cbabbcbeb099dd47597cc5d30fbde828ed6c54082d1f1a4d640b290c22a8"
+              },
+              "checks": {
+                "doi": [
+                  true
+                ],
+                "issue": [
+                  true
+                ],
+                "orcid": [
+                  true,
+                  true,
+                  true,
+                  true
+                ],
+                "orcid_reasons": [
+                  "public_registry_and_crossref_author_match",
+                  "public_registry_and_crossref_author_match",
+                  "public_registry_and_crossref_author_match",
+                  "public_registry_and_crossref_author_match"
+                ],
+                "section": [
+                  true
+                ]
+              },
+              "expected": {
+                "doi": 1,
+                "issue": 1,
+                "orcid": 4,
+                "section": 1
+              },
+              "version": "scoped-authority-evidence-1.0"
+            },
+            "candidate_sha256": "1757cdb3a15b7fd44beb009e794ff812995eb59cd6e2c1eee2cabee15f9a9706",
+            "counts": {
+              "blocking": 0,
+              "critical": 6,
+              "error": 0,
+              "warning": 5
+            },
+            "failure_code": null,
+            "input_kind": ".xml",
+            "name": "packtools",
+            "passed": false,
+            "report_sha256": "0ce4bb0b2d5ed6f8461a3a85934687b2ca3f26a7422960f2449d2cc52efd935b",
+            "status": "completed",
+            "tool_sha256": "8b10e0d37580ed5c018e86049281010968eac05ee07e4cbc640cc9f2358aa266",
+            "unavailable_external_checks": [],
+            "version": "4.17.2+ef0e6f874ea7"
+          },
+          {
+            "authority_verification": {
+              "binding": {
+                "bundle_sha256": "990ce9875b5e69a12dfd77956b7f9f6cdb0425b27144bb7b77945f88e59a96d2",
+                "grant_sha256": "e0add5eed8e0a70f7008a9726d4ef2ecc48262e9cf761cf91cc996b8a2466e9e",
+                "scope_sha256": "a690cbabbcbeb099dd47597cc5d30fbde828ed6c54082d1f1a4d640b290c22a8"
+              },
+              "checks": {
+                "doi": [
+                  true
+                ],
+                "issue": [
+                  true
+                ],
+                "orcid": [
+                  true,
+                  true,
+                  true,
+                  true
+                ],
+                "orcid_reasons": [
+                  "public_registry_and_crossref_author_match",
+                  "public_registry_and_crossref_author_match",
+                  "public_registry_and_crossref_author_match",
+                  "public_registry_and_crossref_author_match"
+                ],
+                "section": [
+                  true
+                ]
+              },
+              "expected": {
+                "doi": 1,
+                "issue": 1,
+                "orcid": 4,
+                "section": 1
+              },
+              "version": "scoped-authority-evidence-1.0"
+            },
+            "candidate_sha256": "e0be244b52eb524328a3f260c426617850bb057e3bbc9ecb82c43134929950c8",
+            "counts": {
+              "blocking": 0,
+              "critical": 6,
+              "error": 0,
+              "warning": 5
+            },
+            "failure_code": null,
+            "input_kind": ".zip",
+            "name": "spsvalidator",
+            "passed": false,
+            "report_sha256": "15f78a7162d7b352dc3807be9f1372ba9ecce92a0dd766739a82300e4005ee8a",
+            "status": "completed",
+            "tool_sha256": "3832b370222634f1eb9ddbd8aa9aa74e31acf2ee4e2cfba398eb72ff3d918ff7",
+            "unavailable_external_checks": [],
+            "version": "0.3.0+d1aa774d4e33"
+          }
+        ],
+        "package_sha256": "e0be244b52eb524328a3f260c426617850bb057e3bbc9ecb82c43134929950c8",
+        "production_activation_authorized": false,
+        "ready_for_scielo": false,
+        "reasons": [
+          "xpm-executor-not-configured",
+          "external-validator-findings"
+        ],
+        "required_validators": [
+          "packtools",
+          "spsvalidator",
+          "xpm"
+        ],
+        "state": "blocked",
+        "version": "package-formal-assessment-1.0",
+        "xml_sha256": "1757cdb3a15b7fd44beb009e794ff812995eb59cd6e2c1eee2cabee15f9a9706",
+        "xpm": {
+          "attested": false,
+          "failure_code": "xpm-executor-not-configured",
+          "status": "unavailable"
+        }
+      }
+    }
+  ],
+  "negative_controls": {
+    "foreign-tenant": {
+      "statuses": {
+        "packtools": "unavailable",
+        "spsvalidator": "unavailable"
+      },
+      "not_approved": true
+    },
+    "foreign-resource": {
+      "statuses": {
+        "packtools": "unavailable",
+        "spsvalidator": "unavailable"
+      },
+      "not_approved": true
+    },
+    "changed-xml": {
+      "statuses": {
+        "packtools": "unavailable",
+        "spsvalidator": "completed"
+      },
+      "not_approved": true
+    },
+    "revoked": {
+      "statuses": {
+        "packtools": "unavailable",
+        "spsvalidator": "unavailable"
+      },
+      "not_approved": true
+    },
+    "expired": {
+      "statuses": {
+        "packtools": "unavailable",
+        "spsvalidator": "unavailable"
+      },
+      "not_approved": true
+    }
+  }
+}

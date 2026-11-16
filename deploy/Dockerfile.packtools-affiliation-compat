@@ -1,0 +1,4 @@
+FROM idml-packtools:h1-affiliation-pinned-base
+COPY packtools_validate.py /validator/packtools_pinned_adapter.py
+COPY affiliation_compat.py /validator/
+COPY packtools_affiliation_validate.py /validator/packtools_validate.py

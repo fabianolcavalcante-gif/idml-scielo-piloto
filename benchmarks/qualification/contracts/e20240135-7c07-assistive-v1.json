@@ -1,0 +1,106 @@
+{
+  "contract_version": "1.0.0",
+  "stage": "7C-07",
+  "corpus_id": "esa-e20240135",
+  "expected_public": {
+    "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+    "role_counts": {
+      "approved_pdf_reference": 1,
+      "approved_xml_reference": 1,
+      "figure_asset": 7,
+      "source_idml": 1,
+      "validator_exception_evidence": 1,
+      "xpm_report": 1
+    },
+    "dataset_qualification": {
+      "report_sha256": "67bda42b9fd57ce8da21040dd70577ef1246d11ef3f84476049df694f9e46c4f",
+      "dataset_version": "idml-agent-e20240135-7c07-1.0",
+      "dataset_cases": 6,
+      "domains": {
+        "contributors_affiliations": 1,
+        "figures_tables": 1,
+        "math_notes": 1,
+        "metadata": 1,
+        "references": 1,
+        "structure": 1
+      },
+      "visual_cases": 1,
+      "atomic_rich_text_cases": 2,
+      "atomic_formula_cases": 1,
+      "candidate_xml_sha256": "20a03a91496ac0b447bd2abe589c2be6c231547793dcf5289bd3e66cc1990880",
+      "hidden_gold_exposed_to_provider": false,
+      "human_review_required": true,
+      "restricted_content_emitted": false
+    },
+    "execution_plan": {
+      "plan_sha256": "3a149b5a63965d2cd9c807b8ab4b428603afdb7506da91481cf0519b0ed0b54e",
+      "model_key": "openai/gpt-5.4-mini",
+      "thinking_level": "medium",
+      "selected_cases": 6,
+      "roles": 4,
+      "max_attempts": 2,
+      "max_repair_cycles": 2,
+      "concurrency": 1,
+      "max_total_cost_microusd": 5000000,
+      "require_human_review": true,
+      "require_application_flags_false": true
+    },
+    "vps_postcheck": {
+      "report_sha256": "16089f9045ffa26014b964518b673d236174a89a6fee3ec59b4ceb0f636b1d40",
+      "services_healthy": 3,
+      "application_flags_false": 2,
+      "provider_credential_present": false,
+      "transient_networks_present": 0,
+      "egress_proxy_present": false,
+      "openclaw_sessions": 0,
+      "agent_runs": 0,
+      "agent_proposals": 0,
+      "restricted_content_emitted": false
+    }
+  },
+  "private_evidence": {
+    "dataset_sha256": "1acd9058fdc3f62c11523f90157307105b4ac1eb26b77f8b258c313a346a6692",
+    "validated_manifest_sha256": "7a496ac215c3409e38bfd7a965c24224787d2101b34dd3ea94395abaefb4b97a",
+    "manifest_id": "dc268cc77b51cfb617a23db9d26e0f86c16ed6703d9fe61d25d3d119f4b2d948",
+    "live_report_sha256": "c66b4c10b94fee3c17c397b423eeb348826fd390fe5a8b5f0e2aad32bdb1e2d3",
+    "run_id": "phase7-7c07-domains-v34-001",
+    "cases": 6,
+    "role_calls": 24,
+    "accepted_for_human_review": 6,
+    "abstentions": 0,
+    "rejections": 0,
+    "false_consensus_candidates": 0,
+    "repair_cycles": 0,
+    "exact_cases": 5,
+    "semantically_equivalent_cases": 6,
+    "qualified_expected_change_precision": 1.0,
+    "qualified_expected_change_recall": 1.0,
+    "input_tokens": 121676,
+    "cached_input_tokens": 0,
+    "output_tokens": 10929,
+    "duration_ms": 136145,
+    "maximum_call_duration_ms": 11609,
+    "cost_microusd": 140447,
+    "role_models_independent": false
+  },
+  "negative_controls": {
+    "names": [
+      "omission",
+      "invention",
+      "author_swap",
+      "ambiguous_visual_formula",
+      "wrong_asset_association"
+    ],
+    "cases": 5,
+    "all_failed_closed": true,
+    "false_consensus_accepted": 0,
+    "provider_calls": 0,
+    "monetary_cost_microusd": 0
+  },
+  "release_constraints": {
+    "human_review_required": true,
+    "automatic_application_authorized": false,
+    "release_candidate_approved": false,
+    "production_activation_authorized": false
+  }
+}

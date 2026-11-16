@@ -1,0 +1,46 @@
+{
+  "actual_target_surpluses": [
+    {
+      "occurrences": 3,
+      "reference_ordinal": 13
+    },
+    {
+      "occurrences": 3,
+      "reference_ordinal": 37
+    }
+  ],
+  "approved_xml_sha256": "739b4c3247a06d6d5253ad2805fb830d09692cb306cbb5c785ad99707e539de9",
+  "corpus_id": "esa-e20240086",
+  "crossref_evidence_sha256": "0e3d531b7c3cb8c63b02d4c1367cc69796f3ec7dc2e81d551e1c631faa07b942",
+  "expected_target_deficits": [
+    {
+      "occurrences": 1,
+      "reference_ordinal": 10
+    },
+    {
+      "occurrences": 2,
+      "reference_ordinal": 11
+    }
+  ],
+  "human_review_required": true,
+  "journal_profile_id": "esa-aop-1.0.0",
+  "metadata_differences": [
+    {
+      "actual_position": 1,
+      "actual_sha256": "ded2353cc31f7e7ae9f9f2551d98c5d3d219f7f26b8d9217f2cbf6af5dd51c78",
+      "authority": "journal-profile",
+      "expected_position": 1,
+      "expected_sha256": "c9cf9a27aeca0331c6a5d500390e0b9d366531a01a26d69fec35a244532acc5e"
+    },
+    {
+      "actual_position": 2,
+      "actual_sha256": "dfcc7275e1f868b450c0157b2ba733d59c6dee9dfa35e65a5ca9d9330b855077",
+      "authority": "source-idml",
+      "expected_position": 2,
+      "expected_sha256": "1d3cf0f027672de77cad356dd9ce28b23bbbc8ec70c41e4eb152f9d629913b1e"
+    }
+  ],
+  "qualification_id": "9c6ac9832ed66215b132007f7c37dbc0ec64ab62ef07318ff80fd89b474b168e",
+  "source_idml_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+  "version": "source-authority-qualification-1.0"
+}

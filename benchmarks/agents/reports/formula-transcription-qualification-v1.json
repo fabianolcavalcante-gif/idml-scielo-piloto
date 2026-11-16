@@ -1,0 +1,27 @@
+{
+  "adjudicator_accepts": 16,
+  "approved_xml_sha256": "739b4c3247a06d6d5253ad2805fb830d09692cb306cbb5c785ad99707e539de9",
+  "catalog_id": "4037bad60e42ce8cf53d998792cf47563cee5ae8341c0a35e6f0e590fdddb1cb",
+  "controlled_abstentions": 1,
+  "corpus_id": "esa-e20240086",
+  "critic_passes": 34,
+  "dataset_sha256": "ab25b6ba93c0af119f398f2b3cfd84e4957de9aa8bfaa3a349328011535e6848",
+  "dataset_version": "idml-agent-real-domain-eval-1.2",
+  "display_formulas": 15,
+  "formula_cases": 17,
+  "hidden_gold_semantically_equivalent": 6,
+  "human_review_required": true,
+  "inline_formulas": 2,
+  "observed_cost_microusd": 485431,
+  "restricted_content_emitted": false,
+  "run_ids": [
+    "visual-formula-v12-002",
+    "visual-formula-v13-001",
+    "visual-formula-v15-002",
+    "visual-formula-v16-001",
+    "visual-formula-v17-001"
+  ],
+  "source_idml_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+  "version": "formula-transcription-qualification-1.0",
+  "visual_source_overrides": 11
+}

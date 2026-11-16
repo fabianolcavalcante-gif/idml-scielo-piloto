@@ -1,0 +1,36 @@
+{
+  "prior": "vh11-named-inputs-20261106-v1",
+  "candidate": "vh17-regression-20261109-v1",
+  "files": {
+    "ops/deploy_article_sources.py": {
+      "before": "88364a6d8e4b89725eb172224812ec5e645f7a6f4e9d5ee4cd1780e654ed8406",
+      "after": "7303e5a5b828ed92bb070735787178fddf23017f1b70d765081701729686c456",
+      "ast": "bf333ee32bc7930f85c91cd9c6ae73d7350f149ab3983fc3d25f60dbb3bfb2fe"
+    },
+    "ops/qualify_doi_socket_linux.py": {
+      "before": "a247a16431ae521a0654b40bb34229d372466bbca4e69b4952caf7b51a17015b",
+      "after": "534d90f861cf728c725b84e4016421cb1a91def3986c389f1868e211a6ce6f89",
+      "ast": "d8b20a961d600e91b658ef479b312849f88e8461509e382e9838c3ba88c441ae"
+    },
+    "ops/qualify_doi_transport_linux.py": {
+      "before": "3430f4cac2f6b462edc33dce6058047664ae105eb512ae26b6db7c52a94b2323",
+      "after": "a66bf7ffe21d33b1ec6a3feaf2d44813f3ff3443a706bbd98c27c8dd9ffaa9ef",
+      "ast": "61d24f5fefcbb545c0b09fb47c099a6c95a7a51a2bc420489d95d90681a6d542"
+    },
+    "ops/qualify_vh09_promotion_native.py": {
+      "before": "a0cb421acc6639cc868d63f6cc624e34e1cd89dc003b80fcbbc0ee916fb9460f",
+      "after": "2cdc806ab9070ed110d1884ac4fe05ffcb987b3ac6f8d1966ebf26ed6c4e1929",
+      "ast": "3921dbd94a6a8f91de5abe8057a52477b7be102a0c47078d859531eaa7e05d80"
+    },
+    "src/idml_foundation/release/reference_types.py": {
+      "before": "dd16c3ee5b2574bbc12cabfc7d9b85dfcb35ea93dba4a8c676827d82e3a5379a",
+      "after": "e602dc5bf23a07b87b08fcfca146492a713d6a8d039ec876427951fdea83dc88",
+      "ast": "9730d313e85e53bd5cee29fea2b3d74a6e0330f004f810c3175685393d13f8f3"
+    },
+    "src/idml_foundation/routers/ui.py": {
+      "before": "80cf4ae1d65700f04836d747397283b161903c8a9c9843a458a18f1933b5eafd",
+      "after": "adabd9291021227a7d7809f86dab953047748c38a592a47ed669a1c9ef277ac9",
+      "ast": "1c8def673aee47f1f61f50fa7c1c599b3ef2cdfb881a7957244a006cb12454a1"
+    }
+  }
+}

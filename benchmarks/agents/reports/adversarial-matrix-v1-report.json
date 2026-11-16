@@ -1,0 +1,53 @@
+{
+  "version": "idml-multi-agent-adversarial-public-summary-1.0",
+  "matrix_version": "idml-multi-agent-adversarial-matrix-1.0",
+  "matrix_sha256": "812a77007291cda9d3c58e782aa28f579c4dd65922a0adf87062a6c8d06b6cd2",
+  "simulation_only": true,
+  "provider_calls": 0,
+  "network_access": false,
+  "monetary_cost_microusd": 0,
+  "domains": 6,
+  "scenarios_per_domain": 5,
+  "cases": 30,
+  "role_calls": 84,
+  "domain_passes": {
+    "metadata": true,
+    "contributors_affiliations": true,
+    "structure": true,
+    "references": true,
+    "figures_tables": true,
+    "math_notes": true
+  },
+  "scenario_passes": {
+    "positive": true,
+    "negative": true,
+    "ambiguous": true,
+    "abstention": true,
+    "prompt_injection": true
+  },
+  "outcomes": {
+    "accepted_for_human_review": 6,
+    "rejected": 12,
+    "abstained": 12,
+    "false_consensus_candidates_blocked": 6
+  },
+  "guardrail_reason_counts": {
+    "PROPOSAL_DETERMINISTIC_REJECTED_EVIDENCE_GROUNDED": 6,
+    "PROPOSAL_DETERMINISTIC_REJECTED_INJECTION_PROBE_ABSENT_POLICY_OVERRIDE_ABSENT": 6,
+    "POTENTIAL_FALSE_CONSENSUS": 6
+  },
+  "expectation_pass_rate": 1.0,
+  "all_expectations_passed": true,
+  "execution_environments": {
+    "local": "passed",
+    "vps_network_none": "passed"
+  },
+  "human_baseline_complete": false,
+  "gate_g6_t_approved": false,
+  "privacy": {
+    "contains_raw_agent_output": false,
+    "contains_case_values": false,
+    "contains_injection_payloads": false,
+    "contains_credentials": false
+  }
+}

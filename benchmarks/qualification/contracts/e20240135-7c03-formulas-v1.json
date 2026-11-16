@@ -1,0 +1,80 @@
+{
+  "contract_version": "1.0.0",
+  "stage": "7C-03",
+  "corpus_id": "esa-e20240135",
+  "expected": {
+    "role_counts": {
+      "source_idml": 1,
+      "approved_xml_reference": 1,
+      "approved_pdf_reference": 1
+    },
+    "qualification": {
+      "report_sha256": "45a5238690801de91b72189019251aeb1eb451da8f024a0ed505e3ea8424f9c5",
+      "catalog_id": "6089705c07ec4144164b10ad3f6beefe7da8b269b80f77c70edb3e636a00e986",
+      "dataset_sha256": "493074f8e5999745ba5029340107cbcee5e8b4e2221d7a8101a4013803635798",
+      "formula_cases": 43,
+      "inline_formulas": 32,
+      "display_formulas": 11,
+      "critic_passes": 86,
+      "adjudicator_accepts": 43,
+      "controlled_abstentions": 0,
+      "human_review_required": true,
+      "restricted_content_emitted": false
+    },
+    "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+    "catalog_id": "6089705c07ec4144164b10ad3f6beefe7da8b269b80f77c70edb3e636a00e986",
+    "dataset_sha256": "493074f8e5999745ba5029340107cbcee5e8b4e2221d7a8101a4013803635798",
+    "candidate_xml_sha256": "cd98d20cd2d38755443fc28cf80665dab7553d6a9b7094607a20dcd082c7e871",
+    "deterministic": true,
+    "validation": {
+      "valid": true,
+      "issues": 1
+    },
+    "semantic_blocking_findings_before_qualification": 57,
+    "semantic_blocking_findings_after_qualification": 33,
+    "qualified_formula_alterations": 24,
+    "formulas": {
+      "expected": 43,
+      "actual": 43,
+      "omissions": 0,
+      "inventions": 0,
+      "duplications": 0,
+      "displacements": 0,
+      "exact": 43,
+      "normalized": 0,
+      "altered": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "text_fidelity": 1.0,
+      "passed": true
+    },
+    "formula_content": {
+      "expected": 43,
+      "actual": 43,
+      "omissions": 0,
+      "inventions": 0,
+      "duplications": 0,
+      "displacements": 0,
+      "exact": 1,
+      "normalized": 18,
+      "altered": 24,
+      "precision": 0.44186,
+      "recall": 0.44186,
+      "f1": 0.44186,
+      "text_fidelity": 0.89668,
+      "passed": true
+    },
+    "formula_xml": {
+      "total": 43,
+      "inline": 32,
+      "display": 11,
+      "graphic_formulas": 0
+    },
+    "review": {
+      "transcription_blockers": [],
+      "pending_human_marker": 1
+    },
+    "general_candidate_blocked": true
+  }
+}

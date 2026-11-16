@@ -1,0 +1,62 @@
+{
+  "stage": "7C-08",
+  "unaffected_services": 23,
+  "all_unaffected_services_unchanged": true,
+  "services": {
+    "idml-development-worker-1": {
+      "id": "b7fb5bb55b557982490c222a2998db585db9582465c91e7a57c89173433ee8a4",
+      "image": "idml-foundation:phase7-7c08-v1",
+      "image_id": "sha256:4fcf47666812a6b45dbafe5baecc44dcdb6393ac7b4893568b44e1683cf2ed86",
+      "started": "2026-09-21T12:25:37.561647415Z",
+      "restarts": 0,
+      "health": "healthy",
+      "flags_disabled": true,
+      "provider_credential_present": false
+    },
+    "idml-development-api-1": {
+      "id": "13d2272f000051fb6236f36ccc93c6905dcce05bd32240ad7c0ff3df66b663ee",
+      "image": "idml-foundation:phase7-7c08-v1",
+      "image_id": "sha256:4fcf47666812a6b45dbafe5baecc44dcdb6393ac7b4893568b44e1683cf2ed86",
+      "started": "2026-09-21T12:25:37.56454542Z",
+      "restarts": 0,
+      "health": "healthy",
+      "flags_disabled": true,
+      "provider_credential_present": false
+    },
+    "idml-development-openclaw-idml-1": {
+      "id": "c1041b72cf98fee8a4a8ccd45988d554a397a6d0f2b254acc54d4ab5d0ea43b3",
+      "image": "ghcr.io/openclaw/openclaw@sha256:3814fb1f62f9cfc5944de088c5817c68c88b5d721feebe36420b666a90a61ce7",
+      "image_id": "sha256:3814fb1f62f9cfc5944de088c5817c68c88b5d721feebe36420b666a90a61ce7",
+      "started": "2026-09-17T13:46:37.401442837Z",
+      "restarts": 0,
+      "health": "healthy",
+      "flags_disabled": true,
+      "provider_credential_present": false
+    },
+    "idml-development-redis-1": {
+      "id": "d9324df4fab4765b28e6716b747a7828b945b7fb6b90a830e1e324b3b99f3a6f",
+      "image": "redis:7-alpine",
+      "image_id": "sha256:6ab0b6e7381779332f97b8ca76193e45b0756f38d4c0dcda72dbb3c32061ab99",
+      "started": "2026-08-24T18:14:17.673502839Z",
+      "restarts": 0,
+      "health": "healthy"
+    },
+    "idml-development-postgres-1": {
+      "id": "85f47dd2873a09ce62196bfc766648c348591bd355d37927515347eaeb75d969",
+      "image": "postgres:16-alpine",
+      "image_id": "sha256:16bc17c64a573ef34162af9298258d1aec548232985b33ed7b1eac33ba35c229",
+      "started": "2026-08-24T18:13:15.971129462Z",
+      "restarts": 0,
+      "health": "healthy"
+    }
+  },
+  "agent_persistence": {
+    "agent_runs": 0,
+    "agent_proposals": 0
+  },
+  "openclaw_sessions": 0,
+  "transient_provider_networks": 0,
+  "runtime_source_files_verified": 282,
+  "restricted_content_emitted": false,
+  "release_ready": false
+}

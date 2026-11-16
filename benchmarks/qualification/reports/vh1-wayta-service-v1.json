@@ -1,0 +1,15 @@
+{
+  "probe_sha256": "1df73a439e88e9174ac2deb34e160d8cb45b1e3eb828a230f8eccc1ee0633e29",
+  "service_observation": {
+    "contract_version": "wayta-service-observation-1.0",
+    "endpoint": "https://wayta.scielo.org/api/v1/institution",
+    "observed_at": "2026-10-19T11:49:58.925524+00:00",
+    "outcome": "timeout",
+    "http_status": null,
+    "response_sha256": null,
+    "public_addresses": 1,
+    "article_query_performed": false,
+    "semantic_result_validated": false,
+    "elapsed_seconds": 8.017
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "approved_xml_sha256": "739b4c3247a06d6d5253ad2805fb830d09692cb306cbb5c785ad99707e539de9",
+  "bibliographic_occurrences": 6,
+  "corpus_id": "esa-e20240086",
+  "crossref_evidence_sha256": "0e3d531b7c3cb8c63b02d4c1367cc69796f3ec7dc2e81d551e1c631faa07b942",
+  "human_review_required": true,
+  "metadata_differences": 2,
+  "qualification_id": "9c6ac9832ed66215b132007f7c37dbc0ec64ab62ef07318ff80fd89b474b168e",
+  "restricted_content_emitted": false,
+  "source_idml_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+  "version": "source-authority-qualification-report-1.0"
+}

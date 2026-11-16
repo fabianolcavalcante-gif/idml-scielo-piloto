@@ -11,10 +11,10 @@ permissions:
 jobs:
   quality:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 60
     env:
       IDML_ENVIRONMENT: test
-      IDML_DATABASE_URL: sqlite+pysqlite:///:memory:
+      IDML_DATABASE_URL: "sqlite+pysqlite:///:memory:"
       IDML_REDIS_URL: redis://127.0.0.1:6379/15
       IDML_ARTIFACT_ROOT: /tmp/idml-test-artifacts
       IDML_SESSION_PEPPER: ci-only-not-a-production-secret-00000000
@@ -30,9 +30,78 @@ jobs:
       - run: ruff format --check .
       - run: mypy src
       - run: pytest
+      - name: Verify corpus provenance metadata and holdout isolation
+        run: python ops/gate_phase7_v01.py --metadata-only
+      - name: Run V-02 IDML ingestion security matrix
+        run: python ops/gate_phase7_v02.py
+      - name: Run V-03 IDML reading and fidelity gate
+        run: python ops/gate_phase7_v03.py
+      - name: Run V-04 domain-model integrity gate
+        run: python ops/gate_phase7_v04.py
+      - name: Run V-05 JATS/SPS construction gate
+        run: python ops/gate_phase7_v05.py
+      - name: Run V-07 semantic-fidelity mutation gate
+        run: python ops/gate_phase7_v07.py
+      - name: Run V-08 assistive OpenClaw qualification gate
+        run: python ops/gate_phase7_v08.py
+      - name: Run V-09 security, identity, and tenant-isolation gate
+        run: python ops/gate_phase7_v09.py
+      - name: Run V-10 end-to-end operational workflow gate
+        run: python ops/gate_phase7_v10.py
+      - name: Verify native and scoped VH-04 evidence without private corpus
+        run: |
+          python -m ops.gate_vh1_editorial
+          python -m ops.gate_vh1_scoped
+          python -m ops.gate_vh1_metadata
+          python -m ops.gate_vh1_history
+          python -m ops.gate_vh1_formula_links
+          python -m ops.gate_vh1_formula_revisions
+          python -m ops.gate_vh1_glyphs
+          python -m ops.gate_vh1_references
+          python -m ops.gate_vh1_reference_metadata
+          python -m ops.gate_vh1_reference_types
+          python -m ops.gate_vh1_content_triage
+          python -m ops.gate_vh1_final_validation
+          python -m ops.gate_vh1_final_warnings
+          python -m ops.gate_vh1_journal_metadata
+          python -m ops.gate_vh1_journal_xpm
+          python -m ops.gate_vh1_sps_compatibility
+          python -m ops.gate_vh1_wayta_requirements
+      - name: Verify closed VH-08 autocorrection policy contracts
+        run: python -m ops.qualify_vh08_autocorrection --check benchmarks/qualification/reports/vh08-autocorrection-policy-v2.json
+      - name: Run V-11 robustness, property, and mutation gate
+        run: python ops/gate_phase7_v11.py
+      - name: Verify 7C-01 corrective contract without private corpus
+        run: python ops/gate_phase7_7c01.py --metadata-only
+      - name: Verify 7C-02 figure contract without private corpus
+        run: python ops/gate_phase7_7c02.py --metadata-only
+      - name: Verify 7C-03 formula contract without private corpus
+        run: python ops/gate_phase7_7c03.py --metadata-only
+      - name: Verify 7C-04 structure and notes contract without private corpus
+        run: python ops/gate_phase7_7c04.py --metadata-only
+      - name: Verify 7C-05 metadata, authors, and citations contract without private corpus
+        run: python ops/gate_phase7_7c05.py --metadata-only
+      - name: Verify 7C-06 formal SPS package contract without private corpus
+        run: python ops/gate_phase7_7c06.py --metadata-only
+      - name: Verify 7C-07 assistive OpenClaw contract without private corpus
+        run: python ops/gate_phase7_7c07.py --metadata-only
+      - name: Requalify 7C-08 synthetic gates without private corpus
+        run: python ops/gate_phase7_7c08.py
+      - name: Verify V-12.1 bounded capacity evidence without private corpus
+        run: python ops/gate_phase7_v12.py
+      - name: Verify V-12.2 isolated real queue evidence
+        run: python ops/gate_phase7_v12_queue.py --report benchmarks/qualification/reports/vh19-queue-observation-v1.json --output /tmp/v12-real-queue-gate.json
+      - name: Verify V-12.2 transaction-bound storage quota evidence
+        run: python ops/gate_phase7_v12_storage.py --report benchmarks/qualification/reports/vh19-queue-observation-v1.json --output /tmp/v12-storage-gate.json
+      - name: Verify V-12.2 bounded ingestion evidence
+        run: python ops/gate_phase7_v12_ingest.py --report benchmarks/qualification/reports/vh17-ingest-observation-v1.json --output /tmp/v12-ingest-gate.json
+      - name: Verify V-12.2 bounded HTTP upload evidence
+        run: python ops/gate_phase7_v12_http.py --report benchmarks/qualification/reports/vh17-http-observation-v1.json --output /tmp/v12-http-gate.json
+      - name: Verify V-12.2 bounded volume profiles
+        run: python ops/gate_phase7_v12_volume.py --report benchmarks/qualification/reports/vh19-volume-observation-v1.json --output /tmp/v12-volume-gate.json
       - name: Check repository for obvious secrets
         run: |
-          if git grep -nE '(sk-proj-|BEGIN (RSA|OPENSSH) PRIVATE KEY|password=[^$<{])' -- ':!*.md' ':!.env.example'; then
+          if git grep -nE '(sk-proj-|BEGIN (RSA|OPENSSH) PRIVATE KEY|password=[^$<{])' -- ':!*.md' ':!.env.example' ':!.github/workflows/ci.yml'; then
             echo "Possible secret found"
             exit 1
           fi

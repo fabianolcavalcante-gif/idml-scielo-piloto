@@ -1,0 +1,25 @@
+{
+  "version": "h1-job-parity-1.0",
+  "cases": [
+    {
+      "corpus_id": "esa-e20240086",
+      "job_state": "succeeded",
+      "xml_sha256": "15287f774bed60a62f0c5734aa7082234cbc7b69b86effeecc7a1e9ea991bc20",
+      "matches_qualified_xml": true,
+      "catalog_count": 2,
+      "provenance_recorded": true
+    },
+    {
+      "corpus_id": "esa-e20240135",
+      "job_state": "succeeded",
+      "xml_sha256": "20a03a91496ac0b447bd2abe589c2be6c231547793dcf5289bd3e66cc1990880",
+      "matches_qualified_xml": true,
+      "catalog_count": 3,
+      "provenance_recorded": true
+    }
+  ],
+  "approved": true,
+  "scope": "local SQLite actual process_job; no Redis/HTTP/provider/external validators",
+  "temporary_copies_removed": true,
+  "release_ready": false
+}

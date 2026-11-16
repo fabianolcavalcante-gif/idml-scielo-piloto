@@ -1,0 +1,111 @@
+{
+  "version": "vh1-xpm-composed-qualification-1.0",
+  "date": "2026-10-26",
+  "source_archive": {
+    "release": "vh1-xpm-composed-20261023-v4",
+    "sha256": "d4dab1a23f08693b936c90d18f1c6c52d15c3e7c9927d19470b592af351e0b31",
+    "files": 1155,
+    "private_inputs_included": false,
+    "closing_documentation_synced_separately": true
+  },
+  "tests": {
+    "local_passed": 609,
+    "linux_passed": 609,
+    "new_cases": 35,
+    "counts_overlap": true,
+    "final_failures": 0,
+    "final_errors": 0,
+    "final_skipped": 0,
+    "warnings_per_run": 3,
+    "local_date": "2026-10-23",
+    "linux_date": "2026-10-26",
+    "local_junit_seconds": 40.612,
+    "linux_seconds": 30.47,
+    "full_suite_repeated": false,
+    "global_coverage_measured": false
+  },
+  "real_execution": {
+    "root": "/opt/idml-platform/private/qualification/vh1-xpm-composed-20261026T113457Z",
+    "modern_root": "/var/lib/idml-vh1-qualification/composed-20261026-v1",
+    "summary": "benchmarks/qualification/reports/vh1-xpm-composed-real-v1.json",
+    "articles": 2,
+    "negative_cases": 2,
+    "native_modern_reports": 6,
+    "attested_xpm_reports": 4,
+    "query_receipts_verified": 13,
+    "sealed_xpm_files_root_0600": 22,
+    "reproduced_composition_hashes": 2,
+    "exceptions_per_baseline": 6,
+    "wayta_probe_outcomes": [
+      "timeout",
+      "timeout",
+      "timeout"
+    ],
+    "wayta_article_query_completed": false,
+    "malformed_xml_modern_validation": "not-provisioned-unavailable",
+    "sources_refetched_on": "2026-10-26",
+    "required_queries_complete": false,
+    "formal_xml_approved": false,
+    "original_inputs_and_vendor_unchanged": true
+  },
+  "postcheck": {
+    "active_services_unchanged": 25,
+    "temporary_networks_remaining": 0,
+    "ready_http": 200,
+    "app_http": 200,
+    "active_image": "idml-foundation:vh09-heads-20261021-v1",
+    "active_runtime_changed": false
+  },
+  "checks": {
+    "ruff_global": true,
+    "mypy_source_files": 132,
+    "formatted_code_files": 10,
+    "archive_manifest_verified": true
+  },
+  "intermediate_attempts": {
+    "counted_as_passes": false,
+    "retained": true,
+    "corrections": [
+      "Administrative collector UID in narrow mounts",
+      "Root-owned ancestry for modern authority staging",
+      "Separate staging directory per validator",
+      "New candidate registry with distinct rollback revisions; unchanged active image pins",
+      "Audit read-only access to UID 65534 private native evidence"
+    ],
+    "historical_matrices": [
+      "vh1-xpm-composed-20261023T202730Z",
+      "vh1-xpm-composed-20261023T202928Z"
+    ],
+    "historical_evidence_not_redated": true
+  },
+  "source_and_evidence_sha256": {
+    "src/idml_foundation/release/xpm_sps_compatibility.py": "2dfd99ddc4297b5440b67a20ee83b3fbc468f8b81a0bffe668b14a0ea59b821b",
+    "src/idml_foundation/release/xpm_query_requirements.py": "fc18c9611a43c36b738bba6813e538bf61c33bfa0f69dbc46dbd9ae0de519b7e",
+    "src/idml_foundation/services/xpm_runtime_compatibility.py": "c11b65e7fa2b95623608bd05c5994265b4d9a6cb0d76049a941231698b05b95d",
+    "src/idml_foundation/services/xpm_execution.py": "756ba3132b6759a8e94f56ab0104c9752909f590d07a8e271be7d4132dffaaf6",
+    "src/idml_foundation/services/package_validation.py": "77cbebd8c588f4baa8c40ca409b60b4a232952411d467371019d427c1d65bf68",
+    "ops/xpm_wayta_collect.py": "be561c3952710f0ae6b5090b54f970e42bd32cc39a3c44da69819de4ca036f71",
+    "ops/xpm_validator_broker.py": "61ea524284d1cfc1850bcdcd2c11a88f22f3322f64d03af0baaabdf870e4fe30",
+    "ops/qualify_vh1_xpm_socket.py": "6d731d4cc6c8e052bfc27ae5bd4ca58cbf72d5cd9f0c1c3a58bf19ebf33a7e43",
+    "ops/qualify_vh1_composed.py": "4c1a84b2c025055700aef4300b67cd168ee456d5c19713d777eec650e3c10880",
+    "tests/test_xpm_composed.py": "cb92e5f7ad288ec23d305b0fdda77f4ae16a7b7a3e42cb91ea475e10c9ff612a",
+    "config/validator-registry-vh1-composed.json": "f2c951dcb6b4bf5d5a1423f8967c8f9095ad9798ad1490f4d79a2a646a7d4774",
+    "tmp/verify_composed.py": "56038ae1e19189d2b1c9c0636cbcf83fc6bb0758512d90e87082ec2ef8344561",
+    "tmp/vh1-xpm-composed-tests.xml": "f6029a062964f5474f7ed8f40e67f6dea9eb526de525732b1d7ddb870859df98",
+    "tmp/vh1-xpm-composed-linux-tests.log": "13859720db460cb1f7be13fda9adeb25f48f4119f98ae13b20e6eebfd7f0a477",
+    "tmp/vh1-xpm-composed-audit.json": "890190cb79358606d2c26022ae5e59f9a6e3c0e803ad64cf4f980a542204d80f",
+    "tmp/vh1-xpm-composed-postcheck.json": "46dbd21364cad1646a9689f0ae628a8baddaece1d187da70a794d580b3e293fa",
+    "benchmarks/qualification/reports/vh1-xpm-composed-real-v1.json": "aeaafc8e2375a3d464cfccf749ec95ba98fb8115f12d60cd6b9839e9e30dc5d2"
+  },
+  "limitations": [
+    "No active API/worker deployment or UI E2E",
+    "No DOCTYPE/JATS exception; one fatal and one residual error per baseline remain",
+    "Warnings and four e135 public-name pending findings preserved",
+    "Wayta applicability is not completed article query or institution identity verification",
+    "Current modern receipts ingested from root-sealed native broker execution; XPM uses real private socket",
+    "No AI invocation, new credential, public port, database change, G-HOMOLOG or publication approval"
+  ],
+  "candidate_stored_on_vps": true,
+  "active_runtime_changed": false,
+  "ai_invoked": false
+}

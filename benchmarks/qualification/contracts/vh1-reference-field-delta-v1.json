@@ -1,0 +1,393 @@
+{
+  "version": "vh1-reference-field-delta-1.0",
+  "reviewed_at": "2026-10-09",
+  "review_kind": "development-source-span-review-not-human-homologation",
+  "gold_used": false,
+  "scientific_fidelity_approved": false,
+  "publication_type_qualified": false,
+  "source_idml_sha256": {
+    "esa-e20240086": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+    "esa-e20240135": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574"
+  },
+  "cases": {
+    "esa-e20240086": [
+      {
+        "after_sha256": "50c0acde064288c14bf4a7e1f40531afd52835c3e4d25f89a40f92cfb965d599",
+        "before_sha256": "7f4ddee73f6ebb4f211114457511efee86f115d69325b6daaf7a116939315bf3",
+        "field": "person-group",
+        "id": "reference-da88d46d-4105-515b-86dd-d34160c7d7a8",
+        "mixed_citation_sha256": "8b2a18d66b5c54dda01b96fa095490d79db754b472a8673017e03ff3d64165ec",
+        "position": 5,
+        "source_spans": [
+          [
+            0,
+            18,
+            "e6c4f9b1ecfea8edf10ff1a238d4f3ce56113401974183e3e45d09d4b2aa618f"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "696f81066c6749bc3ff3f7d19ad06bd9538029b2a0834dd8a64b4f15798fc27b",
+        "before_sha256": "c45f36ab125bf35b940d5d3ed14b78a521ce800f4ede9fe98ead5b5b732b1603",
+        "field": "person-group",
+        "id": "reference-fe7eaf77-cfa3-5dc3-9925-bb6d0f1b0a50",
+        "mixed_citation_sha256": "6a1ad3fb7ba73732b736ee53179ae829fe002585e8ec5607d23a26b6023042f5",
+        "position": 9,
+        "source_spans": [
+          [
+            0,
+            22,
+            "8e20638ae2a008bfe67ddd41cbd766346035b56cd6ad817dc15399dcb91fa967"
+          ],
+          [
+            24,
+            55,
+            "bc71fb69f95eb3298b4dd922e5ef320e0257de625d9dccd56a993d0cb9eb7f96"
+          ],
+          [
+            57,
+            87,
+            "9e8e61a5e8527f54b419da4892d2f95dc96f988f9b1d2bf3cbb1b105def00595"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "02e856c140f4abebc08ae00224e7b2953199c65cca980ee0cb9d0be08590d12c",
+        "before_sha256": "d8f15e23968ed52e5b5fa82436a40a59fd780b2342ef5ef94c72501a9f9f0e3c",
+        "field": "article-title",
+        "id": "reference-fe7eaf77-cfa3-5dc3-9925-bb6d0f1b0a50",
+        "mixed_citation_sha256": "6a1ad3fb7ba73732b736ee53179ae829fe002585e8ec5607d23a26b6023042f5",
+        "position": 9,
+        "source_spans": [
+          [
+            89,
+            328,
+            "50fac0f53c241cd316ce336812f77bcc3d2d26da5ede530b25906067274c1533"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "a54376b95452557c9f7c4a231397041e42048172c4933753f522b519928584d4",
+        "before_sha256": "0c49ab1e4a788992906484ce9a4e64ab3e946846bf69a9497882dfdd9f3ff503",
+        "field": "article-title",
+        "id": "reference-7d03e948-4237-518c-8852-73ef9b572bb2",
+        "mixed_citation_sha256": "eaa327dea705e326b2f639a10b7ce8e641dba83fff5292168b7601a21e690078",
+        "position": 11,
+        "source_spans": [
+          [
+            32,
+            83,
+            "a6e9495e9e9066a0aa347159230f675defcccfc1400c2c676eba06b3832e3e41"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "f54dfc3980455d6f37da2d4aeb5ab6b96f30caeb3fd03ba792dc09da4f501d74",
+        "before_sha256": "3f141a03b776a3a4e22bad82bf4bb606eb6b4c36cab86c3674b92d04f2b54f4b",
+        "field": "source",
+        "id": "reference-7d03e948-4237-518c-8852-73ef9b572bb2",
+        "mixed_citation_sha256": "eaa327dea705e326b2f639a10b7ce8e641dba83fff5292168b7601a21e690078",
+        "position": 11,
+        "source_spans": [
+          [
+            85,
+            112,
+            "7a2143516cb48f0ff882dc2dc120bce1da1a217c74d8f412f182f078af78402d"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "e63d046c6a9b04c9d652ee24cc88139ec84065c266fbccac95424b45936ed9a9",
+        "before_sha256": "e010e5ce10612fcff7d99012a60c12f6affd5a2021712cba10871a7f2c6ba554",
+        "field": "person-group",
+        "id": "reference-1f1ca036-d978-5342-a2a7-b70e3c3fbf51",
+        "mixed_citation_sha256": "6b0ac2cbfadd1ae2f182346b024a94d30fabca3851c89dc0c2dbc0bf1f0c574e",
+        "position": 15,
+        "source_spans": [
+          [
+            0,
+            17,
+            "e85d5436bf97be74abe17e47137df6e9b9871ef53983bea2083bd95bc6a8c699"
+          ],
+          [
+            19,
+            37,
+            "c6f0fab55f6cc78b149b7184420d2f5340f4736c1048085bf0692e45207c74ba"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "2800a0ff2a138e904ca1d64d187d32349a4953485ec21628b1bfeb271321bee4",
+        "before_sha256": "7ddd05f288c754d664813afb2217687b23ec5c3a63d3fc53e8ed36af5ae6fc8b",
+        "field": "article-title",
+        "id": "reference-951d3c5b-df31-5886-a160-4afa2ccb04d4",
+        "mixed_citation_sha256": "f688d44f849b43d4911f49027428b700380229de74579e18db34ea60b9f4471f",
+        "position": 16,
+        "source_spans": [
+          [
+            22,
+            187,
+            "a03df22dc055aba0879fa259333086541bf62b2a90a53f98aa89bdfee8464b82"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "4dbca5d16ae1220f2e68794e65e3badf2640011c0c0a3e139a518fb6576e45de",
+        "before_sha256": "cf3d0ea596e49efd479ffd260681d91037fcdc7ce51ba956cff728e2a40815d4",
+        "field": "source",
+        "id": "reference-951d3c5b-df31-5886-a160-4afa2ccb04d4",
+        "mixed_citation_sha256": "f688d44f849b43d4911f49027428b700380229de74579e18db34ea60b9f4471f",
+        "position": 16,
+        "source_spans": [
+          [
+            189,
+            261,
+            "39a993c738fff01aa0c40e8e5fad4c959e63e3f625b00977b3b98fcd94b7c127"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "ccb9ef058fdd602967460209ea4ff253ad360cbc4c7deb3ccd754c85be1ca9ab",
+        "before_sha256": "7e4beaa415dcf85c3ed0be6272c37f1e43599797be67f87d2bbdd1814cf2bf48",
+        "field": "person-group",
+        "id": "reference-82334187-e21f-5104-860f-b102add32f71",
+        "mixed_citation_sha256": "10005e67d5cf3924bf0eae297e875a1daa7271b773436c2487930b4ea143aba6",
+        "position": 28,
+        "source_spans": [
+          [
+            0,
+            12,
+            "dd7797426c708c2dd3f182e7e76d53b6c7a31e8af6ac045fe7196bf35e34d072"
+          ],
+          [
+            14,
+            24,
+            "c771f334b67eac0b30b51ddd0eaf8b18a5da66c5b58638b0e581af4d98b91d33"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "b6faee8ddf308716f3d3f3203d6882de76280ce90a766494deab0abf9e96938e",
+        "before_sha256": "cdba10163a598e7f0e82fae6e3f1403264f6d9a41be97f05514ca5b609037d8a",
+        "field": "person-group",
+        "id": "reference-d069fd00-9e01-54b2-94b0-04fa446d2870",
+        "mixed_citation_sha256": "48462bb266c2aab6454dc02a13dc64ea81e791c14929d99e85abe2b8c8f6a4f1",
+        "position": 38,
+        "source_spans": [
+          [
+            0,
+            12,
+            "c1127e0419388d6ca0f813553fba660b830c8d11667f9adc37959538e9bff3dc"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "c69dea779fa5738c571fb58720a002ae93c925dcd0425af3bade37a2fc9cd602",
+        "before_sha256": "c1206d92259878186a56c8d963416207ab80ea2b207547e4c6b54f68c151c3ca",
+        "field": "article-title",
+        "id": "reference-d069fd00-9e01-54b2-94b0-04fa446d2870",
+        "mixed_citation_sha256": "48462bb266c2aab6454dc02a13dc64ea81e791c14929d99e85abe2b8c8f6a4f1",
+        "position": 38,
+        "source_spans": [
+          [
+            13,
+            46,
+            "ff4c5dd3098ec45ced33192911b3b84ea08dbdb991a1f4d44b84ec9dee30559e"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "1bb2233894ca0942d8f949d036e54a4191ae75a03ebc7fcb8a6f2b472c685ace",
+        "before_sha256": "aeac47e476cf937db23d851387ea0d26f03fc866880a377c026dad54d4086d40",
+        "field": "person-group",
+        "id": "reference-29a1323e-de7d-5928-a27e-615a0a5016be",
+        "mixed_citation_sha256": "d406fc48a904e3b0d1684a5f6357990e48c322891ad98ba3739fbc56122575ba",
+        "position": 39,
+        "source_spans": [
+          [
+            0,
+            12,
+            "552ed07f755d754ed7827d098210d23b8bf92250a50e8eac6c161cfa5ce3b223"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "49a8b432da3d2cb0021dd80e33ac17a2e2f4e5005d803484d272fa1bc7a76a3f",
+        "before_sha256": "c02030ff3bde20421b5e9bdc84f58758ad031b45235b82b6896be8e2f5ce8d3f",
+        "field": "article-title",
+        "id": "reference-29a1323e-de7d-5928-a27e-615a0a5016be",
+        "mixed_citation_sha256": "d406fc48a904e3b0d1684a5f6357990e48c322891ad98ba3739fbc56122575ba",
+        "position": 39,
+        "source_spans": [
+          [
+            13,
+            72,
+            "462d1518d36a68f83292ea8b3f29497916dfb6676b9a1f9bba6c8bf49ba57c98"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "4b3a2bd34c0f9623492e90a1e3c242fa898a1a92cc7ad6bea6659f2330f62217",
+        "before_sha256": "ee047a03ab3a2bd80de937303596e4065590ff5313160109bf3e4d26cb7e3b66",
+        "field": "article-title",
+        "id": "reference-a3f6a367-c1f9-5543-9306-a2e7615fc0d1",
+        "mixed_citation_sha256": "77c377509bc7ef29c598895a21e4dc3c544db8a4e9e56adfc561e44a62052e23",
+        "position": 44,
+        "source_spans": [
+          [
+            42,
+            52,
+            "c4e7ea52da69a40b14ad141cf1fa28f121bc32bca57781813deb60bf6d1435be"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "952ca72f0550f96e83b6bcb64561d0babecf7f7525a9e7908775d33ae07bab72",
+        "before_sha256": "3378e11bb58c00e21e89c5700ab95026309c73dbde9441eb6c5e884c43639242",
+        "field": "source",
+        "id": "reference-a3f6a367-c1f9-5543-9306-a2e7615fc0d1",
+        "mixed_citation_sha256": "77c377509bc7ef29c598895a21e4dc3c544db8a4e9e56adfc561e44a62052e23",
+        "position": 44,
+        "source_spans": [
+          [
+            35,
+            39,
+            "b4baeecd9628585160db6ffb9a362663d2d55650af5c1d15cc81b699b60c3cf8"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "b8a7cb24d296f77fcd9de81e28ce96c0ca2d03c48346e1e560a375b63e584a42",
+        "before_sha256": "f3e5a23aa54afb482940b835b4c394d5ed72201f490080004e3d712cbd206ae2",
+        "field": "article-title",
+        "id": "reference-4190b619-da56-5bf6-81ce-4075ad960caf",
+        "mixed_citation_sha256": "0288dc0d80a05b64e7deaa6b59b10588be46cdf27b4bf7b8a1a0cf5a07b94a6b",
+        "position": 45,
+        "source_spans": [
+          [
+            76,
+            109,
+            "c21bfd6d4c0d0372369438826f426477cfaaedb77c7577c7899000f2d8c4101a"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "a5906ac483b6c95a6db027e89376a428f686b4a43439e09650134947d9e14527",
+        "before_sha256": "d6f072e94131c8172f243e5e320bae36cc85997c0b72c2127fef5a7847a0e93a",
+        "field": "source",
+        "id": "reference-4190b619-da56-5bf6-81ce-4075ad960caf",
+        "mixed_citation_sha256": "0288dc0d80a05b64e7deaa6b59b10588be46cdf27b4bf7b8a1a0cf5a07b94a6b",
+        "position": 45,
+        "source_spans": [
+          [
+            111,
+            146,
+            "53e8f9367fa775996235ef75765c3d2d21762229ffb152625f95b63e1cd8c112"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "1eab7611780d557afea945bb118403da89a2040b9f1906ac84fc430575225ed6",
+        "before_sha256": "594c53cc098d2977ebe836f61c37b2077429c95b4095debea8a24f4f1031c2cf",
+        "field": "person-group",
+        "id": "reference-db876db5-adfa-5e46-bfa3-6ce6feaf0cc0",
+        "mixed_citation_sha256": "6f806220fdc7ce5e75f73277e086a9e043057f55235321ce47e48397b13b4087",
+        "position": 46,
+        "source_spans": [
+          [
+            0,
+            21,
+            "bae9ad6f8472397f520d54daa51f25f76b67e037bb2f488859a08a105fa6ac0d"
+          ],
+          [
+            23,
+            43,
+            "abf149b814958dbdee3c01ebc0dfc51d99456cd096a567bcacfb0f2f9b1bd7ea"
+          ],
+          [
+            45,
+            61,
+            "ff67dfbac58d4c7de4d5d0ae8cad585089c0541de7025e64dd07fc8a41aa723e"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "cc9849432bd1181ff2e2d1a7566e655379ee4e67a2b68ff79572e0bc2a1164fc",
+        "before_sha256": "0f4c4ea1ee89bdb13b3f9a123590b2191932071d058fe949fa52e16d44e84403",
+        "field": "person-group",
+        "id": "reference-d1f110b2-25dc-5f3f-8d0b-dfbbaf5e3ba7",
+        "mixed_citation_sha256": "83bc30ccab4d261095df9183af7f500329d7ae2d4984c031d04b940c898294ff",
+        "position": 49,
+        "source_spans": [
+          [
+            0,
+            16,
+            "780acd0f823a3b8fa7af5c1b0df0d975cfdfd2862362a265da7c8a1b0e3b6379"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "8c1de6ae2cf225267c81f38f0706e576a54123d3168502a338bbc0ebb93f930d",
+        "before_sha256": "7360e18b8ccaafb2e78277d813dca29a173ae280d656cf2c3258c411ca66c945",
+        "field": "article-title",
+        "id": "reference-d1f110b2-25dc-5f3f-8d0b-dfbbaf5e3ba7",
+        "mixed_citation_sha256": "83bc30ccab4d261095df9183af7f500329d7ae2d4984c031d04b940c898294ff",
+        "position": 49,
+        "source_spans": [
+          [
+            17,
+            30,
+            "504c4e029045d03e77c52b7baff1f26dbd7895bc794f7cc96678a08113742fe5"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "37cbd7f382992d9dce4ddf493b1c2505d85785c69ce0e9dadb648a6dc087374c",
+        "before_sha256": "4970d6b278f17bf748d6d13008a5e930a095ec9a7f774d38f13c67dff4f8f3ae",
+        "field": "source",
+        "id": "reference-d1f110b2-25dc-5f3f-8d0b-dfbbaf5e3ba7",
+        "mixed_citation_sha256": "83bc30ccab4d261095df9183af7f500329d7ae2d4984c031d04b940c898294ff",
+        "position": 49,
+        "source_spans": [
+          [
+            32,
+            36,
+            "743f46d35d1a8ffd8b3728abdc81ebc025abc1f88db0157a27297d3660616444"
+          ]
+        ]
+      }
+    ],
+    "esa-e20240135": [
+      {
+        "after_sha256": "1a11161d3f30fb85a95adcbb2e7da93e96731be4f3c052b69868828ca59173a9",
+        "before_sha256": "5730cd911fb5d7e5e97d7d6f1cbf54488481780f163eeadb3b9cb6ce1c1f231e",
+        "field": "article-title",
+        "id": "reference-ff139fbc-b398-59da-9326-587309014e6a",
+        "mixed_citation_sha256": "f31a522bceb91f7ffa17d0981aa70447f010ad58c4b4ea18a7a707774c8905f8",
+        "position": 31,
+        "source_spans": [
+          [
+            27,
+            63,
+            "2fe05095261038a688c220eb3318f1189e5dfa318ef7a9ceb70db63dda792c2d"
+          ]
+        ]
+      },
+      {
+        "after_sha256": "dc560f5bccd50a1050db0cb295879fcc7143498629e1d304652f7e52d9cb5f96",
+        "before_sha256": "60a7d3237b9fce579a9ad9353c97ea308a502a15f985e37561f32dfe2f92ae17",
+        "field": "source",
+        "id": "reference-ff139fbc-b398-59da-9326-587309014e6a",
+        "mixed_citation_sha256": "f31a522bceb91f7ffa17d0981aa70447f010ad58c4b4ea18a7a707774c8905f8",
+        "position": 31,
+        "source_spans": [
+          [
+            65,
+            90,
+            "24cae19901b9e21bea32887383dd7010c57015f5e14b50076cab633b218aa2bb"
+          ]
+        ]
+      }
+    ]
+  }
+}

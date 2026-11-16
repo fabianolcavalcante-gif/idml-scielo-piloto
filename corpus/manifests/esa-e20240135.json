@@ -1,0 +1,134 @@
+{
+  "manifest_version": "1.0.0",
+  "corpus_id": "esa-e20240135",
+  "journal": "Engenharia Sanitária e Ambiental",
+  "template": "ESA AOP InDesign DOM 20.3",
+  "split": "development",
+  "source_root_hint": "tmp/ARQUIVOS TESTE",
+  "policy": {
+    "purpose": "requalificação corretiva e regressão interna do primeiro template",
+    "license_status": "uso interno autorizado; redistribuição não confirmada",
+    "confidentiality": "restricted",
+    "contains_personal_data": true,
+    "redistribution_allowed": false,
+    "anonymization": "conteúdo não é versionado; somente hashes, nomes técnicos e contagens",
+    "retention": {
+      "retain_until": null,
+      "review_interval_days": 365,
+      "deletion_requires_approval": true
+    }
+  },
+  "artifacts": [
+    {
+      "logical_path": "ESA_2024135_AOP.idml",
+      "role": "source_idml",
+      "media_type": "application/vnd.adobe.indesign-idml-package",
+      "sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+      "size_bytes": 402595,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-1725/1809-4457-esa-30-e20240135.xml",
+      "role": "approved_xml_reference",
+      "media_type": "application/xml",
+      "sha256": "356936b42a1c30f0b3317a8520b04f730fa72c65edca41f3a15bb89c581b9d2c",
+      "size_bytes": 144651,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-1725/1809-4457-esa-30-e20240135.pdf",
+      "role": "approved_pdf_reference",
+      "media_type": "application/pdf",
+      "sha256": "d997b54fdac501397b80e7a4526d6fff705509a99b52e90bd70310d8cdba6157",
+      "size_bytes": 866950,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "xpm.html",
+      "role": "xpm_report",
+      "media_type": "text/html",
+      "sha256": "0d875950bc509bd11e6b7823bb77872e5fea1f095f603c806a7226e77f39c1c3",
+      "size_bytes": 651017,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "falsos positivos.xlsx",
+      "role": "validator_exception_evidence",
+      "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sha256": "6acf0eb93f64d7b82888185b16f2a7fd6b522eb836ebdcdcfd69ad397825c705",
+      "size_bytes": 12860,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-1725/1809-4457-esa-30-e20240135-gf01.jpg",
+      "role": "figure_asset",
+      "media_type": "image/jpeg",
+      "sha256": "d5271693c4ea6aa0711a2a5bb9b61df7c9f2afd95f5b57668eb0aa2203fbf3a8",
+      "size_bytes": 81287,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-1725/1809-4457-esa-30-e20240135-gf02.jpg",
+      "role": "figure_asset",
+      "media_type": "image/jpeg",
+      "sha256": "dc7d711a910fa0bb66166af504982a5bf916d6371f69f7a1cb8633d23274425a",
+      "size_bytes": 158873,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-1725/1809-4457-esa-30-e20240135-gf03.jpg",
+      "role": "figure_asset",
+      "media_type": "image/jpeg",
+      "sha256": "a18b38923350cb857cbc402e74879c6abfcc5c1ea7cf6fdf299f7ac476f02a29",
+      "size_bytes": 155155,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-1725/1809-4457-esa-30-e20240135-gf04.jpg",
+      "role": "figure_asset",
+      "media_type": "image/jpeg",
+      "sha256": "0418804c16c8a026c67fecf3bf4483076974fea628945638c5e1b798809aeb0a",
+      "size_bytes": 119796,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-1725/1809-4457-esa-30-e20240135-gf05.jpg",
+      "role": "figure_asset",
+      "media_type": "image/jpeg",
+      "sha256": "b592cb2ebc7ab6e9b772b092c0c4e4614121ed426b6b72b39ca391e3a397e24a",
+      "size_bytes": 128413,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-1725/1809-4457-esa-30-e20240135-gf06.jpg",
+      "role": "figure_asset",
+      "media_type": "image/jpeg",
+      "sha256": "c276a2dda7563baaaa08b5ba43554e198bc976e0b018d146e8a8efe308c6918f",
+      "size_bytes": 124785,
+      "access_class": "restricted"
+    },
+    {
+      "logical_path": "1809-4457-esa-30-1725/1809-4457-esa-30-e20240135-gf07.jpg",
+      "role": "figure_asset",
+      "media_type": "image/jpeg",
+      "sha256": "53f597cca0364192ecbcb8df7390b986363b339b828865f5228ca5160f7528b8",
+      "size_bytes": 133240,
+      "access_class": "restricted"
+    }
+  ],
+  "expected": {
+    "pages": 14,
+    "stories": 60,
+    "text_frames": 68,
+    "body_sections": 6,
+    "body_paragraphs": 181,
+    "contributors": 4,
+    "affiliations": 4,
+    "figures": 7,
+    "tables": 5,
+    "inline_formulas": 32,
+    "display_formulas": 11,
+    "references": 35,
+    "notes": 7
+  }
+}

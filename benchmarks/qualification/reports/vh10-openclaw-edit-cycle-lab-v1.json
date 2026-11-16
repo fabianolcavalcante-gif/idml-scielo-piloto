@@ -1,0 +1,290 @@
+{
+  "date": "2026-11-02",
+  "stage": "VH-10 laboratory",
+  "active_image": "vh10-edit-20261101-v2",
+  "agents_enabled_for_users": false,
+  "positive_case": "synthetic, text-only IDML with a single missing original affiliation",
+  "original_idml_preflights": [
+    {
+      "source_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+      "state": "abstained",
+      "bindings": 0,
+      "provider_calls": 0
+    },
+    {
+      "source_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+      "state": "abstained",
+      "bindings": 0,
+      "provider_calls": 0
+    }
+  ],
+  "gateway": {
+    "agent": "idml-evaluator",
+    "model": "openai/gpt-5.4-mini",
+    "cost_source": "project pricing catalog, estimated",
+    "votes": {
+      "state": "supported_for_revalidation",
+      "xml_sha256": "fcf5a0f28c39da1426159770823bb65771defc868196f6d257a9f69173f3d011",
+      "calls": [
+        {
+          "role": "proposer",
+          "round": 1,
+          "input_sha256": "3ed3f7193049fa98cf5bbd428e39d16674801e7585547b44e99647814f627ad0",
+          "reserved_microusd": 15750,
+          "input_tokens": 3510,
+          "output_tokens": 205,
+          "cached_input_tokens": 0,
+          "cost_microusd": 3555,
+          "vote": "support"
+        },
+        {
+          "role": "xml_critic",
+          "round": 1,
+          "input_sha256": "6ebe999ce6d46792fead5e008b3f2cdf9adf867f4fc805f6cebd9c8607fb97c7",
+          "reserved_microusd": 15750,
+          "input_tokens": 3530,
+          "output_tokens": 130,
+          "cached_input_tokens": 0,
+          "cost_microusd": 3233,
+          "vote": "support"
+        },
+        {
+          "role": "editorial_critic",
+          "round": 1,
+          "input_sha256": "5a2dc7f6a6d6ae83494a5b3cdf90407ecb847acdfa72fec0905beaefdfe38698",
+          "reserved_microusd": 15750,
+          "input_tokens": 3541,
+          "output_tokens": 162,
+          "cached_input_tokens": 0,
+          "cost_microusd": 3385,
+          "vote": "support"
+        },
+        {
+          "role": "adjudicator",
+          "round": 1,
+          "input_sha256": "1f94e9b8ba43a279e45d041d4435661715091a2ef13296c4d6dac311ba7c6c22",
+          "reserved_microusd": 15750,
+          "input_tokens": 3561,
+          "output_tokens": 135,
+          "cached_input_tokens": 0,
+          "cost_microusd": 3279,
+          "vote": "support"
+        }
+      ],
+      "cost_microusd": 13452,
+      "budget_microusd": 250000,
+      "release_approved": false
+    }
+  },
+  "controlled_formal_responses": {
+    "applied": true,
+    "controlled": true,
+    "offline_valid": true,
+    "formal_runs": [
+      {
+        "name": "packtools",
+        "status": "completed",
+        "counts": {
+          "blocking": 0,
+          "critical": 0,
+          "error": 0,
+          "warning": 0
+        }
+      },
+      {
+        "name": "spsvalidator",
+        "status": "completed",
+        "counts": {
+          "blocking": 0,
+          "critical": 0,
+          "error": 0,
+          "warning": 0
+        }
+      }
+    ],
+    "xpm": {
+      "status": "completed",
+      "counts": {
+        "blocking_errors": 0,
+        "fatal_errors": 0,
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    "reasons": [],
+    "xml_sha256": "fcf5a0f28c39da1426159770823bb65771defc868196f6d257a9f69173f3d011",
+    "package_sha256": "2ea26e50c05f8c5464fd81de3192f10c484a32b3d2c6bea91053b7695f6f7ac5",
+    "restore_state": "revalidated-working-draft",
+    "restored_xml_sha256": "c719def1e66be2828f3b6dad4e1a7f68322e616d9df3c9e720d9ece4004a4ac8",
+    "restored_package_sha256": "e669b95a83a798661db4870ff000d19d9a04a35906176a38bb97883357592618"
+  },
+  "first_native_attempt": "All three executors unavailable; host memory reserve. Draft unchanged.",
+  "native_after_retry": {
+    "applied": false,
+    "controlled": false,
+    "offline_valid": true,
+    "formal_runs": [
+      {
+        "name": "packtools",
+        "status": "unavailable",
+        "counts": {
+          "blocking": 0,
+          "critical": 0,
+          "error": 0,
+          "warning": 0
+        }
+      },
+      {
+        "name": "spsvalidator",
+        "status": "unavailable",
+        "counts": {
+          "blocking": 0,
+          "critical": 0,
+          "error": 0,
+          "warning": 0
+        }
+      }
+    ],
+    "xpm": {
+      "status": "completed",
+      "counts": {
+        "blocking_errors": 4,
+        "fatal_errors": 8,
+        "errors": 6,
+        "warnings": 7
+      }
+    },
+    "reasons": [
+      "fresh-validation-not-qualified-for-working-draft"
+    ],
+    "xml_sha256": "fcf5a0f28c39da1426159770823bb65771defc868196f6d257a9f69173f3d011",
+    "package_sha256": "2ea26e50c05f8c5464fd81de3192f10c484a32b3d2c6bea91053b7695f6f7ac5"
+  },
+  "query_preparation": {
+    "scope_authorized": true,
+    "xml_sha256": "fcf5a0f28c39da1426159770823bb65771defc868196f6d257a9f69173f3d011",
+    "package_sha256": "2ea26e50c05f8c5464fd81de3192f10c484a32b3d2c6bea91053b7695f6f7ac5",
+    "doi_elements": 0,
+    "refusals": {
+      "packtools": "query_doi_not_unique",
+      "spsvalidator": "query_doi_not_unique"
+    }
+  },
+  "real_reference_control": {
+    "passed": true,
+    "articles": 1,
+    "cases": [
+      {
+        "rebuilt_transport": {
+          "transport_completed": true,
+          "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+          "package_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+          "modern_counts": [
+            {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            },
+            {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            }
+          ],
+          "xpm_counts": {
+            "blocking_errors": 3,
+            "fatal_errors": 1,
+            "errors": 4,
+            "warnings": 2
+          }
+        },
+        "article": "esa-e20240086",
+        "worker_job": "passed",
+        "http_authorization": true,
+        "actual_database_decision_resolver": true,
+        "fresh_public_sources": true,
+        "initial_authority_bundles": 0,
+        "generated_authority_bundles": 1,
+        "revocation_denied_all_executors_without_new_runs": true,
+        "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+        "package_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+        "modern": [
+          {
+            "name": "packtools",
+            "status": "completed",
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            }
+          },
+          {
+            "name": "spsvalidator",
+            "status": "completed",
+            "counts": {
+              "blocking": 0,
+              "critical": 0,
+              "error": 0,
+              "warning": 5
+            }
+          }
+        ],
+        "xpm_status": "completed",
+        "raw_xpm_counts": {
+          "blocking_errors": 3,
+          "fatal_errors": 1,
+          "errors": 4,
+          "warnings": 2
+        },
+        "derived_xpm_counts": {
+          "blocking_errors": 0,
+          "fatal_errors": 0,
+          "errors": 0,
+          "warnings": 2
+        },
+        "report_sha256": "e5c7c8321c2a4dd8b71b69cf8592bd17c57b5e8f27a5ab6ad137cdf12834f6ec",
+        "isolated_database": true,
+        "idml_ingestion_exercised": false,
+        "ai_invoked": false,
+        "release_approved": false
+      }
+    ],
+    "manifest_sha256": "68affbf12084ed140b1dc0504afeab6699b651989985cd23745f8def1c7e098b",
+    "real_user_decisions_created": 0,
+    "homologation_ready": false
+  },
+  "limits_exercised": {
+    "abstention": true,
+    "interrupt_after_call": true,
+    "consent_revocation": true,
+    "wrong_candidate_refused": true,
+    "budget_refused_before_call": true,
+    "two_round_limit": true,
+    "same_run_replay_refused": true
+  },
+  "tests": {
+    "local": 586,
+    "linux": 586,
+    "warnings_per_platform": 2
+  },
+  "postcheck": {
+    "active_idml_services_healthy": 5,
+    "agents_enabled": false,
+    "other_services_unchanged": true,
+    "provider_detached": true,
+    "active_database_counts_unchanged": true,
+    "active_release": "vh10-edit-20261101-v2",
+    "smoke": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    }
+  },
+  "mapalead_services_stopped": false,
+  "formal_positive_promotion_and_restore_pending": true,
+  "release_approved": false,
+  "human_homologation_ready": false
+}

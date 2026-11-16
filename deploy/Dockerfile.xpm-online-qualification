@@ -1,0 +1,5 @@
+# Same pinned XPM/Python/Tk/Java runtime as the offline proof; no vendor edits.
+ARG BASE_IMAGE=sha256:dfcc38f04950f075f03a6f1d48ab654ec4fc3be32c600c62b25ee76f9da98116
+FROM ${BASE_IMAGE}
+COPY xpm_egress_proxy.py run_xpm_online_qualification.py /opt/
+ENTRYPOINT ["python", "/opt/run_xpm_online_qualification.py"]

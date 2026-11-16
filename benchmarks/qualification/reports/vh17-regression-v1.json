@@ -1,0 +1,260 @@
+{
+  "date": "2026-11-09",
+  "release": "vh17-regression-20261109-v1",
+  "image_id": "sha256:2124ad8e83e4f5279af479ff9de10cbcdb82c1656e0ed85bb79e8d32f898282b",
+  "schema": "e2f314253647",
+  "runtime_files_verified": {
+    "idml-development-api-1": 351,
+    "idml-development-worker-1": 351
+  },
+  "source_archive_sha256": "a6644a6321830d5d9d7be2c5074bae9559998b750b59b32eead3e6027d98891b",
+  "windows": {
+    "tests": 3244,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "coverage": 90.15923372582515,
+    "elapsed_seconds": 759,
+    "exit_codes": [
+      0,
+      0,
+      0
+    ]
+  },
+  "linux": {
+    "tests": 3244,
+    "coverage": 90.15,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "junit_sha256": "94c8fd0380479a011a60ca2328786e910e57762c8a522e587eb48d26e7b19154"
+  },
+  "windows_junit_sha256": [
+    "67cbe2a5c1cdcf51c66306a3e647dce572104785971f92bd5c0eabb837f435f1",
+    "e10c88c59bbda0ea2babb49a24e5573a4bcc1a7b54dc3ee6eea1893109098586",
+    "972a6d126d313a5a3b2b90c6161ecb6e6936fd10e2efa47fbfe0850f96e20ed8"
+  ],
+  "identical_test_ids": true,
+  "workflow_qualification_commands": {
+    "ops/gate_phase7_v01.py": 0,
+    "ops/gate_phase7_v02.py": 0,
+    "ops/gate_phase7_v03.py": 0,
+    "ops/gate_phase7_v04.py": 0,
+    "ops/gate_phase7_v05.py": 0,
+    "ops/gate_phase7_v07.py": 0,
+    "ops/gate_phase7_v08.py": 0,
+    "ops/gate_phase7_v09.py": 0,
+    "ops/gate_phase7_v10.py": 0,
+    "ops.gate_vh1_editorial": 0,
+    "ops.gate_vh1_scoped": 0,
+    "ops.gate_vh1_metadata": 0,
+    "ops.gate_vh1_history": 0,
+    "ops.gate_vh1_formula_links": 0,
+    "ops.gate_vh1_formula_revisions": 0,
+    "ops.gate_vh1_glyphs": 0,
+    "ops.gate_vh1_references": 0,
+    "ops.gate_vh1_reference_metadata": 0,
+    "ops.gate_vh1_reference_types": 0,
+    "ops.gate_vh1_content_triage": 0,
+    "ops.gate_vh1_final_validation": 0,
+    "ops.gate_vh1_final_warnings": 0,
+    "ops.gate_vh1_journal_metadata": 0,
+    "ops.gate_vh1_journal_xpm": 0,
+    "ops.gate_vh1_sps_compatibility": 0,
+    "ops.gate_vh1_wayta_requirements": 0,
+    "ops.qualify_vh08_autocorrection": 0,
+    "ops/gate_phase7_v11.py": 0,
+    "ops/gate_phase7_7c01.py": 0,
+    "ops/gate_phase7_7c02.py": 0,
+    "ops/gate_phase7_7c03.py": 0,
+    "ops/gate_phase7_7c04.py": 0,
+    "ops/gate_phase7_7c05.py": 0,
+    "ops/gate_phase7_7c06.py": 0,
+    "ops/gate_phase7_7c07.py": 0,
+    "ops/gate_phase7_7c08.py": 0,
+    "ops/gate_phase7_v12.py": 0,
+    "ops/gate_phase7_v12_queue.py": 0,
+    "ops/gate_phase7_v12_storage.py": 0,
+    "ops/gate_phase7_v12_ingest.py": 0,
+    "ops/gate_phase7_v12_http.py": 0,
+    "ops/gate_phase7_v12_volume.py": 0
+  },
+  "hosted_ci_run": false,
+  "mypy_modules": 150,
+  "ruff_check_and_format": true,
+  "deploy_qualification_tests": 865,
+  "postgresql_native": true,
+  "volume_and_queue_gates": {
+    "queue": {
+      "approved": true,
+      "checks": {
+        "candidate_overlays": true,
+        "conversions": true,
+        "deterministic_across_scenarios": true,
+        "existing_services": true,
+        "host_reserves": true,
+        "isolation": true,
+        "no_oom": true,
+        "no_provider": true,
+        "privacy": true,
+        "probe_approved": true,
+        "scenario_matrix": true,
+        "version": true,
+        "watchdog": true
+      },
+      "evidence_sha256": "4e9f48eee1dfebd796aadafcfc98bbc229063ae30c66c97c575ce2ac76087ad0",
+      "production_capacity_qualified": false,
+      "release_ready": false,
+      "restricted_content_emitted": false,
+      "v12_2_complete": false,
+      "v12_complete": false,
+      "version": "phase7-v12-real-queue-gate-1.1"
+    },
+    "storage": {
+      "approved": true,
+      "evidence_sha256": "4e9f48eee1dfebd796aadafcfc98bbc229063ae30c66c97c575ce2ac76087ad0",
+      "production_capacity_qualified": false,
+      "release_ready": false,
+      "restricted_content_emitted": false,
+      "sources_match": true,
+      "v12_2_complete": false,
+      "version": "phase7-v12-storage-gate-1.0"
+    },
+    "http": {
+      "approved": true,
+      "checks": {
+        "admission": true,
+        "cases": true,
+        "cleanup": true,
+        "disk_spooling_exercised": true,
+        "files_closed": true,
+        "host": true,
+        "isolation": true,
+        "matrix": true,
+        "no_oom": true,
+        "no_provider": true,
+        "observation": true,
+        "privacy": true,
+        "probe": true,
+        "rss": true,
+        "services": true,
+        "sources": true,
+        "statuses": true,
+        "versions": true
+      },
+      "evidence_sha256": "9f8106d7fef1bda37070db8d652b8d28f8801539b6d39d991145b8719565fc18",
+      "production_capacity_qualified": false,
+      "release_ready": false,
+      "restricted_content_emitted": false,
+      "v12_2_complete": false,
+      "version": "phase7-v12-http-gate-1.0"
+    },
+    "ingest": {
+      "approved": true,
+      "checks": {
+        "candidate_sources": true,
+        "cleanup": true,
+        "complete": true,
+        "existing_services": true,
+        "host_reserves": true,
+        "isolation": true,
+        "matrix": true,
+        "no_oom": true,
+        "no_provider": true,
+        "outcomes": true,
+        "privacy": true,
+        "rss_headroom": true,
+        "version": true
+      },
+      "evidence_sha256": "35a4ea1980bd38522156dd2252a3aaf7c2de21a10ec3774a3e4a12646d44c462",
+      "production_capacity_qualified": false,
+      "release_ready": false,
+      "restricted_content_emitted": false,
+      "v12_2_complete": false,
+      "version": "phase7-v12-ingest-gate-1.0"
+    },
+    "volume": {
+      "approved": true,
+      "checks": {
+        "bounded_rss": true,
+        "cases": true,
+        "cleanup": true,
+        "conversion": true,
+        "disk_pressure": true,
+        "expanded_limit": true,
+        "file_quota": true,
+        "host": true,
+        "isolation": true,
+        "matrix": true,
+        "privacy": true,
+        "services": true,
+        "sources": true,
+        "stored_limits": true,
+        "text_volume": true,
+        "version": true,
+        "watchdog": true
+      },
+      "evidence_sha256": "5d1f9f8df0cd83b78cdde78768aea042fc0ed95b2f72ab018b428a0862aaf54e",
+      "production_capacity_qualified": false,
+      "release_ready": false,
+      "restricted_content_emitted": false,
+      "v12_2_complete": false,
+      "version": "phase7-v12-volume-gate-1.0"
+    }
+  },
+  "queue": {
+    "failed_224m_observation_sha256": "93205daa65f459537f1467c2cb4f94fcc96b870a81d22ba40f844fc80e35a0a6",
+    "prior_224m_cgroup_oom": true,
+    "release_app_lab_mib": 320,
+    "queue_lab_total_mib": 432,
+    "minimum_host_reserve_mib": 512,
+    "queue_jobs": 24,
+    "production_capacity_qualified": false
+  },
+  "http_portal_byte_parity": {
+    "application_shell": "ba84ecdd357bd4cdbac61ea7cc034cec77395b3b063619a81a769dd498a678cd",
+    "application_css": "ce73157664b406910ba636503d82949c5b1b3bbe2d03db4784b80c68c5e4bf33",
+    "application_javascript": "8511c57b1f7baee587a62a0e6e9936e6c2c7fc6644cca82f6c8c085eb2376e5d"
+  },
+  "browser_reviewer": {
+    "esa-e20240086": {
+      "reviewer_abstention": true,
+      "reviewer_download": true,
+      "reviewer_diagnosis": true,
+      "reviewer_write_status": 403,
+      "figures": 5,
+      "zip_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+      "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690"
+    },
+    "esa-e20240135": {
+      "reviewer_abstention": true,
+      "reviewer_download": true,
+      "reviewer_diagnosis": true,
+      "reviewer_write_status": 403,
+      "figures": 7,
+      "zip_sha256": "985d3789ba5d9b9a1d8f6fc8b3c96ae9af0d63523663a164263b4b9d6de3ad45",
+      "xml_sha256": "f2540405e65898aa2d5bd045075fbc22d2e06177f782e3a649ba891738002412"
+    }
+  },
+  "health": {
+    "reader_membership": true,
+    "test_operator_disabled": true,
+    "worker_mount_verified": true,
+    "smoke": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "unchanged_other_containers": true,
+    "healthy_idml": 5
+  },
+  "backup_restore": {
+    "private_files": 131,
+    "archive_sha256": "ee44966a9a0d2a673cbdd84c51522372f6a76215723773d9635060ec29af8e0f",
+    "database_artifacts_and_authorities": true
+  },
+  "rollback_reapplied": true,
+  "new_paid_agent_calls": 0,
+  "expert_invited": false,
+  "editorial_approval": false
+}

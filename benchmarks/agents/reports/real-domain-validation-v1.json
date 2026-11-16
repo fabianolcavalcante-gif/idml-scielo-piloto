@@ -1,0 +1,57 @@
+{
+  "version": "idml-real-domain-validation-report-1.0",
+  "date": "2026-09-02",
+  "corpus_id": "esa-e20240086",
+  "restricted_source": true,
+  "contains_article_text": false,
+  "deterministic_pipeline": {
+    "valid": true,
+    "approved_titled_sections": 11,
+    "canonical_titled_sections": 14,
+    "canonical_nested_level_two_sections": 7,
+    "idml_anchored_pdf_formulas": 15,
+    "canonical_image_formula_blocks": 15,
+    "approved_display_mathml_formulas": 15,
+    "approved_inline_mathml_formulas": 2,
+    "display_formula_pairing_complete": true
+  },
+  "controlled_lab": {
+    "run_id": "multi-agent-real-domains-v1",
+    "dataset_version": "idml-agent-real-domain-eval-1.0",
+    "model": "openai/gpt-5.4-mini",
+    "cases": 2,
+    "roles": 8,
+    "completed": true,
+    "accepted_for_human_review": 2,
+    "exact_candidates": 2,
+    "critic_passes": 4,
+    "unanimous_accepts": 2,
+    "false_consensus_candidates": 0,
+    "deterministic_checks_passed": 16,
+    "deterministic_checks_total": 16,
+    "total_cost_microusd": 44523,
+    "max_total_cost_microusd": 117000,
+    "tools_exposed": 0,
+    "skills_exposed": 0
+  },
+  "operational_postconditions": {
+    "application_flags_false": true,
+    "database_agent_runs": 0,
+    "database_agent_proposals": 0,
+    "provider_key_present": false,
+    "provider_proxy_present": false,
+    "provider_networks_present": false,
+    "application_ready_http": 200,
+    "shared_openclaw_unchanged": true,
+    "all_services_healthy": true
+  },
+  "limitations": {
+    "structure_fixture_is_controlled_mutation": true,
+    "math_case_application_ready": false,
+    "native_mathml_transcription_complete": false,
+    "inline_formula_mapping_complete": false,
+    "human_baseline_complete": false,
+    "gate_g6_t_approved": false
+  },
+  "next_action": "implement_atomic_mathml_representation_transition_and_inline_formula_mapping"
+}

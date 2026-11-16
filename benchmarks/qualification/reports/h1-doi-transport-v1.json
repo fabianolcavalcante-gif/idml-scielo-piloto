@@ -1,0 +1,41 @@
+{
+  "version": "h1-doi-transport-1.0",
+  "executed_at": "2026-09-30",
+  "scope": "Candidate Packtools broker staging and native DOI rule; not full socket/adapter/SPS/API flow",
+  "image": "sha256:6812b87e87f0d92a898747f6f6183ee0b9702e6faf0180e64a9eebd566e12f18",
+  "base_image": "sha256:4a35ec1dba3c62a8fa52cfdda87b3908c873c02034371fb7809a0fed1ca5ad61",
+  "native_linux": {
+    "synthetic_only": true,
+    "network": "none",
+    "matching_metadata_accepted": true,
+    "mismatched_metadata_rejected": true,
+    "temporary_files_cleaned": true,
+    "health_ready": {
+      "database": "ok",
+      "redis": "ok"
+    }
+  },
+  "tests": {
+    "passed": 750,
+    "warnings": 3,
+    "line_coverage_percent": 88.02,
+    "coverage_scope": "src/idml_foundation; ops helpers covered by tests but not included in this coverage percentage",
+    "focused_passed": 49,
+    "ruff_passed": true,
+    "v10_gate_passed": true
+  },
+  "source_sha256": {
+    "ops/qualify_doi_transport_linux.py": "3430f4cac2f6b462edc33dce6058047664ae105eb512ae26b6db7c52a94b2323",
+    "ops/probe_doi_authority.py": "0387bc63dcaea13fc73c93bae8388c789b26ceed6ad305d1f696fac74bdef49f",
+    "deploy/Dockerfile.packtools-doi-authority": "c7f03fd3db46c7148eff1f6500311e9dcd64fa3e1ebafdbe20f1dc7e425ef382",
+    "ops/packtools_doi_validate.py": "d1aacebb8cf42703fb721114a7e6e9f68e82e5028feb7b2ef5f07737cfe26b42",
+    "ops/validator_broker.py": "cf960126414a7b9d5209e86ed12603916054a4f82b0faa552371694a4e6b5128",
+    "ops/doi_authority_transport.py": "468d8b234602a3a2233f926f335c794c45518e06101ee5a696b57dd2d8384c7b",
+    "ops/doi_authority_runtime.py": "700d11e3e4eb25c80229b6e372ed5494b6d77e70b139c52f5aa9848b06559db5",
+    "tests/test_doi_authority_transport.py": "7c8bb1d491990c5b967136c936db9b07ff7873db707dac1d907f68873a3810aa",
+    "src/idml_foundation/release/doi_snapshot.py": "48ea4ffb755d40464cce0c2c07567312b5b121130a7fd8b0d0d1886c7fb2c19b"
+  },
+  "formal_xml_approved": false,
+  "active_deployment_changed": false,
+  "real_corpus_transferred": false
+}

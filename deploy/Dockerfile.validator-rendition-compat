@@ -1,0 +1,5 @@
+# Qualification only: verify this local alias resolves to 48b91db1bc1a... before build.
+FROM idml-spsvalidator:h1-adapter-refresh-v1
+COPY spsvalidator_validate.py /validator/spsvalidator_pinned_adapter.py
+COPY sps_rendition_compat.py /validator/
+COPY spsvalidator_rendition_validate.py /validator/spsvalidator_validate.py

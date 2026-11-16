@@ -1,0 +1,37 @@
+{
+  "approved": true,
+  "checks": {
+    "benchmark_approved": true,
+    "bounded_soak": true,
+    "case_matrix": true,
+    "cleanup": true,
+    "deterministic_conversions": true,
+    "existing_services": true,
+    "historical_cost_accounting": true,
+    "host_samples": true,
+    "isolation": true,
+    "no_new_provider": true,
+    "pathological_rejected": true,
+    "privacy": true,
+    "real_corpus": true,
+    "resource_budget": true,
+    "versions": true,
+    "vps_approved": true
+  },
+  "evidence_sha256": {
+    "v12-historical-cost-v1.json": "41a162062ebf1f7a7aa43654b5da267b7c93c5544d1cb037a48f4e625e30ea4b",
+    "v12-local-corpus-v1.json": "09e580c6209304c10851e5c19ae8bd124d65685397970f4c77dc97fbb411192d",
+    "v12-vps-observation-v1.json": "007dfd35fdc85e4c9b7cc32bfa240865573c85d3aff7128749f1c41c9bf421d3"
+  },
+  "production_throughput_qualified": false,
+  "release_ready": false,
+  "remaining": [
+    "durable API/Redis/job queue capacity",
+    "upload/storage/backups budgets",
+    "long-duration and integrated AI capacity qualification"
+  ],
+  "restricted_content_emitted": false,
+  "stage": "V-12.1",
+  "v12_complete": false,
+  "version": "phase7-v12-initial-capacity-gate-1.0"
+}

@@ -1,0 +1,79 @@
+{
+  "version": "phase7-v08-assistive-validation-1.0",
+  "family": "V-08",
+  "corpus_id": "esa-e20240086",
+  "model": "openai/gpt-5.4-mini",
+  "source_idml_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+  "live_positive": {
+    "primary_run_id": "phase7-v08-positive-v2",
+    "primary_report_sha256": "19e6a3e14ce11ff4c5209b1ff2978f75b8e283e549756263b7795ee01e2cad7f",
+    "primary_cases": 10,
+    "primary_role_calls": 40,
+    "primary_cost_microusd": 276045,
+    "proposals_exact": 10,
+    "proposals_improved": 10,
+    "proposals_materialized_from_evidence": 10,
+    "accepted_initially": 8,
+    "semantic_safety_rejections": 1,
+    "contract_rejections_repaired": 1,
+    "regression_run_id": "phase7-v08-adjudicator-v1",
+    "regression_report_sha256": "1312d31572653d6327918fa5bf6cdbe34a9c3fd6e59104eff384a6a2927d5865",
+    "regression_cases": 1,
+    "regression_role_calls": 4,
+    "regression_cost_microusd": 21827,
+    "effective_accepted_for_human_review": 9,
+    "effective_semantic_safety_rejections": 1,
+    "open_contract_violations": 0,
+    "tools_exposed": 0,
+    "skills_exposed": 0,
+    "automatic_applications": 0
+  },
+  "domain_coverage": {
+    "metadata": "live_positive_accepted",
+    "contributors_affiliations": "live_positive_accepted_and_semantic_defect_rejected",
+    "references": "live_positive_accepted",
+    "figures_tables": "live_positive_accepted_after_contract_regression",
+    "structure": "live_positive_accepted_from_real_domain_qualification",
+    "math_notes": "live_visual_catalog_qualified_with_controlled_abstention"
+  },
+  "qualified_evidence": {
+    "adversarial_matrix_file_sha256": "8d6af0d1083442cbc8d59d53ad2e9a3ce7722c7b66d0b59b280a79e9918d0d4d",
+    "adversarial_report_sha256": "6ee5b74ed6a825e300deeec720ef769905968e9e9820d394ad26b3d3dbe5bb89",
+    "real_domain_report_sha256": "e0de7a32398e59c5afef7cf4f507fb30936cb5a7bc3314bddb81cf6f71557e91",
+    "formula_report_sha256": "417dae37d8c1eb1039a207a99f0f4b98a1aeeb35c8524bf9942e0a7ef1f14caa"
+  },
+  "metrics": {
+    "live_proposal_exact_accuracy": 1.0,
+    "live_baseline_improvement_rate": 1.0,
+    "effective_acceptance_rate": 0.9,
+    "effective_semantic_safety_rejection_rate": 0.1,
+    "adversarial_expectation_pass_rate": 1.0,
+    "adversarial_cases": 30,
+    "adversarial_role_calls": 84,
+    "formula_cases": 17,
+    "formula_critic_passes": 34,
+    "formula_adjudicator_accepts": 16,
+    "formula_controlled_abstentions": 1,
+    "new_v08_cost_microusd": 297872
+  },
+  "safety": {
+    "human_review_required": true,
+    "role_models_independent": false,
+    "shared_model_consensus_authorizes_release": false,
+    "application_flags_enabled": false,
+    "provider_disabled_after_runs": true,
+    "temporary_proxy_and_networks_removed": true,
+    "application_agent_runs_persisted": 0,
+    "application_agent_proposals_persisted": 0,
+    "release_authority_remains_deterministic": true
+  },
+  "privacy": {
+    "contains_article_text": false,
+    "contains_raw_agent_output": false,
+    "contains_credentials": false,
+    "restricted_content_emitted": false
+  },
+  "v08_approved": true,
+  "release_candidate_approved": false,
+  "production_activation_authorized": false
+}

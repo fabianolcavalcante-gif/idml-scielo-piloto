@@ -1,0 +1,65 @@
+{
+  "approved": true,
+  "family": "V-03",
+  "network_required": false,
+  "real_exact_stories": 209,
+  "real_packages_requested": 6,
+  "real_packages_verified": 6,
+  "real_source_stories": 209,
+  "restricted_content_emitted": false,
+  "rows": [
+    {
+      "case": "synthetic_v03",
+      "metrics": {
+        "checks": 10,
+        "exact_stories": 4,
+        "hyperlink_runs": 2,
+        "hyperlink_sources": 2,
+        "notes": 1,
+        "pages": 3,
+        "source_stories": 4,
+        "tables": 1
+      },
+      "passed": true
+    },
+    {
+      "case": "real_idml_1",
+      "metrics": {"exact_stories": 46, "hyperlink_runs": 37, "hyperlink_sources": 37, "notes": 0, "pages": 10, "source_stories": 46, "tables": 4},
+      "passed": true
+    },
+    {
+      "case": "real_idml_2",
+      "metrics": {"exact_stories": 29, "hyperlink_runs": 25, "hyperlink_sources": 25, "notes": 1, "pages": 13, "source_stories": 29, "tables": 3},
+      "passed": true
+    },
+    {
+      "case": "real_idml_3",
+      "metrics": {"exact_stories": 30, "hyperlink_runs": 25, "hyperlink_sources": 25, "notes": 1, "pages": 13, "source_stories": 30, "tables": 3},
+      "passed": true
+    },
+    {
+      "case": "real_idml_4",
+      "metrics": {"exact_stories": 33, "hyperlink_runs": 31, "hyperlink_sources": 31, "notes": 3, "pages": 20, "source_stories": 33, "tables": 3},
+      "passed": true
+    },
+    {
+      "case": "real_idml_5",
+      "metrics": {"exact_stories": 42, "hyperlink_runs": 31, "hyperlink_sources": 31, "notes": 3, "pages": 20, "source_stories": 42, "tables": 3},
+      "passed": true
+    },
+    {
+      "case": "real_idml_6",
+      "metrics": {"exact_stories": 29, "hyperlink_runs": 43, "hyperlink_sources": 41, "notes": 2, "pages": 19, "source_stories": 29, "tables": 2},
+      "passed": true
+    }
+  ],
+  "synthetic_cases": 1,
+  "synthetic_passed": true,
+  "test_suite": {
+    "coverage_percent": 85.68,
+    "mypy_strict": "passed",
+    "passed": 229,
+    "ruff": "passed"
+  },
+  "version": "phase7-v03-gate-1.0"
+}

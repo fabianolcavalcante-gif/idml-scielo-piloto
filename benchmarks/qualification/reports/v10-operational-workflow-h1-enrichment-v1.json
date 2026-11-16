@@ -1,0 +1,109 @@
+{
+  "version": "phase7-v10-operational-workflow-1.0",
+  "family": "V-10",
+  "executed_at": "2026-09-28",
+  "dedicated_tests": 3,
+  "full_tests": 597,
+  "line_coverage_percent": 87.76,
+  "critical_scenarios": [
+    {
+      "id": "V10-IDENTITY-TENANT",
+      "result": "passed",
+      "evidence": "multi-role tenant-bound sessions and the existing invitation lifecycle"
+    },
+    {
+      "id": "V10-INGEST-PROCESS",
+      "result": "passed",
+      "evidence": "resource plus IDML, PDF, and image uploads followed by durable idml.process execution"
+    },
+    {
+      "id": "V10-XML-DOWNLOAD",
+      "result": "passed",
+      "evidence": "generated XML download SHA-256 equals the persisted job and artifact digest"
+    },
+    {
+      "id": "V10-IDEMPOTENCY",
+      "result": "passed",
+      "evidence": "same request reuses job without duplicate job, effect, artifact, snapshot, or job.create audit; conflicting reuse returns 409"
+    },
+    {
+      "id": "V10-REVIEW",
+      "result": "passed",
+      "evidence": "claim, canonical patch, immutable revision, JATS rebuild, validation, and audit"
+    },
+    {
+      "id": "V10-PACKAGE",
+      "result": "passed",
+      "evidence": "scielo.package creates deterministic ZIP from reviewed snapshot, PDF, and referenced asset"
+    },
+    {
+      "id": "V10-MANIFEST-INTEGRITY",
+      "result": "passed",
+      "evidence": "downloaded package, persisted package hash, manifest, member sizes, member hashes, and candidate-set hash agree"
+    },
+    {
+      "id": "V10-EDITORIAL-APPROVAL",
+      "result": "passed",
+      "evidence": "MFA requester plus two distinct MFA release managers reach editorially_approved"
+    },
+    {
+      "id": "V10-JOB-CONTROL",
+      "result": "passed",
+      "evidence": "queued cancellation, stale-version conflict, manual retry, and retry wake-up are reproducible"
+    },
+    {
+      "id": "V10-TRANSIENT-RESUME",
+      "result": "passed",
+      "evidence": "failed_retryable attempt resumes to success with an ordered six-event timeline"
+    },
+    {
+      "id": "V10-AUDIT",
+      "result": "passed",
+      "evidence": "upload, download, job, review, and release actions are present in the tenant audit trail"
+    },
+    {
+      "id": "V10-DEGRADED-AI-OFF",
+      "result": "passed",
+      "evidence": "complete deterministic workflow with OpenClaw and swarm flags false and zero agent runs/proposals"
+    },
+    {
+      "id": "V10-OPERATOR-UI",
+      "result": "passed",
+      "evidence": "resource, upload, process, package, review, cancel, retry, result, error, timeline, download, approval, and audit controls exposed; JavaScript syntax checked"
+    }
+  ],
+  "source_sha256": {
+    "src/idml_foundation/worker.py": "7af6f0e4855c24da9e41911a3d2bba50bfbeb48e5274c625b30dfcf2558232b2",
+    "src/idml_foundation/ingest/http_upload.py": "ab89080a9e7bacf166b8bd627c0466db61bfac564f871bbd5d5a5906dbcd721f",
+    "tests/test_jobs.py": "2bf5201bece9927eefe7e31798f2ffad77f29ef96e158bc4b2c924cbdc396fcd",
+    "src/idml_foundation/services/artifacts.py": "f954b95d3c96dddbe76d43b8e47baf05f6e4e64418793bd362a6c7335796dff8",
+    "src/idml_foundation/settings.py": "80d2492181da1ed960436b1cfe78d65ceb244089963af3e124d1fec9a51f6de0",
+    "src/idml_foundation/routers/artifacts.py": "8405ec06cefcb29d8d1505837891929d41b60d0813c4844f53c203710160b8e1",
+    "src/idml_foundation/schemas.py": "22a09c7ed02b1751de7512a2edc5cf1b05bc81457c9a373e6ab97d2ce668c5f8",
+    "tests/test_ingest_security_v02.py": "04c2dca8c0ffaebd467a140e649d8fc2baa7f9585f1f4150930257ad97062e6f",
+    "src/idml_foundation/routers/ui.py": "1fc588fd26b864c237f63c2a7cf8b4d35e5d20b294921c94abf05969fa756bb1",
+    "src/idml_foundation/services/jobs.py": "3e199e58798192d5a22f2fc459b894219247de971433c8ef7eea4df113d6b655",
+    "src/idml_foundation/ingest/upload_admission.py": "7c89ec65ad110515106a123e8b6377bf1914c5edfca5945ec6ab42b06cfe5872",
+    "src/idml_foundation/services/storage_budget.py": "6bdd07cec5a2086bbf4cbae26f325dfd14bfe2c26e4875681f5811e9d065da2f",
+    "src/idml_foundation/main.py": "23a8b1cf3b9726a2878cee9911f38eada8b0688974d4797a6172b7ab0d4582fb",
+    "src/idml_foundation/routers/jobs.py": "4f9496b313e8758b41783910699170a7b9c88214d1460bc4fa5235b70837a44c",
+    "tests/test_phase7_v10_workflow.py": "4a327cd5998235f178e404635db43ef5081bfce36323455b6c862fe639c35e37",
+    "src/idml_foundation/services/enrichment.py": "a6ef286fe4890f1663b87d46a88d79fe6dbf5c5096afe963990b90d5df37dfcf"
+  },
+  "residual_constraints": [
+    "Cancellation is qualified before execution; cooperative interruption of an in-flight conversion remains in V-13.",
+    "Editorial approval is not READY_FOR_SCIELO and does not replace the technical release policy.",
+    "XPM on the final candidate and human specialist homologation remain pending by plan."
+  ],
+  "privacy": {
+    "contains_article_text": false,
+    "contains_raw_credentials": false,
+    "contains_raw_agent_output": false,
+    "restricted_content_emitted": false
+  },
+  "v10_approved": true,
+  "release_candidate_approved": false,
+  "production_activation_authorized": false,
+  "requalification_of": "v10-operational-workflow-v12-storage-v1.json",
+  "scope": "Local operational tests rerun for H1 enrichment; final full suite 597 passed after source-evidence rollover; no new browser or VPS qualification"
+}

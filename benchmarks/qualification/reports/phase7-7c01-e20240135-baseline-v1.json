@@ -1,0 +1,231 @@
+{
+  "actual": {
+    "candidate_xml_sha256": "0080b2986805788bfe8023a105ea81e57f0a9dfee39dc486f1559a4e3891e09b",
+    "deterministic": true,
+    "inventory": {
+      "anchored_object_classes": {
+        "figure:inline": 5,
+        "figure:unknown": 2,
+        "formula:block": 21,
+        "formula:inline": 19,
+        "formula:unknown": 7
+      },
+      "asset_media_types": {
+        "application/pdf": 47,
+        "application/postscript": 5,
+        "image/png": 2
+      },
+      "asset_name_classes": {
+        "auxiliary-glyph": 18,
+        "figure": 7,
+        "formula": 22,
+        "layout-branding": 7
+      },
+      "content_emitted": false,
+      "counts": {
+        "anchored_objects": 54,
+        "assets": 54,
+        "evidence": 697,
+        "frames": 68,
+        "links": 89,
+        "notes": 0,
+        "reading_order": 60,
+        "reading_order_issues": 15,
+        "spreads": 8,
+        "stories": 60,
+        "styles": 292,
+        "tables": 6
+      },
+      "evidence_coverage": {
+        "anchored_objects_with_evidence": 54,
+        "assets_with_evidence": 54,
+        "evidence_with_artifact_hash": 697,
+        "links_with_evidence": 89,
+        "styles_with_evidence": 292
+      },
+      "link_relationships": {
+        "external-asset": 45,
+        "external-hyperlink": 35,
+        "external-layout-asset": 9
+      },
+      "private_inventory_sha256": "9c24c356bf8e5ae992805cb2be87d7e69b673b209a1c9b8635d2942566aad086",
+      "report_version": "1.0.0",
+      "review_reason_families": {
+        "correspondence_email_requires_single_marked_contributor": 1,
+        "external_assets_require_package_resolution": 1,
+        "formula_requires_mathml_transcription": 21,
+        "inline_formula_requires_mathml_transcription": 19,
+        "reading_order": 15,
+        "unmapped_correspondence_line": 1,
+        "unmapped_style": 8,
+        "unmatched_figure_asset": 7,
+        "unmatched_source_table": 1,
+        "unnumbered_graphic_caption": 2
+      },
+      "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+      "unresolved_external_assets": 54
+    },
+    "semantic": {
+      "blocking_findings": 108,
+      "cross_references": {
+        "actual": 38,
+        "actual_unique_targets": 34,
+        "decision": "needs_review",
+        "expected": 39,
+        "expected_unique_targets": 35,
+        "matched_targets": 38
+      },
+      "domains": {
+        "affiliations": {
+          "actual": 4,
+          "altered": 0,
+          "displacements": 0,
+          "duplications": 0,
+          "expected": 4,
+          "inventions": 0,
+          "omissions": 0
+        },
+        "authors": {
+          "actual": 4,
+          "altered": 2,
+          "displacements": 0,
+          "duplications": 0,
+          "expected": 4,
+          "inventions": 0,
+          "omissions": 0
+        },
+        "body": {
+          "actual": 5877,
+          "altered": 0,
+          "displacements": 0,
+          "duplications": 61,
+          "expected": 5814,
+          "inventions": 2,
+          "omissions": 0
+        },
+        "figures": {
+          "actual": 7,
+          "altered": 0,
+          "displacements": 6,
+          "duplications": 0,
+          "expected": 7,
+          "inventions": 0,
+          "omissions": 0
+        },
+        "formula_content": {
+          "actual": 0,
+          "altered": 0,
+          "displacements": 0,
+          "duplications": 0,
+          "expected": 43,
+          "inventions": 0,
+          "omissions": 43
+        },
+        "formulas": {
+          "actual": 40,
+          "altered": 14,
+          "displacements": 0,
+          "duplications": 0,
+          "expected": 43,
+          "inventions": 0,
+          "omissions": 3
+        },
+        "media": {
+          "actual": 0,
+          "altered": 0,
+          "displacements": 0,
+          "duplications": 0,
+          "expected": 7,
+          "inventions": 0,
+          "omissions": 7
+        },
+        "metadata": {
+          "actual": 5,
+          "altered": 1,
+          "displacements": 0,
+          "duplications": 0,
+          "expected": 5,
+          "inventions": 1,
+          "omissions": 1
+        },
+        "notes": {
+          "actual": 2,
+          "altered": 0,
+          "displacements": 0,
+          "duplications": 0,
+          "expected": 10,
+          "inventions": 0,
+          "omissions": 8
+        },
+        "references": {
+          "actual": 35,
+          "altered": 0,
+          "displacements": 0,
+          "duplications": 0,
+          "expected": 35,
+          "inventions": 0,
+          "omissions": 0
+        },
+        "structure": {
+          "actual": 18,
+          "altered": 0,
+          "displacements": 0,
+          "duplications": 0,
+          "expected": 26,
+          "inventions": 6,
+          "omissions": 14
+        },
+        "tables": {
+          "actual": 5,
+          "altered": 0,
+          "displacements": 0,
+          "duplications": 0,
+          "expected": 5,
+          "inventions": 0,
+          "omissions": 0
+        }
+      },
+      "passed": false
+    },
+    "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+    "validation": {
+      "issues": 1,
+      "valid": true
+    }
+  },
+  "approved": true,
+  "baseline_mismatches": [],
+  "baseline_reproduced": true,
+  "candidate_approved": false,
+  "corpus_id": "esa-e20240135",
+  "metadata": {
+    "approved": true,
+    "contract_sha256": "6ed80a88842ed35a4d97e65d0a9417ccd6a0b57378aa50396a8ce81556f8e58e",
+    "expected_metric_groups": [
+      "candidate_xml_sha256",
+      "deterministic",
+      "inventory",
+      "semantic",
+      "source_idml_sha256",
+      "validation"
+    ],
+    "manifest_sha256": "080c9de54d5b91a8d45f5aba87a544eb3de5d178f7589d6047b5521aa9601c18",
+    "role_counts": {
+      "approved_pdf_reference": 1,
+      "approved_xml_reference": 1,
+      "figure_asset": 7,
+      "source_idml": 1,
+      "validator_exception_evidence": 1,
+      "xpm_report": 1
+    }
+  },
+  "network_required_by_gate": false,
+  "physical_verification": {
+    "artifacts": 12,
+    "valid": true,
+    "verified": 12
+  },
+  "restricted_content_emitted": false,
+  "stage": "7C-01",
+  "version": "phase7-7c01-gate-1.0"
+}

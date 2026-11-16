@@ -1,0 +1,39 @@
+{
+  "version": "idml-evidence-grounding-corpus-report-1.0",
+  "dataset_version": "idml-agent-initial-corpus-eval-1.3",
+  "corpus_id": "esa-e20240086",
+  "policy": "normalized_exact",
+  "cases": 10,
+  "supported": 8,
+  "unsupported": 2,
+  "support_rate": 0.8,
+  "domains": {
+    "metadata": {
+      "cases": 1,
+      "supported": 1
+    },
+    "contributors_affiliations": {
+      "cases": 3,
+      "supported": 3
+    },
+    "references": {
+      "cases": 3,
+      "supported": 1,
+      "blocked_by_evidence_window": 2
+    },
+    "figures_tables": {
+      "cases": 3,
+      "supported": 3
+    }
+  },
+  "automatic_target_used_only_for_offline_evaluation": true,
+  "target_exposed_to_agents": false,
+  "human_baseline_complete": false,
+  "gate_g6_t_approved": false,
+  "privacy": {
+    "contains_article_text": false,
+    "contains_expected_values": false,
+    "contains_evidence_excerpts": false,
+    "contains_credentials": false
+  }
+}

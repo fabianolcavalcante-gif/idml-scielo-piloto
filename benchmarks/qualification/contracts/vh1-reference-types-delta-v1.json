@@ -1,0 +1,170 @@
+{
+  "version": "vh1-reference-types-delta-1.0",
+  "gold_used": false,
+  "scientific_fidelity_approved": false,
+  "human_review_required": true,
+  "unresolved_types": {
+    "esa-e20240086": [],
+    "esa-e20240135": []
+  },
+  "source_idml_sha256": {
+    "esa-e20240086": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+    "esa-e20240135": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574"
+  },
+  "cases": {
+    "esa-e20240086": [
+      {
+        "access_dates": 1,
+        "after_sha256": "7698dd7093dd47dc1f2b588c7cfc50015b1bca5192c30953a4bf610691bb60c1",
+        "before_sha256": "462aa0d63fdc7ee1f42d098481efcdfff7d2d0c5b53bb93772aa09f8cfc8cc0b",
+        "field": "element-citation",
+        "id": "reference-a3f6a367-c1f9-5543-9306-a2e7615fc0d1",
+        "mixed_citation_sha256": "77c377509bc7ef29c598895a21e4dc3c544db8a4e9e56adfc561e44a62052e23",
+        "position": 44,
+        "publication_type": "webpage",
+        "source_spans": [
+          {
+            "end": 40,
+            "sha256": "318612daea789f4d2809632700ea85429c816f3ba7833edef47b842da19865f1",
+            "start": 0,
+            "tag": "collab"
+          },
+          {
+            "end": 52,
+            "sha256": "c4e7ea52da69a40b14ad141cf1fa28f121bc32bca57781813deb60bf6d1435be",
+            "start": 42,
+            "tag": "source"
+          },
+          {
+            "end": 39,
+            "sha256": "b4baeecd9628585160db6ffb9a362663d2d55650af5c1d15cc81b699b60c3cf8",
+            "start": 35,
+            "tag": "publisher-name"
+          },
+          {
+            "end": 64,
+            "sha256": "73a2af8864fc500fa49048bf3003776c19938f360e56bd03663866fb3087884a",
+            "start": 60,
+            "tag": "year"
+          },
+          {
+            "end": 173,
+            "sha256": "f49db1502cd43dc2586e88dc8cf2f036b3a9854a42e3c3f9211a968e13e0cb9f",
+            "start": 147,
+            "tag": "date-in-citation"
+          },
+          {
+            "end": 145,
+            "sha256": "2d405e26ed331d7253eb39a27feb9a5cdbeb2341a149d420fe130bcff117494a",
+            "start": 80,
+            "tag": "ext-link"
+          }
+        ]
+      },
+      {
+        "access_dates": 1,
+        "after_sha256": "006f39f4bb7fdb008043f797a2fc1bb0ccce8deb23938b94835bdfd6eecc785e",
+        "before_sha256": "ad4b4e48e2202cf8bbb1ee680d9337edf4b780e96773804ca5aea23928f6e4e1",
+        "field": "element-citation",
+        "id": "reference-d1f110b2-25dc-5f3f-8d0b-dfbbaf5e3ba7",
+        "mixed_citation_sha256": "83bc30ccab4d261095df9183af7f500329d7ae2d4984c031d04b940c898294ff",
+        "position": 49,
+        "publication_type": "report",
+        "source_spans": [
+          {
+            "end": 6,
+            "sha256": "f1da68639105e7f356ceb1e63dd75965e11b40f00a51986d4e8ef944c533ba10",
+            "start": 0,
+            "tag": "surname"
+          },
+          {
+            "end": 16,
+            "sha256": "020bb5a58d1d21204f92e3b017f7ac3854a02917de0c9adb35348da8f2085b39",
+            "start": 8,
+            "tag": "given-names"
+          },
+          {
+            "end": 30,
+            "sha256": "504c4e029045d03e77c52b7baff1f26dbd7895bc794f7cc96678a08113742fe5",
+            "start": 17,
+            "tag": "source"
+          },
+          {
+            "end": 36,
+            "sha256": "743f46d35d1a8ffd8b3728abdc81ebc025abc1f88db0157a27297d3660616444",
+            "start": 32,
+            "tag": "publisher-name"
+          },
+          {
+            "end": 42,
+            "sha256": "a20a2b7bb0842d5cf8a0c06c626421fd51ec103925c1819a51271f2779afa730",
+            "start": 38,
+            "tag": "year"
+          },
+          {
+            "end": 155,
+            "sha256": "52b6285bbdf831985d2d5144f25716d189085440b33bd3579660bca698074d11",
+            "start": 130,
+            "tag": "date-in-citation"
+          },
+          {
+            "end": 128,
+            "sha256": "544a09ee4b85ab71c3dd3a967b0c8eb668826b28d52e4382136e06f7d49b7168",
+            "start": 58,
+            "tag": "ext-link"
+          }
+        ]
+      }
+    ],
+    "esa-e20240135": [
+      {
+        "access_dates": 1,
+        "after_sha256": "38c471b2775458247a6571cb0df920d176a7eecc51af3cfbed52820efe175ec7",
+        "before_sha256": "37d8436ae2f8f3df323f2b9e29ac2068e3c21078d0806449da8e436d975340d5",
+        "field": "element-citation",
+        "id": "reference-ff139fbc-b398-59da-9326-587309014e6a",
+        "mixed_citation_sha256": "f31a522bceb91f7ffa17d0981aa70447f010ad58c4b4ea18a7a707774c8905f8",
+        "position": 31,
+        "publication_type": "report",
+        "source_spans": [
+          {
+            "end": 25,
+            "sha256": "268f3a2a41bfdba74649abda4d02a71f8cdaa51bb898a362ef9d9af16f9ff52b",
+            "start": 0,
+            "tag": "collab"
+          },
+          {
+            "end": 63,
+            "sha256": "2fe05095261038a688c220eb3318f1189e5dfa318ef7a9ceb70db63dda792c2d",
+            "start": 27,
+            "tag": "source"
+          },
+          {
+            "end": 90,
+            "sha256": "24cae19901b9e21bea32887383dd7010c57015f5e14b50076cab633b218aa2bb",
+            "start": 65,
+            "tag": "publisher-name"
+          },
+          {
+            "end": 96,
+            "sha256": "73a2af8864fc500fa49048bf3003776c19938f360e56bd03663866fb3087884a",
+            "start": 92,
+            "tag": "year"
+          },
+          {
+            "end": 201,
+            "sha256": "db655553ca9efd5089193011b6ccc4dc1e0d404562d6aa0be5f5fe99b8e33e5d",
+            "start": 177,
+            "tag": "date-in-citation"
+          },
+          {
+            "end": 175,
+            "sha256": "f14ea4abd6bd5104ed6ddd54e0aa2cb0a96b2ae679a891428e94c8711f480fad",
+            "start": 112,
+            "tag": "ext-link"
+          }
+        ]
+      }
+    ]
+  }
+}

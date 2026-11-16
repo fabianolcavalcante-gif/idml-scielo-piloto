@@ -1,0 +1,21 @@
+{
+  "version": "visual-formula-crops-1.0",
+  "source_pdf_sha256": "232fb2428bbdf344af192d24865a4e39848fd4e4fae20f2325aa9ecef6ff2496",
+  "crops": [
+    {
+      "case_id": "esa-math-notes-observed-001",
+      "page_index": 2,
+      "bbox": [35.0, 685.0, 300.0, 730.0]
+    },
+    {
+      "case_id": "esa-math-notes-inline-001",
+      "page_index": 2,
+      "bbox": [35.0, 720.0, 260.0, 750.0]
+    },
+    {
+      "case_id": "esa-math-notes-inline-002",
+      "page_index": 2,
+      "bbox": [300.0, 638.0, 555.0, 656.0]
+    }
+  ]
+}

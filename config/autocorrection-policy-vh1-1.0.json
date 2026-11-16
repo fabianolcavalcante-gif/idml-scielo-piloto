@@ -1,0 +1,21 @@
+{
+  "default_cost_usd": "5.00",
+  "default_seconds": 300,
+  "default_tokens": 50000,
+  "historical_human_decisions_immutable": true,
+  "max_cycles": 2,
+  "max_operations": 5,
+  "max_parallel_articles": 1,
+  "missing_only": true,
+  "model_values_allowed": false,
+  "operations": {
+    "affiliation-original-literal": "/front/affiliations/{index}/original_text",
+    "country-code-exact": "/front/affiliations/{index}/country_code",
+    "figure-asset-exact": "/body/{section}/[children/{section}/]blocks/{index}/asset_id"
+  },
+  "profile_sha256": "c537f446c47a3ace615f64122dd7081eb5d9a60ac52016abfd5ed52d9752507f",
+  "release_approved": false,
+  "revalidation_required": true,
+  "source_kind": "idml",
+  "version": "vh1-autocorrection-1.0"
+}

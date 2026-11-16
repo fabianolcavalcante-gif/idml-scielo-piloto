@@ -1,0 +1,165 @@
+{
+  "actual": {
+    "authority_pending_human_review": true,
+    "authors": {
+      "actual": 4,
+      "altered": 0,
+      "comparison_unit": "elements",
+      "displacements": 0,
+      "domain": "authors",
+      "duplications": 0,
+      "exact": 0,
+      "expected": 4,
+      "f1": 1.0,
+      "inventions": 0,
+      "normalized": 4,
+      "omissions": 0,
+      "passed": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "text_fidelity": 1.0
+    },
+    "body": {
+      "actual": 5814,
+      "altered": 0,
+      "comparison_unit": "tokens",
+      "displacements": 0,
+      "domain": "body",
+      "duplications": 0,
+      "exact": 5814,
+      "expected": 5814,
+      "f1": 1.0,
+      "inventions": 0,
+      "normalized": 1,
+      "omissions": 0,
+      "passed": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "text_fidelity": 0.998634
+    },
+    "candidate_xml_sha256": "6bf6c9960bbbcd1e45083dc917d4addc123f48d32df7261f30d03b32cc00f0c4",
+    "cross_references": {
+      "actual": 39,
+      "actual_target_surpluses": [],
+      "actual_unique_targets": 35,
+      "decision": "pass",
+      "expected": 39,
+      "expected_target_deficits": [],
+      "expected_unique_targets": 35,
+      "f1": 1.0,
+      "matched_targets": 39,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "deterministic": true,
+    "emitted_identifiers": {
+      "doi": "c2c9e6240414c7816424d86ae759f0a0c44b3190dedc2abb34f72c6776c38992",
+      "other": "38366e31869a57b82b4108e6a4c8a26eb5954b1c5f4051bc44c9a1f874c9b4fc"
+    },
+    "formula_catalog_id": "6089705c07ec4144164b10ad3f6beefe7da8b269b80f77c70edb3e636a00e986",
+    "formula_qualification": {
+      "catalog_id": "6089705c07ec4144164b10ad3f6beefe7da8b269b80f77c70edb3e636a00e986",
+      "formula_cases": 43,
+      "human_review_required": true,
+      "report_sha256": "45a5238690801de91b72189019251aeb1eb451da8f024a0ed505e3ea8424f9c5",
+      "restricted_content_emitted": false
+    },
+    "general_candidate_approved": true,
+    "metadata": {
+      "actual": 5,
+      "altered": 0,
+      "comparison_unit": "elements",
+      "displacements": 0,
+      "domain": "metadata",
+      "duplications": 0,
+      "exact": 4,
+      "expected": 5,
+      "f1": 1.0,
+      "inventions": 0,
+      "normalized": 1,
+      "omissions": 0,
+      "passed": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "text_fidelity": 1.0
+    },
+    "metadata_authority": {
+      "article_identifiers": 1,
+      "authors": 4,
+      "catalog_id": "a5219854415a01310d5e3b29b9adb30eddd4a1696889683c40c7db76a0879879",
+      "crossref_response_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+      "human_review_required": true,
+      "journal_titles": 1,
+      "report_sha256": "3d758d3782efd99306bee6c21db673e6527b927bba9fbbc7effe6edecccff25b",
+      "restricted_content_emitted": false
+    },
+    "metadata_authority_catalog_id": "a5219854415a01310d5e3b29b9adb30eddd4a1696889683c40c7db76a0879879",
+    "preserved_domains": {
+      "affiliations": true,
+      "figures": true,
+      "formula_content": true,
+      "formulas": true,
+      "media": true,
+      "notes": true,
+      "references": true,
+      "structure": true,
+      "tables": true
+    },
+    "qualified_formula_alterations": 24,
+    "role_counts": {
+      "approved_pdf_reference": 1,
+      "approved_xml_reference": 1,
+      "source_idml": 1
+    },
+    "semantic_blocking_findings_after_qualification": 0,
+    "semantic_blocking_findings_before_qualification": 24,
+    "source_authenticated_orcids": 4,
+    "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+    "validation": {
+      "issues": 0,
+      "valid": true
+    }
+  },
+  "approved": true,
+  "contract_mismatches": [],
+  "corpus_id": "esa-e20240135",
+  "general_candidate_approved": true,
+  "metadata": {
+    "approved": true,
+    "contract_sha256": "d5c8a70e42aac9943614a7ecf387c8a48f8f2243a7f902eae96f7d692bac5a22",
+    "formula_qualification": {
+      "catalog_id": "6089705c07ec4144164b10ad3f6beefe7da8b269b80f77c70edb3e636a00e986",
+      "formula_cases": 43,
+      "human_review_required": true,
+      "report_sha256": "45a5238690801de91b72189019251aeb1eb451da8f024a0ed505e3ea8424f9c5",
+      "restricted_content_emitted": false
+    },
+    "manifest_sha256": "080c9de54d5b91a8d45f5aba87a544eb3de5d178f7589d6047b5521aa9601c18",
+    "metadata_authority": {
+      "article_identifiers": 1,
+      "authors": 4,
+      "catalog_id": "a5219854415a01310d5e3b29b9adb30eddd4a1696889683c40c7db76a0879879",
+      "crossref_response_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+      "human_review_required": true,
+      "journal_titles": 1,
+      "report_sha256": "3d758d3782efd99306bee6c21db673e6527b927bba9fbbc7effe6edecccff25b",
+      "restricted_content_emitted": false
+    },
+    "mismatches": [],
+    "role_counts": {
+      "approved_pdf_reference": 1,
+      "approved_xml_reference": 1,
+      "source_idml": 1
+    }
+  },
+  "metadata_authors_citations_approved": true,
+  "network_required_by_gate": false,
+  "physical_verification": {
+    "artifacts": 12,
+    "valid": true,
+    "verified": 12
+  },
+  "restricted_content_emitted": false,
+  "stage": "7C-05",
+  "version": "phase7-7c05-gate-1.0"
+}

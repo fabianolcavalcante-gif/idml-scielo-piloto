@@ -1,8 +1,10 @@
+import pytest
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from idml_foundation.models import JobEffect, JobEvent, Organization
 from idml_foundation.services.jobs import (
+    IdempotencyConflictError,
     create_job,
     record_effect_once,
     schedule_retry,
@@ -28,13 +30,23 @@ def test_idempotent_job_creation_and_effects(db: Session) -> None:
         organization_id=org.id,
         kind="foundation.noop",
         idempotency_key="same-request-0001",
-        payload={"value": 2},
+        payload={"value": 1},
         correlation_id="job-correlation-2",
         actor_id="test-user",
     )
     assert created is True
     assert created_again is False
     assert first.id == second.id
+    with pytest.raises(IdempotencyConflictError, match="different request"):
+        create_job(
+            db,
+            organization_id=org.id,
+            kind="foundation.noop",
+            idempotency_key="same-request-0001",
+            payload={"value": 2},
+            correlation_id="job-correlation-3",
+            actor_id="test-user",
+        )
     assert record_effect_once(db, first, "write-once") is True
     assert record_effect_once(db, first, "write-once") is False
     assert db.scalar(select(func.count(JobEffect.id))) == 1

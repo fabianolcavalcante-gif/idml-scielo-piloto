@@ -1,0 +1,1132 @@
+{
+  "version": "vh1-editorial-linux-1.0",
+  "qualification_sha256": "e74af5ed56fc7960584b51225759e9a5ddec0c749a2831b7d88bf876ee89b89a",
+  "executed_at": "2026-10-01T21:57:43.887964+00:00",
+  "code_sha256": {
+    "editorial_authority.py": "ec274acfde43ca4165a7734e438daa2bffd1747a59dbb5cb063acca104d21c44",
+    "editorial_authority_runtime.py": "07d58ce1965fe0e064502722dd4c9361151dbedaf5addab9396f038c78395615",
+    "probe_vh1_editorial.py": "14fa9b06042e2fcefe6395c12ab8ae0837474dd7d62ae31bfec35461bf460fbf",
+    "doi_validation_evidence.py": "ae4edc1c2c878ed86bcea10e857104d60e423b7f6ab332f8136df313c5b3660c",
+    "run_vh1_editorial_linux.py": "8aa8ad5fa3831f425a0350b05a0018d852e14cf2ebc38bd7601b4c3cdd3f102d",
+    "validator_broker.py": "487df9390980f6505b33545df14bc687c4b91824159eadfce2263f8b7aa17f7f",
+    "doi_authority_transport.py": "ab83fbe18e6e688335d6dc69296773285ed52b6854dc98a32326f7db34dcd6a3",
+    "doi_package_binding.py": "4a4e768050bff7669cac414ac49ec5433f7490a42c88c8e39cce385711acc318"
+  },
+  "cases": [
+    {
+      "case": "esa-e20240086",
+      "validators": {
+        "packtools": {
+          "image_id": "sha256:113366e7788c111faada2ef2cb6bc218c1c1b5061dca447fd462ce0216bc23ae",
+          "candidate_sha256": "7081d302358f8c022114a0ebf568372af43e115bda38a748cc7c2ebbc1494ad0",
+          "formal_xml_approved": false,
+          "manifest_sha256": "c420613d35bd75d97bac41672c27e7017398f257c41cef79db4b131d0c0c59a0",
+          "native_context_evidence": {
+            "issue": [
+              true
+            ],
+            "orcid": [],
+            "orcid_reasons": [],
+            "section": [
+              true
+            ]
+          },
+          "native_doi_comparisons": 1,
+          "native_doi_passed": true,
+          "negative_controls": {
+            "issue": {
+              "applicable": true,
+              "comparisons": 1,
+              "native_rejected": true
+            },
+            "orcid": {
+              "applicable": false
+            },
+            "section": {
+              "applicable": true,
+              "comparisons": 1,
+              "native_rejected": true
+            }
+          },
+          "package_sha256": null,
+          "result": {
+            "complete": true,
+            "findings": [
+              {
+                "code": "aff-state-addr-line-state-exist-b767117669fa",
+                "message": "critical reported by rule aff-state-addr-line-state-exist-b767117669fa",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "aff-state-addr-line-state-exist-b767117669fa",
+                "message": "critical reported by rule aff-state-addr-line-state-exist-b767117669fa",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "aff-state-addr-line-state-exist-b767117669fa",
+                "message": "critical reported by rule aff-state-addr-line-state-exist-b767117669fa",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "article-dates-pub-date-date-pub-format-80b782eb212d",
+                "message": "critical reported by rule article-dates-pub-date-date-pub-format-80b782eb212d",
+                "response": "critical"
+              },
+              {
+                "code": "article-dates-pub-date-pub-day-pub-date-pub-exist-8e078bf80ec0",
+                "message": "critical reported by rule article-dates-pub-date-pub-day-pub-date-pub-exist-8e078bf80ec0",
+                "response": "critical"
+              },
+              {
+                "code": "article-dates-pub-date-pub-month-pub-date-pub-exist-0e561c0ff684",
+                "message": "critical reported by rule article-dates-pub-date-pub-month-pub-date-pub-exist-0e561c0ff684",
+                "response": "critical"
+              },
+              {
+                "code": "article-dates-valid-date-accepted-value-c3e694c7802c",
+                "message": "critical reported by rule article-dates-valid-date-accepted-value-c3e694c7802c",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-credit-taxonomy-term-role-exist-0af993405179",
+                "message": "critical reported by rule contrib-credit-taxonomy-term-role-exist-0af993405179",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-credit-taxonomy-term-role-exist-0af993405179",
+                "message": "critical reported by rule contrib-credit-taxonomy-term-role-exist-0af993405179",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-credit-taxonomy-term-role-exist-0af993405179",
+                "message": "critical reported by rule contrib-credit-taxonomy-term-role-exist-0af993405179",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-credit-taxonomy-uri-role-exist-845dda3d1ae9",
+                "message": "critical reported by rule contrib-credit-taxonomy-uri-role-exist-845dda3d1ae9",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-credit-taxonomy-uri-role-exist-845dda3d1ae9",
+                "message": "critical reported by rule contrib-credit-taxonomy-uri-role-exist-845dda3d1ae9",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-credit-taxonomy-uri-role-exist-845dda3d1ae9",
+                "message": "critical reported by rule contrib-credit-taxonomy-uri-role-exist-845dda3d1ae9",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+                "message": "critical reported by rule contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+                "message": "critical reported by rule contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+                "message": "critical reported by rule contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "funding-data-award-id-and-funding-source-award-group-award-id-exist-c1c062bef12e",
+                "message": "critical reported by rule funding-data-award-id-and-funding-source-award-group-award-id-exist-c1c062bef12e",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-d12364d1c76a",
+                "message": "critical reported by rule funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-d12364d1c76a",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-d12364d1c76a",
+                "message": "critical reported by rule funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-d12364d1c76a",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "history-required-date-pub-history-date-date-type-pub-exist-fe5a32c8bf44",
+                "message": "critical reported by rule history-required-date-pub-history-date-date-type-pub-exist-fe5a32c8bf44",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "history-required-date-rev-recd-history-date-date-type-rev-recd-exist-3e953fb9b41f",
+                "message": "critical reported by rule history-required-date-rev-recd-history-date-date-type-rev-recd-exist-3e953fb9b41f",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "history-required-date-rev-request-history-date-date-type-rev-request-exist-4f1d58f9fc9d",
+                "message": "critical reported by rule history-required-date-rev-request-history-date-date-type-rev-request-exist-4f1d58f9fc9d",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-credit-taxonomy-consistency-mixed-roles-role-content-type-consistency-eeb16e30e4fe",
+                "message": "error reported by rule contrib-credit-taxonomy-consistency-mixed-roles-role-content-type-consistency-eeb16e30e4fe",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "error"
+              },
+              {
+                "code": "id-and-rid-disp-formula-id-e-formula-0e118109-65d4-56f5-8082-3ea1436f0d10-is-linked-to-xref-disp-formula-id-match-2f146ebcc8e7",
+                "message": "error reported by rule id-and-rid-disp-formula-id-e-formula-0e118109-65d4-56f5-8082-3ea1436f0d10-is-linked-to-xref-disp-formula-id-match-2f146ebcc8e7",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "error"
+              },
+              {
+                "code": "id-and-rid-disp-formula-id-e-formula-44665dfc-6476-50ef-a786-f9a5fe6a51f7-is-linked-to-xref-disp-formula-id-match-4bbeca1fa4c8",
+                "message": "error reported by rule id-and-rid-disp-formula-id-e-formula-44665dfc-6476-50ef-a786-f9a5fe6a51f7-is-linked-to-xref-disp-formula-id-match-4bbeca1fa4c8",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "error"
+              },
+              {
+                "code": "id-and-rid-disp-formula-id-e-formula-500818b8-d682-5149-893e-c989336435b0-is-linked-to-xref-disp-formula-id-match-c0eb2f7a55f7",
+                "message": "error reported by rule id-and-rid-disp-formula-id-e-formula-500818b8-d682-5149-893e-c989336435b0-is-linked-to-xref-disp-formula-id-match-c0eb2f7a55f7",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "error"
+              },
+              {
+                "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              },
+              {
+                "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              },
+              {
+                "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              },
+              {
+                "code": "app-app-element-app-group-app-exist-6e8b29290a5b",
+                "message": "warning reported by rule app-app-element-app-group-app-exist-6e8b29290a5b",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              },
+              {
+                "code": "reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+                "message": "warning reported by rule reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              },
+              {
+                "code": "reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+                "message": "warning reported by rule reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              },
+              {
+                "code": "reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+                "message": "warning reported by rule reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              },
+              {
+                "code": "sec-sec-content-sec-p-exist-6ca2373fbf26",
+                "message": "warning reported by rule sec-sec-content-sec-p-exist-6ca2373fbf26",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              },
+              {
+                "code": "sec-sec-content-sec-p-exist-6ca2373fbf26",
+                "message": "warning reported by rule sec-sec-content-sec-p-exist-6ca2373fbf26",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              }
+            ],
+            "summary": {
+              "critical": 22,
+              "error": 4,
+              "ok": 1629,
+              "warning": 9
+            }
+          },
+          "runtime_versions": {
+            "packtools": "4.17.2rc20260909"
+          },
+          "unavailable_control": {
+            "native_evidence": {
+              "issue": [
+                false
+              ],
+              "orcid": [],
+              "orcid_reasons": [],
+              "section": [
+                false
+              ]
+            },
+            "result": {
+              "complete": true,
+              "findings": [
+                {
+                  "code": "external-verification-unavailable-journal-issues",
+                  "message": "External verification not completed: journal-issues",
+                  "response": "blocking"
+                },
+                {
+                  "code": "external-verification-unavailable-journal-sections",
+                  "message": "External verification not completed: journal-sections",
+                  "response": "blocking"
+                },
+                {
+                  "code": "credit-taxonomy-term-role-exist-dd3ce711b421",
+                  "message": "critical reported by rule credit-taxonomy-term-role-exist-dd3ce711b421",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "credit-taxonomy-term-role-exist-dd3ce711b421",
+                  "message": "critical reported by rule credit-taxonomy-term-role-exist-dd3ce711b421",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "credit-taxonomy-term-role-exist-dd3ce711b421",
+                  "message": "critical reported by rule credit-taxonomy-term-role-exist-dd3ce711b421",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "credit-taxonomy-uri-role-exist-cd66472cc1cd",
+                  "message": "critical reported by rule credit-taxonomy-uri-role-exist-cd66472cc1cd",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "credit-taxonomy-uri-role-exist-cd66472cc1cd",
+                  "message": "critical reported by rule credit-taxonomy-uri-role-exist-cd66472cc1cd",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "credit-taxonomy-uri-role-exist-cd66472cc1cd",
+                  "message": "critical reported by rule credit-taxonomy-uri-role-exist-cd66472cc1cd",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "orcid-format-contrib-id-contrib-id-type-orcid-format-5312a5075a49",
+                  "message": "critical reported by rule orcid-format-contrib-id-contrib-id-type-orcid-format-5312a5075a49",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "orcid-format-contrib-id-contrib-id-type-orcid-format-5312a5075a49",
+                  "message": "critical reported by rule orcid-format-contrib-id-contrib-id-type-orcid-format-5312a5075a49",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "orcid-format-contrib-id-contrib-id-type-orcid-format-5312a5075a49",
+                  "message": "critical reported by rule orcid-format-contrib-id-contrib-id-type-orcid-format-5312a5075a49",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "credit-taxonomy-consistency-mixed-roles-role-content-type-consistency-cdc47303fc66",
+                  "message": "error reported by rule credit-taxonomy-consistency-mixed-roles-role-content-type-consistency-cdc47303fc66",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "error"
+                },
+                {
+                  "code": "registered-issue-volume-number-supplement-value-in-list-0082b6d7a9a6",
+                  "message": "External verification unavailable (journal-issues); original warning retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "warning"
+                },
+                {
+                  "code": "table-of-contents-section-subj-group-subject-value-in-list-dc2151cfce60",
+                  "message": "External verification unavailable (journal-sections); original warning retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "warning"
+                }
+              ],
+              "summary": {
+                "blocking": 2,
+                "critical": 9,
+                "error": 1,
+                "ok": 55,
+                "warning": 2
+              }
+            }
+          },
+          "xml_unchanged": true
+        },
+        "spsvalidator": {
+          "image_id": "sha256:9549ba39d357854d51c3a1af3d11adc8a0583b83e12092928e808e76f706ad6d",
+          "candidate_sha256": "7081d302358f8c022114a0ebf568372af43e115bda38a748cc7c2ebbc1494ad0",
+          "formal_xml_approved": false,
+          "manifest_sha256": "c420613d35bd75d97bac41672c27e7017398f257c41cef79db4b131d0c0c59a0",
+          "native_context_evidence": {
+            "issue": [
+              true
+            ],
+            "orcid": [],
+            "orcid_reasons": [],
+            "section": [
+              true
+            ]
+          },
+          "native_doi_comparisons": 1,
+          "native_doi_passed": true,
+          "negative_controls": {
+            "issue": {
+              "applicable": true,
+              "comparisons": 1,
+              "native_rejected": true
+            },
+            "orcid": {
+              "applicable": false
+            },
+            "section": {
+              "applicable": true,
+              "comparisons": 1,
+              "native_rejected": true
+            }
+          },
+          "package_sha256": "6b209eb4209e20aff17b653545f5553af3b562c9549ee34b5a2ca49671d9c4f6",
+          "result": {
+            "complete": true,
+            "findings": [
+              {
+                "code": "aff-aff-state-addr-line-state-exist-302311123921",
+                "message": "critical reported by rule aff-aff-state-addr-line-state-exist-302311123921",
+                "response": "critical"
+              },
+              {
+                "code": "aff-aff-state-addr-line-state-exist-302311123921",
+                "message": "critical reported by rule aff-aff-state-addr-line-state-exist-302311123921",
+                "response": "critical"
+              },
+              {
+                "code": "aff-aff-state-addr-line-state-exist-302311123921",
+                "message": "critical reported by rule aff-aff-state-addr-line-state-exist-302311123921",
+                "response": "critical"
+              },
+              {
+                "code": "article-dates-article-dates-pub-date-date-pub-format-78e3c776d3aa",
+                "message": "critical reported by rule article-dates-article-dates-pub-date-date-pub-format-78e3c776d3aa",
+                "response": "critical"
+              },
+              {
+                "code": "article-dates-article-dates-pub-date-pub-day-pub-date-pub-exist-55cfcb45d6aa",
+                "message": "critical reported by rule article-dates-article-dates-pub-date-pub-day-pub-date-pub-exist-55cfcb45d6aa",
+                "response": "critical"
+              },
+              {
+                "code": "article-dates-article-dates-pub-date-pub-month-pub-date-pub-exist-1d9df77c1724",
+                "message": "critical reported by rule article-dates-article-dates-pub-date-pub-month-pub-date-pub-exist-1d9df77c1724",
+                "response": "critical"
+              },
+              {
+                "code": "article-dates-article-dates-valid-date-accepted-value-c9b55e168d69",
+                "message": "critical reported by rule article-dates-article-dates-valid-date-accepted-value-c9b55e168d69",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-contrib-credit-taxonomy-term-role-exist-e8df84ab3684",
+                "message": "critical reported by rule contrib-contrib-credit-taxonomy-term-role-exist-e8df84ab3684",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-contrib-credit-taxonomy-term-role-exist-e8df84ab3684",
+                "message": "critical reported by rule contrib-contrib-credit-taxonomy-term-role-exist-e8df84ab3684",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-contrib-credit-taxonomy-term-role-exist-e8df84ab3684",
+                "message": "critical reported by rule contrib-contrib-credit-taxonomy-term-role-exist-e8df84ab3684",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-contrib-credit-taxonomy-uri-role-exist-68c357fe2848",
+                "message": "critical reported by rule contrib-contrib-credit-taxonomy-uri-role-exist-68c357fe2848",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-contrib-credit-taxonomy-uri-role-exist-68c357fe2848",
+                "message": "critical reported by rule contrib-contrib-credit-taxonomy-uri-role-exist-68c357fe2848",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-contrib-credit-taxonomy-uri-role-exist-68c357fe2848",
+                "message": "critical reported by rule contrib-contrib-credit-taxonomy-uri-role-exist-68c357fe2848",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+                "message": "critical reported by rule contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+                "message": "critical reported by rule contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+                "message": "critical reported by rule contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+                "response": "critical"
+              },
+              {
+                "code": "funding-data-funding-data-award-id-and-funding-source-award-group-award-id-exist-1fcad4ebc009",
+                "message": "critical reported by rule funding-data-funding-data-award-id-and-funding-source-award-group-award-id-exist-1fcad4ebc009",
+                "response": "critical"
+              },
+              {
+                "code": "funding-data-funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-89359b29da1b",
+                "message": "critical reported by rule funding-data-funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-89359b29da1b",
+                "response": "critical"
+              },
+              {
+                "code": "funding-data-funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-89359b29da1b",
+                "message": "critical reported by rule funding-data-funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-89359b29da1b",
+                "response": "critical"
+              },
+              {
+                "code": "history-history-required-date-pub-history-date-date-type-pub-exist-f3038182317b",
+                "message": "critical reported by rule history-history-required-date-pub-history-date-date-type-pub-exist-f3038182317b",
+                "response": "critical"
+              },
+              {
+                "code": "history-history-required-date-rev-recd-history-date-date-type-rev-recd-exist-ef912a098978",
+                "message": "critical reported by rule history-history-required-date-rev-recd-history-date-date-type-rev-recd-exist-ef912a098978",
+                "response": "critical"
+              },
+              {
+                "code": "history-history-required-date-rev-request-history-date-date-type-rev-request-exist-23889e3b4763",
+                "message": "critical reported by rule history-history-required-date-rev-request-history-date-date-type-rev-request-exist-23889e3b4763",
+                "response": "critical"
+              },
+              {
+                "code": "contrib-contrib-credit-taxonomy-consistency-mixed-roles-role-content-type-consistency-a62acdb6a3eb",
+                "message": "error reported by rule contrib-contrib-credit-taxonomy-consistency-mixed-roles-role-content-type-consistency-a62acdb6a3eb",
+                "response": "error"
+              },
+              {
+                "code": "id-and-rid-id-and-rid-disp-formula-id-e-formula-0e118109-65d4-56f5-8082-3ea1436f0d10-is-linked-to-xref-disp-formula-id-m-087e8465041c",
+                "message": "error reported by rule id-and-rid-id-and-rid-disp-formula-id-e-formula-0e118109-65d4-56f5-8082-3ea1436f0d10-is-linked-to-xref-disp-formula-id-m-087e8465041c",
+                "response": "error"
+              },
+              {
+                "code": "id-and-rid-id-and-rid-disp-formula-id-e-formula-44665dfc-6476-50ef-a786-f9a5fe6a51f7-is-linked-to-xref-disp-formula-id-m-a9e280337564",
+                "message": "error reported by rule id-and-rid-id-and-rid-disp-formula-id-e-formula-44665dfc-6476-50ef-a786-f9a5fe6a51f7-is-linked-to-xref-disp-formula-id-m-a9e280337564",
+                "response": "error"
+              },
+              {
+                "code": "id-and-rid-id-and-rid-disp-formula-id-e-formula-500818b8-d682-5149-893e-c989336435b0-is-linked-to-xref-disp-formula-id-m-01880654cbe7",
+                "message": "error reported by rule id-and-rid-id-and-rid-disp-formula-id-e-formula-500818b8-d682-5149-893e-c989336435b0-is-linked-to-xref-disp-formula-id-m-01880654cbe7",
+                "response": "error"
+              },
+              {
+                "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "response": "warning"
+              },
+              {
+                "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "response": "warning"
+              },
+              {
+                "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "response": "warning"
+              },
+              {
+                "code": "app-app-app-element-app-group-app-exist-b70163d3b3dc",
+                "message": "warning reported by rule app-app-app-element-app-group-app-exist-b70163d3b3dc",
+                "response": "warning"
+              },
+              {
+                "code": "reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+                "message": "warning reported by rule reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+                "response": "warning"
+              },
+              {
+                "code": "reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+                "message": "warning reported by rule reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+                "response": "warning"
+              },
+              {
+                "code": "reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+                "message": "warning reported by rule reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+                "response": "warning"
+              },
+              {
+                "code": "sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+                "message": "warning reported by rule sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+                "response": "warning"
+              },
+              {
+                "code": "sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+                "message": "warning reported by rule sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+                "response": "warning"
+              }
+            ],
+            "summary": {
+              "critical": 22,
+              "error": 4,
+              "warning": 9
+            }
+          },
+          "runtime_versions": {
+            "packtools": "4.16.9rc20260909",
+            "spsvalidator": "0.3.0"
+          },
+          "unavailable_control": {
+            "native_evidence": {
+              "issue": [
+                false
+              ],
+              "orcid": [],
+              "orcid_reasons": [],
+              "section": [
+                false
+              ]
+            },
+            "result": {
+              "complete": true,
+              "findings": [
+                {
+                  "code": "external-verification-unavailable-journal-issues",
+                  "message": "External verification not completed: journal-issues",
+                  "response": "blocking"
+                },
+                {
+                  "code": "external-verification-unavailable-journal-sections",
+                  "message": "External verification not completed: journal-sections",
+                  "response": "blocking"
+                },
+                {
+                  "code": "credit-taxonomy-term-role-exist-dd3ce711b421",
+                  "message": "critical reported by rule credit-taxonomy-term-role-exist-dd3ce711b421",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "credit-taxonomy-term-role-exist-dd3ce711b421",
+                  "message": "critical reported by rule credit-taxonomy-term-role-exist-dd3ce711b421",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "credit-taxonomy-term-role-exist-dd3ce711b421",
+                  "message": "critical reported by rule credit-taxonomy-term-role-exist-dd3ce711b421",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "credit-taxonomy-uri-role-exist-cd66472cc1cd",
+                  "message": "critical reported by rule credit-taxonomy-uri-role-exist-cd66472cc1cd",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "credit-taxonomy-uri-role-exist-cd66472cc1cd",
+                  "message": "critical reported by rule credit-taxonomy-uri-role-exist-cd66472cc1cd",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "credit-taxonomy-uri-role-exist-cd66472cc1cd",
+                  "message": "critical reported by rule credit-taxonomy-uri-role-exist-cd66472cc1cd",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "orcid-format-contrib-id-contrib-id-type-orcid-format-5312a5075a49",
+                  "message": "critical reported by rule orcid-format-contrib-id-contrib-id-type-orcid-format-5312a5075a49",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "orcid-format-contrib-id-contrib-id-type-orcid-format-5312a5075a49",
+                  "message": "critical reported by rule orcid-format-contrib-id-contrib-id-type-orcid-format-5312a5075a49",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "orcid-format-contrib-id-contrib-id-type-orcid-format-5312a5075a49",
+                  "message": "critical reported by rule orcid-format-contrib-id-contrib-id-type-orcid-format-5312a5075a49",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "critical"
+                },
+                {
+                  "code": "credit-taxonomy-consistency-mixed-roles-role-content-type-consistency-cdc47303fc66",
+                  "message": "error reported by rule credit-taxonomy-consistency-mixed-roles-role-content-type-consistency-cdc47303fc66",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "error"
+                },
+                {
+                  "code": "registered-issue-volume-number-supplement-value-in-list-0082b6d7a9a6",
+                  "message": "External verification unavailable (journal-issues); original warning retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "warning"
+                },
+                {
+                  "code": "table-of-contents-section-subj-group-subject-value-in-list-dc2151cfce60",
+                  "message": "External verification unavailable (journal-sections); original warning retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "warning"
+                }
+              ],
+              "summary": {
+                "blocking": 2,
+                "critical": 9,
+                "error": 1,
+                "ok": 55,
+                "warning": 2
+              }
+            }
+          },
+          "xml_unchanged": true
+        }
+      }
+    },
+    {
+      "case": "esa-e20240135",
+      "validators": {
+        "packtools": {
+          "image_id": "sha256:113366e7788c111faada2ef2cb6bc218c1c1b5061dca447fd462ce0216bc23ae",
+          "candidate_sha256": "1757cdb3a15b7fd44beb009e794ff812995eb59cd6e2c1eee2cabee15f9a9706",
+          "formal_xml_approved": false,
+          "manifest_sha256": "9d479b566528f2183d4b17b86b3173020cd4ad8d3ea1b605240fa4cd8a36d669",
+          "native_context_evidence": {
+            "issue": [
+              true
+            ],
+            "orcid": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "orcid_reasons": [
+              "public_registry_and_crossref_author_match",
+              "public_registry_and_crossref_author_match",
+              "public_registry_and_crossref_author_match",
+              "public_registry_and_crossref_author_match"
+            ],
+            "section": [
+              true
+            ]
+          },
+          "native_doi_comparisons": 1,
+          "native_doi_passed": true,
+          "negative_controls": {
+            "issue": {
+              "applicable": true,
+              "comparisons": 1,
+              "native_rejected": true
+            },
+            "orcid": {
+              "applicable": true,
+              "comparisons": 4,
+              "native_rejected": true
+            },
+            "section": {
+              "applicable": true,
+              "comparisons": 1,
+              "native_rejected": true
+            }
+          },
+          "package_sha256": null,
+          "result": {
+            "complete": true,
+            "findings": [
+              {
+                "code": "aff-state-addr-line-state-exist-b767117669fa",
+                "message": "critical reported by rule aff-state-addr-line-state-exist-b767117669fa",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "aff-state-addr-line-state-exist-b767117669fa",
+                "message": "critical reported by rule aff-state-addr-line-state-exist-b767117669fa",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "aff-state-addr-line-state-exist-b767117669fa",
+                "message": "critical reported by rule aff-state-addr-line-state-exist-b767117669fa",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "aff-state-addr-line-state-exist-b767117669fa",
+                "message": "critical reported by rule aff-state-addr-line-state-exist-b767117669fa",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "history-required-date-rev-recd-history-date-date-type-rev-recd-exist-3e953fb9b41f",
+                "message": "critical reported by rule history-required-date-rev-recd-history-date-date-type-rev-recd-exist-3e953fb9b41f",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "history-required-date-rev-request-history-date-date-type-rev-request-exist-4f1d58f9fc9d",
+                "message": "critical reported by rule history-required-date-rev-request-history-date-date-type-rev-request-exist-4f1d58f9fc9d",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "critical"
+              },
+              {
+                "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              },
+              {
+                "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              },
+              {
+                "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              },
+              {
+                "code": "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "message": "warning reported by rule aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              },
+              {
+                "code": "app-app-element-app-group-app-exist-6e8b29290a5b",
+                "message": "warning reported by rule app-app-element-app-group-app-exist-6e8b29290a5b",
+                "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                "response": "warning"
+              }
+            ],
+            "summary": {
+              "critical": 6,
+              "info": 4,
+              "ok": 1517,
+              "warning": 5
+            }
+          },
+          "runtime_versions": {
+            "packtools": "4.17.2rc20260909"
+          },
+          "unavailable_control": {
+            "native_evidence": {
+              "issue": [
+                false
+              ],
+              "orcid": [
+                false,
+                false,
+                false,
+                false
+              ],
+              "orcid_reasons": [
+                "unavailable",
+                "unavailable",
+                "unavailable",
+                "unavailable"
+              ],
+              "section": [
+                false
+              ]
+            },
+            "result": {
+              "complete": true,
+              "findings": [
+                {
+                  "code": "external-verification-unavailable-journal-issues",
+                  "message": "External verification not completed: journal-issues",
+                  "response": "blocking"
+                },
+                {
+                  "code": "external-verification-unavailable-journal-sections",
+                  "message": "External verification not completed: journal-sections",
+                  "response": "blocking"
+                },
+                {
+                  "code": "external-verification-unavailable-orcid-registry",
+                  "message": "External verification not completed: orcid-registry",
+                  "response": "blocking"
+                },
+                {
+                  "code": "registered-orcid-contrib-id-contrib-id-type-orcid-registered-559d93df7aee",
+                  "message": "External verification unavailable (orcid-registry); original error retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "error"
+                },
+                {
+                  "code": "registered-orcid-contrib-id-contrib-id-type-orcid-registered-559d93df7aee",
+                  "message": "External verification unavailable (orcid-registry); original error retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "error"
+                },
+                {
+                  "code": "registered-orcid-contrib-id-contrib-id-type-orcid-registered-559d93df7aee",
+                  "message": "External verification unavailable (orcid-registry); original error retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "error"
+                },
+                {
+                  "code": "registered-orcid-contrib-id-contrib-id-type-orcid-registered-559d93df7aee",
+                  "message": "External verification unavailable (orcid-registry); original error retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "error"
+                },
+                {
+                  "code": "registered-issue-volume-number-supplement-value-in-list-0082b6d7a9a6",
+                  "message": "External verification unavailable (journal-issues); original warning retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "warning"
+                },
+                {
+                  "code": "table-of-contents-section-subj-group-subject-value-in-list-dc2151cfce60",
+                  "message": "External verification unavailable (journal-sections); original warning retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "warning"
+                }
+              ],
+              "summary": {
+                "blocking": 3,
+                "error": 4,
+                "ok": 49,
+                "warning": 2
+              }
+            }
+          },
+          "xml_unchanged": true
+        },
+        "spsvalidator": {
+          "image_id": "sha256:9549ba39d357854d51c3a1af3d11adc8a0583b83e12092928e808e76f706ad6d",
+          "candidate_sha256": "1757cdb3a15b7fd44beb009e794ff812995eb59cd6e2c1eee2cabee15f9a9706",
+          "formal_xml_approved": false,
+          "manifest_sha256": "9d479b566528f2183d4b17b86b3173020cd4ad8d3ea1b605240fa4cd8a36d669",
+          "native_context_evidence": {
+            "issue": [
+              true
+            ],
+            "orcid": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "orcid_reasons": [
+              "public_registry_and_crossref_author_match",
+              "public_registry_and_crossref_author_match",
+              "public_registry_and_crossref_author_match",
+              "public_registry_and_crossref_author_match"
+            ],
+            "section": [
+              true
+            ]
+          },
+          "native_doi_comparisons": 1,
+          "native_doi_passed": true,
+          "negative_controls": {
+            "issue": {
+              "applicable": true,
+              "comparisons": 1,
+              "native_rejected": true
+            },
+            "orcid": {
+              "applicable": true,
+              "comparisons": 4,
+              "native_rejected": true
+            },
+            "section": {
+              "applicable": true,
+              "comparisons": 1,
+              "native_rejected": true
+            }
+          },
+          "package_sha256": "e0be244b52eb524328a3f260c426617850bb057e3bbc9ecb82c43134929950c8",
+          "result": {
+            "complete": true,
+            "findings": [
+              {
+                "code": "aff-aff-state-addr-line-state-exist-302311123921",
+                "message": "critical reported by rule aff-aff-state-addr-line-state-exist-302311123921",
+                "response": "critical"
+              },
+              {
+                "code": "aff-aff-state-addr-line-state-exist-302311123921",
+                "message": "critical reported by rule aff-aff-state-addr-line-state-exist-302311123921",
+                "response": "critical"
+              },
+              {
+                "code": "aff-aff-state-addr-line-state-exist-302311123921",
+                "message": "critical reported by rule aff-aff-state-addr-line-state-exist-302311123921",
+                "response": "critical"
+              },
+              {
+                "code": "aff-aff-state-addr-line-state-exist-302311123921",
+                "message": "critical reported by rule aff-aff-state-addr-line-state-exist-302311123921",
+                "response": "critical"
+              },
+              {
+                "code": "history-history-required-date-rev-recd-history-date-date-type-rev-recd-exist-ef912a098978",
+                "message": "critical reported by rule history-history-required-date-rev-recd-history-date-date-type-rev-recd-exist-ef912a098978",
+                "response": "critical"
+              },
+              {
+                "code": "history-history-required-date-rev-request-history-date-date-type-rev-request-exist-23889e3b4763",
+                "message": "critical reported by rule history-history-required-date-rev-request-history-date-date-type-rev-request-exist-23889e3b4763",
+                "response": "critical"
+              },
+              {
+                "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "response": "warning"
+              },
+              {
+                "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "response": "warning"
+              },
+              {
+                "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "response": "warning"
+              },
+              {
+                "code": "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "message": "warning reported by rule aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+                "response": "warning"
+              },
+              {
+                "code": "app-app-app-element-app-group-app-exist-b70163d3b3dc",
+                "message": "warning reported by rule app-app-app-element-app-group-app-exist-b70163d3b3dc",
+                "response": "warning"
+              }
+            ],
+            "summary": {
+              "critical": 6,
+              "info": 4,
+              "warning": 5
+            }
+          },
+          "runtime_versions": {
+            "packtools": "4.16.9rc20260909",
+            "spsvalidator": "0.3.0"
+          },
+          "unavailable_control": {
+            "native_evidence": {
+              "issue": [
+                false
+              ],
+              "orcid": [
+                false,
+                false,
+                false,
+                false
+              ],
+              "orcid_reasons": [
+                "unavailable",
+                "unavailable",
+                "unavailable",
+                "unavailable"
+              ],
+              "section": [
+                false
+              ]
+            },
+            "result": {
+              "complete": true,
+              "findings": [
+                {
+                  "code": "external-verification-unavailable-journal-issues",
+                  "message": "External verification not completed: journal-issues",
+                  "response": "blocking"
+                },
+                {
+                  "code": "external-verification-unavailable-journal-sections",
+                  "message": "External verification not completed: journal-sections",
+                  "response": "blocking"
+                },
+                {
+                  "code": "external-verification-unavailable-orcid-registry",
+                  "message": "External verification not completed: orcid-registry",
+                  "response": "blocking"
+                },
+                {
+                  "code": "registered-orcid-contrib-id-contrib-id-type-orcid-registered-559d93df7aee",
+                  "message": "External verification unavailable (orcid-registry); original error retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "error"
+                },
+                {
+                  "code": "registered-orcid-contrib-id-contrib-id-type-orcid-registered-559d93df7aee",
+                  "message": "External verification unavailable (orcid-registry); original error retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "error"
+                },
+                {
+                  "code": "registered-orcid-contrib-id-contrib-id-type-orcid-registered-559d93df7aee",
+                  "message": "External verification unavailable (orcid-registry); original error retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "error"
+                },
+                {
+                  "code": "registered-orcid-contrib-id-contrib-id-type-orcid-registered-559d93df7aee",
+                  "message": "External verification unavailable (orcid-registry); original error retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "error"
+                },
+                {
+                  "code": "registered-issue-volume-number-supplement-value-in-list-0082b6d7a9a6",
+                  "message": "External verification unavailable (journal-issues); original warning retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "warning"
+                },
+                {
+                  "code": "table-of-contents-section-subj-group-subject-value-in-list-dc2151cfce60",
+                  "message": "External verification unavailable (journal-sections); original warning retained",
+                  "path": "locator-sha256:84393add8c489d33569360efd1bcb5f70ed5a22408127d241c751e5ea345eb7c",
+                  "response": "warning"
+                }
+              ],
+              "summary": {
+                "blocking": 3,
+                "error": 4,
+                "ok": 49,
+                "warning": 2
+              }
+            }
+          },
+          "xml_unchanged": true
+        }
+      }
+    }
+  ],
+  "deployment_changed": false,
+  "formal_xml_approved": false,
+  "runtime": "pinned native images plus fingerprinted read-only qualification harness"
+}

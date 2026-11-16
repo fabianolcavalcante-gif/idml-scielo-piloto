@@ -1,0 +1,24 @@
+# syntax=docker/dockerfile:1.7
+FROM python:3.12-slim
+
+ARG SPSVALIDATOR_COMMIT=d1aa774d4e335d6559c24c2c728471b8fd2e6e42
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_NO_CACHE_DIR=1 \
+    SPSVALIDATOR_REVISION=${SPSVALIDATOR_COMMIT}
+
+RUN apt-get update \
+    && apt-get install --yes --no-install-recommends git ca-certificates \
+    && python -m pip install "spsvalidator @ git+https://github.com/scieloorg/spsvalidator.git@${SPSVALIDATOR_COMMIT}#subdirectory=spsvalidator" \
+    && apt-get purge --yes --auto-remove git \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN groupadd --gid 10001 validator \
+    && useradd --uid 10001 --gid validator --no-create-home validator
+WORKDIR /validator
+COPY ops/spsvalidator_validate.py /validator/spsvalidator_validate.py
+COPY ops/validator_adapter_common.py /validator/validator_adapter_common.py
+COPY ops/external_verification.py /validator/external_verification.py
+USER 10001:10001
+ENTRYPOINT ["python", "/validator/spsvalidator_validate.py"]

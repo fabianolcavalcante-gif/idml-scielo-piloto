@@ -1,0 +1,50 @@
+{
+  "after": {
+    "src/idml_foundation/pipeline/affiliation_hierarchy.py": "ffde54ae9a381add0f831594f824fab433e8ee791a0b73c5005f64449fdd3794",
+    "src/idml_foundation/release/institution_locations.py": "b18fc344700d5ecc993dc719a6728b1a4859a785f38c7995ef77d7494bce6d80",
+    "src/idml_foundation/release/reference_types.py": "e602dc5bf23a07b87b08fcfca146492a713d6a8d039ec876427951fdea83dc88"
+  },
+  "audit_sha256": "54bea426c6111e04a2edbda7a3a7ceb33eb3018fb9ec0d523653d2f1f40a0cc5",
+  "baseline_sha256": "61c57c43c081a537fc95d12c1c1e802a092cbf5ee3a26c093debcfb89d3ad66a",
+  "before": {
+    "src/idml_foundation/pipeline/affiliation_hierarchy.py": "efac1d720b4141c621f383de70de4ff960eb9f392b13643912838b065c00878a",
+    "src/idml_foundation/release/institution_locations.py": "272cad83762e905df22822de84fec177b7563aa1cfd130200d76c9a11d8fa0e3",
+    "src/idml_foundation/release/reference_types.py": "95d1cd68f1ff3c7bd1ec8a619811360d424d3f4a59d83b16a5e83cf76fa543ad"
+  },
+  "cases": {
+    "esa-e20240086": {
+      "catalogs": {
+        "articlemeta_date_catalog": "fb1908069a2511eb7ac0b24aff3353de34080e6f4e767bb310812589155e3ee6",
+        "articlemeta_orcid_catalog": "c03ca7db99861d4076872d3a5c1957c9e1ecdbef71e43334fef69624416c117c",
+        "editorial_enrichment_catalog": "12301152ffee18ebd3ee87adb4fcc0fdc8533ef30468582fb013b1f848d0fa58",
+        "formal_metadata_catalog": "466920403384c76743d1b5d235457deba8da6ccd49d5aa5fa2abaf19e1c54796",
+        "formula_catalog": "cc6ac811f68b821111f6219891846585f6a7a16196ff13aeaf8c823ef0fd24c9",
+        "institution_location_catalog": "fcdd41b732bafd82571fc5d9e7f71ff02c5df66fabd93371fe9ad335a7990a66",
+        "journal_metadata_catalog": "9ede59305d72c255716847c9c986e0480da7c7538d275b97a22170f735b2b39a",
+        "reference_type_catalog": "1b17a79e955dff17980d2a56270ae3bcaf52ba0ae34bf280eb8ffbd3892ea2f1",
+        "verified_funding_catalog": "f97f8dc65e68fda109fb303a50ecae5eb810c43360d66ecb5d31dbf593956843"
+      },
+      "prior_xml_sha256": "414de2ea7329379b98d06f5018839f7de7ac9487501f1b1b2eea44ed2019264f",
+      "source_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+      "unchanged_members": 6,
+      "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690"
+    },
+    "esa-e20240135": {
+      "catalogs": {
+        "crossref_metadata_catalog": "a2528bd179e5d50b0b255a80bfc0acf5dd13c3204f9189bb87c63a994d92122b",
+        "formal_metadata_catalog": "aac6763c58eb9cde824447199f5af3fecc97a55286811e3ba34953bc6247f0d7",
+        "formula_catalog": "ea1709d6d5955c7080b9584747296ed8450cd60dafe3281349c4dff8dc8dea9c",
+        "institution_location_catalog": "814a7e121339706f3dc4f368c4db8d65526521f92d6ef26273c419a52caa3773",
+        "journal_metadata_catalog": "38de33b5cdc5d01d5f66a888717cbfbd93cd58c28f44321cfcc827dfd0c533ed",
+        "reference_type_catalog": "832bde76580ce3c6fe404bcafdd1ba5d44ec08dcef18aea5e5bfa66d5bbede25"
+      },
+      "prior_xml_sha256": "31224a085f49ce7d570069f8d266993979dd46beed720c7edc22324e1c11f1e5",
+      "source_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+      "unchanged_members": 8,
+      "xml_sha256": "f2540405e65898aa2d5bd045075fbc22d2e06177f782e3a649ba891738002412"
+    }
+  },
+  "new_provider_calls": 0,
+  "release_approved": false,
+  "replay_only": true
+}

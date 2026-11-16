@@ -1,0 +1,59 @@
+{
+  "version": "vh1-xpm-execution-bridge-1.0",
+  "date": "2026-10-22",
+  "scope": "trusted-internal-execution-evidence-bridge-only",
+  "source_archive": {
+    "release": "vh1-xpm-bridge-20261022-v2",
+    "sha256": "ab95f633bb012a9d950821bab3fd51d547ab28a6d0baa9c0f68fdcb65e9b1d30",
+    "files": 1127,
+    "private_inputs_included": false
+  },
+  "tests": {
+    "local_passed": 176,
+    "linux_passed": 176,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "new_cases": 28,
+    "counts_overlap": true,
+    "local_duration_seconds": 36.255,
+    "linux_duration_seconds": 18.56,
+    "warnings_per_run": 1,
+    "full_suite_repeated": false,
+    "global_coverage_measured": false
+  },
+  "checks": {
+    "ruff_global": true,
+    "mypy_source_files": 127,
+    "formatted_files": 6,
+    "vh08_policy_proof": true,
+    "linux_network": "none",
+    "linux_memory_mib": 512,
+    "linux_cpus": 0.5,
+    "source_manifest_verified": true,
+    "all_running_services_unchanged": true
+  },
+  "source_and_evidence_sha256": {
+    "src/idml_foundation/services/xpm_execution.py": "18c89cdc3d2259c83685998fadd7146e04667d8138dafd7cc2968905f3ff0a81",
+    "src/idml_foundation/services/package_validation.py": "d6a224703243d43488f4d75742801501cb21f8038ffc6d3d2d83edd75652aef4",
+    "src/idml_foundation/services/autocorrection_package.py": "661f9e2b9b42278a1cb2360480904afb59b50e4f73ac4001aede90e0bda70385",
+    "src/idml_foundation/services/autocorrection_history.py": "45bcdc9ee0759dbca0e2cd8abb7f4c6b680fcb406d065d8ac3b3fae31f703cc8",
+    "tests/test_xpm_execution.py": "0afdb284ed4230ab56869678ea9eea1a27afda1955db06340958eead9c482fb1",
+    "tests/test_autocorrection_history.py": "821c26a407c19ac363aa9f072de78c0c5321421b23ef0c244720704440a0c83c",
+    "tmp/vh1-xpm-bridge-v2-tests.xml": "db66cef5b008dbbc227f93427e234d209fcf207b2d9c7d4254b5a80c61b3aec5",
+    "tmp/vh1-xpm-bridge-v2-linux-tests.log": "7003e1fa3bb9c4a972b23935cada8bc502cbf99e04945a102fc147e19ccd7327"
+  },
+  "limitations": [
+    "Synthetic executors only; no new real XPM or article run",
+    "No new compatibility exception, normative waiver or severity reduction",
+    "Internal bridge only; supervised executor, raw HTML retention and worker provisioning pending",
+    "Historical diagnostics do not authorize promotion; complete and ready_for_scielo remain false",
+    "No active image update or database migration; previous VH09 image remains active",
+    "No whole-project CI approval or new global coverage claim"
+  ],
+  "candidate_stored_on_vps": true,
+  "active_runtime_changed": false,
+  "live_ai_called": false,
+  "homologation_ready": false,
+  "release_approved": false
+}

@@ -1,0 +1,32 @@
+{
+  "version": "vh1-xpm-download-1.0",
+  "retrieved_at": "2026-10-01T17:14:57.056790+00:00",
+  "source": "ftp://ftp.scielo.br/xpm/multiplatform/SciELO_XPM_4.0.096-R20231215.zip",
+  "access_document": "https://raw.githubusercontent.com/scieloorg/PC-Programs/master/docs/source/en_installation_download.rst",
+  "access_document_sha256": "2b7f9fdb55fde6d37a1ab02240f96f418fe8a65a8b703de4933f6fef4a7cc8ce",
+  "archive_name": "SciELO_XPM_4.0.096-R20231215.zip",
+  "archive_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+  "bytes": 4567599,
+  "vps_path": "/opt/idml-platform/private/vendor/xpm/1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec/SciELO_XPM_4.0.096-R20231215.zip",
+  "archive_reused": false,
+  "entries": 455,
+  "uncompressed_bytes": 18965520,
+  "relevant_paths": [
+    "SciELO_XPM/jar/saxonb9-1-0-8j/notices/LICENSE.txt",
+    "SciELO_XPM/pmc/j1.1/JATS-Publishing-1-1-MathML2-DTD/Publishing-Readme.txt",
+    "SciELO_XPM/xml/app_modules/settings/requirements.txt",
+    "SciELO_XPM/xml/app_modules/settings/tables/licenses.csv",
+    "SciELO_XPM/xml/app_modules/tools/requirements_checker.py",
+    "SciELO_XPM/xml/install_requirements.bat"
+  ],
+  "declared_dependencies": [
+    "packtools==2.4.2",
+    "pillow==6.2.2"
+  ],
+  "zip_safety_verified": true,
+  "downloaded": true,
+  "installed": false,
+  "executed": false,
+  "sps_1_10_compatibility_proven": false,
+  "transport": "public-FTP; integrity pinned to previously recorded SHA-256"
+}

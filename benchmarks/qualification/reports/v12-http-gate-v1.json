@@ -1,0 +1,28 @@
+{
+  "approved": true,
+  "checks": {
+    "cases": true,
+    "cleanup": true,
+    "disk_spooling_exercised": true,
+    "files_closed": true,
+    "host": true,
+    "isolation": true,
+    "matrix": true,
+    "no_oom": true,
+    "no_provider": true,
+    "observation": true,
+    "privacy": true,
+    "probe": true,
+    "rss": true,
+    "services": true,
+    "sources": true,
+    "statuses": true,
+    "versions": true
+  },
+  "evidence_sha256": "a10c60e49bbe9e6ab982accb29195bb9c1680fea2d1c5510dd8e979bb6ce71f1",
+  "production_capacity_qualified": false,
+  "release_ready": false,
+  "restricted_content_emitted": false,
+  "v12_2_complete": false,
+  "version": "phase7-v12-http-gate-1.0"
+}

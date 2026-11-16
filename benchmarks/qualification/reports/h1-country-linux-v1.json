@@ -1,0 +1,175 @@
+{
+  "version": "h1-country-linux-1.0",
+  "date": "2026-09-30",
+  "first_article": {
+    "version": "h1-validator-socket-smoke-1.1",
+    "case": "real",
+    "executions_completed": true,
+    "cases": [
+      {
+        "name": "packtools",
+        "case": "real",
+        "status": "completed",
+        "counts": {
+          "blocking": 0,
+          "critical": 25,
+          "error": 4,
+          "warning": 12
+        },
+        "candidate_sha256": "7081d302358f8c022114a0ebf568372af43e115bda38a748cc7c2ebbc1494ad0",
+        "tool_sha256": "412a7502295ebb12fcbe417335eae203e99d6c585e4058659c9fa683beeca175",
+        "report_sha256": "6f62cd992817c7e4d7bc8db11afb2ba761ffdf1587e307944e49e6241ef5ab81",
+        "failure_code": null,
+        "passed": false,
+        "issue_codes": [
+          "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+          "aff-state-addr-line-state-exist-b767117669fa",
+          "app-app-element-app-group-app-exist-6e8b29290a5b",
+          "article-dates-pub-date-date-pub-format-80b782eb212d",
+          "article-dates-pub-date-pub-day-pub-date-pub-exist-8e078bf80ec0",
+          "article-dates-pub-date-pub-month-pub-date-pub-exist-0e561c0ff684",
+          "article-dates-valid-date-accepted-value-c3e694c7802c",
+          "article-id-registered-doi-article-id-pub-id-type-doi-registered-235505bec3f8",
+          "bibliographic-strip-registered-issue-volume-number-supplement-value-in-list-f004897586f4",
+          "contrib-affiliation-contrib-xref-exist-930a3305b1e4",
+          "contrib-credit-taxonomy-consistency-mixed-roles-role-content-type-consistency-eeb16e30e4fe",
+          "contrib-credit-taxonomy-term-role-exist-0af993405179",
+          "contrib-credit-taxonomy-uri-role-exist-845dda3d1ae9",
+          "contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+          "funding-data-award-id-and-funding-source-award-group-award-id-exist-c1c062bef12e",
+          "funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-d12364d1c76a",
+          "history-required-date-pub-history-date-date-type-pub-exist-fe5a32c8bf44",
+          "history-required-date-rev-recd-history-date-date-type-rev-recd-exist-3e953fb9b41f",
+          "history-required-date-rev-request-history-date-date-type-rev-request-exist-4f1d58f9fc9d",
+          "id-and-rid-disp-formula-id-e-formula-0e118109-65d4-56f5-8082-3ea1436f0d10-is-linked-to-xref-disp-formula-id-match-2f146ebcc8e7",
+          "id-and-rid-disp-formula-id-e-formula-44665dfc-6476-50ef-a786-f9a5fe6a51f7-is-linked-to-xref-disp-formula-id-match-4bbeca1fa4c8",
+          "id-and-rid-disp-formula-id-e-formula-500818b8-d682-5149-893e-c989336435b0-is-linked-to-xref-disp-formula-id-match-c0eb2f7a55f7",
+          "reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+          "sec-sec-content-sec-p-exist-6ca2373fbf26",
+          "subject-table-of-contents-section-subj-group-subject-value-in-list-59eb58580f67"
+        ],
+        "transport_completed": true,
+        "client_exit_code": 0
+      },
+      {
+        "name": "spsvalidator",
+        "case": "real",
+        "status": "completed",
+        "counts": {
+          "blocking": 0,
+          "critical": 25,
+          "error": 4,
+          "warning": 12
+        },
+        "candidate_sha256": "6b209eb4209e20aff17b653545f5553af3b562c9549ee34b5a2ca49671d9c4f6",
+        "tool_sha256": "3d3f136c650f4b83f9836b77a378b4fd3304fe30c9c2effa0aa1a06dd1f4de07",
+        "report_sha256": "f86beec3e6750a663db8c6d9424b12198bba7907cb67a8c5326a9c1d1ca3b82d",
+        "failure_code": null,
+        "passed": false,
+        "issue_codes": [
+          "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+          "aff-aff-state-addr-line-state-exist-302311123921",
+          "app-app-app-element-app-group-app-exist-b70163d3b3dc",
+          "article-dates-article-dates-pub-date-date-pub-format-78e3c776d3aa",
+          "article-dates-article-dates-pub-date-pub-day-pub-date-pub-exist-55cfcb45d6aa",
+          "article-dates-article-dates-pub-date-pub-month-pub-date-pub-exist-1d9df77c1724",
+          "article-dates-article-dates-valid-date-accepted-value-c9b55e168d69",
+          "article-id-article-id-registered-doi-article-id-pub-id-type-doi-registered-98aca8200e0d",
+          "bibliographic-strip-bibliographic-strip-registered-issue-volume-number-supplement-value-in-list-f6922614fc5f",
+          "contrib-contrib-affiliation-contrib-xref-exist-2e8bd7736576",
+          "contrib-contrib-credit-taxonomy-consistency-mixed-roles-role-content-type-consistency-a62acdb6a3eb",
+          "contrib-contrib-credit-taxonomy-term-role-exist-e8df84ab3684",
+          "contrib-contrib-credit-taxonomy-uri-role-exist-68c357fe2848",
+          "contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+          "funding-data-funding-data-award-id-and-funding-source-award-group-award-id-exist-1fcad4ebc009",
+          "funding-data-funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-89359b29da1b",
+          "history-history-required-date-pub-history-date-date-type-pub-exist-f3038182317b",
+          "history-history-required-date-rev-recd-history-date-date-type-rev-recd-exist-ef912a098978",
+          "history-history-required-date-rev-request-history-date-date-type-rev-request-exist-23889e3b4763",
+          "id-and-rid-id-and-rid-disp-formula-id-e-formula-0e118109-65d4-56f5-8082-3ea1436f0d10-is-linked-to-xref-disp-formula-id-m-087e8465041c",
+          "id-and-rid-id-and-rid-disp-formula-id-e-formula-44665dfc-6476-50ef-a786-f9a5fe6a51f7-is-linked-to-xref-disp-formula-id-m-a9e280337564",
+          "id-and-rid-id-and-rid-disp-formula-id-e-formula-500818b8-d682-5149-893e-c989336435b0-is-linked-to-xref-disp-formula-id-m-01880654cbe7",
+          "reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+          "sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+          "subject-subject-table-of-contents-section-subj-group-subject-value-in-list-6a9b7648cf8d"
+        ],
+        "transport_completed": true,
+        "client_exit_code": 0
+      }
+    ],
+    "existing_services_unchanged": true,
+    "socket_removed": true,
+    "scratch_empty": true,
+    "private_corpus_used": true,
+    "production_activated": false
+  },
+  "second_article": {
+    "article": "esa-e20240135",
+    "executions_completed": true,
+    "existing_services_unchanged": true,
+    "socket_removed": true,
+    "scratch_empty": true,
+    "cases": [
+      {
+        "name": "packtools",
+        "status": "completed",
+        "passed": false,
+        "counts": {
+          "critical": 10,
+          "error": 4,
+          "warning": 8
+        },
+        "candidate_sha256": "1757cdb3a15b7fd44beb009e794ff812995eb59cd6e2c1eee2cabee15f9a9706",
+        "report_sha256": "87983035fe32d07ca7bab9b9ba543bf43c90eabb498cf4cb57818fa681ea294f"
+      },
+      {
+        "name": "spsvalidator",
+        "status": "completed",
+        "passed": false,
+        "counts": {
+          "critical": 10,
+          "error": 4,
+          "warning": 8
+        },
+        "candidate_sha256": "e0be244b52eb524328a3f260c426617850bb057e3bbc9ecb82c43134929950c8",
+        "report_sha256": "e2dae3d6ff979cd748bf9db3076739fed45b96699966e6fea1932264b681121d"
+      }
+    ]
+  },
+  "synthetic_affiliation_probe": {
+    "image": "sha256:412a7502295ebb12fcbe417335eae203e99d6c585e4058659c9fa683beeca175",
+    "rule_source_sha256": "9f7a3356ae031a8ae80d44e349b941285b5c19ced18ff6dedc3cd0fe7d846bc3",
+    "direct_rule": {
+      "present": "OK",
+      "absent": "ERROR"
+    },
+    "xml_rule": {
+      "target_exists": {
+        "model_resolved_affiliations": 1,
+        "response": "ERROR"
+      },
+      "target_missing": {
+        "model_resolved_affiliations": 0,
+        "response": "ERROR"
+      }
+    },
+    "waiver_applied": false
+  },
+  "local_regression": {
+    "passed": 696,
+    "warnings": 3,
+    "application_coverage_percent": 88,
+    "focused_tests_passed": 16
+  },
+  "cleanup": {
+    "private_candidate_copies_removed": 4,
+    "local_originals_preserved": true
+  },
+  "health_after": {
+    "database": "ok",
+    "redis": "ok"
+  },
+  "active_profile_changed": false,
+  "production_activated": false,
+  "formal_validation_passed": false
+}

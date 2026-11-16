@@ -1,0 +1,102 @@
+{
+  "contract_version": "1.0.0",
+  "stage": "7C-05",
+  "corpus_id": "esa-e20240135",
+  "expected": {
+    "role_counts": {
+      "source_idml": 1,
+      "approved_xml_reference": 1,
+      "approved_pdf_reference": 1
+    },
+    "formula_qualification": {
+      "report_sha256": "45a5238690801de91b72189019251aeb1eb451da8f024a0ed505e3ea8424f9c5",
+      "catalog_id": "6089705c07ec4144164b10ad3f6beefe7da8b269b80f77c70edb3e636a00e986",
+      "formula_cases": 43,
+      "human_review_required": true,
+      "restricted_content_emitted": false
+    },
+    "metadata_authority": {
+      "report_sha256": "3d758d3782efd99306bee6c21db673e6527b927bba9fbbc7effe6edecccff25b",
+      "catalog_id": "a5219854415a01310d5e3b29b9adb30eddd4a1696889683c40c7db76a0879879",
+      "crossref_response_sha256": "27de6610df96f47256d211f1dc0258e6e4b9f6384ee18eb7455e066a4d368f50",
+      "authors": 4,
+      "journal_titles": 1,
+      "article_identifiers": 1,
+      "human_review_required": true,
+      "restricted_content_emitted": false
+    },
+    "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+    "formula_catalog_id": "6089705c07ec4144164b10ad3f6beefe7da8b269b80f77c70edb3e636a00e986",
+    "metadata_authority_catalog_id": "a5219854415a01310d5e3b29b9adb30eddd4a1696889683c40c7db76a0879879",
+    "candidate_xml_sha256": "6bf6c9960bbbcd1e45083dc917d4addc123f48d32df7261f30d03b32cc00f0c4",
+    "deterministic": true,
+    "validation": {
+      "valid": true,
+      "issues": 0
+    },
+    "semantic_blocking_findings_before_qualification": 24,
+    "semantic_blocking_findings_after_qualification": 0,
+    "qualified_formula_alterations": 24,
+    "metadata": {
+      "expected": 5,
+      "actual": 5,
+      "omissions": 0,
+      "inventions": 0,
+      "duplications": 0,
+      "altered": 0,
+      "passed": true
+    },
+    "authors": {
+      "expected": 4,
+      "actual": 4,
+      "omissions": 0,
+      "inventions": 0,
+      "duplications": 0,
+      "altered": 0,
+      "passed": true
+    },
+    "body": {
+      "expected": 5814,
+      "actual": 5814,
+      "omissions": 0,
+      "inventions": 0,
+      "duplications": 0,
+      "altered": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "passed": true
+    },
+    "emitted_identifiers": {
+      "doi": "c2c9e6240414c7816424d86ae759f0a0c44b3190dedc2abb34f72c6776c38992",
+      "other": "38366e31869a57b82b4108e6a4c8a26eb5954b1c5f4051bc44c9a1f874c9b4fc"
+    },
+    "source_authenticated_orcids": 4,
+    "cross_references": {
+      "expected": 39,
+      "actual": 39,
+      "matched_targets": 39,
+      "expected_unique_targets": 35,
+      "actual_unique_targets": 35,
+      "expected_target_deficits": [],
+      "actual_target_surpluses": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "decision": "pass"
+    },
+    "preserved_domains": {
+      "affiliations": true,
+      "structure": true,
+      "references": true,
+      "figures": true,
+      "tables": true,
+      "formulas": true,
+      "formula_content": true,
+      "notes": true,
+      "media": true
+    },
+    "authority_pending_human_review": true,
+    "general_candidate_approved": true
+  }
+}

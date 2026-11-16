@@ -3,7 +3,12 @@ from logging.config import fileConfig
 from alembic import context
 from sqlalchemy import engine_from_config, pool
 
-from idml_foundation import models  # noqa: F401
+from idml_foundation import (  # noqa: F401
+    autocorrection_models,
+    models,
+    restoration_models,
+    source_access_models,
+)
 from idml_foundation.database import Base
 from idml_foundation.settings import get_settings
 

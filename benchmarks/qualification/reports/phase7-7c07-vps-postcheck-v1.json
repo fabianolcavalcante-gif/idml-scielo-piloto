@@ -1,0 +1,27 @@
+{
+  "version": "phase7-7c07-vps-postcheck-1.0",
+  "stage": "7C-07",
+  "corpus_id": "esa-e20240135",
+  "checked_at": "2026-09-17T10:50:54-03:00",
+  "method": "read_only_remote_postcondition_check",
+  "services": {
+    "api": "healthy",
+    "worker": "healthy",
+    "openclaw": "healthy"
+  },
+  "application_flags": {
+    "IDML_FEATURE_OPENCLAW": false,
+    "IDML_FEATURE_AI_SWARM": false
+  },
+  "provider_credential_present": false,
+  "openclaw_networks": [
+    "idml_development_openclaw"
+  ],
+  "transient_provider_network_present": false,
+  "transient_egress_network_present": false,
+  "egress_proxy_present": false,
+  "openclaw_sessions": 0,
+  "agent_runs": 0,
+  "agent_proposals": 0,
+  "restricted_content_emitted": false
+}

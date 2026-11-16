@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-04",
+  "release": "vh11-scan-queue-20261104-v1",
+  "source": {
+    "release": "vh11-scan-queue-20261104-v1",
+    "files": 1292,
+    "bytes": 2568805,
+    "sha256": "ae8d2b99cfce848f3a2030bdd024ca190d3d5ca16a82256ed3fc5cfa3ea10150",
+    "private_inputs_included": false
+  },
+  "scope": "Bounded scanner admission and authenticated HTTP fixture replay. Enriched comparison uses prequalified snapshots; not the final normal web E2E.",
+  "tests": {
+    "local": 630,
+    "local_batches": [
+      429,
+      201
+    ],
+    "linux": 630,
+    "postgres": true,
+    "mypy_modules": 149
+  },
+  "queue": {
+    "consecutive": [
+      "clamav_clean",
+      "clamav_clean"
+    ],
+    "concurrent": [
+      "clamav_clean",
+      "malware_detected",
+      "clamav_clean"
+    ],
+    "explicit_delay": false,
+    "transport_retries": 0,
+    "elapsed_seconds": 119.16,
+    "max_engines_observed": 1,
+    "engine_observation_count": 60
+  },
+  "workflow": {
+    "cases": [
+      {
+        "case": "e135",
+        "raw_package": "invalid_job_input",
+        "scanned_inputs": 9,
+        "figures": 7,
+        "verified_from_canonical": 0,
+        "layout_assets": 54,
+        "source_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+        "package_sha256": "985d3789ba5d9b9a1d8f6fc8b3c96ae9af0d63523663a164263b4b9d6de3ad45",
+        "offline_valid": true,
+        "elapsed_seconds": 211.5
+      },
+      {
+        "case": "e86",
+        "raw_package": "invalid_job_input",
+        "scanned_inputs": 7,
+        "figures": 5,
+        "verified_from_canonical": 0,
+        "layout_assets": 27,
+        "source_sha256": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+        "package_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+        "offline_valid": true,
+        "elapsed_seconds": 163.7
+      }
+    ],
+    "eicar_rejected": true,
+    "real_http_handlers": true,
+    "real_clamav": true,
+    "historical_rescan_audited": true,
+    "native_formal_validators_exercised": false,
+    "ai_invoked": false
+  },
+  "systemd": {
+    "active_clean": true,
+    "single_engine": true,
+    "max_connections": 4,
+    "queue_wait_seconds": 130,
+    "client_timeout_seconds": 300
+  },
+  "deployment": {
+    "release": "vh11-scan-queue-20261104-v1",
+    "image": "idml-foundation:vh11-scan-queue-20261104-v1",
+    "image_id": "sha256:134a0e37cee59ec7f23f2073ae9664c9c7a1fd6776f191848d063d67ce6f736f",
+    "migration": "e2f314253647",
+    "schema_changed": false,
+    "runtime_files_verified": {
+      "idml-development-api-1": 350,
+      "idml-development-worker-1": 350
+    },
+    "backup": "/opt/idml-platform/backups/20261104T182808Z",
+    "restore_test": true,
+    "image_rollback_test": true,
+    "other_services_unchanged": true,
+    "existing_data_counts_unchanged": true,
+    "flags_disabled": true,
+    "smoke": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "homologation_ready": false,
+    "release_approved": false
+  },
+  "postcheck": {
+    "mapalead_unchanged": true,
+    "provider_detached": true,
+    "worker_decisions_read_only": true,
+    "active_article_decisions": 0,
+    "api_native_scan": "clamav_clean",
+    "socket_and_update_enabled": true,
+    "smoke": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "containers": 25,
+    "healthy_idml": 5,
+    "image_id": "sha256:134a0e37cee59ec7f23f2073ae9664c9c7a1fd6776f191848d063d67ce6f736f",
+    "manifest_sha256": "90f7bea3c968afc41f763ab5849af6a43c6b4ac7ba3a984542de05df8db14382",
+    "brokers_reachable": true,
+    "scoped_sources_required": true,
+    "active_db_counts_unchanged": true,
+    "agents_enabled": false,
+    "homologation_ready": false,
+    "web_evaluation_assets": true,
+    "api_openai_key_absent": true,
+    "api_gateway_token_inherited": true
+  },
+  "provider_calls": 0,
+  "homologation_ready": false
+}

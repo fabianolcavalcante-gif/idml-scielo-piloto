@@ -1,0 +1,24 @@
+{
+  "approved": true,
+  "checks": {
+    "candidate_sources": true,
+    "cleanup": true,
+    "complete": true,
+    "existing_services": true,
+    "host_reserves": true,
+    "isolation": true,
+    "matrix": true,
+    "no_oom": true,
+    "no_provider": true,
+    "outcomes": true,
+    "privacy": true,
+    "rss_headroom": true,
+    "version": true
+  },
+  "evidence_sha256": "b25d27a2d24388071297028f7df7ec3ec97c48e02442428b076c42c5f435ede1",
+  "production_capacity_qualified": false,
+  "release_ready": false,
+  "restricted_content_emitted": false,
+  "v12_2_complete": false,
+  "version": "phase7-v12-ingest-gate-1.0"
+}

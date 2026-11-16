@@ -1,0 +1,5 @@
+# Qualification-only adapter refresh; no dependency updates or network downloads.
+# Local alias must resolve to 2806ed5ee19d141be1cc6d0dbbfd54741c7ec4ae6ae7422f3ba0fae21b878526.
+FROM idml-spsvalidator:h1-pinned-base
+COPY validator_adapter_common.py /validator/validator_adapter_common.py
+COPY external_verification.py /validator/external_verification.py

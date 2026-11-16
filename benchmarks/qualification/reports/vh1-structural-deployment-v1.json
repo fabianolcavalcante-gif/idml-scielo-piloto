@@ -1,0 +1,116 @@
+{
+  "version": "vh1-structural-deployment-1.0",
+  "date": "2026-10-29",
+  "deployment": {
+    "release": "vh1-structural-20261028-v1",
+    "image": "idml-foundation:vh1-structural-20261028-v1",
+    "image_id": "sha256:c174d22a596ca65f8d2d280bf5900bc5639f9b29e4230269831cf7b7cb1d3568",
+    "migration": "c0e1f2031425",
+    "schema_changed": false,
+    "runtime_files_verified": {
+      "idml-development-api-1": 334,
+      "idml-development-worker-1": 334
+    },
+    "backup": "/opt/idml-platform/backups/20261029T114636Z",
+    "restore_test": true,
+    "image_rollback_test": true,
+    "other_services_unchanged": true,
+    "existing_data_counts_unchanged": true,
+    "flags_disabled": true,
+    "smoke": {
+      "/health/ready": 200,
+      "/app": 200,
+      "/v1/resources": 401
+    },
+    "homologation_ready": false,
+    "release_approved": false
+  },
+  "services": 25,
+  "unaffected_services": 23,
+  "idml_services_healthy": 5,
+  "source_files_verified": 1206,
+  "qualification": {
+    "linux_tests": true,
+    "postgresql_native": true,
+    "migration": "c0e1f2031425",
+    "release_approved": false
+  },
+  "postgresql": {
+    "passed": true,
+    "migration": "c0e1f2031425",
+    "concurrent_sessions": 2,
+    "same_request_single_restore": true,
+    "different_requests_one_conflict": true,
+    "human_claim_lock_timeout_verified": true,
+    "human_claim_refused_after_commit": true,
+    "outer_rollback": true,
+    "sql_guards": 2,
+    "active_database_changed": false,
+    "promotion_implemented": false,
+    "release_approved": false
+  },
+  "tests": {
+    "linux_image": 625,
+    "warnings": 3,
+    "full_suite": false,
+    "coverage": null,
+    "initial_attempt": "one failure due to 256MiB laboratory tmpfs; rerun with 512MiB; application safeguards unchanged"
+  },
+  "image_native_replay": {
+    "sha256": "f01adad7a46d3e749446c60106214a961bbf4a459dae2f960decc93b0ce57308",
+    "qualified_articles": 2,
+    "native_negative_cases": 2,
+    "additional_error_controls": 2,
+    "original_receipt_times": true,
+    "new_native_executions": 0
+  },
+  "http": {
+    "/health/ready": 200,
+    "/app": 200,
+    "/app/assets/app.js": 200,
+    "/v1/resources": 401,
+    "/v1/jobs/00000000-0000-0000-0000-000000000000/validation-diagnosis": 401
+  },
+  "diagnosis_ui_present": true,
+  "security_headers_present": true,
+  "environment_image_tag_matches": true,
+  "database": {
+    "migration": "c0e1f2031425",
+    "jobs": {
+      "succeeded": 2
+    },
+    "counts": {
+      "organizations": 9,
+      "users": 4,
+      "artifacts": 1,
+      "domain_snapshots": 2,
+      "agent_runs": 0,
+      "agent_proposals": 0
+    },
+    "restore_exists": false
+  },
+  "driver_sha256": "62e89e1137f05b711adf56a284819e4686040b2263adce5d3d4144b783a18672",
+  "source_archive_sha256": "1e85cd67356ff486e3a25ac26a87f65c3e6084767ec6ebbabe5f84b4d9b124de",
+  "manifest_sha256": "3daa569caba1efd71414c96ecbd198af6d9ea112228b0a8e7742a221f87ea78c",
+  "evidence_sha256": {
+    "backup.json": "03825ce714734726c5cc6e985ecaccc606bb9a77e0a16b8ea2442c98215f5fcf",
+    "preactivation.json": "3119abcba3f502849333b769d2ac752552d52428259074d4cb9572e9c8d0c533",
+    "preactivation-restore.log": "a6b2ad7b6e7e74735fe655c781a545f793437c3da0416049a65897825734126c",
+    "linux-tests.log": "53b1a357bc20de67ec3404be2ad468f33a1ce84fc98c398f6a240680cf4c434f",
+    "linux-tests-initial-tmpfs.log": "9cfb05c8bb1d545e350835008ece7c7999805ad7641a1aa77da38f1d4b0e3c51",
+    "postgres-tests.log": "62a9df3a177849ea777d51285637294ab599af5374d2ae8d89e100ee4afd67c3",
+    "qualification.json": "227459c13a20e6286e2e7329fa4a06e8da72d4b462f0b7b63a80c5a14ae1bafd",
+    "deployment.json": "055f52baa21a26045dc2276e7e8a2fcb1ca6a4aa8f3c1e625aff4b53d1da2aaa",
+    "activate.log": "57f3356d72ea6b0423969664289b3a6b65a5d0e4b6691c880cb14c54622b1940",
+    "rollback-test.log": "f4b27fa0f3a14edbfc638f77fe6e043ef579648f0d85cd2c9986560a375c00ed",
+    "reapply.log": "722715f614e3f1b8c7aea39841084a8e8179138281e653f2e42c838716f583ea"
+  },
+  "active_runtime_changed": true,
+  "ai_invoked": false,
+  "automatic_application_enabled": false,
+  "worker_xpm_connection_enabled": false,
+  "formal_promotion_implemented": false,
+  "restored_package_revalidation_implemented": false,
+  "homologation_ready": false,
+  "release_approved": false
+}

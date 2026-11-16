@@ -1,0 +1,129 @@
+{
+  "approved": true,
+  "articles": [
+    {
+      "all_valid": true,
+      "candidate_matches_qualification": true,
+      "corpus_id": "esa-e20240086",
+      "p95_duration_ms": 2629.775,
+      "samples": [
+        {
+          "duration_ms": 2629.775,
+          "source_bytes": 371156,
+          "stages_ms": {
+            "build": 26.065,
+            "map": 1218.312,
+            "parse": 598.686,
+            "validate": 556.435
+          },
+          "status": "valid",
+          "xml_bytes": 138864,
+          "xml_sha256": "15287f774bed60a62f0c5734aa7082234cbc7b69b86effeecc7a1e9ea991bc20"
+        },
+        {
+          "duration_ms": 2405.214,
+          "source_bytes": 371156,
+          "stages_ms": {
+            "build": 25.84,
+            "map": 1178.608,
+            "parse": 419.347,
+            "validate": 553.791
+          },
+          "status": "valid",
+          "xml_bytes": 138864,
+          "xml_sha256": "15287f774bed60a62f0c5734aa7082234cbc7b69b86effeecc7a1e9ea991bc20"
+        },
+        {
+          "duration_ms": 2479.143,
+          "source_bytes": 371156,
+          "stages_ms": {
+            "build": 25.833,
+            "map": 1188.37,
+            "parse": 481.716,
+            "validate": 558.279
+          },
+          "status": "valid",
+          "xml_bytes": 138864,
+          "xml_sha256": "15287f774bed60a62f0c5734aa7082234cbc7b69b86effeecc7a1e9ea991bc20"
+        }
+      ]
+    },
+    {
+      "all_valid": true,
+      "candidate_matches_qualification": true,
+      "corpus_id": "esa-e20240135",
+      "p95_duration_ms": 3172.749,
+      "samples": [
+        {
+          "duration_ms": 3172.749,
+          "source_bytes": 402595,
+          "stages_ms": {
+            "build": 32.756,
+            "map": 1244.022,
+            "parse": 514.955,
+            "validate": 991.347
+          },
+          "status": "valid",
+          "xml_bytes": 161568,
+          "xml_sha256": "20a03a91496ac0b447bd2abe589c2be6c231547793dcf5289bd3e66cc1990880"
+        },
+        {
+          "duration_ms": 3129.832,
+          "source_bytes": 402595,
+          "stages_ms": {
+            "build": 33.448,
+            "map": 1211.994,
+            "parse": 504.871,
+            "validate": 989.385
+          },
+          "status": "valid",
+          "xml_bytes": 161568,
+          "xml_sha256": "20a03a91496ac0b447bd2abe589c2be6c231547793dcf5289bd3e66cc1990880"
+        },
+        {
+          "duration_ms": 3147.229,
+          "source_bytes": 402595,
+          "stages_ms": {
+            "build": 31.953,
+            "map": 1212.43,
+            "parse": 510.023,
+            "validate": 1000.441
+          },
+          "status": "valid",
+          "xml_bytes": 161568,
+          "xml_sha256": "20a03a91496ac0b447bd2abe589c2be6c231547793dcf5289bd3e66cc1990880"
+        }
+      ]
+    }
+  ],
+  "environment": "local-windows-not-vps",
+  "excluded_from_timing": [
+    "pipeline initialization",
+    "catalog loading",
+    "source file reads",
+    "external validators",
+    "AI"
+  ],
+  "package_samples": [
+    {
+      "bytes": 1319986,
+      "duration_ms": 141.028,
+      "sha256": "e86f51a83a1f5d7cc869e51f4e13d18bb68fcf6c758016dd99bead032b0559ee"
+    },
+    {
+      "bytes": 1319986,
+      "duration_ms": 137.721,
+      "sha256": "e86f51a83a1f5d7cc869e51f4e13d18bb68fcf6c758016dd99bead032b0559ee"
+    },
+    {
+      "bytes": 1319986,
+      "duration_ms": 138.282,
+      "sha256": "e86f51a83a1f5d7cc869e51f4e13d18bb68fcf6c758016dd99bead032b0559ee"
+    }
+  ],
+  "provider_calls": 0,
+  "release_ready": false,
+  "restricted_content_emitted": false,
+  "stage_timing_note": "total also includes enrichment and cross-reference resolution",
+  "version": "phase7-v12-local-corpus-1.0"
+}

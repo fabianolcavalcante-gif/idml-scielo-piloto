@@ -1,0 +1,73 @@
+{
+  "active": "vh09-heads-20261021-v1",
+  "active_runtime_changed": false,
+  "ai_invoked": false,
+  "archived_native_query_replay": {
+    "articles": 2,
+    "matched_deposits": 7,
+    "new_online_execution": false,
+    "public_name_conflicts": 4
+  },
+  "candidate": "vh1-followups-20261027-v1",
+  "checks": {
+    "diff_whitespace": true,
+    "mypy_modules": 134,
+    "ruff_global": true
+  },
+  "closing_date": "2026-10-28",
+  "external_postgresql_rerun": false,
+  "formal_xml_approved": false,
+  "full_suite_rerun": false,
+  "homologation_ready": false,
+  "javascript": {
+    "checks": 6,
+    "passed": true,
+    "real_browser": false
+  },
+  "linux": {
+    "errors": 0,
+    "failures": 0,
+    "file": "tmp/vh1-followups-linux.xml",
+    "seconds": 18.195,
+    "sha256": "6e53f67fc0da7f5d728af13e453742b418636ab4a1247dd1d0c378a9b7439205",
+    "skipped": 0,
+    "tests": 297
+  },
+  "local": {
+    "errors": 0,
+    "failures": 0,
+    "file": "tmp/vh1-followups-focused.xml",
+    "seconds": 16.186,
+    "sha256": "953c1c9f4fa624f50cd8c6c928bb2081492ad4a69b2d3e6179a7ffd96506310a",
+    "skipped": 0,
+    "tests": 297
+  },
+  "new_compatibility_exceptions": 0,
+  "new_global_coverage": false,
+  "new_online_xpm_execution": false,
+  "new_test_cases": 41,
+  "overlapping_test_sets": true,
+  "postcheck": {
+    "app_status": 200,
+    "gates_approved": true,
+    "ready_status": 200,
+    "services": 25,
+    "services_unchanged": true,
+    "source_files_verified": 1191
+  },
+  "source_archive_files": 1191,
+  "source_archive_sha256": "896fc996abbd2f92e43966be33ba4d9ad9791f1c267f37b7ba250443758fe811",
+  "source_sha256": {
+    "benchmarks/qualification/reports/v10-operational-workflow-vh1-followups-v1.json": "be2733e1254fb4cb6f041dc8c5132ce85d5033285046677b4e1910f512db3e30",
+    "benchmarks/qualification/reports/v11-robustness-mutation-vh1-followups-v1.json": "88318d4cd5770122bbedf5634e30a31cda7eb73ab043be588beb0f485bdcacb7",
+    "ops/gate_phase7_v10.py": "a36867f3288514f491f547729aa490d1bfbe77a15423d88863b848d21e6f3028",
+    "ops/gate_phase7_v11.py": "eab5ff41adfd5b56330bcbf8ef3cea516ea33a21808148be7b25c5caf53ad913",
+    "ops/requalify_vh1_followups.py": "597f16e7676e1a91a16f928dd732b581bcfef6fdc70c9f3854b99ef0b5da18a2",
+    "src/idml_foundation/routers/ui.py": "9a97b2f4b7554c702a9ff34e9092cba2a67a57fef588c830494738ebcf1d8b1c",
+    "src/idml_foundation/services/validation_diagnosis.py": "0a882470a1b419424ab945cdb3ec544700d687de4816c21938d15ade3028e94c",
+    "src/idml_foundation/services/validation_followups.py": "1aedf410bdc09b6d4099a901e96f0d0f5fdc92861e79fec582e011a5384c3519",
+    "tests/test_validation_followups.py": "587789cbe5c135722cc413629e06d29fcd73eeae276d2ef8ed942aea778440b7",
+    "tests/ui_validation_diagnosis.cjs": "29aaba445cc329b3091f8fa50d260de1c11d7a0c1db54da810cf99b7b00c70e0"
+  },
+  "version": "vh1-followups-closure-1.0"
+}

@@ -20,6 +20,10 @@ TRANSITIONS: dict[str, frozenset[str]] = {
 }
 
 
+class IdempotencyConflictError(ValueError):
+    pass
+
+
 def create_job(
     db: Session,
     *,
@@ -37,6 +41,10 @@ def create_job(
         )
     )
     if existing is not None:
+        if existing.kind != kind or existing.payload != payload:
+            raise IdempotencyConflictError(
+                "idempotency key is already bound to a different request"
+            )
         return existing, False
     job = Job(
         organization_id=organization_id,
@@ -86,6 +94,8 @@ def transition_job(
         job.attempt_count += 1
     if to_state in TERMINAL_STATES:
         job.finished_at = utcnow()
+    if to_state == "cancelled":
+        job.cancelled_at = job.finished_at
     sequence = db.scalar(
         select(func.coalesce(func.max(JobEvent.sequence), 0)).where(JobEvent.job_id == job.id)
     )

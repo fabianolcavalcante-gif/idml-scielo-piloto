@@ -1,0 +1,135 @@
+{
+  "version": "h1-sps-doi-authority-1.0",
+  "executed_at": "2026-09-30",
+  "scope": "Synthetic full socket and native adapters; real articles and active deployment not qualified",
+  "runs": [
+    {
+      "image": "sha256:9549ba39d357854d51c3a1af3d11adc8a0583b83e12092928e808e76f706ad6d",
+      "validator": "spsvalidator",
+      "cases": [
+        {
+          "mode": "match",
+          "cleaned": true,
+          "adapter_completed": true,
+          "doi_mismatch_detected": false,
+          "summary": {
+            "blocking": 3,
+            "error": 3,
+            "warning": 6
+          },
+          "report_sha256": "bd21493548c16ec79448ce68a799cf64b1748abbe78b2394741cc194582e5c83"
+        },
+        {
+          "mode": "mismatch",
+          "cleaned": true,
+          "adapter_completed": true,
+          "doi_mismatch_detected": true,
+          "summary": {
+            "blocking": 3,
+            "error": 4,
+            "warning": 6
+          },
+          "report_sha256": "b8e8f63df47b8644393b1408518194a2a84bb6314c64a55d9c35cc7b8844a569"
+        },
+        {
+          "mode": "expired",
+          "cleaned": true,
+          "rejected": true
+        },
+        {
+          "mode": "disconnect",
+          "cleaned": true,
+          "client_disconnected": true
+        },
+        {
+          "mode": "package-mismatch",
+          "cleaned": true,
+          "rejected": true
+        },
+        {
+          "mode": "xml-mismatch",
+          "cleaned": true,
+          "rejected": true
+        }
+      ],
+      "existing_services_unchanged": true,
+      "synthetic_only": true,
+      "peer_uid": 10001,
+      "formal_xml_approved": false
+    },
+    {
+      "image": "sha256:113366e7788c111faada2ef2cb6bc218c1c1b5061dca447fd462ce0216bc23ae",
+      "validator": "packtools",
+      "cases": [
+        {
+          "mode": "match",
+          "cleaned": true,
+          "adapter_completed": true,
+          "doi_mismatch_detected": false,
+          "summary": {
+            "blocking": 3,
+            "error": 3,
+            "ok": 233,
+            "warning": 6
+          },
+          "report_sha256": "425a38552e9bbfbb3b1fd4a42acdc15d4bb75ba268b3b49c10e72f192e2b1564"
+        },
+        {
+          "mode": "mismatch",
+          "cleaned": true,
+          "adapter_completed": true,
+          "doi_mismatch_detected": true,
+          "summary": {
+            "blocking": 3,
+            "error": 4,
+            "ok": 232,
+            "warning": 6
+          },
+          "report_sha256": "3d06cbb8bb09aff6522f6108f5f8db206455a03f4479218620aa054169d38fe6"
+        },
+        {
+          "mode": "expired",
+          "cleaned": true,
+          "rejected": true
+        },
+        {
+          "mode": "disconnect",
+          "cleaned": true,
+          "client_disconnected": true
+        }
+      ],
+      "existing_services_unchanged": true,
+      "synthetic_only": true,
+      "peer_uid": 10001,
+      "formal_xml_approved": false
+    }
+  ],
+  "health": {
+    "status": "ok",
+    "checks": {
+      "database": "ok",
+      "redis": "ok"
+    }
+  },
+  "source_sha256": {
+    "ops/doi_authority_transport.py": "ab83fbe18e6e688335d6dc69296773285ed52b6854dc98a32326f7db34dcd6a3",
+    "ops/doi_package_binding.py": "4a4e768050bff7669cac414ac49ec5433f7490a42c88c8e39cce385711acc318",
+    "ops/qualify_doi_socket_linux.py": "a247a16431ae521a0654b40bb34229d372466bbca4e69b4952caf7b51a17015b",
+    "ops/doi_authority_runtime.py": "4115bfc86ad8da2e571ca663f84e63fff7a8710067415bbdad537b06d58cd8a1",
+    "deploy/Dockerfile.sps-doi-authority": "100233c49a14ee018f0786f44f7430d7efab2574d6d14667bcd255b97fbd5a65",
+    "tests/test_doi_package_binding.py": "25a887c1511442369b541b4883a11129ed843ffdf5e7e99ad73b7bf1275130c1",
+    "ops/spsvalidator_doi_validate.py": "d553c7f166ff764d0cadf278c735eb54d12a2899f0d44074d6955c5c7cd6e664"
+  },
+  "tests": {
+    "passed": 762,
+    "warnings": 3,
+    "coverage_percent": 88.02,
+    "coverage_scope": "src/idml_foundation only",
+    "focused_passed": 61,
+    "ruff_passed": true,
+    "v10_passed": true
+  },
+  "formal_xml_approved": false,
+  "active_deployment_changed": false,
+  "private_corpus_transferred": false
+}

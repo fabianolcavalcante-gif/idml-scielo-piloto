@@ -1,0 +1,22 @@
+{
+  "version": "backup-classification-1.0",
+  "read_only": true,
+  "complete": true,
+  "protected": 90,
+  "classification": {
+    "future_timestamp": 0,
+    "missing_or_empty_payload": 15,
+    "noncanonical_name": 34,
+    "unsafe_path": 0
+  },
+  "missing_or_empty_by_file": {
+    "SHA256SUMS": 0,
+    "artifacts.tar.gz": 0,
+    "database.dump": 0,
+    "openclaw-state.tar.gz": 15
+  },
+  "manual_review_candidates": [],
+  "delete_authorized": false,
+  "collection_checksums_verified": false,
+  "collection_restore_verified": false
+}

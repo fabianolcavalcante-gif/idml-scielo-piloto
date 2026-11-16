@@ -1,0 +1,76 @@
+{
+  "version": "vh19-web-provider-1.0",
+  "execution_date": "2026-11-14",
+  "closing_date": "2026-11-16",
+  "release": "vh19-web-provider-20261114-v1",
+  "image_id": "sha256:e59bde9a7135d7703da9a57ef68d3809b13c049557bcc54da7bb48c4b21806ad",
+  "model": "openai/gpt-5.4-mini",
+  "operation": "affiliation-original-literal",
+  "authorization": "authenticated operator, current revision, single evidenced affiliation and verified PDF from package",
+  "real_case": {
+    "article": "e20240086",
+    "controlled_copy": true,
+    "provider_calls": 4,
+    "cost_microusd": 12069,
+    "corrected_head": "ab28fc9a-32aa-4bcf-af68-8c0b87921083",
+    "revalidation_id": "b61b794f-0aae-49d7-b4e8-fe743a4f721b",
+    "source_article_preserved": true,
+    "reviewer_downloads_match": true,
+    "clean_revision_calls": 0,
+    "qa_accounts_disabled": true
+  },
+  "validation": {
+    "modern": {
+      "packtools": {
+        "blocking": 0,
+        "critical": 0,
+        "error": 0,
+        "warning": 5
+      },
+      "spsvalidator": {
+        "blocking": 0,
+        "critical": 0,
+        "error": 0,
+        "warning": 5
+      }
+    },
+    "xpm_raw": {
+      "blocking_errors": 3,
+      "fatal_errors": 1,
+      "errors": 4,
+      "warnings": 2
+    },
+    "xpm_compatibility": {
+      "blocking_errors": 0,
+      "fatal_errors": 0,
+      "errors": 0,
+      "warnings": 2
+    },
+    "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+    "zip_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+    "original_intact": true,
+    "temporary_accounts_disabled": true,
+    "provider_enabled": true
+  },
+  "tests": {
+    "local_targeted": 134,
+    "linux_targeted": 886,
+    "postgresql_native": true,
+    "workflow_checks": 42,
+    "queue": true,
+    "volume": true,
+    "full_suite_on_this_image": false
+  },
+  "deployment": {
+    "rollback": true,
+    "runtime_files_verified": {
+      "idml-development-api-1": 354,
+      "idml-development-worker-1": 354
+    },
+    "restore_passed": true,
+    "private_files_restored": 197,
+    "provider_enabled_persistently": true
+  },
+  "formal_homologation_approved": false,
+  "official_scielo_acceptance": false
+}

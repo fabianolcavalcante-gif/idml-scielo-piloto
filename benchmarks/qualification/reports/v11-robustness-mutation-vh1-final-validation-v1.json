@@ -1,0 +1,286 @@
+{
+  "version": "phase7-v11-robustness-mutation-1.0",
+  "family": "V-11",
+  "executed_at": "2026-10-14T16:03:39.416157+00:00",
+  "dedicated_tests": 9,
+  "full_tests": null,
+  "line_coverage_percent": null,
+  "fuzz_cases": {
+    "arbitrary_binary_inputs": 121,
+    "single_bit_zip_mutations": 128,
+    "hostile_internal_xml": 5,
+    "unexpected_exceptions": 0
+  },
+  "property_cases": {
+    "unicode_title_variants": 6,
+    "mixed_content_combinations": 16,
+    "zip_order_variants": 2,
+    "xml_whitespace_variants": 1,
+    "source_id_renaming_variants": 1,
+    "package_order_variants": 3
+  },
+  "mutation_assessment": {
+    "approach": "behavioral mutation matrix over security and integrity invariants",
+    "mutants_total": 13,
+    "mutants_killed": 13,
+    "score_percent": 100,
+    "covered_guards": [
+      "invalid ZIP",
+      "corrupt deflate stream",
+      "path traversal and collision",
+      "DOCTYPE/entity declaration",
+      "malformed XML",
+      "canonical RichText mismatch",
+      "dangling cross-reference",
+      "duplicate package member",
+      "missing required package role",
+      "package member byte mutation",
+      "artifact SHA mismatch",
+      "idempotency key conflict",
+      "unknown tenant field in job payload"
+    ],
+    "minimum_future_score_percent": {
+      "ingest_safe_zip": 90,
+      "domain_and_jats": 85,
+      "artifact_job_package": 90,
+      "ai_contracts": 90
+    }
+  },
+  "resolved_findings": [
+    {
+      "id": "V11-ZIP-ZLIB-ESCAPE",
+      "severity": "major",
+      "resolution": "zlib.error from ZipFile.testzip is normalized to UnsafeArchiveError(corrupt_entry)",
+      "regression": "128 deterministic single-bit mutations"
+    }
+  ],
+  "source_sha256": {
+    "benchmarks/qualification/contracts/vh1-final-validation-delta-v1.json": "3053c0e77a40cc4c5f01d9341c6f943a45b2fc86e60173ee011a8badfe8e658c",
+    "benchmarks/qualification/contracts/vh1-reference-field-delta-v1.json": "283d9bc05d5642a0ad91b02bcd204c8fcac5a2167be6b373b31ebeb60f9d05a4",
+    "benchmarks/qualification/contracts/vh1-reference-metadata-delta-v1.json": "7635f5bda823090303a161a98b985d3ce08052ab44e0c171533b9ac125db00f7",
+    "benchmarks/qualification/contracts/vh1-reference-types-delta-v1.json": "f24330bcee26eae632872f9dea9fd97a67024a9bbbf6194545afd54ca63a7e19",
+    "ops/audit_vh1_reference_metadata.py": "d45f4098268d442520857eba8975063b8779b27bd3c4a48b151213b650860aee",
+    "ops/audit_vh1_reference_types.py": "a65adc7682b097dd2d845f407bb70c182a6f5ef7d596a1ed7a4c1bc7ea471d01",
+    "ops/audit_vh1_references.py": "e2848c7ff370fefdf2e5fed541a180ff5602d4e07b2976dd1bf3b3d1000db2c4",
+    "ops/collect_vh1_affiliation_sources.py": "46c3607057bfa1adfe61a3117edeed1269cb97c253d749c824356495681f9641",
+    "ops/collect_vh1_articlemeta_dates.py": "26664fa36e68dabba3a1ddcff81c7a1b2f19d646ec206c77289cb8cacfab8c67",
+    "ops/collect_vh1_editorial_sources.py": "0307b6d30de3208f4d144bb87ca7b88156dcf1b9718d02009a13acb4d4257e57",
+    "ops/collect_vh1_funding_sources.py": "70f085d2c3116b10aa6654df8fea22af76fec1809ddbdba6473ab8ba54bd4008",
+    "ops/collect_vh1_orcid_sources.py": "3cf171f8d3b7acafca424d4476e9e7bec1d8c4ed688a20c9ac558c5cc1b096b6",
+    "ops/collect_vh1_reference_sources.py": "d56756b1976132f3ca4a85ebc9f78a40a11dd83c72f4b199b83de13ea2e34563",
+    "ops/gate_vh1_content_triage.py": "825ca3c0ceb7ea53b47351dc95e0f86dd2cc206866b54a51c2cf7a6275403799",
+    "ops/gate_vh1_final_validation.py": "d29ce65a11345fe5bc4c5e7d9218038f4e65b456339c0a942b3350b336cdc50d",
+    "ops/gate_vh1_final_warnings.py": "b7b028d48ac2985791ca4af1258402e71e633cc4c644d76dbea7af087033ab27",
+    "ops/gate_vh1_formula_links.py": "c46cd039dddbb8e6d0816546a262ed7aa66cd29cde841236f7494a303a1ff5e6",
+    "ops/gate_vh1_formula_revisions.py": "c7893aba26b38068181f75c0b692d888f46adfb7d4a4ed519b62acbb65531618",
+    "ops/gate_vh1_glyphs.py": "74e5caee7c990222384666652c36b8d6dc3e0181558af05bedb52ac2ae61800a",
+    "ops/gate_vh1_reference_metadata.py": "a8d570c2bf3072ffb8f014980458edbe5a2e7c4ed498185059db9f34ed7ab093",
+    "ops/gate_vh1_reference_types.py": "c531e6458cb74c7f79f9f53727263148b890ccacdb8ea0ed1fcc42b377ad0b64",
+    "ops/gate_vh1_references.py": "960d345ace3debb622c0d85f7c0090a46e1bee33f70995f3d66b0bad553a9f89",
+    "ops/qualify_vh1_final_validation.py": "47174bce35512717b0d00ff206c08beff377c3034d3262ada050df0fbb0206f7",
+    "ops/qualify_vh1_formula_links.py": "005bce3872689dabb1fb0a7c361f55fca0b8134d0398ade115a6fe246a96679b",
+    "ops/qualify_vh1_formula_revisions.py": "29f704f16b070ce412cb88811a2d792e44f8677359b9c9cf39b00022a0444e64",
+    "ops/qualify_vh1_glyphs.py": "530b9d517cf84bf7a50fe693bd1780a4e249cdbfbde04466a2de545fb01f2c7e",
+    "ops/qualify_vh1_metadata.py": "a2dec611576e90e4279c37addfc96e1cf3b255173ecbe881935a00c06b1fcafe",
+    "ops/qualify_vh1_reference_metadata.py": "4063ce1561505d8f1ae771189bca55e2076df43b52b0be4d42df1830220a3c6b",
+    "ops/qualify_vh1_reference_types.py": "1e8b8eacba0cc119b9a5d4b21509a929569709b634bd57dfbee23b2e418120c1",
+    "ops/qualify_vh1_references.py": "2296a63fac800802f7206953c41f9c9d0bcae34af8e142632cf24c7eb005b7ac",
+    "ops/requalify_vh1_articlemeta_workflow.py": "6dabc9bf9b282d228be8b3e259009159caf5e45869a1cc393d13b580de6737c5",
+    "ops/requalify_vh1_final_validation_workflow.py": "4c9d721cf611abf607c22db9b3784479a5fff1d5ccbd9a421431e5731e53c321",
+    "ops/requalify_vh1_formula_revision_workflow.py": "7e3519ed4f19db24c9d033d96f5f755abfe044d3a1e07012c98733d048ccfeb3",
+    "ops/requalify_vh1_formula_workflow.py": "10d3a9ea2acf7fa3389070088f5e349f9246472591b79a2fa1e2c62c29566a9b",
+    "ops/requalify_vh1_glyph_workflow.py": "01bdd6d2dea1e541630feb0b39bd1ce9536e327c45aee0bf01f6163b93ac59d4",
+    "ops/requalify_vh1_reference_metadata_workflow.py": "6696b27fe84c94590ca4b47b32cbaeece16b5362ed42cb96063b6a2d66ec7b6d",
+    "ops/requalify_vh1_reference_types_workflow.py": "91d2b998044880c3e68eb009a5fa7002e8cda57f1a24ccb2458b344511817e1d",
+    "ops/requalify_vh1_reference_workflow.py": "ac3729b829b3dcb4d797d8345eedac1e3d9cdcb71b253ddd9186ab43620bdc35",
+    "ops/triage_vh1_content.py": "76d52bdd3f132b8694e089462698b927d2acca1757b394ed84642d5f02e39ead",
+    "ops/triage_vh1_final_warnings.py": "f9b94ba8c53024981a882e147c66d15b6e8fa8e48bcf4a924a026a1f3879c65b",
+    "ops/vh1_source_evolution.py": "5e8197ec08cde279c0c38dc7ee75a02d0dd7aeb20130be4c56258c704e378f99",
+    "schemas/canonical-article-1.5.0.schema.json": "97ee6ff8ea7ce86bb685a4b891cf30ec9f308909c06b6f951c2cdaa041195259",
+    "schemas/canonical-article-1.6.0.schema.json": "65c4f1d8200949eb3e9ded4da57c9fc7e3b787f70634c77d04882112c47f0db4",
+    "src/idml_foundation/ai/formula_catalog.py": "78870c9fab28bd3c294aca4b51b68eefd3e5ce4eb07a8887c429826d83416ec4",
+    "src/idml_foundation/domain/canonical.py": "38171a7f6ece6323da7bad02535983f7a833cdc3a8091ae724c44c2108943f50",
+    "src/idml_foundation/domain/schema_migrations.py": "70f767e54e630551f4b121b36ee7ebf007d2477f47ed8fe281ae0fe6f61e4aaa",
+    "src/idml_foundation/ingest/safe_zip.py": "93faa91755c6fee6997f80b6249a446a11b17257069e76f07c7f8152d16fe829",
+    "src/idml_foundation/ingest/xml_security.py": "a6f062e7620bda07a4e0fadf6b8a20b6c75371e566b5fd2295e4bb1a96058a90",
+    "src/idml_foundation/pipeline/affiliation_hierarchy.py": "efac1d720b4141c621f383de70de4ff960eb9f392b13643912838b065c00878a",
+    "src/idml_foundation/pipeline/canonical_mapper.py": "acae6cca29f27f0855810eaf64abc8c08616445188ad633a8f9aeb7868532e8e",
+    "src/idml_foundation/pipeline/funding_parser.py": "47a40964e8da95d62b62c84484b9ed639e8eed6cd47dfdbe58be8c9f4ccc8fad",
+    "src/idml_foundation/pipeline/idml_parser.py": "4f260a042aaaa10469b086adeccf28388a7e5e3e2b5c1c969bd31dd720b9bf98",
+    "src/idml_foundation/pipeline/jats_builder.py": "a95b9248d1b7bfd62538500a7b89cf0396476da20c8d3cad6e61b3686bf6a056",
+    "src/idml_foundation/pipeline/metadata_normalization.py": "088deaecec3648103c86ea6984a6bbc6a46a7686dde0f196c01c7f1fc1d16ad8",
+    "src/idml_foundation/pipeline/object_reference_resolver.py": "69d38bcf2a199875663a83817b77c95c961287e3e4d06635036f7a72788d347c",
+    "src/idml_foundation/pipeline/reference_metadata.py": "e24472fd6349847a20f11e362397eab4591af976724308cb43a96e084a7f0574",
+    "src/idml_foundation/pipeline/reference_parser.py": "4cdc6838568ed11ee820201c70075b53b4048aa8d25865d7354590fbf4e88808",
+    "src/idml_foundation/pipeline/service.py": "239bf0af6d610004a1ced38dd34c1a67cb4093f984a4a9f62c36ca2d6e2049d6",
+    "src/idml_foundation/publication_dates.py": "0f20190f807ac867acf402ed0e5d11fc1fb0ef5491a9ea0e79cd9e7bd08b5eae",
+    "src/idml_foundation/release/articlemeta_dates.py": "3bae62f5bda276d585ce568502c61e7e50f5dc66e9ffa019d304bf846eb80532",
+    "src/idml_foundation/release/articlemeta_orcids.py": "2231ed6f7068226bc7b1088d2d3d051ac396e7eb7358c3aef8caf3fae1795568",
+    "src/idml_foundation/release/formal_metadata.py": "c179194a4704ec137b754a6e088cfcfe4dc2b659e796d44cd6ad975af2bbd1b7",
+    "src/idml_foundation/release/institution_locations.py": "272cad83762e905df22822de84fec177b7563aa1cfd130200d76c9a11d8fa0e3",
+    "src/idml_foundation/release/package_builder.py": "10dcbd0043bedcb0041924c9fa2467a0cb56cd420e3866c988f729892d78002a",
+    "src/idml_foundation/release/reference_types.py": "95d1cd68f1ff3c7bd1ec8a619811360d424d3f4a59d83b16a5e83cf76fa543ad",
+    "src/idml_foundation/release/verified_funding.py": "79fb22afa11f69d5b77a1899782fd154a3459eac4d9d48e501813456c740c03b",
+    "src/idml_foundation/services/enrichment.py": "532eaf9e9f3e61cf3a5786d8e4dcbf7a3fc3a1b4194e63c2580adb1db17a9549",
+    "src/idml_foundation/services/source_authorization.py": "b066fcae6e09e55c69ad08aed33ea0a12c1d392d813b296cf5c2d4b9df424694",
+    "tests/test_affiliation_hierarchy.py": "241bcd67afe518f2a266752427653cb51e364a86381a6b34b323c9e62b3e807c",
+    "tests/test_articlemeta_dates.py": "59dd7f8446a0d168c17a95d13831453e32b966c76f1cf4dd71b51cdff520a3cf",
+    "tests/test_articlemeta_orcids.py": "cf14faf513c05b4cb4e86bc144e7d4d5dba06e28dd63d52d6b7c55ab31924f15",
+    "tests/test_formula_reference_links.py": "a84cee75453cc2e2a57483f75773260d14b6a5bd1d4f501733b59f758d3489b9",
+    "tests/test_formula_source_revisions.py": "4bcddd48682db1c8531fcaf22982199f3cb298f7cd42966b22e512dad239fac8",
+    "tests/test_inline_position_overrides.py": "031a172ad9cf0cc708fe17481233723466e9f40af758a817a8b5c0ed42f333bb",
+    "tests/test_institution_locations.py": "8894b06081cb229dcc16e5c5af09977219a996dbfa757f30761eb538e748232c",
+    "tests/test_object_reference_resolver.py": "70f0efb4c2cc0b16a79673892784e94b9c68f8ea6ec087bb0f801c79dee95902",
+    "tests/test_phase7_v11_robustness.py": "a2e64b4061198f86e54157826e9ccc085cc49c2006c452ab6ae812f8c2521ef6",
+    "tests/test_reference_boundaries.py": "c23642153d858d76528b742d33edf010297ed2e2a8680d74536e642cf8e30cab",
+    "tests/test_reference_metadata.py": "de0d391cb56004e556e288c554ef3143089efdf02cff84a680ab72fd25b1a81b",
+    "tests/test_reference_types.py": "9bbbcae10518b58f46d55cd1eb7338513ee4642c84391ac3737e2bab5d49f02f",
+    "tests/test_verified_funding.py": "8e815604229207f7ca372c7028a40d627473967dd5bf1387e5d93ea9c280c3ce",
+    "tests/test_vh1_content_triage.py": "360ad4962d700d7533359108f6bf7e1006fdb38b7c72c3c5e2d132a5ad582ed5",
+    "tests/test_vh1_dates_funding.py": "bbe350ae9b55df07bc5f381544314cfb2c699fad3424819856d3ea5be41153bb",
+    "tests/test_vh1_final_gate.py": "16c7f77f7ca0ef4b3ebd92c730a196a594635ad8c292c575b4abacf9a968a857",
+    "tests/test_vh1_final_validation.py": "57498c9f6ccd0f6d23b9ad69aeeddccbff925f0a95a81025c056910c855ca196",
+    "tests/test_vh1_final_warnings_gate.py": "ee26e9fbbf10d7cbbcc3e44dc2491212dc2ac950355d1525658b461b38600fd5",
+    "tests/test_vh1_formula_delta.py": "3a7b86ac2cd5b4cd5c9fa04369b6535180ddf4fd6f4f03506b8185fd8302348e",
+    "tests/test_vh1_formula_links_gate.py": "d45bb989e70dd3de01b39d373274b85f35e5ab0d97a8286d7cdf97f162153588",
+    "tests/test_vh1_formula_revision_delta.py": "3bc4733d1cd49b9de08a60eb7aa8ca49dfe5f83b1aec79526980c4613a7744a2",
+    "tests/test_vh1_formula_revisions_gate.py": "ddf15cc1867381250994b3d82377257615e1ad49ff20434deed5a2d64ccf8283",
+    "tests/test_vh1_glyph_delta.py": "0b34b87a519693f54524077dfcb77f8aa28b8db3717eeac25d6b49f024af2d68",
+    "tests/test_vh1_glyph_gate.py": "bbd53618b7fe2c7314e3c188d0325064f0b48d21dfc6185a6b760b6fdc5020f0",
+    "tests/test_vh1_metadata_normalization.py": "12c1ffcb7adb229a2feb811533f1f54e62a810106695f997056fca60cabf5379",
+    "tests/test_vh1_reference_adjudication.py": "d5da7b69eb606c60a4f2d91549ed6d6ccda9d2aaaff8fa8f66822356fbcd7cd4",
+    "tests/test_vh1_reference_delta.py": "97b9b2db0b58716e388af3bc56f656a4ea3efb578f6ccf4484db102446992310",
+    "tests/test_vh1_reference_gate.py": "a0fc924c437d98707d281e28581073d0f1b01baa1eff886422617ef02212b863",
+    "tests/test_vh1_reference_metadata_audit.py": "ed8c8a2d9a1ab88fd25d762ddec598dd51c9aa1e0271700490583d7d560350d7",
+    "tests/test_vh1_reference_metadata_delta.py": "214cf3ecd2a6bd310c1491b2bcf90e5873060cb02d83f2de986468028a51ba8a",
+    "tests/test_vh1_reference_metadata_gate.py": "209fc49a87a7710a249cc8b7815a4bbe74215fa89f2c2552e899eab21963874d",
+    "tests/test_vh1_reference_types_audit.py": "711dcf2be9628c2fa4708be254118fe31bc4dd743bfb0e1e3275e929295097a5",
+    "tests/test_vh1_reference_types_delta.py": "80b71bcf273bcb7a97349de74f6ee21bd410b8968e6e681ff281bf1835c78694",
+    "tests/test_vh1_reference_types_gate.py": "db98910b1b44926b0798af78d3a02db47e2b5ededfaaf9eb2d3fffa51852b00e",
+    "tests/test_vh1_source_evolution.py": "4398340860e4cfb5c5f63dc55b2c201146168134d887421ad8aac00a79869c9a"
+  },
+  "privacy": {
+    "contains_article_text": false,
+    "contains_raw_credentials": false,
+    "contains_raw_agent_output": false,
+    "restricted_content_emitted": false
+  },
+  "critical_findings_open": 0,
+  "major_findings_open": 0,
+  "v11_approved": true,
+  "release_candidate_approved": false,
+  "production_activation_authorized": false,
+  "requalification_of": "v11-robustness-mutation-vh1-reference-types-v1.json",
+  "scope": "Literal institutional hierarchy and complete raw warning triage; not scientific acceptance, deployment or release.",
+  "previous_report_sha256": "ef5ee18f8567ca9c581c44493b714a42ff56b1b961bf9e90588396debce1324e",
+  "focused_tests": 936,
+  "focused_junit_sha256": "e4a7a811fa17cbc889468bcb363d1e0439f1c1d20ea075f66f3dc50b9a01755d",
+  "current_gates": {
+    "fuzz": {
+      "arbitrary_rejections": 121,
+      "zip_mutations": 128,
+      "controlled_rejections": 128,
+      "accepted_non_structural_mutations": 0
+    },
+    "xml_unicode": {
+      "hostile_xml_rejected": 5,
+      "unicode_round_trips": 128
+    },
+    "package": {
+      "order_permutations": 3,
+      "member_mutation_detected": true,
+      "package_sha256": "8e85bff234201e22d0c521030a1d30ebce4a89a33912bb6672bd0f77a908d7cb"
+    }
+  },
+  "articlemeta_current_checks": {
+    "fuzz": {
+      "arbitrary_rejections": 121,
+      "zip_mutations": 128,
+      "controlled_rejections": 128,
+      "accepted_non_structural_mutations": 0
+    },
+    "xml_unicode": {
+      "hostile_xml_rejected": 5,
+      "unicode_round_trips": 128
+    },
+    "package": {
+      "order_permutations": 3,
+      "member_mutation_detected": true,
+      "package_sha256": "8e85bff234201e22d0c521030a1d30ebce4a89a33912bb6672bd0f77a908d7cb"
+    }
+  },
+  "formula_links_current_checks": {
+    "fuzz": {
+      "arbitrary_rejections": 121,
+      "zip_mutations": 128,
+      "controlled_rejections": 128,
+      "accepted_non_structural_mutations": 0
+    },
+    "xml_unicode": {
+      "hostile_xml_rejected": 5,
+      "unicode_round_trips": 128
+    },
+    "package": {
+      "order_permutations": 3,
+      "member_mutation_detected": true,
+      "package_sha256": "8e85bff234201e22d0c521030a1d30ebce4a89a33912bb6672bd0f77a908d7cb"
+    }
+  },
+  "formula_links_native_report_sha256": "409ce1f39551671e0be9e82df42d3a12622f871e34e0d5c9a0ca7094f50c37bf",
+  "formula_revisions_current_checks": {
+    "fuzz": {
+      "arbitrary_rejections": 121,
+      "zip_mutations": 128,
+      "controlled_rejections": 128,
+      "accepted_non_structural_mutations": 0
+    },
+    "xml_unicode": {
+      "hostile_xml_rejected": 5,
+      "unicode_round_trips": 128
+    },
+    "package": {
+      "order_permutations": 3,
+      "member_mutation_detected": true,
+      "package_sha256": "8e85bff234201e22d0c521030a1d30ebce4a89a33912bb6672bd0f77a908d7cb"
+    }
+  },
+  "formula_revisions_native_report_sha256": "8e85ebf7328de85027f3cc91ad4d6ac0a8b46bb8477968fdca4244c6224e7419",
+  "glyph_current_checks": {
+    "fuzz": {
+      "arbitrary_rejections": 121,
+      "zip_mutations": 128,
+      "controlled_rejections": 128,
+      "accepted_non_structural_mutations": 0
+    },
+    "xml_unicode": {
+      "hostile_xml_rejected": 5,
+      "unicode_round_trips": 128
+    },
+    "package": {
+      "order_permutations": 3,
+      "member_mutation_detected": true,
+      "package_sha256": "8e85bff234201e22d0c521030a1d30ebce4a89a33912bb6672bd0f77a908d7cb"
+    }
+  },
+  "glyph_native_report_sha256": "25777098e66a7dae05a048f3d3019a2d33df0e57902bcf7e8bc20bd08c81e719",
+  "reference_current_checks": {
+    "fuzz": {
+      "arbitrary_rejections": 121,
+      "zip_mutations": 128,
+      "controlled_rejections": 128,
+      "accepted_non_structural_mutations": 0
+    },
+    "xml_unicode": {
+      "hostile_xml_rejected": 5,
+      "unicode_round_trips": 128
+    },
+    "package": {
+      "order_permutations": 3,
+      "member_mutation_detected": true,
+      "package_sha256": "8e85bff234201e22d0c521030a1d30ebce4a89a33912bb6672bd0f77a908d7cb"
+    }
+  },
+  "reference_native_report_sha256": "8e86df94a1eb14544a781c2ce3876140bb81771107c20252e3c7810e6e0b601a",
+  "final_increment_tests": 103,
+  "final_increment_junit_sha256": "f2a3bdec59f3f1534a16572c0896eec08f0a032813d96cff0f0ff3f90d6be8f1"
+}

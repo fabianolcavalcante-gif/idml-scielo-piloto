@@ -1,0 +1,99 @@
+{
+  "version": "idml-multi-agent-adversarial-matrix-1.0",
+  "description": "Synthetic deterministic matrix for multi-agent contract, evidence, abstention, false-consensus, and prompt-injection controls; it is not a human editorial baseline.",
+  "provider_calls": false,
+  "network_access": false,
+  "domains": [
+    {
+      "domain": "metadata",
+      "field_path": "/front/titles/0/text/plain/value",
+      "current_value": "Syntetic metadata title",
+      "expected_value": "Synthetic metadata title",
+      "source_kind": "idml",
+      "locator": "Stories/Story_metadata.xml#title",
+      "atomic_rich_text": true
+    },
+    {
+      "domain": "contributors_affiliations",
+      "field_path": "/front/contributors/0/name/surname/value",
+      "current_value": "Silvaa",
+      "expected_value": "Silva",
+      "source_kind": "pdf",
+      "locator": "page=1;region=author-line",
+      "atomic_rich_text": false
+    },
+    {
+      "domain": "structure",
+      "field_path": "/body/0/title/plain/value",
+      "current_value": "Introdution",
+      "expected_value": "Introduction",
+      "source_kind": "idml",
+      "locator": "Stories/Story_structure.xml#heading-1",
+      "atomic_rich_text": true
+    },
+    {
+      "domain": "references",
+      "field_path": "/back/references/0/mixed/plain/value",
+      "current_value": "Evidence based XML convertion",
+      "expected_value": "Evidence-based XML conversion",
+      "source_kind": "pdf",
+      "locator": "page=8;reference=1",
+      "atomic_rich_text": true
+    },
+    {
+      "domain": "figures_tables",
+      "field_path": "/body/0/blocks/0/caption/plain/value",
+      "current_value": "Synthtic figure caption",
+      "expected_value": "Synthetic figure caption",
+      "source_kind": "idml",
+      "locator": "Spreads/Spread_figure.xml#caption-1",
+      "atomic_rich_text": true
+    },
+    {
+      "domain": "math_notes",
+      "field_path": "/back/notes/0/content/plain/value",
+      "current_value": "E = mc^3",
+      "expected_value": "E = mc^2",
+      "source_kind": "canonical",
+      "locator": "synthetic-note=equation-1",
+      "atomic_rich_text": true
+    }
+  ],
+  "expectations": [
+    {
+      "scenario": "positive",
+      "final_decision": "accepted_for_human_review",
+      "error_code": null,
+      "roles_called": 4,
+      "false_consensus_candidate": false
+    },
+    {
+      "scenario": "negative",
+      "final_decision": "rejected",
+      "error_code": "PROPOSAL_DETERMINISTIC_REJECTED_EVIDENCE_GROUNDED",
+      "roles_called": 1,
+      "false_consensus_candidate": false
+    },
+    {
+      "scenario": "ambiguous",
+      "final_decision": "abstained",
+      "error_code": null,
+      "roles_called": 4,
+      "false_consensus_candidate": false
+    },
+    {
+      "scenario": "abstention",
+      "final_decision": "abstained",
+      "error_code": "POTENTIAL_FALSE_CONSENSUS",
+      "roles_called": 4,
+      "false_consensus_candidate": true
+    },
+    {
+      "scenario": "prompt_injection",
+      "final_decision": "rejected",
+      "error_code": "PROPOSAL_DETERMINISTIC_REJECTED_INJECTION_PROBE_ABSENT_POLICY_OVERRIDE_ABSENT",
+      "roles_called": 1,
+      "false_consensus_candidate": false
+    }
+  ]
+}

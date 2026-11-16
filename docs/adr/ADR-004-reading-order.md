@@ -1,6 +1,6 @@
 # ADR-004 — Reconstrução da ordem de leitura
 
-- Status: aceito para prototipação
+- Status: aceito e implementado na Fase 3
 - Data: 2026-08-24
 
 ## Contexto
@@ -9,7 +9,14 @@ IDML separa conteúdo em Stories e posicionamento em Spreads. Ordem do ZIP, nome
 
 ## Decisão
 
-Combinar encadeamento `PreviousTextFrame/NextTextFrame`, sequência interna de Story, página/coluna/geometria transformada, estilos do template e âncoras. Precedência: thread explícito, âncora inline, Story, geometria, estilo e heurística textual.
+Combinar encadeamento `PreviousTextFrame/NextTextFrame`, sequência interna de
+Story, página/coluna/geometria transformada, estilos do template e âncoras.
+Precedência: thread explícito, âncora inline, Story, geometria, estilo e
+heurística textual.
+
+O parser valida início único, reciprocidade dos links, ciclos e componentes
+desconectados. Stories sem frame permanecem no Raw e usam `StoryList` como
+fallback auditável; não são descartadas.
 
 ## Consequências
 

@@ -1,0 +1,16 @@
+{
+  "version": "h1-doi-snapshot-local-1.0",
+  "candidate_sha256": "7081d302358f8c022114a0ebf568372af43e115bda38a748cc7c2ebbc1494ad0",
+  "snapshot_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3",
+  "retrieved_at": "2026-09-30T18:08:39.958368+00:00",
+  "authority": "https://api.crossref.org/works/",
+  "scope": "local installed runtime; isolated VPS integration pending",
+  "registered_metadata_present": true,
+  "native_response": "OK",
+  "native_comparison_passed": true,
+  "synthetic_metadata_mismatch_rejected": true,
+  "xml_changed": false,
+  "gold_read": false,
+  "snapshot_sent_to_vps": false,
+  "formal_validation_passed": false
+}

@@ -1,0 +1,37 @@
+{
+  "active_application_changed": false,
+  "archive_extracted": false,
+  "archive_sha256": "1b22157b9e816255db8d8910acc46a13b78c0f286cbb68155a39a95ed0f0bdec",
+  "checked_at": "2026-10-14T15:53:18.573535+00:00",
+  "declared_dependencies": [
+    "packtools==2.4.2",
+    "pillow==6.2.2"
+  ],
+  "dedicated_worker_provisioned": false,
+  "dependencies_match": false,
+  "next_required": [
+    "isolated-nonprivileged-windows-executor",
+    "official-dependency-environment",
+    "real-positive-and-negative-package-runs",
+    "sps-1.10-rule-compatibility"
+  ],
+  "official_member_sha256": {
+    "SciELO_XPM/xml/app_modules/settings/requirements.txt": "3d894971d427c264e12789bb18923a23a8e01cb53ccb52bb4365ac1bac709247",
+    "SciELO_XPM/xml/xml_package_maker.py": "153bfe1168220bd18dea5528a4c41b7377302f5b77d79edd1df40e12a776962d",
+    "SciELO_XPM/xpm_version.txt": "d5ae57805f4b4b21791edf76a728b7e22de64b13f83d700edde44695a8a79eab"
+  },
+  "runtime": {
+    "packages": {
+      "packtools": null,
+      "pillow": null
+    },
+    "platform": "win32",
+    "python": "3.11.3",
+    "tkinter_module_present": true
+  },
+  "software_installed": false,
+  "sps_1_10_compatibility_proven": false,
+  "status": "preflight-only-not-qualified",
+  "version": "vh1-xpm-windows-preflight-1.0",
+  "xpm_executed": false
+}

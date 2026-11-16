@@ -1,0 +1,89 @@
+{
+  "version": "vh09-integration-local-qualification-1.0",
+  "created_at": "2026-10-20T12:01:12.7872443Z",
+  "source_sha256": {
+    "src/idml_foundation/autocorrection_models.py": "fc0356b1f2aba86f07d3c48cfddce67f9bdb521408a8adb1ff5778af7186c642",
+    "src/idml_foundation/services/autocorrection_sources.py": "66be19d3e91b10f57aed688349025ea060ce9ea0d18c54cf0e325cc1f4d43972",
+    "src/idml_foundation/services/autocorrection_executor.py": "77b61e3ab11c9cccf97f99bcca61bbf5f6c83575b0cb148b8881faf7c66cbba2",
+    "src/idml_foundation/pipeline/autocorrection_evidence.py": "bf12ec8e2d0d3ae9b02678beeed4ce156d6a3248f3d72ffa5d99afdb373ec244",
+    "src/idml_foundation/services/autocorrection_authorization.py": "1c6318fab40ae800b8ec41f980d1c092d1c1f6fabf01fe0488d3554f92cd6504",
+    "src/idml_foundation/services/autocorrection_package.py": "78a753b3814a1aa262a135594a64e41e3421fc11fe41d6e90e8da2d2776099f8",
+    "src/idml_foundation/services/package_validation.py": "728f9e4d565967a8e5d4c6084fe1c19c898d53193ed6536c18ef529865880aec",
+    "src/idml_foundation/release/package_builder.py": "10dcbd0043bedcb0041924c9fa2467a0cb56cd420e3866c988f729892d78002a",
+    "tests/autocorrection_helpers.py": "fcaeef76b11eed39c67a3c5262371aaadffd3b19ab0c6cb9b685acb1d1554b06",
+    "tests/test_autocorrection_sources.py": "cd02b2e3ac5306bcb78886b07eb08fdf9cbecf952ec624941b4b92c3007cec63",
+    "tests/test_autocorrection_executor.py": "65fcb3e5bee229d2c064ce0dd7e286423ed90b89492850c8b124e4f9e7bc9ed3",
+    "tests/test_autocorrection_transactions.py": "917745482e4c118f2d0b87283b738514e46682887fdd3d7481726d55523c0293",
+    "tests/test_autocorrection_evidence_pipeline.py": "c3bc5a305fb8317a1fce8b84afcda908707da3c998cdebbbd92a5b3b59661fab",
+    "tests/test_autocorrection_package.py": "25d32985d6391fca2e2afaf329b27fbe8eacd7e3014871e4bdc58db2172c23cf",
+    "benchmarks/qualification/reports/vh08-autocorrection-policy-v1.json": "cc7374ae21886380e9c15b2bc3e5331e6956a0187dee072770740035adbdb89c"
+  },
+  "tests": {
+    "tmp/vh09-integration-tests.xml": {
+      "tests": 167,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "sha256": "cdfd575008d1d6f818b651608261dac2cdf313f22e2d131e3481f54125d152fe"
+    },
+    "tmp/vh09-integration-focused.xml": {
+      "tests": 421,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "sha256": "15580200e22ec9cc0c8bbbd4263e178c26292d26afbd781f277897842c95f51e"
+    }
+  },
+  "new_tests_this_increment": 82,
+  "test_counts_are_overlapping_not_additive": true,
+  "coverage_run_warnings": 1,
+  "coverage": {
+    "covered_lines": 761,
+    "num_statements": 807,
+    "missing_lines": 46,
+    "num_branches": 274,
+    "covered_branches": 229,
+    "missing_branches": 45,
+    "percent_statements_covered": 94.2998760842627,
+    "percent_branches_covered": 83.57664233576642,
+    "percent_covered": 91.58186864014802
+  },
+  "coverage_path": "tmp/vh09-integration-coverage.json",
+  "coverage_sha256": "79b34afc3f170670d524f6bfd2bd8d1fbd6c59224295284f8b7db681ab275a8b",
+  "coverage_scope": [
+    "idml_foundation.autocorrection_models",
+    "idml_foundation.services.autocorrection_sources",
+    "idml_foundation.services.autocorrection_executor",
+    "idml_foundation.pipeline.autocorrection_evidence",
+    "idml_foundation.services.autocorrection_authorization",
+    "idml_foundation.services.autocorrection_package"
+  ],
+  "scope": "synthetic-local-field-provenance-batch-grants-private-package-revalidation",
+  "checks": {
+    "ruff_global": true,
+    "mypy_source_modules": 124,
+    "increment_format_files": 11,
+    "vh08_proof": true,
+    "existing_qualifications_not_overwritten": true,
+    "real_offline_jats_execution_on_synthetic_fixture": true,
+    "external_executors_are_synthetic": true,
+    "postgresql_native_execution": false
+  },
+  "limitations": [
+    "Opt-in internal pipeline/service entrypoints only; worker and HTTP routes unchanged",
+    "No real source authorization provisioned; synthetic permission fixtures only",
+    "Package result returned privately, not persisted or promoted",
+    "PDF is a trusted server selection; byte integrity is not scientific or visual equivalence",
+    "No live Packtools, SPSValidator or XPM execution in this increment",
+    "XPM remains unavailable in package orchestration; positive synthetic external runs never approve release",
+    "Native PostgreSQL migration/concurrency qualification and promotion/restoration remain pending",
+    "No new complete system suite, global coverage or global CI approval",
+    "No live article or live AI evaluation"
+  ],
+  "full_vh09_complete": false,
+  "live_ai_called": false,
+  "vps_changed": false,
+  "active_snapshot_changed": false,
+  "homologation_ready": false,
+  "release_approved": false
+}

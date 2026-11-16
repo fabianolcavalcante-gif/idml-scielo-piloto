@@ -1,0 +1,36 @@
+{
+  "version": "h1-validator-socket-smoke-1.0",
+  "executed_at": "2026-09-28",
+  "scope": "incomplete synthetic negative inputs; transport evidence only",
+  "cases": [
+    {
+      "name": "packtools",
+      "status": "completed",
+      "counts": {"blocking": 0, "critical": 11, "error": 4, "warning": 6},
+      "candidate_sha256": "1859e371b2abd20006adac6d8cf9ba5eb09a82a8b3621366ed04865366c64547",
+      "tool_sha256": "412a7502295ebb12fcbe417335eae203e99d6c585e4058659c9fa683beeca175",
+      "report_sha256": "0b61cee4e6e94ffea208e5d693099e5fd11b7fc41b1da63c9f7bedf50afc7c82",
+      "failure_code": null,
+      "passed": false,
+      "transport_completed": true,
+      "client_exit_code": 0
+    },
+    {
+      "name": "spsvalidator",
+      "status": "failed",
+      "counts": {"blocking": 0, "critical": 12, "error": 5, "warning": 6},
+      "candidate_sha256": "fac03533b3a7e0273c9c6196c7411a4ce22fe0cdab8238fbeb169b48ecf36186",
+      "tool_sha256": "2806ed5ee19d141be1cc6d0dbbfd54741c7ec4ae6ae7422f3ba0fae21b878526",
+      "report_sha256": "5dac9d56e065e760a9b1b73ff9da55f8d48f8e7ddbfb4802c234c0d95faf0a00",
+      "failure_code": "validator-exception-or-invalid-output",
+      "passed": false,
+      "transport_completed": true,
+      "client_exit_code": 0
+    }
+  ],
+  "existing_services_unchanged": true,
+  "socket_removed": true,
+  "scratch_empty": true,
+  "private_corpus_used": false,
+  "production_activated": false
+}

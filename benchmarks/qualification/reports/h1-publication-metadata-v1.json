@@ -1,0 +1,13 @@
+{
+  "version": "h1-publication-metadata-1.0",
+  "corpus_id": "esa-e20240086",
+  "before_xml_sha256": "15287f774bed60a62f0c5734aa7082234cbc7b69b86effeecc7a1e9ea991bc20",
+  "after_xml_sha256": "183dd2595a3b7d115075b426b7542acaac75dbfae2c785a3a64c41d8a291f61a",
+  "catalog_id": "b805907f033904d56a89e3e641d4cb7e295c1c47a23285727919941201bc4fae",
+  "crossref_response_sha256": "4912fa3aa1ff64288d3cadab4a9767976a82a87d086b5f2368c07e6cc18e6fb3",
+  "publication_date_precision": "year",
+  "offline_valid": true,
+  "gold_read": false,
+  "human_review_required": true,
+  "external_validation_passed": false
+}

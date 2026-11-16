@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-10-01T17:12:47.811155+00:00",
+  "source": "https://documentacao.scielo.org/books/scielo-pc-programs/page/download",
+  "directory": "xpm/Windows",
+  "downloaded": false,
+  "executed": false,
+  "compatible_distribution_proven": false,
+  "entry_count": 9,
+  "entries": [
+    "4.0.095_win7_or_proxy",
+    "xpm-4.0.091.EXE",
+    "xpm-4.0.092.EXE",
+    "xpm_4.0.093_R2_2017-04-19.EXE",
+    "xpm_4.0.094.EXE",
+    "xpm_4.0.095.EXE",
+    "xpm_4.0.096-R20190411.EXE",
+    "xpm_4.0.096-R20190422.EXE",
+    "xpm_4.0.096-R20231215.EXE"
+  ],
+  "software_files": [
+    "xpm-4.0.091.EXE",
+    "xpm-4.0.092.EXE",
+    "xpm_4.0.093_R2_2017-04-19.EXE",
+    "xpm_4.0.094.EXE",
+    "xpm_4.0.095.EXE",
+    "xpm_4.0.096-R20190411.EXE",
+    "xpm_4.0.096-R20190422.EXE",
+    "xpm_4.0.096-R20231215.EXE"
+  ],
+  "archives": [],
+  "status": "listed"
+}

@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "articles": 2,
+  "cases": [
+    {
+      "article": "esa-e20240086",
+      "worker_job": "passed",
+      "http_authorization": true,
+      "actual_database_decision_resolver": true,
+      "fresh_public_sources": true,
+      "initial_authority_bundles": 0,
+      "generated_authority_bundles": 1,
+      "revocation_denied_all_executors_without_new_runs": true,
+      "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+      "package_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+      "modern": [
+        {
+          "name": "packtools",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        },
+        {
+          "name": "spsvalidator",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        }
+      ],
+      "xpm_status": "completed",
+      "raw_xpm_counts": {
+        "blocking_errors": 3,
+        "fatal_errors": 1,
+        "errors": 4,
+        "warnings": 2
+      },
+      "derived_xpm_counts": {
+        "blocking_errors": 0,
+        "fatal_errors": 0,
+        "errors": 0,
+        "warnings": 2
+      },
+      "report_sha256": "ae8133140c3bc53583a8d847a70ef50aa1a570726d53399af01128b7cee3efb2",
+      "isolated_database": true,
+      "idml_ingestion_exercised": false,
+      "ai_invoked": false,
+      "release_approved": false
+    },
+    {
+      "article": "esa-e20240135",
+      "worker_job": "passed",
+      "http_authorization": true,
+      "actual_database_decision_resolver": true,
+      "fresh_public_sources": true,
+      "initial_authority_bundles": 0,
+      "generated_authority_bundles": 1,
+      "revocation_denied_all_executors_without_new_runs": true,
+      "xml_sha256": "f2540405e65898aa2d5bd045075fbc22d2e06177f782e3a649ba891738002412",
+      "package_sha256": "985d3789ba5d9b9a1d8f6fc8b3c96ae9af0d63523663a164263b4b9d6de3ad45",
+      "modern": [
+        {
+          "name": "packtools",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        },
+        {
+          "name": "spsvalidator",
+          "status": "completed",
+          "counts": {
+            "blocking": 0,
+            "critical": 0,
+            "error": 0,
+            "warning": 5
+          }
+        }
+      ],
+      "xpm_status": "completed",
+      "raw_xpm_counts": {
+        "blocking_errors": 3,
+        "fatal_errors": 1,
+        "errors": 4,
+        "warnings": 3
+      },
+      "derived_xpm_counts": {
+        "blocking_errors": 0,
+        "fatal_errors": 0,
+        "errors": 0,
+        "warnings": 3
+      },
+      "report_sha256": "27f4b76df2096f75452a588f397bc674aa1dc717ab9c97517df8dfaf5251f946",
+      "isolated_database": true,
+      "idml_ingestion_exercised": false,
+      "ai_invoked": false,
+      "release_approved": false
+    }
+  ],
+  "manifest_sha256": "60d0cd5ae736e12a98673f2004c39e672ddd4060d3bd16a789139a3629aaedda",
+  "real_user_decisions_created": 0,
+  "homologation_ready": false
+}

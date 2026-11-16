@@ -1,0 +1,92 @@
+{
+  "version": "phase7-v12-resource-inventory-1.0",
+  "services": {
+    "api": {
+      "memory_bytes": 268435456,
+      "nano_cpus": 500000000,
+      "pids_limit": 120,
+      "log_policy": {
+        "Type": "json-file",
+        "Config": {
+          "max-file": "3",
+          "max-size": "10m"
+        }
+      },
+      "health": "healthy"
+    },
+    "worker": {
+      "memory_bytes": 268435456,
+      "nano_cpus": 500000000,
+      "pids_limit": 120,
+      "log_policy": {
+        "Type": "json-file",
+        "Config": {
+          "max-file": "3",
+          "max-size": "10m"
+        }
+      },
+      "health": "healthy"
+    },
+    "postgres": {
+      "memory_bytes": 402653184,
+      "nano_cpus": 500000000,
+      "pids_limit": 120,
+      "log_policy": {
+        "Type": "json-file",
+        "Config": {
+          "max-file": "3",
+          "max-size": "10m"
+        }
+      },
+      "health": "healthy"
+    },
+    "redis": {
+      "memory_bytes": 100663296,
+      "nano_cpus": 200000000,
+      "pids_limit": 80,
+      "log_policy": {
+        "Type": "json-file",
+        "Config": {
+          "max-file": "3",
+          "max-size": "10m"
+        }
+      },
+      "health": "healthy"
+    },
+    "openclaw-idml": {
+      "memory_bytes": 402653184,
+      "nano_cpus": 350000000,
+      "pids_limit": 120,
+      "log_policy": {
+        "Type": "json-file",
+        "Config": {}
+      },
+      "health": "healthy"
+    }
+  },
+  "settings": {
+    "upload_max_bytes": 104857600,
+    "zip_max_entries": 5000,
+    "zip_max_uncompressed_bytes": 524288000,
+    "zip_max_ratio": 100,
+    "ai_max_concurrency": 1,
+    "ai_max_attempts": 2,
+    "ai_max_repair_cycles": 2,
+    "ai_max_cost_microusd": 50000,
+    "feature_openclaw": false,
+    "feature_ai_swarm": false
+  },
+  "jobs_by_state": {
+    "succeeded": 2
+  },
+  "storage": {
+    "backup_directories": 106,
+    "backup_bytes": 47125841,
+    "artifacts_bytes": 12560,
+    "postgres_bytes": 66262137,
+    "redis_bytes": 9919,
+    "openclaw_state_bytes": 3435511
+  },
+  "read_only_inventory": true,
+  "restricted_content_emitted": false
+}

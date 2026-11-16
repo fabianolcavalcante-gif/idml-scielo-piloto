@@ -1,0 +1,62 @@
+{
+  "version": "xpm-doi-comparison-native-1.0",
+  "probe_sha256": "a705da7caaa592571d777d558276380d1909dd09671803885d3dec547beb2fb4",
+  "vendor_module_sha256": "e07eb281a1d4cd9b9eefae23e530c26b340bd4f78d57799596605f0ef0038d3a",
+  "vendor_files_unchanged": true,
+  "network": "none",
+  "cases": [
+    {
+      "field": "journal",
+      "case": "exact",
+      "statuses": [
+        "[ERROR]"
+      ]
+    },
+    {
+      "field": "journal",
+      "case": "near_but_not_exact",
+      "statuses": [
+        "[ERROR]"
+      ]
+    },
+    {
+      "field": "journal",
+      "case": "different",
+      "statuses": [
+        "[FATAL ERROR]"
+      ]
+    },
+    {
+      "field": "journal",
+      "case": "absent",
+      "statuses": []
+    },
+    {
+      "field": "article",
+      "case": "exact",
+      "statuses": [
+        "[ERROR]"
+      ]
+    },
+    {
+      "field": "article",
+      "case": "near_but_not_exact",
+      "statuses": [
+        "[ERROR]"
+      ]
+    },
+    {
+      "field": "article",
+      "case": "different",
+      "statuses": [
+        "[FATAL ERROR]"
+      ]
+    },
+    {
+      "field": "article",
+      "case": "absent",
+      "statuses": []
+    }
+  ],
+  "release_approved": false
+}

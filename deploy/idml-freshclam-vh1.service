@@ -1,0 +1,9 @@
+[Unit]
+Description=Update official IDML scanner signatures
+After=docker.service network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/flock -w 160 /run/lock/idml-clamav-vh1.lock /usr/bin/docker run --pull=never --rm --name=idml-vh1-freshclam --memory=700m --memory-swap=1100m --cpus=0.5 --pids-limit=48 --cap-drop=ALL --security-opt=no-new-privileges --user=100:101 --read-only --tmpfs=/tmp:rw,nosuid,nodev,size=150m -v idml_vh1_clamav_signatures:/var/lib/clamav -v /opt/idml-platform/releases/vh10-scan-20261031-v1/deploy/idml-freshclam.conf:/fresh.conf:ro --entrypoint=timeout clamav/clamav@sha256:bda39705e291105049c3936e2803ac90b955172af8030f94f05dce1252df6c6d -s KILL 300 freshclam --config-file=/fresh.conf --stdout
+TimeoutStartSec=490
+NoNewPrivileges=yes

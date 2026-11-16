@@ -1,0 +1,20 @@
+{
+  "version": "h1-rendition-compat-1.0",
+  "scope": "local rendition check only",
+  "cases": [
+    {
+      "case": "esa-e20240086-corrected",
+      "package_sha256": "44f30381779f0f520780b272b95dfcfd54312a70a7c17012f08ace7aaaabe825",
+      "legacy_missing_renditions": 1,
+      "corrected_missing_renditions": 0
+    },
+    {
+      "case": "esa-e20240135",
+      "package_sha256": "5d199ea2fc24939c367e5b57d8ca79cb944576ffe80514790c2f11414222a0fa",
+      "legacy_missing_renditions": 1,
+      "corrected_missing_renditions": 0
+    }
+  ],
+  "formal_validation_passed": false,
+  "active_adapter_changed": false
+}

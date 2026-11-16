@@ -1,0 +1,47 @@
+{
+  "version": "visual-formula-validation-report-1.0",
+  "dataset_version": "idml-agent-real-domain-eval-1.1",
+  "corpus_id": "esa-e20240086",
+  "source_gold_exposed_to_agents": false,
+  "model": "openai/gpt-5.4-mini",
+  "model_input_modalities": ["text", "image"],
+  "role_models_independent": false,
+  "human_review_required": true,
+  "application_flags_enabled": false,
+  "accepted_runs": [
+    {
+      "run_id": "visual-formula-v12-002",
+      "cases": ["esa-math-notes-observed-001"],
+      "cost_microusd": 23657
+    },
+    {
+      "run_id": "visual-formula-v13-001",
+      "cases": ["esa-math-notes-inline-001", "esa-math-notes-inline-002"],
+      "cost_microusd": 55435
+    }
+  ],
+  "metrics": {
+    "cases": 3,
+    "completed": 3,
+    "accepted_for_human_review": 3,
+    "deterministic_checks_passed": 24,
+    "critic_passes": 6,
+    "adjudicator_accepts": 3,
+    "mathml_semantically_equivalent_to_hidden_gold": 3,
+    "automatic_applications": 0,
+    "accepted_run_cost_microusd": 79092,
+    "article_cumulative_cost_microusd": 935233,
+    "article_budget_microusd": 1000000
+  },
+  "safety": {
+    "provider_disabled_after_each_run": true,
+    "temporary_proxy_and_networks_removed": true,
+    "application_agent_runs_persisted": 0,
+    "application_agent_proposals_persisted": 0,
+    "tools_exposed": 0,
+    "skills_exposed": 0,
+    "shared_model_consensus_never_authorizes_release": true
+  },
+  "gate_g6_t_approved": false,
+  "next_required_package": "phase_6_qa_and_bounded_semantic_repair"
+}

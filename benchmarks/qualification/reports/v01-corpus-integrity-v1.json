@@ -1,0 +1,54 @@
+{
+  "version": "phase7-v01-evidence-1.0",
+  "family": "V-01",
+  "status": "passed",
+  "catalog": {
+    "manifests": 6,
+    "artifacts": 21,
+    "holdouts": 1,
+    "catalog_sha256": "6869ea39c818a9036f8f949a79a616f8f407195464b18bdfcd98e3b11e21207d",
+    "duplicate_corpus_ids": 0,
+    "duplicate_artifacts": 0,
+    "cross_split_artifacts": 0,
+    "classification_issues": 0
+  },
+  "physical_verification": {
+    "environment": "authorized-local-private-root",
+    "corpora_verified": 6,
+    "artifacts_verified": 21,
+    "artifacts_failed": 0,
+    "restricted_content_emitted": false
+  },
+  "repository_exposure": {
+    "local_files_hashed": 404,
+    "local_execution_text_files_scanned": 88,
+    "restricted_artifacts_versioned": 0,
+    "holdout_tokens_in_execution_material": 0
+  },
+  "reproducibility": {
+    "local_metadata_gate": "passed",
+    "vps_metadata_gate": "passed",
+    "vps_catalog_sha256_matches_local": true,
+    "ci_metadata_gate_configured": true,
+    "vps_network_enabled": false,
+    "vps_private_corpus_present": false
+  },
+  "automated_regression": {
+    "tests_passed": 199,
+    "coverage_percent": 84.89,
+    "ruff": "passed",
+    "mypy_strict": "passed"
+  },
+  "deployment": {
+    "image": "idml-foundation:phase7-v01-corpus-integrity-v1",
+    "image_id": "sha256:9a3c733134a52cfcd82bf8796c8915e53f179235286505008ab681e0af82471d",
+    "backup": "/opt/idml-platform/backups/20260904T200455Z",
+    "backup_restore": "passed",
+    "api_health": "healthy",
+    "worker_health": "healthy",
+    "openclaw_health": "healthy",
+    "application_feature_flags_false": true
+  },
+  "production_activation_authorized": false,
+  "next_family": "V-02"
+}

@@ -1,0 +1,6 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+ARG VALIDATOR_NAME
+# Keep the qualified scoped entrypoint and every native package byte unchanged.
+COPY --chmod=444 scoped_validator_adapter.py history_compat.py /validator/
+COPY --chmod=444 history_validator_adapter.py /validator/${VALIDATOR_NAME}_validate.py

@@ -1,0 +1,211 @@
+{
+  "version": "h1-doi-retry-linux-1.0",
+  "executed_at": "2026-09-30",
+  "scope": "Isolated laboratory classification; authority snapshot only qualified locally, not transferred or integrated in Linux.",
+  "articles": {
+    "esa-e20240086": {
+      "version": "h1-validator-socket-smoke-1.1",
+      "case": "real",
+      "executions_completed": true,
+      "cases": [
+        {
+          "name": "packtools",
+          "case": "real",
+          "status": "completed",
+          "counts": {
+            "blocking": 3,
+            "critical": 22,
+            "error": 4,
+            "warning": 12
+          },
+          "candidate_sha256": "7081d302358f8c022114a0ebf568372af43e115bda38a748cc7c2ebbc1494ad0",
+          "tool_sha256": "4a35ec1dba3c62a8fa52cfdda87b3908c873c02034371fb7809a0fed1ca5ad61",
+          "report_sha256": "abdd2b7773e500d61b3563f608d5f38559b98069d24ede0eb51c5d5e5c3c1b73",
+          "failure_code": null,
+          "passed": false,
+          "issue_codes": [
+            "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+            "aff-state-addr-line-state-exist-b767117669fa",
+            "app-app-element-app-group-app-exist-6e8b29290a5b",
+            "article-dates-pub-date-date-pub-format-80b782eb212d",
+            "article-dates-pub-date-pub-day-pub-date-pub-exist-8e078bf80ec0",
+            "article-dates-pub-date-pub-month-pub-date-pub-exist-0e561c0ff684",
+            "article-dates-valid-date-accepted-value-c3e694c7802c",
+            "article-id-registered-doi-article-id-pub-id-type-doi-registered-235505bec3f8",
+            "bibliographic-strip-registered-issue-volume-number-supplement-value-in-list-f004897586f4",
+            "contrib-credit-taxonomy-consistency-mixed-roles-role-content-type-consistency-eeb16e30e4fe",
+            "contrib-credit-taxonomy-term-role-exist-0af993405179",
+            "contrib-credit-taxonomy-uri-role-exist-845dda3d1ae9",
+            "contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-8ac6d24f063c",
+            "external-verification-unavailable-doi-registry",
+            "external-verification-unavailable-journal-issues",
+            "external-verification-unavailable-journal-sections",
+            "funding-data-award-id-and-funding-source-award-group-award-id-exist-c1c062bef12e",
+            "funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-d12364d1c76a",
+            "history-required-date-pub-history-date-date-type-pub-exist-fe5a32c8bf44",
+            "history-required-date-rev-recd-history-date-date-type-rev-recd-exist-3e953fb9b41f",
+            "history-required-date-rev-request-history-date-date-type-rev-request-exist-4f1d58f9fc9d",
+            "id-and-rid-disp-formula-id-e-formula-0e118109-65d4-56f5-8082-3ea1436f0d10-is-linked-to-xref-disp-formula-id-match-2f146ebcc8e7",
+            "id-and-rid-disp-formula-id-e-formula-44665dfc-6476-50ef-a786-f9a5fe6a51f7-is-linked-to-xref-disp-formula-id-match-4bbeca1fa4c8",
+            "id-and-rid-disp-formula-id-e-formula-500818b8-d682-5149-893e-c989336435b0-is-linked-to-xref-disp-formula-id-match-c0eb2f7a55f7",
+            "reference-element-citation-versus-mixed-citation-element-citation-match-d18501a6974d",
+            "sec-sec-content-sec-p-exist-6ca2373fbf26",
+            "subject-table-of-contents-section-subj-group-subject-value-in-list-59eb58580f67"
+          ],
+          "transport_completed": true,
+          "client_exit_code": 0
+        },
+        {
+          "name": "spsvalidator",
+          "case": "real",
+          "status": "completed",
+          "counts": {
+            "blocking": 3,
+            "critical": 22,
+            "error": 4,
+            "warning": 12
+          },
+          "candidate_sha256": "6b209eb4209e20aff17b653545f5553af3b562c9549ee34b5a2ca49671d9c4f6",
+          "tool_sha256": "372a13a1ad2dcbf94391559c20db4f63c1fbf3ab13453bf38e9e43ec1d34db77",
+          "report_sha256": "716a899434d407ce1b2cde1763f70f9f2c171abc84bdf0914b945cbe7d252abb",
+          "failure_code": null,
+          "passed": false,
+          "issue_codes": [
+            "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+            "aff-aff-state-addr-line-state-exist-302311123921",
+            "app-app-app-element-app-group-app-exist-b70163d3b3dc",
+            "article-dates-article-dates-pub-date-date-pub-format-78e3c776d3aa",
+            "article-dates-article-dates-pub-date-pub-day-pub-date-pub-exist-55cfcb45d6aa",
+            "article-dates-article-dates-pub-date-pub-month-pub-date-pub-exist-1d9df77c1724",
+            "article-dates-article-dates-valid-date-accepted-value-c9b55e168d69",
+            "article-id-article-id-registered-doi-article-id-pub-id-type-doi-registered-98aca8200e0d",
+            "bibliographic-strip-bibliographic-strip-registered-issue-volume-number-supplement-value-in-list-f6922614fc5f",
+            "contrib-contrib-credit-taxonomy-consistency-mixed-roles-role-content-type-consistency-a62acdb6a3eb",
+            "contrib-contrib-credit-taxonomy-term-role-exist-e8df84ab3684",
+            "contrib-contrib-credit-taxonomy-uri-role-exist-68c357fe2848",
+            "contrib-contrib-orcid-format-contrib-id-contrib-id-type-orcid-format-c5fe7973d774",
+            "external-verification-unavailable-doi-registry",
+            "external-verification-unavailable-journal-issues",
+            "external-verification-unavailable-journal-sections",
+            "funding-data-funding-data-award-id-and-funding-source-award-group-award-id-exist-1fcad4ebc009",
+            "funding-data-funding-data-required-funding-group-award-group-with-award-id-and-funding-source-award-group-award-id-exist-89359b29da1b",
+            "history-history-required-date-pub-history-date-date-type-pub-exist-f3038182317b",
+            "history-history-required-date-rev-recd-history-date-date-type-rev-recd-exist-ef912a098978",
+            "history-history-required-date-rev-request-history-date-date-type-rev-request-exist-23889e3b4763",
+            "id-and-rid-id-and-rid-disp-formula-id-e-formula-0e118109-65d4-56f5-8082-3ea1436f0d10-is-linked-to-xref-disp-formula-id-m-087e8465041c",
+            "id-and-rid-id-and-rid-disp-formula-id-e-formula-44665dfc-6476-50ef-a786-f9a5fe6a51f7-is-linked-to-xref-disp-formula-id-m-a9e280337564",
+            "id-and-rid-id-and-rid-disp-formula-id-e-formula-500818b8-d682-5149-893e-c989336435b0-is-linked-to-xref-disp-formula-id-m-01880654cbe7",
+            "reference-reference-element-citation-versus-mixed-citation-element-citation-match-dcd31799e4f0",
+            "sec-sec-sec-content-sec-p-exist-1b8d5e5cd455",
+            "subject-subject-table-of-contents-section-subj-group-subject-value-in-list-6a9b7648cf8d"
+          ],
+          "transport_completed": true,
+          "client_exit_code": 0
+        }
+      ],
+      "existing_services_unchanged": true,
+      "socket_removed": true,
+      "scratch_empty": true,
+      "private_corpus_used": true,
+      "production_activated": false
+    },
+    "esa-e20240135": {
+      "version": "h1-validator-socket-smoke-1.1",
+      "case": "real",
+      "executions_completed": true,
+      "cases": [
+        {
+          "name": "packtools",
+          "case": "real",
+          "status": "completed",
+          "counts": {
+            "blocking": 4,
+            "critical": 6,
+            "error": 4,
+            "warning": 8
+          },
+          "candidate_sha256": "1757cdb3a15b7fd44beb009e794ff812995eb59cd6e2c1eee2cabee15f9a9706",
+          "tool_sha256": "4a35ec1dba3c62a8fa52cfdda87b3908c873c02034371fb7809a0fed1ca5ad61",
+          "report_sha256": "5430ec88c881a8f640d1f0ccd0e8043ac49d879769db0cad9bc424bb2731bce8",
+          "failure_code": null,
+          "passed": false,
+          "issue_codes": [
+            "aff-orgdiv2-institution-content-type-orgdiv2-exist-4bb6052e0349",
+            "aff-state-addr-line-state-exist-b767117669fa",
+            "app-app-element-app-group-app-exist-6e8b29290a5b",
+            "article-id-registered-doi-article-id-pub-id-type-doi-registered-235505bec3f8",
+            "bibliographic-strip-registered-issue-volume-number-supplement-value-in-list-f004897586f4",
+            "contrib-registered-orcid-contrib-id-contrib-id-type-orcid-registered-26d9e269d583",
+            "external-verification-unavailable-doi-registry",
+            "external-verification-unavailable-journal-issues",
+            "external-verification-unavailable-journal-sections",
+            "external-verification-unavailable-orcid-registry",
+            "history-required-date-rev-recd-history-date-date-type-rev-recd-exist-3e953fb9b41f",
+            "history-required-date-rev-request-history-date-date-type-rev-request-exist-4f1d58f9fc9d",
+            "subject-table-of-contents-section-subj-group-subject-value-in-list-59eb58580f67"
+          ],
+          "transport_completed": true,
+          "client_exit_code": 0
+        },
+        {
+          "name": "spsvalidator",
+          "case": "real",
+          "status": "completed",
+          "counts": {
+            "blocking": 4,
+            "critical": 6,
+            "error": 4,
+            "warning": 8
+          },
+          "candidate_sha256": "e0be244b52eb524328a3f260c426617850bb057e3bbc9ecb82c43134929950c8",
+          "tool_sha256": "372a13a1ad2dcbf94391559c20db4f63c1fbf3ab13453bf38e9e43ec1d34db77",
+          "report_sha256": "720c8521c5082b0d06ee0928220bdc8949b482f02b47321922e6fa7eedd09608",
+          "failure_code": null,
+          "passed": false,
+          "issue_codes": [
+            "aff-aff-orgdiv2-institution-content-type-orgdiv2-exist-aeb9d1e856d7",
+            "aff-aff-state-addr-line-state-exist-302311123921",
+            "app-app-app-element-app-group-app-exist-b70163d3b3dc",
+            "article-id-article-id-registered-doi-article-id-pub-id-type-doi-registered-98aca8200e0d",
+            "bibliographic-strip-bibliographic-strip-registered-issue-volume-number-supplement-value-in-list-f6922614fc5f",
+            "contrib-contrib-registered-orcid-contrib-id-contrib-id-type-orcid-registered-2ca467ac0cf7",
+            "external-verification-unavailable-doi-registry",
+            "external-verification-unavailable-journal-issues",
+            "external-verification-unavailable-journal-sections",
+            "external-verification-unavailable-orcid-registry",
+            "history-history-required-date-rev-recd-history-date-date-type-rev-recd-exist-ef912a098978",
+            "history-history-required-date-rev-request-history-date-date-type-rev-request-exist-23889e3b4763",
+            "subject-subject-table-of-contents-section-subj-group-subject-value-in-list-6a9b7648cf8d"
+          ],
+          "transport_completed": true,
+          "client_exit_code": 0
+        }
+      ],
+      "existing_services_unchanged": true,
+      "socket_removed": true,
+      "scratch_empty": true,
+      "private_corpus_used": true,
+      "production_activated": false
+    }
+  },
+  "cleanup": {
+    "private_candidate_copies_removed": 4,
+    "local_originals_preserved": true,
+    "health_ready": {
+      "database": "ok",
+      "redis": "ok"
+    },
+    "mem_available_kib": 960804
+  },
+  "formal_validation_passed": false,
+  "deployed": false,
+  "human_homologation_released": false,
+  "regression": {
+    "tests_passed": 736,
+    "warnings": 3,
+    "line_coverage_percent": 88.02,
+    "focused_tests": 59,
+    "ruff_passed": true,
+    "doi_snapshot_mypy_passed": true
+  }
+}

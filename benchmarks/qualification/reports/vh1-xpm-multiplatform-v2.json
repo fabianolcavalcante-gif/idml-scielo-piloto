@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-10-15T14:27:17.367220+00:00",
+  "source": "https://documentacao.scielo.org/books/scielo-pc-programs/page/download",
+  "directory": "xpm/multiplatform",
+  "downloaded": false,
+  "executed": false,
+  "compatible_distribution_proven": false,
+  "entry_count": 10,
+  "entries": [
+    "4.0.095_win7_or_proxy",
+    "SciELO_XPM-4.0.091.zip",
+    "SciELO_XPM-4.0.092.zip",
+    "SciELO_XPM-4.0.093_R2_2017-04-19.zip",
+    "SciELO_XPM-4.0.094.zip",
+    "SciELO_XPM-4.0.095.zip",
+    "SciELO_XPM_4.0.095_R20180426.zip",
+    "SciELO_XPM_4.0.096-R20190411.zip",
+    "SciELO_XPM_4.0.096-R20190422.zip",
+    "SciELO_XPM_4.0.096-R20231215.zip"
+  ],
+  "software_files": [
+    "SciELO_XPM-4.0.091.zip",
+    "SciELO_XPM-4.0.092.zip",
+    "SciELO_XPM-4.0.093_R2_2017-04-19.zip",
+    "SciELO_XPM-4.0.094.zip",
+    "SciELO_XPM-4.0.095.zip",
+    "SciELO_XPM_4.0.095_R20180426.zip",
+    "SciELO_XPM_4.0.096-R20190411.zip",
+    "SciELO_XPM_4.0.096-R20190422.zip",
+    "SciELO_XPM_4.0.096-R20231215.zip"
+  ],
+  "archives": [
+    "SciELO_XPM_4.0.095_R20180426.zip",
+    "SciELO_XPM_4.0.096-R20190411.zip",
+    "SciELO_XPM_4.0.096-R20190422.zip",
+    "SciELO_XPM_4.0.096-R20231215.zip"
+  ],
+  "status": "listed"
+}

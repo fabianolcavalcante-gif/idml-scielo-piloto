@@ -1,0 +1,36 @@
+{
+  "version": "openclaw-multi-agent-lab-1.0",
+  "dataset_version": "idml-agent-real-domain-eval-1.2",
+  "corpus_id": "esa-e20240135",
+  "source_idml_sha256": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574",
+  "agent_id": "idml-evaluator",
+  "model_key": "openai/gpt-5.4-mini",
+  "selected_case_ids": [
+    "esa-math-notes-observed-001",
+    "esa-math-notes-observed-002",
+    "esa-math-notes-observed-003",
+    "esa-math-notes-observed-004",
+    "esa-math-notes-observed-005",
+    "esa-math-notes-observed-006",
+    "esa-math-notes-observed-007",
+    "esa-math-notes-observed-008",
+    "esa-math-notes-observed-009"
+  ],
+  "roles": [
+    {"role": "proposer", "max_output_tokens": 2000},
+    {"role": "xml_critic", "max_output_tokens": 1000},
+    {"role": "editorial_critic", "max_output_tokens": 1000},
+    {"role": "adjudicator", "max_output_tokens": 1000}
+  ],
+  "timeout_seconds": 60,
+  "max_attempts": 2,
+  "max_input_tokens_per_call": 12000,
+  "max_total_cost_microusd": 3000000,
+  "max_repair_cycles": 2,
+  "require_hidden_gold_equivalence": false,
+  "thinking_level": "medium",
+  "concurrency": 1,
+  "require_human_review": true,
+  "require_application_flags_false": true,
+  "execution_confirmation": "RUN_IDML_OPENCLAW_MULTI_AGENT_LAB_V20"
+}

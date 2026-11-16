@@ -1,0 +1,97 @@
+{
+  "version": "vh09-promotion-historical-policy-replay-1.0",
+  "executed_at": "2026-10-29T19:34:42.368567+00:00",
+  "summary_sha256": "54e1ee9ddb0291828aa9f9092482ffbadcd920c7e8ebf97296404d023349003c",
+  "structural_sha256": "b597f1f154ffb94fb8ab483344bb502c1451a81ee93589ebd5b5430edbdef503",
+  "cases": [
+    {
+      "case": "esa-e20240086-baseline",
+      "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690",
+      "package_sha256": "07a4789dfcb70aed8436b3f69a67be9b3112954f054857b249f693b20f00f7d4",
+      "offline_valid": true,
+      "historical_policy_decision": {
+        "policy_version": "autocorrection-working-draft-admission-1.0",
+        "eligible": true,
+        "reasons": [],
+        "pending_review": [
+          "affiliation-source-review",
+          "delivery-doctype-editorial-review",
+          "orcid-ownership-not-authenticated",
+          "packtools-warnings-review",
+          "spsvalidator-warnings-review",
+          "xpm-warnings-review"
+        ],
+        "warnings_accepted": false,
+        "release_approved": false,
+        "homologation_ready": false
+      },
+      "actual_promotion": false
+    },
+    {
+      "case": "esa-e20240135-baseline",
+      "xml_sha256": "f2540405e65898aa2d5bd045075fbc22d2e06177f782e3a649ba891738002412",
+      "package_sha256": "de753e0aad72debdf6fee7c770b1c82f2ed6d59824bf9548c0cc45ba4b3d8a1b",
+      "offline_valid": true,
+      "historical_policy_decision": {
+        "policy_version": "autocorrection-working-draft-admission-1.0",
+        "eligible": false,
+        "reasons": [
+          "fresh-validation-not-qualified-for-working-draft"
+        ],
+        "pending_review": [
+          "delivery-doctype-editorial-review",
+          "packtools-warnings-review",
+          "spsvalidator-warnings-review",
+          "xpm-warnings-review"
+        ],
+        "warnings_accepted": false,
+        "release_approved": false,
+        "homologation_ready": false
+      },
+      "actual_promotion": false
+    },
+    {
+      "case": "esa-e20240086-missing_journal_title",
+      "xml_sha256": "220e057a15ab84ee5da02b502e97fe1268576700df5d4ce0ed1e304be8408ce7",
+      "package_sha256": "a04a1369cac1076a689187c72dda778ecce12c13b59187a26ac280713f2259cc",
+      "offline_valid": false,
+      "historical_policy_decision": {
+        "policy_version": "autocorrection-working-draft-admission-1.0",
+        "eligible": false,
+        "reasons": [
+          "fresh-validation-not-qualified-for-working-draft"
+        ],
+        "pending_review": [],
+        "warnings_accepted": false,
+        "release_approved": false,
+        "homologation_ready": false
+      },
+      "actual_promotion": false
+    },
+    {
+      "case": "esa-e20240086-malformed_xml",
+      "xml_sha256": "e0db26146d473d8199c5f8c9f3a10167c30701c2369ca4a509f92958de7b9896",
+      "package_sha256": "b90339042f950e93c3cfd100dbe399d675afed9a81773c77698ba9c7de12cb9f",
+      "offline_valid": false,
+      "historical_policy_decision": {
+        "policy_version": "autocorrection-working-draft-admission-1.0",
+        "eligible": false,
+        "reasons": [
+          "fresh-validation-not-qualified-for-working-draft"
+        ],
+        "pending_review": [],
+        "warnings_accepted": false,
+        "release_approved": false,
+        "homologation_ready": false
+      },
+      "actual_promotion": false
+    }
+  ],
+  "policy_sha256": "a6a8b618043e258838862d799e20b6e82b66c5fb451eb1e3613b466a7078647b",
+  "driver_sha256": "a0cb421acc6639cc868d63f6cc624e34e1cd89dc003b80fcbbc0ee916fb9460f",
+  "fresh_offline_validation": true,
+  "new_external_executions": 0,
+  "authorization_renewed": false,
+  "actual_promotions": 0,
+  "release_approved": false
+}

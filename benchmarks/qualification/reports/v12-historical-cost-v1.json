@@ -1,0 +1,265 @@
+{
+  "version": "phase7-v12-historical-cost-1.0",
+  "corpus_id": "esa-e20240135",
+  "scope": "Recorded development windows 7C-03 and 7C-07, including failed roles; not recurring article price or provider invoice",
+  "runs": [
+    {
+      "run_id": "phase7-7c03-formulas-v20-001",
+      "report_sha256": "32a7edcf83e771ef32442b353679863e0e0362468e714c67408de692abd244df",
+      "completed": false,
+      "recorded_cost_microusd": 18000,
+      "role_calls": 1,
+      "failed_roles": 1,
+      "repair_role_calls": 0,
+      "failed_role_cost_microusd": 18000
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v20-003",
+      "report_sha256": "79d0457389ada4d499b16987f0ed330e9280107c09637396dc3c313c3ed2218b",
+      "completed": true,
+      "recorded_cost_microusd": 202033,
+      "role_calls": 32,
+      "failed_roles": 0,
+      "repair_role_calls": 2,
+      "failed_role_cost_microusd": 0
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v20-004",
+      "report_sha256": "ae38d33b587627a7b85d3f3d73a30e6c978d7d0e2b079f10967928e6d266fb34",
+      "completed": false,
+      "recorded_cost_microusd": 171353,
+      "role_calls": 24,
+      "failed_roles": 1,
+      "repair_role_calls": 0,
+      "failed_role_cost_microusd": 13500
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v20-005",
+      "report_sha256": "6d7cb39de95ffd938d6e20fa9f9a72d30fd84bda5c5d8907669aab350000df61",
+      "completed": false,
+      "recorded_cost_microusd": 206217,
+      "role_calls": 30,
+      "failed_roles": 1,
+      "repair_role_calls": 1,
+      "failed_role_cost_microusd": 18000
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v21-001",
+      "report_sha256": "603c4f5f6a9330f997e9c88df361429ae17738545284680da668653543050c1e",
+      "completed": true,
+      "recorded_cost_microusd": 233591,
+      "role_calls": 27,
+      "failed_roles": 0,
+      "repair_role_calls": 0,
+      "failed_role_cost_microusd": 0
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v21-003",
+      "report_sha256": "f8109b48feed9b85a0de0fb97d9f25359da1af30fe0cb6bd63c1e24ab59f5bc0",
+      "completed": false,
+      "recorded_cost_microusd": 184700,
+      "role_calls": 19,
+      "failed_roles": 1,
+      "repair_role_calls": 1,
+      "failed_role_cost_microusd": 36000
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v22-001",
+      "report_sha256": "2242871338c0da3ce99b1fa1a875068c594dd37d6f1a0fb2dcd04bb6975ff29a",
+      "completed": false,
+      "recorded_cost_microusd": 79097,
+      "role_calls": 7,
+      "failed_roles": 1,
+      "repair_role_calls": 1,
+      "failed_role_cost_microusd": 36000
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v22-002",
+      "report_sha256": "66e3c2df6b4e1d107b9c7cefdf2909da6cafa1c0c30b0d64228674e21b182d01",
+      "completed": false,
+      "recorded_cost_microusd": 39078,
+      "role_calls": 2,
+      "failed_roles": 1,
+      "repair_role_calls": 1,
+      "failed_role_cost_microusd": 36000
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v22-003",
+      "report_sha256": "32b4144d98ea8a498754a1f8d4806ff0aa5209d8d766aebc217b57b7c6cfcf50",
+      "completed": true,
+      "recorded_cost_microusd": 247862,
+      "role_calls": 40,
+      "failed_roles": 0,
+      "repair_role_calls": 4,
+      "failed_role_cost_microusd": 0
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v23-001",
+      "report_sha256": "c6d5428280a59e70a724cfba04e513a2af958a6bf3fea006530233b97c756d7b",
+      "completed": false,
+      "recorded_cost_microusd": 113824,
+      "role_calls": 12,
+      "failed_roles": 1,
+      "repair_role_calls": 1,
+      "failed_role_cost_microusd": 36000
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v24-001",
+      "report_sha256": "f39d99d889ba25d152fd50f39060a792beb98235056b252d81cffb88789fad33",
+      "completed": true,
+      "recorded_cost_microusd": 168568,
+      "role_calls": 28,
+      "failed_roles": 0,
+      "repair_role_calls": 0,
+      "failed_role_cost_microusd": 0
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v25-001",
+      "report_sha256": "d30c804f200ab6ba7729f2d866f52451591d2773b82a1bb5cfda051d9d0ee9d7",
+      "completed": false,
+      "recorded_cost_microusd": 57864,
+      "role_calls": 5,
+      "failed_roles": 1,
+      "repair_role_calls": 0,
+      "failed_role_cost_microusd": 27000
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v26-001",
+      "report_sha256": "6799c6194ad83df49b9845339fadcfce1e486775543a0a6965fe06cd46f4cb7b",
+      "completed": true,
+      "recorded_cost_microusd": 39386,
+      "role_calls": 4,
+      "failed_roles": 0,
+      "repair_role_calls": 0,
+      "failed_role_cost_microusd": 0
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v27-001",
+      "report_sha256": "99e835cc01ba9badc7a0f7b8289ca20f25d08ab1b22f84b9cdb54318e106b4b8",
+      "completed": true,
+      "recorded_cost_microusd": 203256,
+      "role_calls": 24,
+      "failed_roles": 0,
+      "repair_role_calls": 3,
+      "failed_role_cost_microusd": 0
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v28-001",
+      "report_sha256": "077f9ca3577e9684f2c120cfc03f10e7c03fc80b3d475cfa2c1731c915d3679c",
+      "completed": true,
+      "recorded_cost_microusd": 83921,
+      "role_calls": 9,
+      "failed_roles": 0,
+      "repair_role_calls": 1,
+      "failed_role_cost_microusd": 0
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v29-001",
+      "report_sha256": "882ebba3a3db3ae03cb9515819ecda2f4c343bb5c19d4f2d02c7a0817c698501",
+      "completed": true,
+      "recorded_cost_microusd": 136736,
+      "role_calls": 20,
+      "failed_roles": 0,
+      "repair_role_calls": 4,
+      "failed_role_cost_microusd": 0
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v30-001",
+      "report_sha256": "deb949c0f48ffa0d150fa1348bd2794dc09cc79ac5881dc081eeab98d1617634",
+      "completed": true,
+      "recorded_cost_microusd": 77611,
+      "role_calls": 13,
+      "failed_roles": 0,
+      "repair_role_calls": 1,
+      "failed_role_cost_microusd": 0
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v31-001",
+      "report_sha256": "51d4aab385a6d3e4be6c396b2627520eb053c8c23d7bd505369b62dda0b18758",
+      "completed": true,
+      "recorded_cost_microusd": 28841,
+      "role_calls": 4,
+      "failed_roles": 0,
+      "repair_role_calls": 0,
+      "failed_role_cost_microusd": 0
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v32-001",
+      "report_sha256": "3e80c126d3756bc33db3454e07a499291b936bb02a2c2b3d6ee1f1f43ee83180",
+      "completed": true,
+      "recorded_cost_microusd": 211715,
+      "role_calls": 28,
+      "failed_roles": 0,
+      "repair_role_calls": 0,
+      "failed_role_cost_microusd": 0
+    },
+    {
+      "run_id": "phase7-7c03-formulas-v33-001",
+      "report_sha256": "6a77be0d6d2353a88986d503c3da59f643a21c7b85396ee2e57f7db7f5ebdaf4",
+      "completed": true,
+      "recorded_cost_microusd": 33141,
+      "role_calls": 4,
+      "failed_roles": 0,
+      "repair_role_calls": 0,
+      "failed_role_cost_microusd": 0
+    },
+    {
+      "run_id": "phase7-7c07-domains-v34-001",
+      "report_sha256": "c66b4c10b94fee3c17c397b423eeb348826fd390fe5a8b5f0e2aad32bdb1e2d3",
+      "completed": true,
+      "recorded_cost_microusd": 140447,
+      "role_calls": 24,
+      "failed_roles": 0,
+      "repair_role_calls": 0,
+      "failed_role_cost_microusd": 0
+    }
+  ],
+  "assistive_domains": [
+    {
+      "domain": "metadata",
+      "recorded_cost_microusd": 21703,
+      "duration_ms": 25154,
+      "role_calls": 4,
+      "repair_cycles": 0
+    },
+    {
+      "domain": "contributors_affiliations",
+      "recorded_cost_microusd": 22309,
+      "duration_ms": 17904,
+      "role_calls": 4,
+      "repair_cycles": 0
+    },
+    {
+      "domain": "structure",
+      "recorded_cost_microusd": 22409,
+      "duration_ms": 23639,
+      "role_calls": 4,
+      "repair_cycles": 0
+    },
+    {
+      "domain": "references",
+      "recorded_cost_microusd": 25797,
+      "duration_ms": 28357,
+      "role_calls": 4,
+      "repair_cycles": 0
+    },
+    {
+      "domain": "figures_tables",
+      "recorded_cost_microusd": 22097,
+      "duration_ms": 20155,
+      "role_calls": 4,
+      "repair_cycles": 0
+    },
+    {
+      "domain": "math_notes",
+      "recorded_cost_microusd": 26132,
+      "duration_ms": 20936,
+      "role_calls": 4,
+      "repair_cycles": 0
+    }
+  ],
+  "recorded_cost_microusd": 2677241,
+  "failed_role_cost_microusd": 220500,
+  "new_provider_calls": 0,
+  "restricted_content_emitted": false
+}

@@ -1,0 +1,85 @@
+{
+  "version": "vh1-xpm-semantic-qualification-1.0",
+  "date": "2026-10-23",
+  "scope": "independent-selected-crossref-orcid-response-verification",
+  "source_archive": {
+    "release": "vh1-xpm-semantic-20261023-v3",
+    "sha256": "1871c0657b75568a7aa9920ca446a3fac781657ceb492ac47793405f5917f379",
+    "files": 1142,
+    "private_inputs_included": false
+  },
+  "tests": {
+    "local_passed": 373,
+    "linux_passed": 373,
+    "new_cases": 55,
+    "counts_overlap": true,
+    "final_failures": 0,
+    "final_errors": 0,
+    "final_skipped": 0,
+    "warnings_per_final_run": 1,
+    "local_duration_seconds": 38.5,
+    "linux_duration_seconds": 28.72,
+    "full_suite_repeated": false,
+    "global_coverage_measured": false
+  },
+  "real_execution": {
+    "summary": "benchmarks/qualification/reports/vh1-xpm-semantic-real-v1.json",
+    "postcheck": "tmp/vh1-xpm-semantic-postcheck.json",
+    "root": "/opt/idml-platform/private/qualification/vh1-xpm-semantic-20261023T150553Z",
+    "articles": 2,
+    "negative_cases": 2,
+    "attested_reports": 4,
+    "verified_query_receipts": 13,
+    "sealed_files_root_0600": 19,
+    "baseline_crossref_matches": 2,
+    "baseline_orcid_matches": 3,
+    "baseline_orcid_names_unconfirmed": 4,
+    "negative_crossref_conflicts": 1,
+    "malformed_xml_semantic_collection_performed": false,
+    "original_inputs_and_vendor_files_unchanged": true,
+    "active_services_unchanged": 25,
+    "temporary_networks_remaining": 0,
+    "required_queries_complete": false,
+    "authenticated_orcid_ownership": false
+  },
+  "intermediate_attempt": {
+    "root": "/opt/idml-platform/private/qualification/vh1-xpm-semantic-20261023T150220Z",
+    "status": "partial-not-accepted",
+    "cause": "Concurrent Linux regression container consumed memory reserve; supervisor refused last real case. Inventory added only temporary regression container; 25 active services unchanged.",
+    "correction": "Real matrix repeated without concurrent VPS regression; regression executed afterward; no reserve reduction."
+  },
+  "checks": {
+    "ruff_global": true,
+    "mypy_source_files": 130,
+    "formatted_files": 9,
+    "source_manifest_verified": true
+  },
+  "source_and_evidence_sha256": {
+    "src/idml_foundation/services/xpm_query_targets.py": "91e107f7bc34216eb1356cba00224fc7402e60bb3e3f8abdc48f6b3e28b48625",
+    "src/idml_foundation/release/xpm_query_semantics.py": "bfcc96b9da1b6163986f3bb8a4ca8d42a9a0773254c954b49e40b6597b67dd1a",
+    "ops/xpm_authority_collect.py": "4ed0a34bc0842bf99f980d84be84c69559128fbe810e11ac7d56635953f04407",
+    "src/idml_foundation/services/xpm_execution.py": "8297b289a7e6dfbd0f74d4a0165f7343b6e3c609293c3de2b572a44c3af9f06a",
+    "src/idml_foundation/services/xpm_socket.py": "9bea3cf9f795f374eb4917811938f2c7b7d14f808ee7d4cfa197375d1306d7e9",
+    "ops/xpm_validator_broker.py": "5540c9a9c94116e450d13c33d6c450ba127d1f53379e8a1381c640afbc0b9d54",
+    "ops/qualify_vh1_xpm_socket.py": "9125e391232f5ae5f160e43d17c25b46faf1690ac9adf6fdb81fcedadeed8bd6",
+    "src/idml_foundation/services/package_validation.py": "2437752bfc199899876098a4341ba2a17fdec43d84d8cb488b461cbeb3116b88",
+    "tests/test_xpm_query_semantics.py": "83e05d6560d8cb4fd4970d6abebdb2b727dbb502444373af70bcafeb6b221f24",
+    "tmp/vh1-xpm-semantic-tests.xml": "8109bce208f1d200ec3bb4c015f4edd914dde739579e525058c3ea3c183a1493",
+    "tmp/vh1-xpm-semantic-linux-tests.log": "d883fb79e61065341ba84ce9298fcdd7e6521dea77e65198cdc431f650e8a3f9",
+    "tmp/vh1-xpm-semantic-postcheck.json": "2db39ac8e3779bfdc7f0fcb89684381c43184bab93924b2fdbb85f751918dd97",
+    "benchmarks/qualification/reports/vh1-xpm-semantic-real-v1.json": "565918f6478c1fcdbaa6c7371a14c384ea21846fa0a30a23e0583eeaec727474"
+  },
+  "limitations": [
+    "Independent source responses, not interception or proof of every XPM internal query",
+    "Four e135 public ORCID names not exactly confirmed; this alone does not prove incorrect identifiers",
+    "No fuzzy identity, author renaming, identifier changes or authenticated-ownership assertion",
+    "DOCTYPE/JATS, residual finding and complete ADR-019/query integration remain pending",
+    "Candidate not provisioned in active API/worker; no human acceptance or G-HOMOLOG",
+    "No global CI or new global coverage claim"
+  ],
+  "candidate_stored_on_vps": true,
+  "active_runtime_changed": false,
+  "database_changed": false,
+  "formal_xml_approved": false,
+  "ai_invoked": false
+}

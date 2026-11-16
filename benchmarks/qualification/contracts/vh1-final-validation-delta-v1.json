@@ -1,0 +1,25 @@
+{
+  "version": "vh1-final-validation-delta-1.0",
+  "gold_used": false,
+  "scientific_fidelity_approved": false,
+  "source_idml_sha256": {
+    "esa-e20240086": "8ce185f5dd03f5403a36ca7b60d9d708b95e2b334e731327dd0b568b0cd44d2c",
+    "esa-e20240135": "48c5c693d0e1a3f5fa597811fc861fccf21b987956340966552bbefec0175574"
+  },
+  "cases": {
+    "esa-e20240086": [
+      {
+        "after_sha256": "0a9ea8f6b2991b75ab63812996fe097148e4dd7f904e507b6264afc6efff038d",
+        "before_sha256": "04e28244bec7949ea6fe9ce67153e647fa61267254ee194e9f89b9cfe6c0320e",
+        "combined_divisions_sha256": "7a5554799f0d4a6188cda7163074b3cbfd6f42878223373013677ea0563d81f6",
+        "divisions_sha256": [
+          "199bd3505b98eba48a8a9ef5eab784215455fe8e26f5176c51ee4a12080a1ddd",
+          "57d8b960520df9cd824d8528fbe83619f2f79e3052795f47709d2e50bb224639"
+        ],
+        "id": "affiliation-0c293498-3dde-51ad-93e0-5a9bfa8c88c5",
+        "original_sha256": "d82618003ddeefada882444a0fd46ad2a1cc5952a33d454a4bb3293fb857891f"
+      }
+    ],
+    "esa-e20240135": []
+  }
+}

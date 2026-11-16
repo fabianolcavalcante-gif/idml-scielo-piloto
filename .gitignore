@@ -15,6 +15,7 @@ dist/
 build/
 artifacts/
 backups/
+benchmarks/private/
 tmp/
 *.log
 *.db

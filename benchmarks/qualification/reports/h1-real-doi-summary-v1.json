@@ -1,0 +1,33 @@
+{
+  "version": "h1-real-doi-summary-1.0",
+  "executed_at": "2026-10-01",
+  "evidence": "h1-real-doi-local-20261001T113558Z.json",
+  "source_sha256": {
+    "ops/qualify_real_doi_authority.py": "9cc675e051583b3e474de4bff861c9c1b116f4540c084077a3f367867bb3b74f",
+    "ops/doi_validation_evidence.py": "ae4edc1c2c878ed86bcea10e857104d60e423b7f6ab332f8136df313c5b3660c",
+    "benchmarks/qualification/reports/h1-real-doi-local-20261001T113558Z.json": "9aa8b7c7f465f5e5731639af235396d7382200a0dfff80837ab18a6ead2bb51a",
+    "tests/test_doi_validation_evidence.py": "279850c58c29c522506da4e439fb692e3954d2ecb7654e75fe521570de1f329c"
+  },
+  "runtime_versions": {
+    "packtools": "4.16.9rc20260916",
+    "spsvalidator": "0.3.0"
+  },
+  "pinned_linux_runtime_equivalence_confirmed": false,
+  "explicit_native_doi_comparisons": 4,
+  "explicit_native_doi_passed": 4,
+  "xml_changed": false,
+  "gold_read": false,
+  "vps_upload": false,
+  "formal_xml_approved": false,
+  "tests": {
+    "regression_passed_before_observer_addition": 770,
+    "regression_warnings": 3,
+    "coverage_percent": 88.02,
+    "coverage_scope": "src/idml_foundation",
+    "focused_passed_after_observer_addition": 31,
+    "counts_overlap": true,
+    "ruff_passed": true,
+    "v10_passed": true
+  },
+  "next": "Align native runtime versions before interpreting count differences; journal authority, ORCID and content findings remain"
+}

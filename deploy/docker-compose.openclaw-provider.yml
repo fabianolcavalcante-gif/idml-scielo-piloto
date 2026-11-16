@@ -1,0 +1,56 @@
+services:
+  openclaw-egress-proxy:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.openclaw-egress-proxy
+    image: idml-openclaw-egress-proxy:6.12-r0
+    user: "31:31"
+    networks:
+      - idml_openclaw_provider
+      - idml_openclaw_egress
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777,uid=31,gid=31
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "grep ':0C38 ' /proc/net/tcp6 | grep -q ' 0A '",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    restart: unless-stopped
+    mem_limit: 96m
+    cpus: 0.15
+    pids_limit: 80
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+
+  openclaw-idml:
+    environment:
+      OPENAI_API_KEY: ${IDML_OPENAI_API_KEY:?define the authorized OpenAI provider key}
+      NODE_USE_ENV_PROXY: "1"
+      HTTPS_PROXY: http://openclaw-egress-proxy:3128
+      NO_PROXY: 127.0.0.1,localhost,openclaw-idml
+    networks:
+      - idml_openclaw
+      - idml_openclaw_provider
+    depends_on:
+      openclaw-egress-proxy:
+        condition: service_healthy
+
+networks:
+  idml_openclaw_provider:
+    name: idml_development_openclaw_provider
+    internal: true
+  idml_openclaw_egress:
+    name: idml_development_openclaw_egress

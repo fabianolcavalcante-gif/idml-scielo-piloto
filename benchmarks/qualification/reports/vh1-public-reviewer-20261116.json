@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-16",
+  "url": "https://143.95.214.8:8443/app",
+  "api": "vh19-web-recovery-20261116-v2",
+  "worker": "vh19-web-provider-20261114-v1",
+  "cases": {
+    "esa-e20240086": {
+      "reviewer_abstention": true,
+      "reviewer_download": true,
+      "reviewer_diagnosis": true,
+      "reviewer_write_status": 403,
+      "figures": 5,
+      "zip_sha256": "7c0d7052ff7c84d15cb077d2b7cbf736f5045ee167cb7902f2a63d331da4b07f",
+      "xml_sha256": "7e75b57753eba0b5cd9124ecabddba692a467ea666a8ce5f5fc953586dc7e690"
+    },
+    "esa-e20240135": {
+      "reviewer_abstention": true,
+      "reviewer_download": true,
+      "reviewer_diagnosis": true,
+      "reviewer_write_status": 403,
+      "figures": 7,
+      "zip_sha256": "985d3789ba5d9b9a1d8f6fc8b3c96ae9af0d63523663a164263b4b9d6de3ad45",
+      "xml_sha256": "f2540405e65898aa2d5bd045075fbc22d2e06177f782e3a649ba891738002412"
+    }
+  },
+  "public_password_flow": "passed_with_test_account",
+  "tls_renewal_dry_run": "passed",
+  "invitation": "sent",
+  "specialist_assessment": "pending"
+}

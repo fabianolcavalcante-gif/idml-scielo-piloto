@@ -1,0 +1,15 @@
+[Unit]
+Description=Scan one bounded IDML input
+
+[Service]
+ExecStart=/usr/bin/python3 -I /opt/idml-platform/releases/vh11-scan-queue-20261104-v1/ops/clamav_stream.py
+StandardInput=socket
+StandardOutput=null
+StandardError=journal
+PrivateTmp=yes
+ProtectHome=yes
+ProtectSystem=strict
+ReadWritePaths=/run/lock
+NoNewPrivileges=yes
+MemoryMax=160M
+RuntimeMaxSec=300

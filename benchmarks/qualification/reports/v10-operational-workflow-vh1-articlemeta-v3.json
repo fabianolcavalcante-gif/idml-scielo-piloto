@@ -1,0 +1,202 @@
+{
+  "version": "phase7-v10-operational-workflow-1.0",
+  "family": "V-10",
+  "executed_at": "2026-10-06T17:07:52.958188+00:00",
+  "dedicated_tests": 3,
+  "full_tests": null,
+  "line_coverage_percent": null,
+  "critical_scenarios": [
+    {
+      "id": "V10-IDENTITY-TENANT",
+      "result": "passed",
+      "evidence": "multi-role tenant-bound sessions and the existing invitation lifecycle"
+    },
+    {
+      "id": "V10-INGEST-PROCESS",
+      "result": "passed",
+      "evidence": "resource plus IDML, PDF, and image uploads followed by durable idml.process execution"
+    },
+    {
+      "id": "V10-XML-DOWNLOAD",
+      "result": "passed",
+      "evidence": "generated XML download SHA-256 equals the persisted job and artifact digest"
+    },
+    {
+      "id": "V10-IDEMPOTENCY",
+      "result": "passed",
+      "evidence": "same request reuses job without duplicate job, effect, artifact, snapshot, or job.create audit; conflicting reuse returns 409"
+    },
+    {
+      "id": "V10-REVIEW",
+      "result": "passed",
+      "evidence": "claim, canonical patch, immutable revision, JATS rebuild, validation, and audit"
+    },
+    {
+      "id": "V10-PACKAGE",
+      "result": "passed",
+      "evidence": "scielo.package creates deterministic ZIP from reviewed snapshot, PDF, and referenced asset"
+    },
+    {
+      "id": "V10-MANIFEST-INTEGRITY",
+      "result": "passed",
+      "evidence": "downloaded package, persisted package hash, manifest, member sizes, member hashes, and candidate-set hash agree"
+    },
+    {
+      "id": "V10-EDITORIAL-APPROVAL",
+      "result": "passed",
+      "evidence": "MFA requester plus two distinct MFA release managers reach editorially_approved"
+    },
+    {
+      "id": "V10-JOB-CONTROL",
+      "result": "passed",
+      "evidence": "queued cancellation, stale-version conflict, manual retry, and retry wake-up are reproducible"
+    },
+    {
+      "id": "V10-TRANSIENT-RESUME",
+      "result": "passed",
+      "evidence": "failed_retryable attempt resumes to success with an ordered six-event timeline"
+    },
+    {
+      "id": "V10-AUDIT",
+      "result": "passed",
+      "evidence": "upload, download, job, review, and release actions are present in the tenant audit trail"
+    },
+    {
+      "id": "V10-DEGRADED-AI-OFF",
+      "result": "passed",
+      "evidence": "complete deterministic workflow with OpenClaw and swarm flags false and zero agent runs/proposals"
+    },
+    {
+      "id": "V10-OPERATOR-UI",
+      "result": "passed",
+      "evidence": "resource, upload, process, package, review, cancel, retry, result, error, timeline, download, approval, and audit controls exposed; JavaScript syntax checked"
+    }
+  ],
+  "source_sha256": {
+    "ops/collect_vh1_affiliation_sources.py": "46c3607057bfa1adfe61a3117edeed1269cb97c253d749c824356495681f9641",
+    "ops/collect_vh1_articlemeta_dates.py": "26664fa36e68dabba3a1ddcff81c7a1b2f19d646ec206c77289cb8cacfab8c67",
+    "ops/collect_vh1_orcid_sources.py": "3cf171f8d3b7acafca424d4476e9e7bec1d8c4ed688a20c9ac558c5cc1b096b6",
+    "ops/external_verification.py": "afe54ce01b490153289a3b4d167a067771afc2ad6fe7af27c0aa5ef2eaf3cd0a",
+    "ops/provision_enrichment.py": "b08998547cfa88ceb7a9ae0efef1ae2a87c048600f28a18b177369086f9712ef",
+    "ops/provision_scoped_authorities.py": "280c4dbeba72db68e7822ba515d3700037f352911ab1f31e20708d2f52a8ea23",
+    "ops/qualify_vh1_metadata.py": "3b72bb80a6fc2e462c8d541a5b4c390b3e6b89ee27fc25ea8d921785e78a92f1",
+    "ops/requalify_vh1_articlemeta_workflow.py": "7b455f57bef6fc0f5357f4cda667dcdf8c27b7cd93a61b35cd46af83845e3f05",
+    "ops/scoped_authority_transport.py": "2d6a8cd07056464bb64b25739b1c9c423e3ec4ba94e674b992d6ad8baaced0f2",
+    "ops/scoped_validator_adapter.py": "dfc585716ea94e28834352dd225f80300d7f9a5a4324d026396cdd1da70b6509",
+    "ops/scoped_validator_broker.py": "e3cd6ccafe54523db1e70b76ecd7cc6f33da143487ae4206f1b7b7e80c5cb83f",
+    "ops/validator_adapter_common.py": "16ee3002394b041a1512a6ed0044d2a086c83d2772a88f0a2710d37d18b2c16b",
+    "src/idml_foundation/ingest/http_upload.py": "ab89080a9e7bacf166b8bd627c0466db61bfac564f871bbd5d5a5906dbcd721f",
+    "src/idml_foundation/ingest/upload_admission.py": "7c89ec65ad110515106a123e8b6377bf1914c5edfca5945ec6ab42b06cfe5872",
+    "src/idml_foundation/main.py": "23a8b1cf3b9726a2878cee9911f38eada8b0688974d4797a6172b7ab0d4582fb",
+    "src/idml_foundation/pipeline/canonical_mapper.py": "5380a66f15e0eb475f7c1f5104ce93181009d2e1cdda7f3a6082cc288284f462",
+    "src/idml_foundation/pipeline/funding_parser.py": "47a40964e8da95d62b62c84484b9ed639e8eed6cd47dfdbe58be8c9f4ccc8fad",
+    "src/idml_foundation/pipeline/jats_builder.py": "9ad113044ef77a4fa342ac31a24129631db1f870bdfd64c4bfd723ef6db71430",
+    "src/idml_foundation/pipeline/metadata_normalization.py": "088deaecec3648103c86ea6984a6bbc6a46a7686dde0f196c01c7f1fc1d16ad8",
+    "src/idml_foundation/pipeline/service.py": "863a8623a9bcd0e35182e6e04a0792a8e5a69b56e3b60676dd1c8cb4fb816a17",
+    "src/idml_foundation/publication_dates.py": "0f20190f807ac867acf402ed0e5d11fc1fb0ef5491a9ea0e79cd9e7bd08b5eae",
+    "src/idml_foundation/release/articlemeta_dates.py": "3bae62f5bda276d585ce568502c61e7e50f5dc66e9ffa019d304bf846eb80532",
+    "src/idml_foundation/release/articlemeta_orcids.py": "2231ed6f7068226bc7b1088d2d3d051ac396e7eb7358c3aef8caf3fae1795568",
+    "src/idml_foundation/release/doi_snapshot.py": "48ea4ffb755d40464cce0c2c07567312b5b121130a7fd8b0d0d1886c7fb2c19b",
+    "src/idml_foundation/release/formal_metadata.py": "c179194a4704ec137b754a6e088cfcfe4dc2b659e796d44cd6ad975af2bbd1b7",
+    "src/idml_foundation/release/institution_locations.py": "272cad83762e905df22822de84fec177b7563aa1cfd130200d76c9a11d8fa0e3",
+    "src/idml_foundation/release/validation_engine.py": "ee32a0c44e9a7cb60f9d65d85281b0eb7e55dba79d846e687bdd95139f275b1d",
+    "src/idml_foundation/routers/artifacts.py": "8405ec06cefcb29d8d1505837891929d41b60d0813c4844f53c203710160b8e1",
+    "src/idml_foundation/routers/jobs.py": "4f9496b313e8758b41783910699170a7b9c88214d1460bc4fa5235b70837a44c",
+    "src/idml_foundation/routers/ui.py": "524b389fb1f3968de9000ec9159d83f4de17a935f3b209fae10f93ca8c0a9b84",
+    "src/idml_foundation/schemas.py": "22a09c7ed02b1751de7512a2edc5cf1b05bc81457c9a373e6ab97d2ce668c5f8",
+    "src/idml_foundation/services/artifacts.py": "f954b95d3c96dddbe76d43b8e47baf05f6e4e64418793bd362a6c7335796dff8",
+    "src/idml_foundation/services/enrichment.py": "4ab46801bcc33af829b26acdcc949d2d36a0e0f61aa04059682833903c8e6d93",
+    "src/idml_foundation/services/jobs.py": "3e199e58798192d5a22f2fc459b894219247de971433c8ef7eea4df113d6b655",
+    "src/idml_foundation/services/package_validation.py": "728f9e4d565967a8e5d4c6084fe1c19c898d53193ed6536c18ef529865880aec",
+    "src/idml_foundation/services/scoped_validator_transport.py": "7a8c633911fb8abcaf24e9a4882a90a7f669b55fc1c1928a1ccad33cd75e1856",
+    "src/idml_foundation/services/source_authorization.py": "b9d969d8b5eb6c8760a65acf23437512c28350790c560f6eacd4c003dde342c1",
+    "src/idml_foundation/services/storage_budget.py": "6bdd07cec5a2086bbf4cbae26f325dfd14bfe2c26e4875681f5811e9d065da2f",
+    "src/idml_foundation/services/validation_scope.py": "7df6a7f2255faec390c2f11228a61f70ef741fd28031170566e97a901883af63",
+    "src/idml_foundation/services/validator_transport.py": "68e69b1332a1e68cc0812c488efc263f6b405fdcfd2eb20db6a8174f3b8311b4",
+    "src/idml_foundation/settings.py": "990015ef4e8b6ef4d0b1f509fc2168f878da53e760cbc1011df61e3af1c34cff",
+    "src/idml_foundation/worker.py": "a57e72626a354fbddd8765b8ed0b6db0666f19f99b5d64d74257b12a45390fc2",
+    "tests/test_articlemeta_dates.py": "59dd7f8446a0d168c17a95d13831453e32b966c76f1cf4dd71b51cdff520a3cf",
+    "tests/test_articlemeta_orcids.py": "cf14faf513c05b4cb4e86bc144e7d4d5dba06e28dd63d52d6b7c55ab31924f15",
+    "tests/test_doi_snapshot.py": "7b317e31ca71eb8c0d1ccd48bd4ea7ec63e77452fc379d79679726b01a46361d",
+    "tests/test_enrichment_bundles.py": "ad080b8f1a4d0c5de4282582076bb1705263fb2d20d74b5f5bbe5a754fb5ddf8",
+    "tests/test_external_verification.py": "0c3be0d0c37e7039a2ba85f83a874d556939520d49045225ba7fe6f4349829c6",
+    "tests/test_ingest_security_v02.py": "04c2dca8c0ffaebd467a140e649d8fc2baa7f9585f1f4150930257ad97062e6f",
+    "tests/test_institution_locations.py": "8894b06081cb229dcc16e5c5af09977219a996dbfa757f30761eb538e748232c",
+    "tests/test_jobs.py": "2bf5201bece9927eefe7e31798f2ffad77f29ef96e158bc4b2c924cbdc396fcd",
+    "tests/test_package_formal_validation.py": "afa3578f769c52b01e0c3db293aa3c8d408e0153a12166fc4c4ccb2df57b892c",
+    "tests/test_phase7_v10_workflow.py": "eb40c32267a01fb6e08be73be75dee3784c4bb61f25fcb7ba13955c5e913a2da",
+    "tests/test_scoped_authority_provision.py": "08ac7981456094f3ac0b4969ff5933bccfa7e17626497eff956cb2fb3175218e",
+    "tests/test_scoped_authority_transport.py": "e5361aea9360ef969a8a3b50290627256cb7eebbcd13b16e535f1c11d92f2a53",
+    "tests/test_scoped_validator_transport.py": "66abbef2f915b6ce394ebffd00adc5bc2565373ace09bbe12917206d9144f29e",
+    "tests/test_source_authorization.py": "782638e28753dee3edad660b549465c828e475abe05c3f1fa8829010a9e8213f",
+    "tests/test_validator_transport.py": "63ccd5e0a8f43faf9b19688199ba7eba7251a911efabf162a4d1f124da333059",
+    "tests/test_vh1_baseline.py": "d3f194ce3a3863be88bfd79e4e967ebea1bd670c37e00c7778d717824a1007a4"
+  },
+  "residual_constraints": [
+    "Cancellation is qualified before execution; cooperative interruption of an in-flight conversion remains in V-13.",
+    "Editorial approval is not READY_FOR_SCIELO and does not replace the technical release policy.",
+    "XPM on the final candidate and human specialist homologation remain pending by plan."
+  ],
+  "privacy": {
+    "contains_article_text": false,
+    "contains_raw_credentials": false,
+    "contains_raw_agent_output": false,
+    "restricted_content_emitted": false
+  },
+  "v10_approved": true,
+  "release_candidate_approved": false,
+  "production_activation_authorized": false,
+  "requalification_of": "v10-operational-workflow-vh1-articlemeta-v2.json",
+  "scope": "ArticleMeta dates, author ORCIDs and institutional states, scoped worker; not deployment or XML approval.",
+  "previous_report_sha256": "51c4953b277ce30b3f0dee830ce00684d3276da9005e69f6066c4b5670e7555e",
+  "focused_tests": 165,
+  "focused_junit_sha256": "e5ca4a26012a4f7e467bd9696be8eb2ab2d3895e611e80fa6cc6d2b784123dec",
+  "contract_gates": {
+    "api": {
+      "operational_endpoints": 14,
+      "authenticated": true
+    },
+    "jobs": {
+      "job_kinds": [
+        "idml.process",
+        "scielo.package"
+      ],
+      "required_transitions": 4,
+      "strict_payloads": true
+    },
+    "package": {
+      "deterministic": true,
+      "manifest_files": 2,
+      "package_sha256": "b63e60f1a68429b885a30643b82e5da0c7cb63111d56063543b1a6eff5dbdb46"
+    },
+    "interface": {
+      "interface_controls": 12,
+      "openclaw_enabled": false,
+      "swarm_enabled": false
+    }
+  },
+  "articlemeta_current_checks": {
+    "api": {
+      "operational_endpoints": 14,
+      "authenticated": true
+    },
+    "jobs": {
+      "job_kinds": [
+        "idml.process",
+        "scielo.package"
+      ],
+      "required_transitions": 4,
+      "strict_payloads": true
+    },
+    "package": {
+      "deterministic": true,
+      "manifest_files": 2,
+      "package_sha256": "b63e60f1a68429b885a30643b82e5da0c7cb63111d56063543b1a6eff5dbdb46"
+    },
+    "interface": {
+      "interface_controls": 12,
+      "openclaw_enabled": false,
+      "swarm_enabled": false
+    }
+  }
+}

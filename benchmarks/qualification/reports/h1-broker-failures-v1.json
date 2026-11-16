@@ -1,0 +1,27 @@
+{
+  "version": "h1-broker-failures-1.0",
+  "executed_at": "2026-09-29",
+  "environment": "local-windows-fault-injection-no-docker",
+  "new_tests": 19,
+  "focused_tests_passed": 35,
+  "full_tests_passed": 644,
+  "full_suite_warnings": 3,
+  "application_line_coverage_percent": 87.83,
+  "broker_line_coverage_percent": 71.93,
+  "combined_line_coverage_percent": 87.60,
+  "source_sha256": {
+    "ops/validator_broker.py": "bba13b95b571bc604428c82e4e6548e47bfafe73d0d799d303ead327bc8fef55",
+    "tests/test_validator_broker_failures.py": "8bf68f9f101b0aa54947f99776dd8a0f0b6b3503246f3ddc3a7116caff8d3d69"
+  },
+  "fixed_regression": "explicit expired zero deadline must not be renewed",
+  "limitations": [
+    "Mocked Docker/OOM/resource failures are not Linux integration proof",
+    "Failed Docker cleanup propagates error but cannot prove container removal",
+    "Complete synthetic and real package qualification pending",
+    "Compatible XPM executor pending"
+  ],
+  "deployed": false,
+  "xml_approved": false,
+  "homologation_authorized": false,
+  "production_activated": false
+}

@@ -1,0 +1,11 @@
+{
+  "version": "openclaw-idml-policy-1.0",
+  "enabled": false,
+  "dedicated_agent_required": true,
+  "skills": [],
+  "tools": {
+    "allow": ["idml_read_review_item", "idml_read_canonical_fragment", "idml_read_evidence", "idml_read_validation_issues", "idml_propose_patch", "idml_validate_patch"],
+    "deny": ["group:fs", "group:runtime", "group:web", "browser", "canvas", "shell", "exec", "write", "edit", "apply_patch"]
+  },
+  "controls": {"output_schema": true, "elevated": false, "network": false, "spawn": false, "max_concurrency": 1}
+}

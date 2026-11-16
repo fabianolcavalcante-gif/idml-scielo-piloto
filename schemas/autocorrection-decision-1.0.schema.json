@@ -1,0 +1,293 @@
+{
+  "$defs": {
+    "AutomationScope": {
+      "additionalProperties": false,
+      "properties": {
+        "article_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Article Id",
+          "type": "string"
+        },
+        "organization_id": {
+          "format": "uuid",
+          "title": "Organization Id",
+          "type": "string"
+        },
+        "profile_id": {
+          "const": "esa-aop-1.1.0",
+          "title": "Profile Id",
+          "type": "string"
+        },
+        "resource_id": {
+          "format": "uuid",
+          "title": "Resource Id",
+          "type": "string"
+        },
+        "review_version": {
+          "minimum": 1,
+          "title": "Review Version",
+          "type": "integer"
+        },
+        "snapshot_id": {
+          "format": "uuid",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "snapshot_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Snapshot Sha256",
+          "type": "string"
+        },
+        "source_idml_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Idml Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "organization_id",
+        "resource_id",
+        "snapshot_id",
+        "snapshot_sha256",
+        "source_idml_sha256",
+        "article_id",
+        "profile_id",
+        "review_version"
+      ],
+      "title": "AutomationScope",
+      "type": "object"
+    },
+    "FieldState": {
+      "enum": [
+        "present",
+        "missing",
+        "ambiguous",
+        "needs_review"
+      ],
+      "title": "FieldState",
+      "type": "string"
+    },
+    "PreparedAutomationOperation": {
+      "additionalProperties": false,
+      "properties": {
+        "after_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "After Sha256",
+          "type": "string"
+        },
+        "authorization_id": {
+          "format": "uuid",
+          "title": "Authorization Id",
+          "type": "string"
+        },
+        "before_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Before Sha256",
+          "type": "string"
+        },
+        "evidence_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "evidence_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Evidence Sha256",
+          "type": "string"
+        },
+        "finding_id": {
+          "format": "uuid",
+          "title": "Finding Id",
+          "type": "string"
+        },
+        "operation": {
+          "enum": [
+            "country-code-exact",
+            "figure-asset-exact",
+            "affiliation-original-literal"
+          ],
+          "title": "Operation",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "subject_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Subject Id",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourcedText"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "operation",
+        "subject_id",
+        "finding_id",
+        "path",
+        "before_sha256",
+        "after_sha256",
+        "value",
+        "evidence_id",
+        "evidence_sha256",
+        "authorization_id"
+      ],
+      "title": "PreparedAutomationOperation",
+      "type": "object"
+    },
+    "SourcedText": {
+      "additionalProperties": false,
+      "properties": {
+        "alternatives": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Alternatives",
+          "type": "array"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "state": {
+          "$ref": "#/$defs/FieldState"
+        },
+        "transformation": {
+          "anyOf": [
+            {
+              "maxLength": 300,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transformation"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "state"
+      ],
+      "title": "SourcedText",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "applied": {
+      "const": false,
+      "default": false,
+      "title": "Applied",
+      "type": "boolean"
+    },
+    "disposition": {
+      "enum": [
+        "eligible_for_candidate",
+        "refused",
+        "abstained"
+      ],
+      "title": "Disposition",
+      "type": "string"
+    },
+    "intent_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Intent Sha256",
+      "type": "string"
+    },
+    "operations": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/PreparedAutomationOperation"
+      },
+      "title": "Operations",
+      "type": "array"
+    },
+    "policy_version": {
+      "const": "vh1-autocorrection-1.0",
+      "default": "vh1-autocorrection-1.0",
+      "title": "Policy Version",
+      "type": "string"
+    },
+    "reason": {
+      "title": "Reason",
+      "type": "string"
+    },
+    "release_approved": {
+      "const": false,
+      "default": false,
+      "title": "Release Approved",
+      "type": "boolean"
+    },
+    "requires_revalidation": {
+      "const": true,
+      "default": true,
+      "title": "Requires Revalidation",
+      "type": "boolean"
+    },
+    "scope": {
+      "$ref": "#/$defs/AutomationScope"
+    },
+    "version": {
+      "const": "autocorrection-decision-1.0",
+      "default": "autocorrection-decision-1.0",
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "scope",
+    "intent_sha256",
+    "disposition",
+    "reason"
+  ],
+  "title": "AutomationDecision",
+  "type": "object"
+}
