@@ -9,6 +9,8 @@ from idml_foundation.database import SessionLocal, session_scope
 from idml_foundation.domain.common import canonical_bytes
 from idml_foundation.domain.corpus import load_manifest, verify_manifest
 from idml_foundation.models import Membership, Organization, User
+from idml_foundation.pipeline.bilingual import compose_bilingual, translation_profile
+from idml_foundation.pipeline.profile import load_profile
 from idml_foundation.pipeline.service import DeterministicPipeline
 from idml_foundation.rbac import Role
 from idml_foundation.security import hash_password, normalize_email
@@ -58,15 +60,24 @@ def convert_idml(
     report_path: Path,
     raw_path: Path | None = None,
     canonical_path: Path | None = None,
+    profile_path: Path | None = None,
+    translation_path: Path | None = None,
 ) -> None:
-    result = DeterministicPipeline().run(
+    profile = load_profile(profile_path) if profile_path else None
+    result = DeterministicPipeline(profile=profile).run(
         input_path.read_bytes(),
         logical_name=input_path.name,
     )
+    xml = result.xml
+    if translation_path is not None:
+        translated = DeterministicPipeline(
+            profile=translation_profile(profile or load_profile())
+        ).run(translation_path.read_bytes(), logical_name=translation_path.name)
+        xml = compose_bilingual(result.xml, translated.xml)
     for path in (output_path, report_path, raw_path, canonical_path):
         if path is not None:
             path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_bytes(result.xml)
+    output_path.write_bytes(xml)
     report_path.write_bytes(canonical_bytes(result.validation))
     if raw_path is not None:
         raw_path.write_bytes(canonical_bytes(result.raw))
@@ -90,13 +101,23 @@ def main() -> None:
     corpus = commands.add_parser("corpus-verify")
     corpus.add_argument("--manifest", type=Path, required=True)
     corpus.add_argument("--root", type=Path, required=True)
+    commands.add_parser("validators-status", help="probe validator broker sockets")
     convert = commands.add_parser("pipeline-convert")
     convert.add_argument("--input", type=Path, required=True)
     convert.add_argument("--output", type=Path, required=True)
     convert.add_argument("--report", type=Path, required=True)
     convert.add_argument("--raw", type=Path)
     convert.add_argument("--canonical", type=Path)
+    convert.add_argument("--profile", type=Path, help="journal profile JSON (default: ESA 1.0)")
+    convert.add_argument(
+        "--translation", type=Path, help="IDML of the translation, emitted as <sub-article>"
+    )
     args = parser.parse_args()
+    if args.command == "validators-status":
+        from idml_foundation.services.validator_status import main as status_main
+
+        status_main()
+        return
     if args.command == "bootstrap":
         bootstrap(args.organization_slug, args.organization_name, args.email)
     elif args.command == "corpus-verify":
@@ -109,7 +130,15 @@ def main() -> None:
         if not result.valid:
             raise SystemExit(2)
     elif args.command == "pipeline-convert":
-        convert_idml(args.input, args.output, args.report, args.raw, args.canonical)
+        convert_idml(
+            args.input,
+            args.output,
+            args.report,
+            args.raw,
+            args.canonical,
+            profile_path=args.profile,
+            translation_path=args.translation,
+        )
 
 
 if __name__ == "__main__":

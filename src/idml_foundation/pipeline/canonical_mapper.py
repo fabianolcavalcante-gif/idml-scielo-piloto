@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import dataclasses
 import hashlib
 import re
 from collections import defaultdict
@@ -57,16 +58,42 @@ from idml_foundation.domain.raw import (
     RawStory,
 )
 from idml_foundation.pipeline.citation_resolver import resolve_citations
+from idml_foundation.pipeline.country_codes import iso_country_code
 from idml_foundation.pipeline.funding_parser import parse_funding
 from idml_foundation.pipeline.idml_parser import style_prefix
 from idml_foundation.pipeline.metadata_normalization import split_explicit_brazil_state
 from idml_foundation.pipeline.profile import JournalProfile
-from idml_foundation.pipeline.reference_metadata import reference_metadata
+from idml_foundation.pipeline.reference_metadata import ReferenceType, reference_metadata
 from idml_foundation.pipeline.reference_parser import reference_without_volume
+from idml_foundation.pipeline.vancouver import parse_vancouver
 
 _ARTICLE_NUMBER = re.compile(r"(?:^|_)(20\d{2})(\d{1,4})(?:_|$)")
 _AUTHOR_MARKERS = re.compile(r"[\d*]+")
-_NUMBERED_GRAPHIC = re.compile(r"^\s*(figure|table)\s*([1-9]\d*)\b", re.IGNORECASE)
+_NUMBERED_GRAPHIC = re.compile(
+    r"^\s*(figure|figura|fig\.?|table|tabela|chart|quadro|graph|gr[áa]fico)\s*([1-9]\d*)\b",
+    re.IGNORECASE,
+)
+# 'Chart 1. Continuation.' repeats the caption of a table split across pages.
+_CONTINUATION_CAPTION = re.compile(
+    r"^[\s.:\-\u2013\u2014]*(?:continuation|continued|continua[çc][ãa]o|continua|cont\.)",
+    re.IGNORECASE,
+)
+_TABLE_LABEL_WORDS = frozenset({"table", "tabela", "chart", "quadro"})
+
+
+def _caption_family(word: str) -> str:
+    """'table' for Table/Tabela/Chart/Quadro captions, 'figure' otherwise."""
+    return "table" if word.casefold().rstrip(".") in _TABLE_LABEL_WORDS else "figure"
+
+
+def _caption_label(word: str, number: int) -> str:
+    """Keep the source label word ('Chart 1'); normalize 'Fig.' to 'Figure'."""
+    clean = word.rstrip(".")
+    if clean.casefold() == "fig":
+        clean = "Figure"
+    return f"{clean[:1].upper()}{clean[1:].lower()} {number}"
+
+
 _CAPTION_SEPARATOR = re.compile(r"^[\s.\-\u2013\u2014:]*")
 _MISSING_INLINE_FORMULA = re.compile(r"(?m)^[ \t]*(?=:[ \t]+\S)")
 _NATIVE_DISPLAY_FORMULA = re.compile(
@@ -175,6 +202,212 @@ def _section_type(value: str, level: int) -> str | None:
     return _STANDARD_SECTION_TYPES.get(normalized)
 
 
+# Roles that never belong inside a data table: a table holding them is a layout box.
+_FLOW_ROLES = frozenset(
+    {
+        "abstract",
+        "abstract-heading",
+        "keywords",
+        "title-primary",
+        "title-secondary",
+        "contributors",
+        "affiliations",
+    }
+)
+_ABSTRACT_LABELS = frozenset({"abstract", "resumo", "resumen", "résumé"})
+_REFERENCE_LABELS = frozenset(
+    {"references", "referências", "referencias", "referência", "bibliography", "bibliografia"}
+)
+
+
+_KEYWORDS_LINE = re.compile(
+    r"^\s*(keywords|key words|palavras-chave|palavras chave|palabras clave|descritores)"
+    r"\s*:\s*(.*)$",
+    re.IGNORECASE | re.DOTALL,
+)
+
+
+_ROMAN_VALUES = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100}
+_MARKER_TOKEN = re.compile(r"\*|\d+|[IVXLC]+")
+
+
+def _marker_index(token: str) -> int | None:
+    """Affiliation ordinal of an author marker: '3' -> 3, 'IV' -> 4, '*' -> None."""
+    if token.isdigit():
+        return int(token)
+    if not token or any(character not in _ROMAN_VALUES for character in token):
+        return None
+    total = 0
+    for current, following in zip(token, [*token[1:], ""], strict=True):
+        value = _ROMAN_VALUES[current]
+        total += -value if following and _ROMAN_VALUES[following] > value else value
+    return total
+
+
+def _split_marked_authors(
+    runs: list[tuple[str, bool]],
+) -> list[tuple[str, list[str]]]:
+    """Split an author line into (name, markers) using superscript runs as markers.
+
+    Commas in normal text separate authors; a segment with markers but no name
+    (e.g. the ", III" of "Duarte II, III") extends the previous author's markers.
+    """
+    authors: list[tuple[str, list[str]]] = []
+    name = ""
+    markers: list[str] = []
+
+    def close() -> None:
+        nonlocal name, markers
+        clean = " ".join(name.replace("*", " ").split())
+        if any(character.isalpha() for character in clean):
+            authors.append((clean, markers))
+        elif authors:
+            authors[-1][1].extend(markers)
+        name, markers = "", []
+
+    for value, superscript in runs:
+        if superscript:
+            markers.extend(_MARKER_TOKEN.findall(value))
+            continue
+        for index, piece in enumerate(value.split(",")):
+            if index:
+                close()
+            markers.extend("*" for _ in range(piece.count("*")))
+            name += piece
+    close()
+    return authors
+
+
+_HISTORY_TYPES = {
+    "received on": "received",
+    "recebido em": "received",
+    "recibido el": "received",
+    "reviewed on": "rev-recd",
+    "revised on": "rev-recd",
+    "revisado em": "rev-recd",
+    "reformulado em": "rev-recd",
+    "accepted on": "accepted",
+    "approved on": "accepted",
+    "aceito em": "accepted",
+    "aprovado em": "accepted",
+    "aceptado el": "accepted",
+}
+_HISTORY_LANGUAGE = {
+    label: ("en" if label.endswith(" on") else "es" if label.endswith(" el") else "pt")
+    for label in _HISTORY_TYPES
+}
+_HISTORY_LABELLED = re.compile(
+    r"(?P<label>" + "|".join(map(re.escape, _HISTORY_TYPES)) + r")\s*:?\s*"
+    r"(?P<date>\d{1,2}/\d{1,2}/\d{4})",
+    re.IGNORECASE,
+)
+
+
+def _history_iso_date(value: str, order: str) -> str | None:
+    """Parse d/m/y or m/d/y per profile; an unambiguous date (a part > 12) wins."""
+    first, second, year = (int(part) for part in value.split("/"))
+    if first > 12 and second <= 12:
+        order = "dmy"
+    elif second > 12 and first <= 12:
+        order = "mdy"
+    day, month = (second, first) if order == "mdy" else (first, second)
+    try:
+        return datetime(year, month, day).date().isoformat()
+    except ValueError:
+        return None
+
+
+_AFFILIATION_NO_DEPARTMENT = re.compile(
+    r"^(?P<institution>[^,\ufffd\u2013\u2014]+?)\s*[\ufffd\u2013\u2014]\s*"
+    r"(?P<city>[^,]+),\s*(?P<country>[^.]+)\.?$"
+)
+
+
+def _roman(number: int) -> str:
+    out = ""
+    for value, letters in ((100, "C"), (90, "XC"), (50, "L"), (40, "XL"), (10, "X"), (9, "IX")):
+        while number >= value:
+            out, number = out + letters, number - value
+    for value, letters in ((5, "V"), (4, "IV"), (1, "I")):
+        while number >= value:
+            out, number = out + letters, number - value
+    return out
+
+
+def _strip_affiliation_label(line: str, ordinal: int) -> str:
+    """Drop the leading affiliation label: any digits, a spaced roman numeral, or the
+    expected ordinal glued to the name ('IVNTS' as 4th line -> 'NTS')."""
+    stripped = re.sub(r"^(?:\d+|[IVXLC]+(?=\s))", "", line).strip()
+    if stripped != line.strip():
+        return stripped
+    expected = _roman(ordinal)
+    if line.startswith(expected) and line[len(expected) : len(expected) + 1].isupper():
+        return line[len(expected) :].strip()
+    return line
+
+
+class _AffiliationParts:
+    """Minimal match-like view so the caller can keep using ``groupdict()``."""
+
+    def __init__(self, values: dict[str, str]) -> None:
+        self._values = values
+
+    def groupdict(self) -> dict[str, str]:
+        return dict(self._values)
+
+
+def _split_trailing_country(match: re.Match[str]) -> re.Match[str] | _AffiliationParts:
+    """'- Bogotá, Cundinamarca, Colombia' -> city 'Bogotá, Cundinamarca', country 'Colombia'."""
+    values = {key: value or "" for key, value in match.groupdict().items()}
+    city, country = values["city"], values["country"]
+    if "," not in country or iso_country_code(country):
+        return match
+    head, last = country.rsplit(",", 1)
+    if not iso_country_code(last):
+        return match
+    values["city"] = f"{city.strip()}, {head.strip()}"
+    values["country"] = last.strip()
+    return _AffiliationParts(values)
+
+
+def _author_run_groups(runs: list[tuple[str, bool]]) -> list[list[int]]:
+    """Indices of the runs belonging to each author, with the same rules as
+    ``_split_marked_authors`` (used to attach ORCID icon links to the right author)."""
+    groups: list[list[int]] = []
+    name = ""
+    current: list[int] = []
+
+    def close() -> None:
+        nonlocal name, current
+        if any(character.isalpha() for character in name):
+            groups.append(current)
+        elif groups:
+            groups[-1].extend(current)
+        name, current = "", []
+
+    for index, (value, superscript) in enumerate(runs):
+        if superscript:
+            current.append(index)
+            continue
+        for position, piece in enumerate(value.split(",")):
+            if position:
+                close()
+            name += piece.replace("*", " ")
+        current.append(index)
+    close()
+    return groups
+
+
+def _front_heading_role(value: str) -> str | None:
+    """Recognize abstract/reference headings set with an ordinary section style."""
+    normalized = " ".join(value.split()).strip(":. ").casefold()
+    if normalized in _ABSTRACT_LABELS:
+        return "abstract-heading"
+    if normalized in _REFERENCE_LABELS:
+        return "references-heading"
+    return None
+
+
 def _language_from_label(value: str, fallback: str) -> str:
     normalized = " ".join(value.split()).strip(":. ").casefold()
     if normalized in {"abstract", "keywords"}:
@@ -188,7 +421,10 @@ def _credit_roles(statement: SourcedText | None) -> dict[str, tuple[str, ...]]:
     if statement is None or not statement.value:
         return {}
     roles: dict[str, tuple[str, ...]] = {}
-    for item in re.split(r"\.\s+(?=[A-Z][^:]{1,100},\s*[^:]+:)|\.$", statement.value.strip()):
+    for item in re.split(
+        r"\.\s+(?=[A-Z][^:]{1,100},\s*[^:]+:)|\.\s+(?=[A-ZÀ-Ý]{1,8}\s*:)|\.$",
+        statement.value.strip(),
+    ):
         if ":" not in item:
             continue
         source_name, source_roles = item.split(":", 1)
@@ -203,6 +439,55 @@ def _credit_roles(statement: SourcedText | None) -> dict[str, tuple[str, ...]]:
     return roles
 
 
+_PARTICLES = frozenset({"de", "da", "do", "das", "dos", "del", "la", "e", "y", "van", "von"})
+_CONTRIBUTIONS_LINE = re.compile(
+    r"^\s*(?:authors?[\u2019']?\s*contributions?|contribui[çc][õo]es\s+dos\s+autores)\s*:\s*(.+)$",
+    re.IGNORECASE,
+)
+
+
+def _name_initials(name: str) -> set[str]:
+    """Lower-cased initials of a full name, with and without particles ('de', 'da'...)."""
+    variants: set[str] = set()
+    for separator in (r"[\s\-]+", r"\s+"):  # 'La-Rotta' counts as L or as LR
+        parts = [part for part in re.split(separator, name) if part and part[0].isalpha()]
+        variants.add("".join(part[0] for part in parts).casefold())
+        variants.add(
+            "".join(part[0] for part in parts if part.casefold() not in _PARTICLES).casefold()
+        )
+    return variants
+
+
+def _contribution_line(
+    paragraphs: list[tuple[RawStory, RawParagraph]], text_for: object
+) -> SourcedText | None:
+    """'AUTHORS' CONTRIBUTIONS: CEAL: ...' typed inside the correspondence block."""
+    for story, paragraph in paragraphs:
+        for line in text_for(story, paragraph).splitlines():  # type: ignore[operator]
+            match = _CONTRIBUTIONS_LINE.match(line)
+            if match:
+                return _present(
+                    match.group(1).strip(),
+                    paragraph.evidence_ids,
+                    "correspondence-contributions-line",
+                )
+    return None
+
+
+def _author_title_boundary(prefix: str, start: int) -> int:
+    """Position of the '. ' that ends the last author, skipping initials ('NUNES, T. F.')."""
+    candidates = [match.start() for match in re.finditer(r"\. ", prefix[start:])]
+    last_initial = -1
+    for offset in candidates:
+        position = start + offset
+        token = prefix[:position].rsplit(" ", 1)[-1].lstrip(",")
+        if re.fullmatch(r"[A-ZÀ-Ý]", token):
+            last_initial = position
+            continue
+        return position
+    return last_initial
+
+
 def _reference_parts(value: str) -> tuple[tuple[str, ...], str | None, str | None]:
     journal = re.match(r"^(?P<prefix>.+)\.\s+(?P<source>.+?),\s+v\.\s*", value)
     if journal is not None:
@@ -211,7 +496,7 @@ def _reference_parts(value: str) -> tuple[tuple[str, ...], str | None, str | Non
     else:
         return reference_without_volume(value)
     last_semicolon = prefix.rfind(";")
-    boundary = prefix.find(". ", last_semicolon + 1)
+    boundary = _author_title_boundary(prefix, last_semicolon + 1)
     if boundary < 0:
         return (), None, source
     author_text = prefix[:boundary].strip()
@@ -547,6 +832,34 @@ def _group_pseudocode_inline_formulas(
     return inlines
 
 
+_DOI_IN_TEXT = re.compile(r"(?<![\d.])10\.\d{4,9}/[^\s<>\"]+")
+
+
+_ERRATUM_CORRECTS = re.compile(
+    r"(?:this\s+erratum\s+corrects|esta\s+errata\s+corrige|errata\s+de)\s*:?\s*"
+    r"(?:https?://(?:dx\.)?doi\.org/\s*)?(10\.\d{4,9}/\S+)",
+    re.IGNORECASE,
+)
+
+
+def _corrected_doi(raw: RawArticle, source_doi: str | None) -> str | None:
+    """DOI of the article an erratum corrects, or None when this is not an erratum."""
+    is_erratum = bool(source_doi and source_doi.casefold().endswith("erratum"))
+    for story in raw.stories:
+        text = "".join(run.text for run in story.runs)
+        if match := _ERRATUM_CORRECTS.search(text):
+            return match.group(1).rstrip(".,;)")
+    if is_erratum and source_doi:
+        return re.sub(r"erratum$", "", source_doi, flags=re.IGNORECASE) or None
+    return None
+
+
+def _doi_in_text(value: str) -> str | None:
+    """First DOI in 'https://doi.org 10.1590/x' or 'https://doi.org10.1590/x' (typed slips)."""
+    match = _DOI_IN_TEXT.search(value)
+    return match.group(0).rstrip(".,;)") if match else None
+
+
 def _article_id(source_id: str) -> str:
     match = _ARTICLE_NUMBER.search(source_id)
     if not match:
@@ -569,15 +882,31 @@ class CanonicalMapper:
             list
         )
         unknown: set[str] = set()
+
+        def paragraph_role(paragraph: RawParagraph) -> str | None:
+            source_name = style_names.get(paragraph.paragraph_style_id or "", "")
+            return self.profile.role_for_style(source_name, style_prefix(source_name))
+
+        table_by_cell = {cell.id: table.id for table in raw.tables for cell in table.cells}
+        layout_table_ids = frozenset(
+            table_by_cell[paragraph.table_cell_id]
+            for story in raw.stories
+            for paragraph in story.paragraphs
+            if paragraph.table_cell_id in table_by_cell and paragraph_role(paragraph) in _FLOW_ROLES
+        )
         for story_id in raw.reading_order:
             story = story_by_id[story_id]
             runs = {run.id: run for run in story.runs}
             for paragraph in story.paragraphs:
-                if paragraph.table_cell_id:
+                if paragraph.table_cell_id and (
+                    table_by_cell.get(paragraph.table_cell_id) not in layout_table_ids
+                ):
                     continue
                 source_name = style_names.get(paragraph.paragraph_style_id or "", "")
-                role = self.profile.role_for_prefix(style_prefix(source_name))
+                role = paragraph_role(paragraph)
                 text = "".join(runs[run_id].text for run_id in paragraph.text_run_ids)
+                if role and role.startswith("section-level-"):
+                    role = _front_heading_role(text) or role
                 if role:
                     paragraphs_by_role[role].append((story, paragraph))
                 elif text.strip():
@@ -600,6 +929,17 @@ class CanonicalMapper:
         def text_for(story: RawStory, paragraph: RawParagraph) -> str:
             runs = {run.id: run for run in story.runs}
             return "".join(runs[item].text for item in paragraph.text_run_ids).strip()
+
+        source_doi = next(
+            (
+                doi
+                for story, paragraph in paragraphs_by_role["article-doi"]
+                if (doi := _doi_in_text(text_for(story, paragraph)))
+            ),
+            None,
+        )
+        article_id = self.profile.article_id_for_doi(source_doi) or article_id
+        corrected_doi = _corrected_doi(raw, source_doi)
 
         def first_text(role: str) -> tuple[str, tuple[str, ...]] | None:
             for story, paragraph in paragraphs_by_role[role]:
@@ -645,9 +985,25 @@ class CanonicalMapper:
                 value=_present(article_id, (profile_evidence.id,), "filename-rule"),
             )
         ]
+        if corrected_doi:
+            article_identifiers.append(
+                Identifier(
+                    kind="corrected-article-doi",
+                    value=_present(corrected_doi, (profile_evidence.id,), "erratum-corrects-doi"),
+                )
+            )
+            if not titles:
+                titles.append(
+                    LocalizedText(
+                        language=self.profile.primary_language,
+                        text=_present("ERRATUM", (profile_evidence.id,), "erratum-default-title"),
+                    )
+                )
         article_doi = first_text("article-doi")
         if article_doi:
-            doi = re.sub(r"^https?://(?:dx\.)?doi\.org/", "", article_doi[0], flags=re.I)
+            doi = _doi_in_text(article_doi[0]) or re.sub(
+                r"^https?://(?:dx\.)?doi\.org/", "", article_doi[0], flags=re.I
+            )
             article_identifiers.append(
                 Identifier(
                     kind="doi",
@@ -663,7 +1019,8 @@ class CanonicalMapper:
             article_id,
             tuple(item.id for item in affiliations),
             raw,
-            contribution_statement=back_statements.contribution_statement,
+            contribution_statement=back_statements.contribution_statement
+            or _contribution_line(paragraphs_by_role["correspondence"], text_for),
         )
         correspondence = self._correspondence(paragraphs_by_role, text_for, article_id, raw)
         if correspondence.email is not None:
@@ -682,22 +1039,65 @@ class CanonicalMapper:
                 )
         abstracts: list[LocalizedText] = []
         keywords: list[LocalizedText] = []
+        story_rank = {story_id: index for index, story_id in enumerate(raw.reading_order)}
+
+        def document_key(item: tuple[RawStory, RawParagraph]) -> tuple[int, int]:
+            return story_rank.get(item[0].id, len(story_rank)), item[1].position
+
+        heading_keys = sorted(
+            (document_key(item), position)
+            for position, item in enumerate(paragraphs_by_role["abstract-heading"])
+            if abstract_headings[position].strip()
+        )
+        grouped: dict[int, list[tuple[str, tuple[str, ...]]]] = {}
         for position, (story, paragraph) in enumerate(paragraphs_by_role["abstract"]):
-            fallback = (
-                self.profile.primary_language if position == 0 else self.profile.secondary_language
-            )
-            language = _language_from_label(
-                abstract_headings[position] if position < len(abstract_headings) else "",
-                fallback,
-            )
+            key = document_key((story, paragraph))
+            preceding = [heading for heading_key, heading in heading_keys if heading_key < key]
+            # Without headings, each abstract paragraph keeps its historical positional slot.
+            slot = preceding[-1] if preceding else position
             value = text_for(story, paragraph)
-            if value:
-                abstracts.append(
+            kept_lines: list[str] = []
+            for line in (value or "").split("\n"):
+                keyword_line = _KEYWORDS_LINE.match(line)
+                if keyword_line is None or not keyword_line.group(2).strip():
+                    kept_lines.append(line)
+                    continue
+                # "Keywords: a. b." typed inside the abstract box belongs to the keywords.
+                keywords.append(
                     LocalizedText(
-                        language=language,
-                        text=_present(value, paragraph.evidence_ids, "style-role:abstract"),
+                        language=_language_from_label(
+                            keyword_line.group(1),
+                            self.profile.primary_language
+                            if slot == 0
+                            else self.profile.secondary_language,
+                        ),
+                        text=_present(
+                            keyword_line.group(2).strip(),
+                            paragraph.evidence_ids,
+                            "style-role:abstract-keywords-line",
+                        ),
                     )
                 )
+            value = "\n".join(kept_lines).strip()
+            if value:
+                grouped.setdefault(slot, []).append((value, paragraph.evidence_ids))
+        for slot, parts in grouped.items():
+            fallback = (
+                self.profile.primary_language if slot == 0 else self.profile.secondary_language
+            )
+            language = _language_from_label(
+                abstract_headings[slot] if slot < len(abstract_headings) else "", fallback
+            )
+            abstracts.append(
+                LocalizedText(
+                    language=language,
+                    text=_present(
+                        "\n".join(value for value, _ in parts),
+                        tuple(dict.fromkeys(e for _, ids in parts for e in ids)),
+                        "style-role:abstract",
+                    ),
+                )
+            )
         for position, (story, paragraph) in enumerate(paragraphs_by_role["keywords"]):
             fallback = (
                 self.profile.primary_language if position == 0 else self.profile.secondary_language
@@ -725,6 +1125,7 @@ class CanonicalMapper:
             article_id,
             references,
             excluded_paragraph_ids=back_statements.excluded_paragraph_ids,
+            layout_table_ids=layout_table_ids,
         )
         notes = (*self._notes(raw, character_names, article_id), *correspondence.notes)
         assets = tuple(
@@ -808,9 +1209,9 @@ class CanonicalMapper:
                 ),
                 article_identifiers=tuple(article_identifiers),
                 article_category=_present(
-                    self.profile.article_category,
+                    "correction" if corrected_doi else self.profile.article_category,
                     (profile_evidence.id,),
-                    "journal-profile",
+                    "erratum-correction-type" if corrected_doi else "journal-profile",
                 ),
                 titles=tuple(titles),
                 contributors=contributors,
@@ -824,11 +1225,16 @@ class CanonicalMapper:
                     (profile_evidence.id,),
                     "journal-profile",
                 ),
+                license_url=(
+                    _present(self.profile.license_url, (profile_evidence.id,), "journal-profile")
+                    if self.profile.license_url
+                    else None
+                ),
                 funding=correspondence.funding,
                 subject_category=_present(
-                    self.profile.subject_category,
+                    "Erratum" if corrected_doi else self.profile.subject_category,
                     (profile_evidence.id,),
-                    "journal-profile",
+                    "erratum-section" if corrected_doi else "journal-profile",
                 ),
             ),
             body=sections,
@@ -1041,6 +1447,37 @@ class CanonicalMapper:
                         )
                         seen_history.add(date_type)
                     continue
+                labelled = list(_HISTORY_LABELLED.finditer(line))
+                if labelled:
+                    for item in labelled:
+                        date_type = _HISTORY_TYPES[item.group("label").casefold()]
+                        if date_type in seen_history:
+                            review_reasons.append(f"duplicate_history_date:{date_type}")
+                            continue
+                        labelled_date = _history_iso_date(
+                            item.group("date"),
+                            self.profile.history_date_order.get(
+                                _HISTORY_LANGUAGE[item.group("label").casefold()], "dmy"
+                            ),
+                        )
+                        if labelled_date is None:
+                            review_reasons.append(f"invalid_history_date:{date_type}")
+                            continue
+                        history_dates.append(
+                            ArticleHistoryDate(
+                                date_type=cast(
+                                    Literal["received", "rev-request", "rev-recd", "accepted"],
+                                    date_type,
+                                ),
+                                date=_present(
+                                    labelled_date,
+                                    evidence_ids,
+                                    "correspondence-labelled-date-to-iso-8601",
+                                ),
+                            )
+                        )
+                        seen_history.add(date_type)
+                    continue
                 editor_type = next(
                     (
                         label
@@ -1156,25 +1593,71 @@ class CanonicalMapper:
             if link.relationship == "external-hyperlink"
             and _ORCID_URL.fullmatch(link.target) is not None
         }
+        style_by_id = {style.id: style for style in raw.styles}
+
+        def superscript(run_style_id: str | None) -> bool:
+            style = style_by_id.get(run_style_id or "")
+            if style is None:
+                return False
+            name = style.normalized_name.casefold()
+            position = str(style.properties.get("Position", "")).casefold()
+            return "superscript" in name or "sobrescrito" in name or position == "superscript"
+
         for story, paragraph in by_role["contributors"]:
             value = text_for(story, paragraph)  # type: ignore[operator]
             paragraph_orcids = [
                 links_by_run[run_id] for run_id in paragraph.text_run_ids if run_id in links_by_run
             ]
-            for position, source_name in enumerate(re.split(r"\s*,\s*", value)):
-                markers = [int(item) for item in re.findall(r"\d+", source_name)]
-                clean_name = " ".join(_AUTHOR_MARKERS.sub("", source_name).split())
+            run_by_id = {run.id: run for run in story.runs}
+            marked = [
+                (run_by_id[run_id].text, superscript(run_by_id[run_id].character_style_id))
+                for run_id in paragraph.text_run_ids
+                if run_id in run_by_id
+            ]
+            marked_ids = [run_id for run_id in paragraph.text_run_ids if run_id in run_by_id]
+            author_runs: list[list[str]] = []
+            if any(flag and _MARKER_TOKEN.search(text) for text, flag in marked):
+                authors = _split_marked_authors(marked)
+                author_runs = [
+                    [marked_ids[index] for index in group] for group in _author_run_groups(marked)
+                ]
+            else:
+                authors = [
+                    (
+                        " ".join(_AUTHOR_MARKERS.sub("", source).split()),
+                        re.findall(r"\*|\d+", source),
+                    )
+                    for source in re.split(r"\s*,\s*", value)
+                ]
+            for position, (clean_name, marker_tokens) in enumerate(authors):
+                source_name = clean_name + ("*" if "*" in marker_tokens else "")
+                markers = [
+                    index for token in marker_tokens if (index := _marker_index(token)) is not None
+                ]
                 parts = clean_name.split()
                 if len(parts) < 2:
                     continue
                 selected_affiliations = tuple(
-                    affiliation_ids[index - 1]
-                    for index in markers
-                    if 0 < index <= len(affiliation_ids)
+                    dict.fromkeys(
+                        affiliation_ids[index - 1]
+                        for index in markers
+                        if 0 < index <= len(affiliation_ids)
+                    )
                 )
                 contributor_id = stable_id(article_id, "contributor", str(len(contributors)))
+                own_links = (
+                    [links_by_run[r] for r in author_runs[position] if r in links_by_run]
+                    if position < len(author_runs)
+                    else []
+                )
                 orcid_link = (
-                    paragraph_orcids[position] if position < len(paragraph_orcids) else None
+                    own_links[0]
+                    if own_links
+                    else None
+                    if author_runs
+                    else paragraph_orcids[position]
+                    if position < len(paragraph_orcids)
+                    else None
                 )
                 name_tokens = {
                     part.casefold()
@@ -1187,6 +1670,12 @@ class CanonicalMapper:
                     if name_tokens
                     & {part.casefold() for part in re.findall(r"[A-Za-z]+", name) if len(part) >= 4}
                 ]
+                if not matching_roles:
+                    # "CEAL: Conceptualization, ..." identifies authors by their initials.
+                    initials = _name_initials(clean_name)
+                    matching_roles = [
+                        roles for name, roles in roles_by_name.items() if name in initials
+                    ]
                 contributors.append(
                     Contributor(
                         id=contributor_id,
@@ -1233,8 +1722,13 @@ class CanonicalMapper:
                 clean = line.strip()
                 if not clean:
                     continue
-                clean = re.sub(r"^\d+", "", clean).strip()
-                match = _AFFILIATION.fullmatch(clean)
+                clean = _strip_affiliation_label(clean, len(affiliations) + 1)
+                match: re.Match[str] | _AffiliationParts | None = _AFFILIATION.fullmatch(clean)
+                if match is None:
+                    # "Institution - City, Country." without a department segment.
+                    match = _AFFILIATION_NO_DEPARTMENT.fullmatch(clean)
+                if isinstance(match, re.Match):
+                    match = _split_trailing_country(match)
                 if match is None:
                     institution = clean
                     original_text = department = city = state = country = country_code = None
@@ -1246,10 +1740,14 @@ class CanonicalMapper:
                         paragraph.evidence_ids,
                         "line-from-affiliation-style",
                     )
-                    department = _present(
-                        values["department"],
-                        paragraph.evidence_ids,
-                        "deterministic-affiliation-decomposition",
+                    department = (
+                        _present(
+                            values["department"],
+                            paragraph.evidence_ids,
+                            "deterministic-affiliation-decomposition",
+                        )
+                        if values.get("department")
+                        else None
                     )
                     city_value, state_value = split_explicit_brazil_state(
                         values["city"], values["country"]
@@ -1274,6 +1772,7 @@ class CanonicalMapper:
                         "deterministic-affiliation-decomposition",
                     )
                     code = self.profile.country_codes.get(values["country"])
+                    generic_code = None if code else iso_country_code(values["country"])
                     country_code = (
                         _present(
                             code,
@@ -1281,6 +1780,12 @@ class CanonicalMapper:
                             "journal-profile-country-code",
                         )
                         if code
+                        else _present(
+                            generic_code,
+                            paragraph.evidence_ids,
+                            "cldr-country-name-to-iso-3166",
+                        )
+                        if generic_code
                         else None
                     )
                 affiliations.append(
@@ -1447,6 +1952,7 @@ class CanonicalMapper:
         references: tuple[Reference, ...],
         *,
         excluded_paragraph_ids: frozenset[str] = frozenset(),
+        layout_table_ids: frozenset[str] = frozenset(),
     ) -> tuple[tuple[Section, ...], tuple[str, ...]]:
         embedded_story_sources = {
             anchored_object.source_self_id
@@ -1853,7 +2359,7 @@ class CanonicalMapper:
                         segment_run_ids.append(run_id)
                 append_paragraph(segment_run_ids, segment)
 
-        raw_tables = {table.id: table for table in raw.tables}
+        raw_tables = {table.id: table for table in raw.tables if table.id not in layout_table_ids}
         story_by_table = {table_id: story for story in raw.stories for table_id in story.table_ids}
         table_story = {table_id: story.id for table_id, story in story_by_table.items()}
         story_page = {
@@ -1894,7 +2400,9 @@ class CanonicalMapper:
         def caption_kind(story: RawStory, paragraph: RawParagraph) -> str | None:
             value = "".join(run_lookup[item].text for item in paragraph.text_run_ids)
             match = _NUMBERED_GRAPHIC.match(value)
-            return match.group(1).casefold() if match else None
+            if match is None or _CONTINUATION_CAPTION.match(value[match.end() :]):
+                return None
+            return _caption_family(match.group(1))
 
         table_caption_keys = sorted(
             (story_order[story.id], paragraph.position)
@@ -1962,6 +2470,35 @@ class CanonicalMapper:
                 rows.append(tuple(row))
             return tuple(rows)
 
+        def table_header_rows(table_id: str) -> int:
+            """Count leading rows whose filled cells all use the profile's header style."""
+            table = raw_tables[table_id]
+            source_story = story_by_table[table_id]
+            paragraphs_by_cell: defaultdict[str, list[RawParagraph]] = defaultdict(list)
+            for item in source_story.paragraphs:
+                if item.table_cell_id:
+                    paragraphs_by_cell[item.table_cell_id].append(item)
+            header = 0
+            for row_index in range(table.row_count - 1):
+                filled = [
+                    cell
+                    for cell in table.cells
+                    if cell.row == row_index
+                    and "".join(run_lookup[item].text for item in cell.text_run_ids).strip()
+                ]
+                roles = {
+                    self.profile.role_for_style(
+                        style_names.get(item.paragraph_style_id or "", ""),
+                        style_prefix(style_names.get(item.paragraph_style_id or "", "")),
+                    )
+                    for cell in filled
+                    for item in paragraphs_by_cell[cell.id]
+                }
+                if not filled or roles != {"table-heading"}:
+                    break
+                header += 1
+            return header
+
         def table_cell_spans(table_id: str) -> tuple[TableCellSpan, ...]:
             return tuple(
                 TableCellSpan(
@@ -1982,7 +2519,10 @@ class CanonicalMapper:
                 if caption_value.strip():
                     graphic_review_reasons.append(f"unnumbered_graphic_caption:{paragraph.id}")
                 continue
-            kind, number_text = numbered.group(1).casefold(), numbered.group(2)
+            if _CONTINUATION_CAPTION.match(caption_value[numbered.end() :]):
+                continue
+            label_word = numbered.group(1)
+            kind, number_text = _caption_family(label_word), numbered.group(2)
             number = int(number_text)
             caption_source = (
                 self._rich_text(
@@ -2066,7 +2606,7 @@ class CanonicalMapper:
                     TableBlock(
                         id=stable_id(article_id, "canonical-table", table.id),
                         label=_present(
-                            f"Table {number}",
+                            _caption_label(label_word, number),
                             paragraph.evidence_ids,
                             "numbered-caption-label",
                         ),
@@ -2075,6 +2615,7 @@ class CanonicalMapper:
                         cell_spans=table_cell_spans(table_id),
                         footnotes=table_footnotes,
                         evidence_ids=table.evidence_ids,
+                        header_rows=table_header_rows(table_id),
                     )
                 )
             else:
@@ -2095,7 +2636,7 @@ class CanonicalMapper:
                     FigureBlock(
                         id=stable_id(article_id, "figure", paragraph.id),
                         label=_present(
-                            f"Figure {number}",
+                            _caption_label(label_word, number),
                             paragraph.evidence_ids,
                             "numbered-caption-label",
                         ),
@@ -2280,14 +2821,36 @@ class CanonicalMapper:
                     if publication_year is not None
                     else (year_matches[-1] if year_matches else None)
                 )
-                authors, title, source = _reference_parts(source_line)
-                details = _reference_details(source_line, year)
-                metadata = reference_metadata(source_line, title, source)
-                additions = dict(metadata.fields)
-                title = additions.pop("title", title)
-                source = additions.pop("source", source)
-                year = additions.pop("year", year)
-                details.update(additions)
+                if self.profile.reference_style == "vancouver":
+                    parsed = parse_vancouver(source_line)
+                    authors, title, source = parsed.authors, parsed.title, parsed.source
+                    year = parsed.year or year
+                    details = {
+                        key: value
+                        for key, value in (
+                            ("volume", parsed.volume),
+                            ("issue", parsed.issue),
+                            ("first_page", parsed.first_page),
+                            ("last_page", parsed.last_page or parsed.first_page),
+                            ("elocation_id", parsed.elocation_id),
+                        )
+                        if value
+                    }
+                    metadata = reference_metadata(source_line, title, source)
+                    if parsed.publication_type:
+                        metadata = dataclasses.replace(
+                            metadata,
+                            publication_type=cast(ReferenceType, parsed.publication_type),
+                        )
+                else:
+                    authors, title, source = _reference_parts(source_line)
+                    details = _reference_details(source_line, year)
+                    metadata = reference_metadata(source_line, title, source)
+                    additions = dict(metadata.fields)
+                    title = additions.pop("title", title)
+                    source = additions.pop("source", source)
+                    year = additions.pop("year", year)
+                    details.update(additions)
                 references.append(
                     Reference(
                         id=reference_id,

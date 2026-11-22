@@ -64,6 +64,10 @@ _CREDIT_ROLE_URIS = {
 }
 
 
+# "Objective: text" lines of a structured abstract -> <sec><title>Objective:</title><p>.
+_STRUCTURED_ABSTRACT_LINE = re.compile(r"^\s*([^:\n]{2,40}:)\s+(\S.*)$")
+
+
 class IdRegistryError(ValueError):
     pass
 
@@ -290,6 +294,8 @@ class JatsBuilder:
             for identifier in article.front.article_identifiers
         )
         for identifier in article.front.article_identifiers:
+            if identifier.kind == "corrected-article-doi":
+                continue  # emitted as <related-article> after <permissions>
             if identifier.value.value:
                 if (
                     has_other_identifier
@@ -524,6 +530,21 @@ class JatsBuilder:
                 license_attributes[f"{{{XLINK_NS}}}href"] = article.front.license_url.value
             license_element = _add(permissions, "license", **license_attributes)
             _add(license_element, "license-p", article.front.license_text.value)
+        for position, identifier in enumerate(
+            item
+            for item in article.front.article_identifiers
+            if item.kind == "corrected-article-doi" and item.value.value
+        ):
+            _add(
+                article_meta,
+                "related-article",
+                **{
+                    "related-article-type": "corrected-article",
+                    "id": f"related-{position + 1}",
+                    f"{{{XLINK_NS}}}href": identifier.value.value or "",
+                    "ext-link-type": "doi",
+                },
+            )
         for abstract in article.front.abstracts:
             if abstract.text.value:
                 tag = (
@@ -537,7 +558,14 @@ class JatsBuilder:
                     **{f"{{{XML_NS}}}lang": abstract.language},
                 )
                 _add(element, "title", "Resumo" if abstract.language == "pt" else "Abstract")
-                _add(element, "p", abstract.text.value)
+                for line in abstract.text.value.split("\n"):
+                    labelled = _STRUCTURED_ABSTRACT_LINE.match(line)
+                    if labelled and "\n" in abstract.text.value:
+                        section = _add(element, "sec")
+                        _add(section, "title", labelled.group(1))
+                        _add(section, "p", labelled.group(2))
+                    elif line.strip():
+                        _add(element, "p", line)
         for keyword_group in article.front.keywords:
             if not keyword_group.text.value:
                 continue
@@ -546,7 +574,9 @@ class JatsBuilder:
                 "kwd-group",
                 **{f"{{{XML_NS}}}lang": keyword_group.language},
             )
-            for keyword in re.split(r"\s*;\s*", keyword_group.text.value.rstrip(". ")):
+            value = keyword_group.text.value.rstrip(". ")
+            separator = r"\s*;\s*" if ";" in value else r"\.\s+"
+            for keyword in re.split(separator, value):
                 if keyword:
                     _add(group, "kwd", keyword)
         if article.front.funding:
@@ -637,7 +667,14 @@ class JatsBuilder:
         section_attributes = {"id": registry.resolve(section.id)}
         if section.section_type:
             section_attributes["sec-type"] = section.section_type
-        element = _add(parent, "sec", **section_attributes)
+        # Text before the first heading (e.g. an erratum) is body content, not an untitled
+        # <sec>: JATS requires a title in <sec> but allows paragraphs directly in <body>.
+        lead_in = (
+            not section.title.value
+            and etree.QName(parent).localname == "body"
+            and parent.find("sec") is None
+        )
+        element = parent if lead_in else _add(parent, "sec", **section_attributes)
         if section.title.value:
             _add(element, "title", section.title.value)
         for block in section.blocks:
@@ -671,6 +708,7 @@ class JatsBuilder:
                 caption_paragraph = _add(caption, "p")
                 self._rich(caption_paragraph, block.caption, registry, asset_names)
                 table = _add(wrapper, "table")
+                thead = _add(table, "thead") if block.header_rows else None
                 tbody = _add(table, "tbody")
                 spans = {(span.row, span.column): span for span in block.cell_spans}
                 covered = {
@@ -681,7 +719,8 @@ class JatsBuilder:
                     if (row, column) != (span.row, span.column)
                 }
                 for row_index, row in enumerate(block.rows):
-                    tr = _add(tbody, "tr")
+                    in_header = thead is not None and row_index < block.header_rows
+                    tr = _add(thead if in_header and thead is not None else tbody, "tr")
                     for column_index, cell in enumerate(row):
                         if (row_index, column_index) in covered:
                             continue
@@ -691,7 +730,7 @@ class JatsBuilder:
                             cell_attributes["rowspan"] = str(span.row_span)
                         if span and span.column_span > 1:
                             cell_attributes["colspan"] = str(span.column_span)
-                        td = _add(tr, "td", **cell_attributes)
+                        td = _add(tr, "th" if in_header else "td", **cell_attributes)
                         if cell.plain.value:
                             self._rich(td, cell, registry, asset_names)
                 if block.footnotes:
@@ -826,6 +865,13 @@ class JatsBuilder:
                 previous = _add(parent, tag, **attributes)
                 bold = _add(previous, "bold")
                 _add(bold, "italic", inline.text)
+            elif (
+                inline.kind == InlineKind.CROSS_REFERENCE
+                and inline.attributes.get("source-position") == "superscript"
+            ):
+                # Numeric citations keep the source superscript: <sup><xref>1</xref></sup>.
+                previous = _add(parent, "sup")
+                _add(previous, tag, inline.text, **attributes)
             else:
                 previous = _add(parent, tag, inline.text, **attributes)
 

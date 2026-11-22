@@ -127,7 +127,14 @@ def _canonical_1_4_to_1_5(payload: dict[str, Any]) -> dict[str, Any]:
 def _canonical_1_5_to_1_6(payload: dict[str, Any]) -> dict[str, Any]:
     migrated = copy.deepcopy(payload)
     # Webpage/report are permitted, never assigned by migration.
-    migrated["schema_version"] = CANONICAL_SCHEMA_VERSION
+    migrated["schema_version"] = "1.6.0"
+    return migrated
+
+
+def _canonical_1_6_to_1_7(payload: dict[str, Any]) -> dict[str, Any]:
+    """1.7.0 adds TableBlock.header_rows (default 0: same rendering as before)."""
+    migrated = copy.deepcopy(payload)
+    migrated["schema_version"] = "1.7.0"
     return migrated
 
 
@@ -142,7 +149,8 @@ MIGRATIONS: dict[tuple[ModelKind, str], tuple[str, Migration]] = {
     ("canonical", "1.2.0"): ("1.3.0", _canonical_1_2_to_1_3),
     ("canonical", "1.3.0"): ("1.4.0", _canonical_1_3_to_1_4),
     ("canonical", "1.4.0"): ("1.5.0", _canonical_1_4_to_1_5),
-    ("canonical", "1.5.0"): (CANONICAL_SCHEMA_VERSION, _canonical_1_5_to_1_6),
+    ("canonical", "1.5.0"): ("1.6.0", _canonical_1_5_to_1_6),
+    ("canonical", "1.6.0"): (CANONICAL_SCHEMA_VERSION, _canonical_1_6_to_1_7),
 }
 
 LATEST_VERSIONS: dict[ModelKind, str] = {

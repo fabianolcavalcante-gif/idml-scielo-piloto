@@ -47,6 +47,7 @@ from idml_foundation.ingest.xml_security import (
     XmlComplexityBudget,
     parse_untrusted_xml,
 )
+from idml_foundation.pipeline.profile import DIRECT_PARAGRAPH_SUFFIX
 from idml_foundation.settings import Settings
 
 _STYLE_PREFIX = re.compile(r"^(\d{1,2}(?:\.\d+)?)")
@@ -116,6 +117,76 @@ def _page_interval_score(
     overlap = max(0.0, min(frame_right, page_right) - max(frame_left, page_left))
     distance = abs(frame_center - ((page_left + page_right) / 2))
     return overlap > 0, overlap, -distance
+
+
+_Affine = tuple[float, float, float, float, float, float]
+_IDENTITY: _Affine = (1.0, 0.0, 0.0, 1.0, 0.0, 0.0)
+
+
+def _compose(outer: _Affine, inner: _Affine) -> _Affine:
+    """Return the affine map applying ``inner`` first, then ``outer`` (IDML row vectors)."""
+    a, b, c, d, e, f = inner
+    oa, ob, oc, od, oe, of = outer
+    return (
+        a * oa + b * oc,
+        a * ob + b * od,
+        c * oa + d * oc,
+        c * ob + d * od,
+        e * oa + f * oc + oe,
+        e * ob + f * od + of,
+    )
+
+
+def _affine(value: str | None) -> _Affine:
+    parts = _numbers(value, 6)
+    return _IDENTITY if parts == (0.0,) * 6 else cast(_Affine, parts)
+
+
+def _spread_box(
+    element: etree._Element, spread: etree._Element
+) -> tuple[float, float, float, float] | None:
+    """Bounding box of an item in spread coordinates, composing every ancestor transform."""
+    transform = _affine(element.get("ItemTransform"))
+    for ancestor in element.iterancestors():
+        if ancestor is spread:
+            break
+        if "ItemTransform" in ancestor.attrib:
+            transform = _compose(_affine(ancestor.get("ItemTransform")), transform)
+    points = [_numbers(item.get("Anchor"), 2) for item in _elements(element, "PathPointType")]
+    if not points:
+        return None
+    a, b, c, d, e, f = transform
+    xs = [a * x + c * y + e for x, y in points]
+    ys = [b * x + d * y + f for x, y in points]
+    return min(xs), min(ys), max(xs), max(ys)
+
+
+def _page_box(page: etree._Element) -> tuple[float, float, float, float]:
+    top, left, bottom, right = _numbers(page.get("GeometricBounds"), 4)
+    a, b, c, d, e, f = _affine(page.get("ItemTransform"))
+    xs = [a * x + c * y + e for x, y in ((left, top), (right, bottom))]
+    ys = [b * x + d * y + f for x, y in ((left, top), (right, bottom))]
+    return min(xs), min(ys), max(xs), max(ys)
+
+
+def _off_all_pages(
+    box: tuple[float, float, float, float] | None,
+    pages: list[tuple[float, float, float, float]],
+) -> bool:
+    """True only when the item has area and touches no page (a pasteboard leftover).
+
+    Pages without usable bounds make the decision unknown, so nothing is excluded.
+    """
+    pages = [page for page in pages if page[2] - page[0] > 0 and page[3] - page[1] > 0]
+    if box is None or not pages:
+        return False
+    x0, y0, x1, y1 = box
+    if x1 - x0 <= 0 or y1 - y0 <= 0:
+        return False
+    return all(
+        min(x1, px1) - max(x0, px0) <= 0 or min(y1, py1) - max(y0, py0) <= 0
+        for px0, py0, px1, py1 in pages
+    )
 
 
 def _sanitized_asset_name(uri: str) -> str:
@@ -307,6 +378,7 @@ class _LayoutResult:
     assets: tuple[RawAsset, ...]
     links: tuple[RawLink, ...]
     evidence: tuple[Evidence, ...]
+    pasteboard_frame_ids: frozenset[str] = frozenset()
 
 
 class IdmlParser:
@@ -371,6 +443,36 @@ class IdmlParser:
             for style in styles
         )
         frames, spreads = layout.frames, layout.spreads
+        frames_per_story: defaultdict[str, set[str]] = defaultdict(set)
+        for frame in frames:
+            frames_per_story[frame.parent_story_id].add(frame.id)
+        pasteboard_story_ids = {
+            story_id
+            for story_id, frame_ids in frames_per_story.items()
+            if frame_ids and frame_ids <= layout.pasteboard_frame_ids
+        }
+        pasteboard_issues = [
+            ReadingOrderIssue(
+                code="pasteboard_story_excluded",
+                story_id=result.story.id,
+                details={"source_story_id": result.story.source_self_id},
+            )
+            for result in story_results
+            if result.story.id in pasteboard_story_ids
+        ]
+        # Content of pasteboard stories is dropped; their evidence stays for audit.
+        pasteboard_evidence = [
+            item
+            for result in story_results
+            if result.story.id in pasteboard_story_ids
+            for item in result.evidence
+        ]
+        story_results = [
+            result for result in story_results if result.story.id not in pasteboard_story_ids
+        ]
+        frames = tuple(
+            frame for frame in frames if frame.parent_story_id not in pasteboard_story_ids
+        )
         stories = tuple(result.story for result in story_results)
         story_by_source_self = {story.source_self_id: story for story in stories}
         style_by_id = {style.id: style for style in styles}
@@ -456,7 +558,7 @@ class IdmlParser:
             frames,
             tuple(design.get("StoryList", "").split()),
         )
-        issues = tuple(reference_issues) + issues
+        issues = tuple(pasteboard_issues) + tuple(reference_issues) + issues
 
         try:
             return RawArticle(
@@ -480,6 +582,7 @@ class IdmlParser:
                 evidence=tuple(
                     [*style_evidence, *layout.evidence]
                     + [item for result in story_results for item in result.evidence]
+                    + pasteboard_evidence
                 ),
             )
         except ValueError as exc:
@@ -702,7 +805,7 @@ class IdmlParser:
                 override_styles.append(
                     RawStyle(
                         id=paragraph_style_id,
-                        source_name=f"{base_name} [direct paragraph properties]",
+                        source_name=f"{base_name}{DIRECT_PARAGRAPH_SUFFIX}",
                         normalized_name=_normalize_style_name(
                             " ".join((paragraph_style or "", *paragraph_properties.values()))
                         ),
@@ -1088,6 +1191,7 @@ class IdmlParser:
         assets: list[RawAsset] = []
         links: list[RawLink] = []
         evidence: list[Evidence] = []
+        pasteboard_frames: set[str] = set()
         page_counter = 0
         referenced_paths = [
             normalized_source
@@ -1114,12 +1218,15 @@ class IdmlParser:
                 right = page_transform[4] + page_bounds[3]
                 page_ranges.append((min(left, right), max(left, right)))
             page_counter += len(pages)
+            page_boxes = [_page_box(page) for page in pages]
             spread_frame_ids: list[str] = []
             for frame_element in _elements(spread_element, "TextFrame"):
                 source_self = frame_element.get("Self")
                 parent_story = frame_element.get("ParentStory")
                 if source_self is None or parent_story is None:
                     continue
+                if _off_all_pages(_spread_box(frame_element, spread_element), page_boxes):
+                    pasteboard_frames.add(stable_id(article_key, "frame", source_self))
                 transform = _numbers(frame_element.get("ItemTransform"), 6)
                 anchors = [
                     _numbers(item.get("Anchor"), 2)
@@ -1235,6 +1342,7 @@ class IdmlParser:
             assets=tuple(assets),
             links=tuple(links),
             evidence=tuple(evidence),
+            pasteboard_frame_ids=frozenset(pasteboard_frames),
         )
 
     def _reading_order(

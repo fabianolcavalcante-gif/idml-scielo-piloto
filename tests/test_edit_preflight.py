@@ -70,4 +70,6 @@ def test_job_rejects_foreign_resource_without_retry(
     row = response.json()["id"]
     process_job(row, session_factory, settings=settings)
     status = client.get("/v1/jobs/" + row, headers=headers).json()
-    assert status["state"] == "failed_permanent" and not status["result"]
+    # Failure detail is operator-safe and must not reveal anything about the foreign article.
+    assert status["state"] == "failed_permanent"
+    assert status["result"] == {"error_detail": {"reason": "unclassified"}}

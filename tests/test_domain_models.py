@@ -95,6 +95,6 @@ def test_versioned_schema_migrations_are_explicit_and_non_mutating() -> None:
 def test_exported_json_schemas_match_runtime_contracts() -> None:
     schema_root = Path(__file__).parents[1] / "schemas"
     raw_schema = json.loads((schema_root / "raw-article-1.3.0.schema.json").read_text())
-    canonical_schema = json.loads((schema_root / "canonical-article-1.6.0.schema.json").read_text())
+    canonical_schema = json.loads((schema_root / "canonical-article-1.7.0.schema.json").read_text())
     assert raw_schema == RawArticle.model_json_schema()
     assert canonical_schema == CanonicalArticle.model_json_schema()

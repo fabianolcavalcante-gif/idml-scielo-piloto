@@ -203,7 +203,7 @@ def test_legacy_migration_is_pure_and_does_not_invent_metadata():
     original = copy.deepcopy(old)
     migrated = CanonicalArticle.model_validate(migrate_payload("canonical", old))
     assert old == original
-    assert migrated.schema_version == "1.6.0"
+    assert migrated.schema_version == "1.7.0"
     assert migrated.back.references[0].publication_type is None
     assert migrated.back.references[0].access_date is None
 

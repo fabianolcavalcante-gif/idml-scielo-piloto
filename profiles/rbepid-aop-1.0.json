@@ -1,0 +1,60 @@
+{
+  "profile_id": "rbepid-aop-1.0.0",
+  "profile_version": "1.0.0",
+  "journal_title": "Revista Brasileira de Epidemiologia",
+  "journal_abbreviated_title": "Rev. bras. Epidemiol.",
+  "journal_publisher_id": "rbepid",
+  "journal_print_issn": "1415-790X",
+  "journal_issn": "1980-5497",
+  "publisher_name": "Associação Brasileira de Saúde Coletiva",
+  "primary_language": "en",
+  "secondary_language": "pt",
+  "article_category": "research-article",
+  "subject_category": "Original Article",
+  "license_text": "This is an open article distributed under the CC-BY 4.0 license, which allows copying and redistribution of the material in any format and for any purpose as long as the original authors and source are credited.",
+  "country_codes": {
+    "India": "IN",
+    "Brazil": "BR",
+    "Brasil": "BR",
+    "Japan": "JP"
+  },
+  "sps_version": "sps-1.10",
+  "package_name_template": "1980-5497-rbepid-28-{article_id}",
+  "style_roles": {},
+  "style_name_roles": {
+    "zp.DOI": "article-doi",
+    "zp.Título": "title-primary",
+    "zp.Título_IN": "title-secondary",
+    "zp.Autores": "contributors",
+    "zp.titulação": "affiliations",
+    "zp.resumo": "abstract",
+    "zp.palavras": "keywords",
+    "zp.autor_correspondente/conflito/comocitar": "correspondence",
+    "zp.recebido e aceito/ selo": "correspondence",
+    "zp.SUB1": "section-level-1",
+    "zp.SUB2": "section-level-2",
+    "zp.SUB3": "section-level-3",
+    "zp.Texto": "paragraph",
+    "zp.bullet": "list-level-1",
+    "zp.refs": "references",
+    "zp.tabela/fig_titulo": "caption",
+    "zp.tabela_legenda": "table-footnote",
+    "zp.Tabela_cabeçalho": "table-heading",
+    "zp.tabela_texto": "table-cell",
+    "zp.Resumo_titulo": "abstract-heading"
+  },
+  "article_id_from_doi": "^10\\.1590/1980-5497\\d{2}(?P<yy>\\d{2})(?P<seq>\\d{4})(?:\\.\\d+)?$",
+  "article_id_template": "e{yy}{seq}",
+  "history_date_order": {
+    "en": "mdy",
+    "pt": "dmy"
+  },
+  "reference_style": "vancouver",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "article_id_rules": [
+    [
+      "^10\\.1590/1980-5497(?P<yyyy>\\d{4})(?P<seq>\\d{4})erratum$",
+      "e{yyyy}{seq}erratum"
+    ]
+  ]
+}

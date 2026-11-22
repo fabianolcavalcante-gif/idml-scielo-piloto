@@ -27,6 +27,7 @@ from idml_foundation.services.audit import record_audit
 from idml_foundation.services.autocorrection_preflight import run_edit_preflight
 from idml_foundation.services.canonical_heads import lock_resource
 from idml_foundation.services.enrichment import select_enrichment
+from idml_foundation.services.job_errors import operator_error_detail
 from idml_foundation.services.jobs import record_effect_once, schedule_retry, transition_job
 from idml_foundation.services.package_validation import assess_package
 from idml_foundation.services.scoped_validator_transport import ScopedValidatorExecutor
@@ -447,7 +448,14 @@ def process_job(
                 outcome=job.state,
                 details={"kind": job.kind, "error_code": exc.code},
             )
-        except (FileNotFoundError, PermanentJobError, ValueError):
+        except (FileNotFoundError, PermanentJobError, ValueError) as exc:
+            detail = operator_error_detail(exc)
+            logger.warning(
+                "job input rejected",
+                extra={"job_id": job.id, "kind": job.kind, "reason": detail["reason"]},
+                exc_info=True,
+            )
+            job.result = {"error_detail": detail}
             transition_job(
                 db,
                 job,
@@ -464,7 +472,7 @@ def process_job(
                 organization_id=job.organization_id,
                 correlation_id=correlation_id,
                 outcome="failed_permanent",
-                details={"kind": job.kind, "error_code": "invalid_job_input"},
+                details={"kind": job.kind, "error_code": "invalid_job_input", **detail},
             )
         except Exception:
             logger.exception("job execution failed", extra={"job_id": job.id})

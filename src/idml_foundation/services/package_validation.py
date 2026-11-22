@@ -1,6 +1,7 @@
 """Package-bound external validation orchestration; never implies editorial/go-live approval."""
 
 import hashlib
+import logging
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
@@ -17,9 +18,12 @@ from idml_foundation.release.validator_registry import (
     load_validator_registry,
 )
 from idml_foundation.services.scoped_validator_transport import ScopedValidatorExecutor
+from idml_foundation.services.validator_failures import validator_failure_reason
 from idml_foundation.services.xpm_execution import XpmExecutor, assess_xpm_execution
 from idml_foundation.services.xpm_socket import XpmSocketExecutor
 from idml_foundation.settings import Settings
+
+logger = logging.getLogger(__name__)
 
 Executor = Callable[[bytes, ValidatorCommand], ValidatorRun]
 
@@ -66,6 +70,7 @@ def assess_package(
     engine = ValidationEngine()
     runs = []
     evidence = []
+    failure_reasons: dict[str, str] = {}
     xpm = assess_xpm_execution(
         xml=xml, package=package, expected_scope=expected_scope, executor=None
     )
@@ -103,8 +108,14 @@ def assess_package(
                         )
                     ):
                         raise ValueError("external evidence mismatch")
-                except Exception:
-                    # Execution diagnostics can contain article text or environment secrets.
+                except Exception as exc:
+                    # Execution diagnostics can contain article text or environment secrets:
+                    # only a fixed reason code is kept and logged.
+                    failure_reasons[name] = validator_failure_reason(exc)
+                    logger.warning(
+                        "validator unavailable",
+                        extra={"validator": name, "reason": failure_reasons[name]},
+                    )
                     run = engine.unavailable(
                         name,
                         specification.version,
@@ -134,6 +145,9 @@ def assess_package(
                     "failure_code": None
                     if run.status == ValidatorStatus.COMPLETED
                     else "validator-unavailable-or-failed",
+                    **(
+                        {"failure_reason": failure_reasons[name]} if name in failure_reasons else {}
+                    ),
                 }
             )
             if isinstance(executor, ScopedValidatorExecutor) and name in executor.evidence:

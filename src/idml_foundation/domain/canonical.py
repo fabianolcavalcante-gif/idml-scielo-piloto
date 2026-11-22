@@ -8,7 +8,7 @@ from pydantic import BaseModel, Field, model_validator
 from idml_foundation.domain.common import SHA256_PATTERN, Evidence, StrictModel
 from idml_foundation.mathml import parse_mathml_fragment
 
-CANONICAL_SCHEMA_VERSION = "1.6.0"
+CANONICAL_SCHEMA_VERSION = "1.7.0"
 
 _ORCID = re.compile(r"^(?:https?://orcid\.org/)?(\d{4})-(\d{4})-(\d{4})-(\d{3}[\dXx])$")
 
@@ -310,6 +310,8 @@ class TableBlock(StrictModel):
     cell_spans: tuple[TableCellSpan, ...] = ()
     footnotes: tuple[RichText, ...] = ()
     evidence_ids: tuple[str, ...] = ()
+    # Leading rows rendered as <thead>; derived from the journal's header cell style.
+    header_rows: int = Field(default=0, ge=0)
 
     @model_validator(mode="after")
     def spans_fit_the_table_and_do_not_overlap(self) -> Self:

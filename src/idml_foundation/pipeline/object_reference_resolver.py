@@ -13,7 +13,7 @@ from idml_foundation.domain.canonical import (
 from idml_foundation.domain.common import stable_id
 
 _MENTION = re.compile(
-    r"(?i)\b(?P<kind>fig(?:ure)?s?|tables?|equations?)\.?\s*"
+    r"(?i)\b(?P<kind>fig(?:ure)?s?|figuras?|tables?|tabelas?|charts?|quadros?|equations?)\.?\s*"
     r"(?:\(\s*)?(?P<number>[1-9]\d*)(?:\s*\))?(?:[a-z])?"
 )
 _TEXTUAL_INLINE_KINDS = {
@@ -163,6 +163,15 @@ def _following_formulas(sections: list[dict[str, Any]], *, article_id: str) -> N
         _following_formulas(section["children"], article_id=article_id)
 
 
+_NAMESPACES = {"tabela": "table", "quadro": "chart", "figura": "figure"}
+
+
+def _label_namespace(word: str) -> str:
+    """Numbering namespace of a label word: 'Chart 1' and 'Table 1' are different objects."""
+    base = word.split()[0].casefold().rstrip("s.") if word.split() else "table"
+    return _NAMESPACES.get(base, base)
+
+
 def _targets(article: CanonicalArticle) -> dict[tuple[str, int], str]:
     found: dict[tuple[str, int], str] = {}
 
@@ -171,7 +180,7 @@ def _targets(article: CanonicalArticle) -> dict[tuple[str, int], str]:
             if isinstance(block, FigureBlock):
                 kind, label = "figure", block.label.value
             elif isinstance(block, TableBlock):
-                kind, label = "table", block.label.value
+                kind, label = _label_namespace(block.label.value or "table"), block.label.value
             elif isinstance(block, FormulaBlock):
                 kind, label = "formula", block.label.value if block.label else None
             else:
@@ -191,7 +200,7 @@ def _targets(article: CanonicalArticle) -> dict[tuple[str, int], str]:
 
 def _target_key(match: re.Match[str]) -> tuple[str, int]:
     source_kind = match.group("kind").casefold()
-    kind = "figure" if source_kind.startswith("fig") else source_kind.rstrip("s")
+    kind = "figure" if source_kind.startswith("fig") else _label_namespace(source_kind)
     if kind == "equation":
         kind = "formula"
     return kind, int(match.group("number"))
@@ -320,7 +329,11 @@ def _walk(
                 for item in value.get("cross_references", [])
                 if isinstance(item, dict) and item.get("target_id")
             }
-            target_types = {target_id: kind for (kind, _), target_id in targets.items()}
+            # Numbering namespaces (chart vs table) collapse to the JATS ref-type.
+            target_types = {
+                target_id: "table" if kind == "chart" else kind
+                for (kind, _), target_id in targets.items()
+            }
             declared: list[dict[str, Any]] = []
             seen: set[str] = set()
             for inline in value["content"].get("inlines", []):

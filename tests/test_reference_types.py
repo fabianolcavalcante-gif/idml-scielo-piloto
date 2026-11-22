@@ -293,7 +293,7 @@ def test_migration_adds_no_reference_classification_or_metadata():
     old["schema_version"] = "1.5.0"
     migrated = migrate_payload("canonical", old)
     assert old["schema_version"] == "1.5.0"
-    assert migrated == {**old, "schema_version": "1.6.0"}
+    assert migrated == {**old, "schema_version": "1.7.0"}
     assert migrated["back"]["references"][0]["publication_type"] == "other"
 
 
